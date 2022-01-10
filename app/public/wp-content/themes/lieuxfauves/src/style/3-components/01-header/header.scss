@@ -1,0 +1,24 @@
+.navigation {
+    display: fixed;
+}
+
+.bloc-menu {
+    display: flex;
+    position:fixed;
+    right:0;
+    width: 5vh;
+    height: 100%;
+    background-color:white;
+}
+
+.list-menu {
+    position : fixed;
+    font-size: 10px;
+    writing-mode: vertical-lr;
+    list-style-type:none;
+
+    ul li a {
+        display:block;
+        float:left;   }
+
+}

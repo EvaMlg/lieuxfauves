@@ -1,0 +1,35 @@
+.front-image {
+    display: none;
+}
+
+.container-front-page {
+    display: flex;
+    font-family: "Fira Sans";
+}
+
+.split-left {
+    width: 40vw;
+    .list-chapter {
+        position : fixed;
+    }
+}
+
+.split-right {
+    width: 60vw;
+}
+
+.bloc-link {
+    background-color: $jungle-col-10 ;
+}
+
+.bloc-haiku {
+    background-color: $jungle-col ;
+}
+
+.bloc-images {
+    display: flex;
+    img {
+        width: 50%;
+        height: auto;
+    }
+}

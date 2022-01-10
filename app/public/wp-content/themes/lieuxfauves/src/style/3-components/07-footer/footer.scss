@@ -1,0 +1,81 @@
+body{
+  
+    display: grid; 
+    grid-template-rows: auto 1fr auto; 
+    height: 100vh; }
+
+
+footer {
+    
+
+
+    background-color: $jungle-col;
+
+
+    .container-adresses {
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+
+        width: 90vw;
+        
+
+
+    .logo {
+        justify-content: start;
+        margin: 3vh;
+
+        img {
+            height: 5vh;
+
+            @include tablet {
+            height: 10vh;
+            width: auto;
+        }
+        }
+        
+    }    
+
+    .adresse {
+        justify-content: end; 
+        font-family: 'Fira Sans', sans-serif;
+        color :white;
+
+        font-size: 10px;
+
+        @include tablet {
+        font-size: 18px;
+        padding:15px;
+    }
+
+    }
+
+}
+
+  
+}
+
+.legal {
+    text-align: center;
+    border-top : 0.5px solid white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-family: 'Fira Sans', sans-serif;
+    font-weight: 300;
+    color :white;
+
+    font-size: 8px;
+
+
+    @include tablet { font-size: 12px; }
+}
+
+
+.adress-container {
+    display: flex;
+    flex-direction: row;
+    width: 60vw;
+    justify-content: space-around;
+} 

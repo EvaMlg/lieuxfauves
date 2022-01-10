@@ -1,0 +1,499 @@
+[09-Oct-2021 12:51:38 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_field() in /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-content/themes/newtheme/front-page.php:20
+Stack trace:
+#0 /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-includes/template-loader.php(106): include()
+#1 /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-blog-header.php(19): require_once('/Users/evamarec...')
+#2 /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/index.php(17): require('/Users/evamarec...')
+#3 {main}
+  thrown in /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-content/themes/newtheme/front-page.php on line 20
+[25-Nov-2021 12:33:27 UTC] PHP Parse error:  syntax error, unexpected '<', expecting end of file in /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-content/themes/lieuxfauves/functions.php on line 27
+[25-Nov-2021 12:33:27 UTC] PHP Parse error:  syntax error, unexpected '<', expecting end of file in /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-content/themes/lieuxfauves/functions.php on line 27
+[25-Nov-2021 12:33:37 UTC] PHP Warning:  call_user_func_array() expects parameter 1 to be a valid callback, function 'lf_register_post_types' not found or invalid function name in /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-includes/class-wp-hook.php on line 303
+[25-Nov-2021 12:33:37 UTC] PHP Stack trace:
+[25-Nov-2021 12:33:37 UTC] PHP   1. {main}() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/index.php:0
+[25-Nov-2021 12:33:37 UTC] PHP   2. require() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/index.php:17
+[25-Nov-2021 12:33:37 UTC] PHP   3. require_once() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-blog-header.php:13
+[25-Nov-2021 12:33:37 UTC] PHP   4. require_once() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-load.php:50
+[25-Nov-2021 12:33:37 UTC] PHP   5. require_once() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-config.php:77
+[25-Nov-2021 12:33:37 UTC] PHP   6. do_action() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-settings.php:578
+[25-Nov-2021 12:33:37 UTC] PHP   7. WP_Hook->do_action() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-includes/plugin.php:470
+[25-Nov-2021 12:33:37 UTC] PHP   8. WP_Hook->apply_filters() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-includes/class-wp-hook.php:327
+[25-Nov-2021 12:33:38 UTC] PHP Warning:  call_user_func_array() expects parameter 1 to be a valid callback, function 'lf_register_post_types' not found or invalid function name in /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-includes/class-wp-hook.php on line 303
+[25-Nov-2021 12:33:38 UTC] PHP Stack trace:
+[25-Nov-2021 12:33:38 UTC] PHP   1. {main}() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/index.php:0
+[25-Nov-2021 12:33:38 UTC] PHP   2. require() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/index.php:17
+[25-Nov-2021 12:33:38 UTC] PHP   3. require_once() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-blog-header.php:13
+[25-Nov-2021 12:33:38 UTC] PHP   4. require_once() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-load.php:50
+[25-Nov-2021 12:33:38 UTC] PHP   5. require_once() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-config.php:77
+[25-Nov-2021 12:33:38 UTC] PHP   6. do_action() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-settings.php:578
+[25-Nov-2021 12:33:38 UTC] PHP   7. WP_Hook->do_action() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-includes/plugin.php:470
+[25-Nov-2021 12:33:38 UTC] PHP   8. WP_Hook->apply_filters() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-includes/class-wp-hook.php:327
+[25-Nov-2021 12:33:38 UTC] PHP Warning:  call_user_func_array() expects parameter 1 to be a valid callback, function 'lf_register_post_types' not found or invalid function name in /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-includes/class-wp-hook.php on line 303
+[25-Nov-2021 12:33:38 UTC] PHP Stack trace:
+[25-Nov-2021 12:33:38 UTC] PHP   1. {main}() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/index.php:0
+[25-Nov-2021 12:33:38 UTC] PHP   2. require() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/index.php:17
+[25-Nov-2021 12:33:38 UTC] PHP   3. require_once() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-blog-header.php:13
+[25-Nov-2021 12:33:38 UTC] PHP   4. require_once() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-load.php:50
+[25-Nov-2021 12:33:38 UTC] PHP   5. require_once() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-config.php:77
+[25-Nov-2021 12:33:38 UTC] PHP   6. do_action() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-settings.php:578
+[25-Nov-2021 12:33:38 UTC] PHP   7. WP_Hook->do_action() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-includes/plugin.php:470
+[25-Nov-2021 12:33:38 UTC] PHP   8. WP_Hook->apply_filters() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-includes/class-wp-hook.php:327
+[25-Nov-2021 12:33:41 UTC] PHP Warning:  call_user_func_array() expects parameter 1 to be a valid callback, function 'lf_register_post_types' not found or invalid function name in /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-includes/class-wp-hook.php on line 303
+[25-Nov-2021 12:33:41 UTC] PHP Stack trace:
+[25-Nov-2021 12:33:41 UTC] PHP   1. {main}() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-admin/admin-ajax.php:0
+[25-Nov-2021 12:33:41 UTC] PHP   2. require_once() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-admin/admin-ajax.php:22
+[25-Nov-2021 12:33:41 UTC] PHP   3. require_once() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-load.php:50
+[25-Nov-2021 12:33:41 UTC] PHP   4. require_once() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-config.php:77
+[25-Nov-2021 12:33:41 UTC] PHP   5. do_action() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-settings.php:578
+[25-Nov-2021 12:33:41 UTC] PHP   6. WP_Hook->do_action() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-includes/plugin.php:470
+[25-Nov-2021 12:33:41 UTC] PHP   7. WP_Hook->apply_filters() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-includes/class-wp-hook.php:327
+[25-Nov-2021 12:49:23 UTC] PHP Warning:  An unexpected error occurred. Something may be wrong with WordPress.org or this server&#8217;s configuration. If you continue to have problems, please try the <a href="https://wordpress.org/support/forums/">support forums</a>. (WordPress could not establish a secure connection to WordPress.org. Please contact your server administrator.) in /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-includes/update.php on line 175
+[25-Nov-2021 12:49:23 UTC] PHP Stack trace:
+[25-Nov-2021 12:49:23 UTC] PHP   1. {main}() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-cron.php:0
+[25-Nov-2021 12:49:23 UTC] PHP   2. do_action_ref_array() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-cron.php:138
+[25-Nov-2021 12:49:23 UTC] PHP   3. WP_Hook->do_action() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-includes/plugin.php:518
+[25-Nov-2021 12:49:23 UTC] PHP   4. WP_Hook->apply_filters() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-includes/class-wp-hook.php:327
+[25-Nov-2021 12:49:23 UTC] PHP   5. wp_version_check() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-includes/class-wp-hook.php:303
+[25-Nov-2021 12:49:23 UTC] PHP   6. trigger_error() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-includes/update.php:175
+[09-Dec-2021 11:10:43 UTC] PHP Warning:  call_user_func_array() expects parameter 1 to be a valid callback, function 'lf_recherche_rpt' not found or invalid function name in /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-includes/class-wp-hook.php on line 303
+[09-Dec-2021 11:10:43 UTC] PHP Stack trace:
+[09-Dec-2021 11:10:43 UTC] PHP   1. {main}() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-admin/admin-ajax.php:0
+[09-Dec-2021 11:10:43 UTC] PHP   2. require_once() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-admin/admin-ajax.php:22
+[09-Dec-2021 11:10:43 UTC] PHP   3. require_once() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-load.php:50
+[09-Dec-2021 11:10:43 UTC] PHP   4. require_once() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-config.php:77
+[09-Dec-2021 11:10:43 UTC] PHP   5. do_action() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-settings.php:578
+[09-Dec-2021 11:10:43 UTC] PHP   6. WP_Hook->do_action() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-includes/plugin.php:470
+[09-Dec-2021 11:10:43 UTC] PHP   7. WP_Hook->apply_filters() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-includes/class-wp-hook.php:327
+[09-Dec-2021 11:10:43 UTC] PHP Warning:  call_user_func_array() expects parameter 1 to be a valid callback, function 'lf_recherche_rpt' not found or invalid function name in /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-includes/class-wp-hook.php on line 303
+[09-Dec-2021 11:10:43 UTC] PHP Stack trace:
+[09-Dec-2021 11:10:43 UTC] PHP   1. {main}() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-admin/edit.php:0
+[09-Dec-2021 11:10:43 UTC] PHP   2. require_once() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-admin/edit.php:10
+[09-Dec-2021 11:10:43 UTC] PHP   3. require_once() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-admin/admin.php:34
+[09-Dec-2021 11:10:43 UTC] PHP   4. require_once() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-load.php:50
+[09-Dec-2021 11:10:43 UTC] PHP   5. require_once() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-config.php:77
+[09-Dec-2021 11:10:43 UTC] PHP   6. do_action() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-settings.php:578
+[09-Dec-2021 11:10:43 UTC] PHP   7. WP_Hook->do_action() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-includes/plugin.php:470
+[09-Dec-2021 11:10:43 UTC] PHP   8. WP_Hook->apply_filters() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-includes/class-wp-hook.php:327
+[09-Dec-2021 11:10:44 UTC] PHP Warning:  call_user_func_array() expects parameter 1 to be a valid callback, function 'lf_recherche_rpt' not found or invalid function name in /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-includes/class-wp-hook.php on line 303
+[09-Dec-2021 11:10:44 UTC] PHP Stack trace:
+[09-Dec-2021 11:10:44 UTC] PHP   1. {main}() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/index.php:0
+[09-Dec-2021 11:10:44 UTC] PHP   2. require() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/index.php:17
+[09-Dec-2021 11:10:44 UTC] PHP   3. require_once() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-blog-header.php:13
+[09-Dec-2021 11:10:44 UTC] PHP   4. require_once() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-load.php:50
+[09-Dec-2021 11:10:44 UTC] PHP   5. require_once() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-config.php:77
+[09-Dec-2021 11:10:44 UTC] PHP   6. do_action() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-settings.php:578
+[09-Dec-2021 11:10:44 UTC] PHP   7. WP_Hook->do_action() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-includes/plugin.php:470
+[09-Dec-2021 11:10:44 UTC] PHP   8. WP_Hook->apply_filters() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-includes/class-wp-hook.php:327
+[09-Dec-2021 11:10:45 UTC] PHP Warning:  call_user_func_array() expects parameter 1 to be a valid callback, function 'lf_recherche_rpt' not found or invalid function name in /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-includes/class-wp-hook.php on line 303
+[09-Dec-2021 11:10:45 UTC] PHP Stack trace:
+[09-Dec-2021 11:10:45 UTC] PHP   1. {main}() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-admin/edit.php:0
+[09-Dec-2021 11:10:45 UTC] PHP   2. require_once() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-admin/edit.php:10
+[09-Dec-2021 11:10:45 UTC] PHP   3. require_once() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-admin/admin.php:34
+[09-Dec-2021 11:10:45 UTC] PHP   4. require_once() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-load.php:50
+[09-Dec-2021 11:10:45 UTC] PHP   5. require_once() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-config.php:77
+[09-Dec-2021 11:10:45 UTC] PHP   6. do_action() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-settings.php:578
+[09-Dec-2021 11:10:45 UTC] PHP   7. WP_Hook->do_action() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-includes/plugin.php:470
+[09-Dec-2021 11:10:45 UTC] PHP   8. WP_Hook->apply_filters() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-includes/class-wp-hook.php:327
+[09-Dec-2021 11:10:45 UTC] PHP Warning:  call_user_func_array() expects parameter 1 to be a valid callback, function 'lf_recherche_rpt' not found or invalid function name in /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-includes/class-wp-hook.php on line 303
+[09-Dec-2021 11:10:45 UTC] PHP Stack trace:
+[09-Dec-2021 11:10:45 UTC] PHP   1. {main}() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/index.php:0
+[09-Dec-2021 11:10:45 UTC] PHP   2. require() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/index.php:17
+[09-Dec-2021 11:10:45 UTC] PHP   3. require_once() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-blog-header.php:13
+[09-Dec-2021 11:10:45 UTC] PHP   4. require_once() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-load.php:50
+[09-Dec-2021 11:10:45 UTC] PHP   5. require_once() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-config.php:77
+[09-Dec-2021 11:10:45 UTC] PHP   6. do_action() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-settings.php:578
+[09-Dec-2021 11:10:45 UTC] PHP   7. WP_Hook->do_action() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-includes/plugin.php:470
+[09-Dec-2021 11:10:45 UTC] PHP   8. WP_Hook->apply_filters() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-includes/class-wp-hook.php:327
+[09-Dec-2021 13:51:44 UTC] PHP Warning:  Use of undefined constant ‘show_in_rest’ - assumed '‘show_in_rest’' (this will throw an Error in a future version of PHP) in /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-content/themes/lieuxfauves/functions.php on line 144
+[09-Dec-2021 13:51:44 UTC] PHP Stack trace:
+[09-Dec-2021 13:51:44 UTC] PHP   1. {main}() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-admin/admin-ajax.php:0
+[09-Dec-2021 13:51:44 UTC] PHP   2. require_once() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-admin/admin-ajax.php:22
+[09-Dec-2021 13:51:44 UTC] PHP   3. require_once() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-load.php:50
+[09-Dec-2021 13:51:44 UTC] PHP   4. require_once() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-config.php:77
+[09-Dec-2021 13:51:44 UTC] PHP   5. do_action() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-settings.php:578
+[09-Dec-2021 13:51:44 UTC] PHP   6. WP_Hook->do_action() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-includes/plugin.php:470
+[09-Dec-2021 13:51:44 UTC] PHP   7. WP_Hook->apply_filters() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-includes/class-wp-hook.php:327
+[09-Dec-2021 13:51:44 UTC] PHP   8. wpm_add_taxonomies() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-includes/class-wp-hook.php:303
+[09-Dec-2021 13:51:45 UTC] PHP Warning:  Use of undefined constant ‘show_in_rest’ - assumed '‘show_in_rest’' (this will throw an Error in a future version of PHP) in /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-content/themes/lieuxfauves/functions.php on line 144
+[09-Dec-2021 13:51:45 UTC] PHP Stack trace:
+[09-Dec-2021 13:51:45 UTC] PHP   1. {main}() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-admin/edit.php:0
+[09-Dec-2021 13:51:45 UTC] PHP   2. require_once() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-admin/edit.php:10
+[09-Dec-2021 13:51:45 UTC] PHP   3. require_once() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-admin/admin.php:34
+[09-Dec-2021 13:51:45 UTC] PHP   4. require_once() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-load.php:50
+[09-Dec-2021 13:51:45 UTC] PHP   5. require_once() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-config.php:77
+[09-Dec-2021 13:51:45 UTC] PHP   6. do_action() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-settings.php:578
+[09-Dec-2021 13:51:45 UTC] PHP   7. WP_Hook->do_action() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-includes/plugin.php:470
+[09-Dec-2021 13:51:45 UTC] PHP   8. WP_Hook->apply_filters() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-includes/class-wp-hook.php:327
+[09-Dec-2021 13:51:45 UTC] PHP   9. wpm_add_taxonomies() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-includes/class-wp-hook.php:303
+[09-Dec-2021 13:51:45 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-content/themes/lieuxfauves/functions.php:144) in /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-includes/functions.php on line 6712
+[09-Dec-2021 13:51:45 UTC] PHP Stack trace:
+[09-Dec-2021 13:51:45 UTC] PHP   1. {main}() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-admin/edit.php:0
+[09-Dec-2021 13:51:45 UTC] PHP   2. require_once() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-admin/edit.php:10
+[09-Dec-2021 13:51:45 UTC] PHP   3. do_action() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-admin/admin.php:175
+[09-Dec-2021 13:51:45 UTC] PHP   4. WP_Hook->do_action() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-includes/plugin.php:470
+[09-Dec-2021 13:51:45 UTC] PHP   5. WP_Hook->apply_filters() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-includes/class-wp-hook.php:327
+[09-Dec-2021 13:51:45 UTC] PHP   6. send_frame_options_header() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-includes/class-wp-hook.php:301
+[09-Dec-2021 13:51:45 UTC] PHP   7. header() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-includes/functions.php:6712
+[09-Dec-2021 13:51:45 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-content/themes/lieuxfauves/functions.php:144) in /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-admin/includes/misc.php on line 1310
+[09-Dec-2021 13:51:45 UTC] PHP Stack trace:
+[09-Dec-2021 13:51:45 UTC] PHP   1. {main}() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-admin/edit.php:0
+[09-Dec-2021 13:51:45 UTC] PHP   2. require_once() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-admin/edit.php:10
+[09-Dec-2021 13:51:45 UTC] PHP   3. do_action() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-admin/admin.php:175
+[09-Dec-2021 13:51:45 UTC] PHP   4. WP_Hook->do_action() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-includes/plugin.php:470
+[09-Dec-2021 13:51:45 UTC] PHP   5. WP_Hook->apply_filters() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-includes/class-wp-hook.php:327
+[09-Dec-2021 13:51:45 UTC] PHP   6. wp_admin_headers() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-includes/class-wp-hook.php:303
+[09-Dec-2021 13:51:45 UTC] PHP   7. header() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-admin/includes/misc.php:1310
+[09-Dec-2021 13:51:45 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-content/themes/lieuxfauves/functions.php:144) in /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-admin/admin-header.php on line 9
+[09-Dec-2021 13:51:45 UTC] PHP Stack trace:
+[09-Dec-2021 13:51:45 UTC] PHP   1. {main}() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-admin/edit.php:0
+[09-Dec-2021 13:51:45 UTC] PHP   2. require_once() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-admin/edit.php:396
+[09-Dec-2021 13:51:45 UTC] PHP   3. header() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-admin/admin-header.php:9
+[09-Dec-2021 13:51:45 UTC] PHP Warning:  Use of undefined constant ‘show_in_rest’ - assumed '‘show_in_rest’' (this will throw an Error in a future version of PHP) in /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-content/themes/lieuxfauves/functions.php on line 144
+[09-Dec-2021 13:51:45 UTC] PHP Stack trace:
+[09-Dec-2021 13:51:45 UTC] PHP   1. {main}() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/index.php:0
+[09-Dec-2021 13:51:45 UTC] PHP   2. require() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/index.php:17
+[09-Dec-2021 13:51:45 UTC] PHP   3. require_once() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-blog-header.php:13
+[09-Dec-2021 13:51:45 UTC] PHP   4. require_once() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-load.php:50
+[09-Dec-2021 13:51:45 UTC] PHP   5. require_once() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-config.php:77
+[09-Dec-2021 13:51:45 UTC] PHP   6. do_action() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-settings.php:578
+[09-Dec-2021 13:51:45 UTC] PHP   7. WP_Hook->do_action() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-includes/plugin.php:470
+[09-Dec-2021 13:51:45 UTC] PHP   8. WP_Hook->apply_filters() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-includes/class-wp-hook.php:327
+[09-Dec-2021 13:51:45 UTC] PHP   9. wpm_add_taxonomies() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-includes/class-wp-hook.php:303
+[09-Dec-2021 13:51:45 UTC] PHP Warning:  Use of undefined constant ‘show_in_rest’ - assumed '‘show_in_rest’' (this will throw an Error in a future version of PHP) in /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-content/themes/lieuxfauves/functions.php on line 144
+[09-Dec-2021 13:51:45 UTC] PHP Stack trace:
+[09-Dec-2021 13:51:45 UTC] PHP   1. {main}() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-admin/admin-ajax.php:0
+[09-Dec-2021 13:51:45 UTC] PHP   2. require_once() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-admin/admin-ajax.php:22
+[09-Dec-2021 13:51:45 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-content/themes/lieuxfauves/functions.php:144) in /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-includes/pluggable.php on line 1340
+[09-Dec-2021 13:51:45 UTC] PHP Stack trace:
+[09-Dec-2021 13:51:45 UTC] PHP   3. require_once() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-load.php:50
+[09-Dec-2021 13:51:45 UTC] PHP   4. require_once() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-config.php:77
+[09-Dec-2021 13:51:45 UTC] PHP   1. {main}() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/index.php:0
+[09-Dec-2021 13:51:45 UTC] PHP   5. do_action() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-settings.php:578
+[09-Dec-2021 13:51:45 UTC] PHP   2. require() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/index.php:17
+[09-Dec-2021 13:51:45 UTC] PHP   6. WP_Hook->do_action() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-includes/plugin.php:470
+[09-Dec-2021 13:51:45 UTC] PHP   7. WP_Hook->apply_filters() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-includes/class-wp-hook.php:327
+[09-Dec-2021 13:51:45 UTC] PHP   3. require_once() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-blog-header.php:19
+[09-Dec-2021 13:51:45 UTC] PHP   8. wpm_add_taxonomies() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-includes/class-wp-hook.php:303
+[09-Dec-2021 13:51:45 UTC] PHP   4. do_action() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-includes/template-loader.php:45
+[09-Dec-2021 13:51:45 UTC] PHP   5. WP_Hook->do_action() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-includes/plugin.php:470
+[09-Dec-2021 13:51:45 UTC] PHP   6. WP_Hook->apply_filters() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-includes/class-wp-hook.php:327
+[09-Dec-2021 13:51:45 UTC] PHP   7. do_favicon() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-includes/class-wp-hook.php:303
+[09-Dec-2021 13:51:45 UTC] PHP   8. wp_redirect() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-includes/functions.php:1694
+[09-Dec-2021 13:51:45 UTC] PHP   9. header() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-includes/pluggable.php:1340
+[09-Dec-2021 13:51:45 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-content/themes/lieuxfauves/functions.php:144) in /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-includes/pluggable.php on line 1343
+[09-Dec-2021 13:51:45 UTC] PHP Stack trace:
+[09-Dec-2021 13:51:45 UTC] PHP   1. {main}() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/index.php:0
+[09-Dec-2021 13:51:45 UTC] PHP   2. require() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/index.php:17
+[09-Dec-2021 13:51:45 UTC] PHP   3. require_once() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-blog-header.php:19
+[09-Dec-2021 13:51:45 UTC] PHP   4. do_action() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-includes/template-loader.php:45
+[09-Dec-2021 13:51:45 UTC] PHP   5. WP_Hook->do_action() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-includes/plugin.php:470
+[09-Dec-2021 13:51:45 UTC] PHP   6. WP_Hook->apply_filters() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-includes/class-wp-hook.php:327
+[09-Dec-2021 13:51:45 UTC] PHP   7. do_favicon() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-includes/class-wp-hook.php:303
+[09-Dec-2021 13:51:45 UTC] PHP   8. wp_redirect() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-includes/functions.php:1694
+[09-Dec-2021 13:51:45 UTC] PHP   9. header() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-includes/pluggable.php:1343
+[09-Dec-2021 13:52:00 UTC] PHP Parse error:  syntax error, unexpected 'show_admin_column' (T_STRING), expecting ')' in /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-content/themes/lieuxfauves/functions.php on line 145
+[09-Dec-2021 13:53:14 UTC] PHP Warning:  Use of undefined constant ‘show_in_rest’ - assumed '‘show_in_rest’' (this will throw an Error in a future version of PHP) in /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-content/themes/lieuxfauves/functions.php on line 142
+[09-Dec-2021 13:53:14 UTC] PHP Stack trace:
+[09-Dec-2021 13:53:14 UTC] PHP   1. {main}() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-admin/admin-ajax.php:0
+[09-Dec-2021 13:53:14 UTC] PHP   2. require_once() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-admin/admin-ajax.php:22
+[09-Dec-2021 13:53:14 UTC] PHP   3. require_once() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-load.php:50
+[09-Dec-2021 13:53:14 UTC] PHP   4. require_once() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-config.php:77
+[09-Dec-2021 13:53:14 UTC] PHP   5. do_action() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-settings.php:578
+[09-Dec-2021 13:53:14 UTC] PHP   6. WP_Hook->do_action() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-includes/plugin.php:470
+[09-Dec-2021 13:53:14 UTC] PHP   7. WP_Hook->apply_filters() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-includes/class-wp-hook.php:327
+[09-Dec-2021 13:53:14 UTC] PHP   8. wpm_add_taxonomies() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-includes/class-wp-hook.php:303
+[09-Dec-2021 14:22:39 UTC] PHP Parse error:  syntax error, unexpected '}', expecting end of file in /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-content/themes/lieuxfauves/functions.php on line 182
+[09-Dec-2021 14:24:39 UTC] PHP Parse error:  syntax error, unexpected '}', expecting end of file in /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-content/themes/lieuxfauves/functions.php on line 182
+[10-Jan-2022 14:17:08 UTC] PHP Warning:  Illegal string offset 'url' in /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-content/themes/lieuxfauves/front-page.php on line 17
+[10-Jan-2022 14:17:08 UTC] PHP Stack trace:
+[10-Jan-2022 14:17:08 UTC] PHP   1. {main}() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/index.php:0
+[10-Jan-2022 14:17:08 UTC] PHP   2. require() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/index.php:17
+[10-Jan-2022 14:17:08 UTC] PHP   3. require_once() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-blog-header.php:19
+[10-Jan-2022 14:17:08 UTC] PHP   4. include() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-includes/template-loader.php:106
+[10-Jan-2022 14:17:28 UTC] PHP Warning:  Illegal string offset 'url' in /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-content/themes/lieuxfauves/front-page.php on line 17
+[10-Jan-2022 14:17:28 UTC] PHP Stack trace:
+[10-Jan-2022 14:17:28 UTC] PHP   1. {main}() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/index.php:0
+[10-Jan-2022 14:17:28 UTC] PHP   2. require() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/index.php:17
+[10-Jan-2022 14:17:28 UTC] PHP   3. require_once() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-blog-header.php:19
+[10-Jan-2022 14:17:28 UTC] PHP   4. include() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-includes/template-loader.php:106
+[10-Jan-2022 14:29:44 UTC] PHP Fatal error:  Cannot redeclare get_group_field() (previously declared in /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-content/themes/lieuxfauves/functions.php:220) in /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-content/themes/lieuxfauves/front-page.php on line 20
+[10-Jan-2022 14:29:44 UTC] PHP Stack trace:
+[10-Jan-2022 14:29:44 UTC] PHP   1. {main}() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/index.php:0
+[10-Jan-2022 14:29:44 UTC] PHP   2. require() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/index.php:17
+[10-Jan-2022 14:29:44 UTC] PHP   3. require_once() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-blog-header.php:19
+[10-Jan-2022 14:29:44 UTC] PHP   4. include() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-includes/template-loader.php:106
+[10-Jan-2022 15:50:19 UTC] PHP Warning:  Illegal string offset 'url' in /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-content/themes/lieuxfauves/front-page.php on line 81
+[10-Jan-2022 15:50:19 UTC] PHP Stack trace:
+[10-Jan-2022 15:50:19 UTC] PHP   1. {main}() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/index.php:0
+[10-Jan-2022 15:50:19 UTC] PHP   2. require() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/index.php:17
+[10-Jan-2022 15:50:19 UTC] PHP   3. require_once() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-blog-header.php:19
+[10-Jan-2022 15:50:19 UTC] PHP   4. include() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-includes/template-loader.php:106
+[10-Jan-2022 15:50:19 UTC] PHP Warning:  Illegal string offset 'alt' in /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-content/themes/lieuxfauves/front-page.php on line 81
+[10-Jan-2022 15:50:19 UTC] PHP Stack trace:
+[10-Jan-2022 15:50:19 UTC] PHP   1. {main}() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/index.php:0
+[10-Jan-2022 15:50:19 UTC] PHP   2. require() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/index.php:17
+[10-Jan-2022 15:50:19 UTC] PHP   3. require_once() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-blog-header.php:19
+[10-Jan-2022 15:50:19 UTC] PHP   4. include() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-includes/template-loader.php:106
+[10-Jan-2022 15:52:42 UTC] PHP Warning:  Illegal string offset 'url' in /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-content/themes/lieuxfauves/front-page.php on line 81
+[10-Jan-2022 15:52:42 UTC] PHP Stack trace:
+[10-Jan-2022 15:52:42 UTC] PHP   1. {main}() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/index.php:0
+[10-Jan-2022 15:52:42 UTC] PHP   2. require() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/index.php:17
+[10-Jan-2022 15:52:42 UTC] PHP   3. require_once() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-blog-header.php:19
+[10-Jan-2022 15:52:42 UTC] PHP   4. include() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-includes/template-loader.php:106
+[10-Jan-2022 15:52:42 UTC] PHP Warning:  Illegal string offset 'alt' in /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-content/themes/lieuxfauves/front-page.php on line 81
+[10-Jan-2022 15:52:42 UTC] PHP Stack trace:
+[10-Jan-2022 15:52:42 UTC] PHP   1. {main}() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/index.php:0
+[10-Jan-2022 15:52:42 UTC] PHP   2. require() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/index.php:17
+[10-Jan-2022 15:52:42 UTC] PHP   3. require_once() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-blog-header.php:19
+[10-Jan-2022 15:52:42 UTC] PHP   4. include() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-includes/template-loader.php:106
+[10-Jan-2022 15:53:33 UTC] PHP Warning:  Illegal string offset 'url' in /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-content/themes/lieuxfauves/front-page.php on line 81
+[10-Jan-2022 15:53:33 UTC] PHP Stack trace:
+[10-Jan-2022 15:53:33 UTC] PHP   1. {main}() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/index.php:0
+[10-Jan-2022 15:53:33 UTC] PHP   2. require() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/index.php:17
+[10-Jan-2022 15:53:33 UTC] PHP   3. require_once() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-blog-header.php:19
+[10-Jan-2022 15:53:33 UTC] PHP   4. include() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-includes/template-loader.php:106
+[10-Jan-2022 15:53:33 UTC] PHP Warning:  Illegal string offset 'alt' in /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-content/themes/lieuxfauves/front-page.php on line 81
+[10-Jan-2022 15:53:33 UTC] PHP Stack trace:
+[10-Jan-2022 15:53:33 UTC] PHP   1. {main}() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/index.php:0
+[10-Jan-2022 15:53:33 UTC] PHP   2. require() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/index.php:17
+[10-Jan-2022 15:53:33 UTC] PHP   3. require_once() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-blog-header.php:19
+[10-Jan-2022 15:53:33 UTC] PHP   4. include() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-includes/template-loader.php:106
+[10-Jan-2022 15:54:44 UTC] PHP Warning:  Illegal string offset 'url' in /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-content/themes/lieuxfauves/front-page.php on line 82
+[10-Jan-2022 15:54:44 UTC] PHP Stack trace:
+[10-Jan-2022 15:54:44 UTC] PHP   1. {main}() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/index.php:0
+[10-Jan-2022 15:54:44 UTC] PHP   2. require() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/index.php:17
+[10-Jan-2022 15:54:44 UTC] PHP   3. require_once() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-blog-header.php:19
+[10-Jan-2022 15:54:44 UTC] PHP   4. include() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-includes/template-loader.php:106
+[10-Jan-2022 15:54:44 UTC] PHP Warning:  Illegal string offset 'alt' in /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-content/themes/lieuxfauves/front-page.php on line 82
+[10-Jan-2022 15:54:44 UTC] PHP Stack trace:
+[10-Jan-2022 15:54:44 UTC] PHP   1. {main}() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/index.php:0
+[10-Jan-2022 15:54:44 UTC] PHP   2. require() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/index.php:17
+[10-Jan-2022 15:54:44 UTC] PHP   3. require_once() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-blog-header.php:19
+[10-Jan-2022 15:54:44 UTC] PHP   4. include() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-includes/template-loader.php:106
+[10-Jan-2022 15:54:50 UTC] PHP Warning:  Illegal string offset 'url' in /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-content/themes/lieuxfauves/front-page.php on line 82
+[10-Jan-2022 15:54:50 UTC] PHP Stack trace:
+[10-Jan-2022 15:54:50 UTC] PHP   1. {main}() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/index.php:0
+[10-Jan-2022 15:54:50 UTC] PHP   2. require() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/index.php:17
+[10-Jan-2022 15:54:50 UTC] PHP   3. require_once() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-blog-header.php:19
+[10-Jan-2022 15:54:50 UTC] PHP   4. include() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-includes/template-loader.php:106
+[10-Jan-2022 15:54:50 UTC] PHP Warning:  Illegal string offset 'alt' in /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-content/themes/lieuxfauves/front-page.php on line 82
+[10-Jan-2022 15:54:50 UTC] PHP Stack trace:
+[10-Jan-2022 15:54:50 UTC] PHP   1. {main}() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/index.php:0
+[10-Jan-2022 15:54:50 UTC] PHP   2. require() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/index.php:17
+[10-Jan-2022 15:54:50 UTC] PHP   3. require_once() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-blog-header.php:19
+[10-Jan-2022 15:54:50 UTC] PHP   4. include() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-includes/template-loader.php:106
+[10-Jan-2022 15:55:04 UTC] PHP Warning:  Illegal string offset 'url' in /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-content/themes/lieuxfauves/front-page.php on line 82
+[10-Jan-2022 15:55:04 UTC] PHP Stack trace:
+[10-Jan-2022 15:55:04 UTC] PHP   1. {main}() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/index.php:0
+[10-Jan-2022 15:55:04 UTC] PHP   2. require() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/index.php:17
+[10-Jan-2022 15:55:04 UTC] PHP   3. require_once() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-blog-header.php:19
+[10-Jan-2022 15:55:04 UTC] PHP   4. include() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-includes/template-loader.php:106
+[10-Jan-2022 15:55:04 UTC] PHP Warning:  Illegal string offset 'alt' in /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-content/themes/lieuxfauves/front-page.php on line 82
+[10-Jan-2022 15:55:04 UTC] PHP Stack trace:
+[10-Jan-2022 15:55:04 UTC] PHP   1. {main}() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/index.php:0
+[10-Jan-2022 15:55:04 UTC] PHP   2. require() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/index.php:17
+[10-Jan-2022 15:55:04 UTC] PHP   3. require_once() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-blog-header.php:19
+[10-Jan-2022 15:55:04 UTC] PHP   4. include() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-includes/template-loader.php:106
+[10-Jan-2022 15:55:42 UTC] PHP Warning:  Illegal string offset 'url' in /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-content/themes/lieuxfauves/front-page.php on line 83
+[10-Jan-2022 15:55:42 UTC] PHP Stack trace:
+[10-Jan-2022 15:55:42 UTC] PHP   1. {main}() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/index.php:0
+[10-Jan-2022 15:55:42 UTC] PHP   2. require() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/index.php:17
+[10-Jan-2022 15:55:42 UTC] PHP   3. require_once() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-blog-header.php:19
+[10-Jan-2022 15:55:42 UTC] PHP   4. include() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-includes/template-loader.php:106
+[10-Jan-2022 15:55:42 UTC] PHP Warning:  Illegal string offset 'alt' in /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-content/themes/lieuxfauves/front-page.php on line 83
+[10-Jan-2022 15:55:42 UTC] PHP Stack trace:
+[10-Jan-2022 15:55:42 UTC] PHP   1. {main}() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/index.php:0
+[10-Jan-2022 15:55:42 UTC] PHP   2. require() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/index.php:17
+[10-Jan-2022 15:55:42 UTC] PHP   3. require_once() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-blog-header.php:19
+[10-Jan-2022 15:55:42 UTC] PHP   4. include() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-includes/template-loader.php:106
+[10-Jan-2022 15:55:46 UTC] PHP Warning:  Illegal string offset 'url' in /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-content/themes/lieuxfauves/front-page.php on line 83
+[10-Jan-2022 15:55:46 UTC] PHP Stack trace:
+[10-Jan-2022 15:55:46 UTC] PHP   1. {main}() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/index.php:0
+[10-Jan-2022 15:55:46 UTC] PHP   2. require() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/index.php:17
+[10-Jan-2022 15:55:46 UTC] PHP   3. require_once() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-blog-header.php:19
+[10-Jan-2022 15:55:46 UTC] PHP   4. include() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-includes/template-loader.php:106
+[10-Jan-2022 15:55:46 UTC] PHP Warning:  Illegal string offset 'alt' in /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-content/themes/lieuxfauves/front-page.php on line 83
+[10-Jan-2022 15:55:46 UTC] PHP Stack trace:
+[10-Jan-2022 15:55:46 UTC] PHP   1. {main}() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/index.php:0
+[10-Jan-2022 15:55:46 UTC] PHP   2. require() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/index.php:17
+[10-Jan-2022 15:55:46 UTC] PHP   3. require_once() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-blog-header.php:19
+[10-Jan-2022 15:55:46 UTC] PHP   4. include() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-includes/template-loader.php:106
+[10-Jan-2022 15:56:08 UTC] PHP Warning:  Illegal string offset 'url' in /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-content/themes/lieuxfauves/front-page.php on line 83
+[10-Jan-2022 15:56:08 UTC] PHP Stack trace:
+[10-Jan-2022 15:56:08 UTC] PHP   1. {main}() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/index.php:0
+[10-Jan-2022 15:56:08 UTC] PHP   2. require() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/index.php:17
+[10-Jan-2022 15:56:08 UTC] PHP   3. require_once() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-blog-header.php:19
+[10-Jan-2022 15:56:08 UTC] PHP   4. include() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-includes/template-loader.php:106
+[10-Jan-2022 15:56:08 UTC] PHP Warning:  Illegal string offset 'alt' in /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-content/themes/lieuxfauves/front-page.php on line 83
+[10-Jan-2022 15:56:08 UTC] PHP Stack trace:
+[10-Jan-2022 15:56:08 UTC] PHP   1. {main}() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/index.php:0
+[10-Jan-2022 15:56:08 UTC] PHP   2. require() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/index.php:17
+[10-Jan-2022 15:56:08 UTC] PHP   3. require_once() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-blog-header.php:19
+[10-Jan-2022 15:56:08 UTC] PHP   4. include() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-includes/template-loader.php:106
+[10-Jan-2022 15:56:38 UTC] PHP Warning:  Illegal string offset 'url' in /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-content/themes/lieuxfauves/front-page.php on line 83
+[10-Jan-2022 15:56:38 UTC] PHP Stack trace:
+[10-Jan-2022 15:56:38 UTC] PHP   1. {main}() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/index.php:0
+[10-Jan-2022 15:56:38 UTC] PHP   2. require() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/index.php:17
+[10-Jan-2022 15:56:38 UTC] PHP   3. require_once() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-blog-header.php:19
+[10-Jan-2022 15:56:38 UTC] PHP   4. include() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-includes/template-loader.php:106
+[10-Jan-2022 15:56:38 UTC] PHP Warning:  Illegal string offset 'alt' in /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-content/themes/lieuxfauves/front-page.php on line 83
+[10-Jan-2022 15:56:38 UTC] PHP Stack trace:
+[10-Jan-2022 15:56:38 UTC] PHP   1. {main}() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/index.php:0
+[10-Jan-2022 15:56:38 UTC] PHP   2. require() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/index.php:17
+[10-Jan-2022 15:56:38 UTC] PHP   3. require_once() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-blog-header.php:19
+[10-Jan-2022 15:56:38 UTC] PHP   4. include() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-includes/template-loader.php:106
+[10-Jan-2022 15:56:43 UTC] PHP Warning:  Illegal string offset 'url' in /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-content/themes/lieuxfauves/front-page.php on line 83
+[10-Jan-2022 15:56:43 UTC] PHP Stack trace:
+[10-Jan-2022 15:56:43 UTC] PHP   1. {main}() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/index.php:0
+[10-Jan-2022 15:56:43 UTC] PHP   2. require() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/index.php:17
+[10-Jan-2022 15:56:43 UTC] PHP   3. require_once() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-blog-header.php:19
+[10-Jan-2022 15:56:43 UTC] PHP   4. include() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-includes/template-loader.php:106
+[10-Jan-2022 15:56:43 UTC] PHP Warning:  Illegal string offset 'alt' in /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-content/themes/lieuxfauves/front-page.php on line 83
+[10-Jan-2022 15:56:43 UTC] PHP Stack trace:
+[10-Jan-2022 15:56:43 UTC] PHP   1. {main}() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/index.php:0
+[10-Jan-2022 15:56:43 UTC] PHP   2. require() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/index.php:17
+[10-Jan-2022 15:56:43 UTC] PHP   3. require_once() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-blog-header.php:19
+[10-Jan-2022 15:56:43 UTC] PHP   4. include() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-includes/template-loader.php:106
+[10-Jan-2022 15:57:21 UTC] PHP Warning:  Illegal string offset 'url' in /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-content/themes/lieuxfauves/front-page.php on line 83
+[10-Jan-2022 15:57:21 UTC] PHP Stack trace:
+[10-Jan-2022 15:57:21 UTC] PHP   1. {main}() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/index.php:0
+[10-Jan-2022 15:57:21 UTC] PHP   2. require() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/index.php:17
+[10-Jan-2022 15:57:21 UTC] PHP   3. require_once() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-blog-header.php:19
+[10-Jan-2022 15:57:21 UTC] PHP   4. include() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-includes/template-loader.php:106
+[10-Jan-2022 15:57:21 UTC] PHP Warning:  Illegal string offset 'alt' in /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-content/themes/lieuxfauves/front-page.php on line 83
+[10-Jan-2022 15:57:21 UTC] PHP Stack trace:
+[10-Jan-2022 15:57:21 UTC] PHP   1. {main}() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/index.php:0
+[10-Jan-2022 15:57:21 UTC] PHP   2. require() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/index.php:17
+[10-Jan-2022 15:57:21 UTC] PHP   3. require_once() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-blog-header.php:19
+[10-Jan-2022 15:57:21 UTC] PHP   4. include() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-includes/template-loader.php:106
+[10-Jan-2022 15:58:29 UTC] PHP Warning:  Illegal string offset 'url' in /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-content/themes/lieuxfauves/front-page.php on line 83
+[10-Jan-2022 15:58:29 UTC] PHP Stack trace:
+[10-Jan-2022 15:58:29 UTC] PHP   1. {main}() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/index.php:0
+[10-Jan-2022 15:58:29 UTC] PHP   2. require() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/index.php:17
+[10-Jan-2022 15:58:29 UTC] PHP   3. require_once() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-blog-header.php:19
+[10-Jan-2022 15:58:29 UTC] PHP   4. include() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-includes/template-loader.php:106
+[10-Jan-2022 15:58:29 UTC] PHP Warning:  Illegal string offset 'alt' in /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-content/themes/lieuxfauves/front-page.php on line 83
+[10-Jan-2022 15:58:29 UTC] PHP Stack trace:
+[10-Jan-2022 15:58:29 UTC] PHP   1. {main}() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/index.php:0
+[10-Jan-2022 15:58:29 UTC] PHP   2. require() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/index.php:17
+[10-Jan-2022 15:58:29 UTC] PHP   3. require_once() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-blog-header.php:19
+[10-Jan-2022 15:58:29 UTC] PHP   4. include() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-includes/template-loader.php:106
+[10-Jan-2022 16:02:02 UTC] PHP Warning:  Illegal string offset 'url' in /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-content/themes/lieuxfauves/front-page.php on line 84
+[10-Jan-2022 16:02:02 UTC] PHP Stack trace:
+[10-Jan-2022 16:02:02 UTC] PHP   1. {main}() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/index.php:0
+[10-Jan-2022 16:02:02 UTC] PHP   2. require() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/index.php:17
+[10-Jan-2022 16:02:02 UTC] PHP   3. require_once() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-blog-header.php:19
+[10-Jan-2022 16:02:02 UTC] PHP   4. include() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-includes/template-loader.php:106
+[10-Jan-2022 16:02:02 UTC] PHP Warning:  Illegal string offset 'alt' in /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-content/themes/lieuxfauves/front-page.php on line 84
+[10-Jan-2022 16:02:02 UTC] PHP Stack trace:
+[10-Jan-2022 16:02:02 UTC] PHP   1. {main}() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/index.php:0
+[10-Jan-2022 16:02:02 UTC] PHP   2. require() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/index.php:17
+[10-Jan-2022 16:02:02 UTC] PHP   3. require_once() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-blog-header.php:19
+[10-Jan-2022 16:02:02 UTC] PHP   4. include() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-includes/template-loader.php:106
+[10-Jan-2022 16:02:07 UTC] PHP Warning:  Illegal string offset 'url' in /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-content/themes/lieuxfauves/front-page.php on line 84
+[10-Jan-2022 16:02:07 UTC] PHP Stack trace:
+[10-Jan-2022 16:02:07 UTC] PHP   1. {main}() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/index.php:0
+[10-Jan-2022 16:02:07 UTC] PHP   2. require() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/index.php:17
+[10-Jan-2022 16:02:07 UTC] PHP   3. require_once() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-blog-header.php:19
+[10-Jan-2022 16:02:07 UTC] PHP   4. include() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-includes/template-loader.php:106
+[10-Jan-2022 16:02:07 UTC] PHP Warning:  Illegal string offset 'alt' in /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-content/themes/lieuxfauves/front-page.php on line 84
+[10-Jan-2022 16:02:07 UTC] PHP Stack trace:
+[10-Jan-2022 16:02:07 UTC] PHP   1. {main}() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/index.php:0
+[10-Jan-2022 16:02:07 UTC] PHP   2. require() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/index.php:17
+[10-Jan-2022 16:02:07 UTC] PHP   3. require_once() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-blog-header.php:19
+[10-Jan-2022 16:02:07 UTC] PHP   4. include() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-includes/template-loader.php:106
+[10-Jan-2022 16:02:25 UTC] PHP Warning:  Illegal string offset 'url' in /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-content/themes/lieuxfauves/front-page.php on line 84
+[10-Jan-2022 16:02:25 UTC] PHP Stack trace:
+[10-Jan-2022 16:02:25 UTC] PHP   1. {main}() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/index.php:0
+[10-Jan-2022 16:02:25 UTC] PHP   2. require() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/index.php:17
+[10-Jan-2022 16:02:25 UTC] PHP   3. require_once() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-blog-header.php:19
+[10-Jan-2022 16:02:25 UTC] PHP   4. include() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-includes/template-loader.php:106
+[10-Jan-2022 16:02:25 UTC] PHP Warning:  Illegal string offset 'alt' in /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-content/themes/lieuxfauves/front-page.php on line 84
+[10-Jan-2022 16:02:25 UTC] PHP Stack trace:
+[10-Jan-2022 16:02:25 UTC] PHP   1. {main}() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/index.php:0
+[10-Jan-2022 16:02:25 UTC] PHP   2. require() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/index.php:17
+[10-Jan-2022 16:02:25 UTC] PHP   3. require_once() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-blog-header.php:19
+[10-Jan-2022 16:02:25 UTC] PHP   4. include() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-includes/template-loader.php:106
+[10-Jan-2022 16:02:29 UTC] PHP Warning:  Illegal string offset 'url' in /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-content/themes/lieuxfauves/front-page.php on line 84
+[10-Jan-2022 16:02:29 UTC] PHP Stack trace:
+[10-Jan-2022 16:02:29 UTC] PHP   1. {main}() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/index.php:0
+[10-Jan-2022 16:02:29 UTC] PHP   2. require() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/index.php:17
+[10-Jan-2022 16:02:29 UTC] PHP   3. require_once() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-blog-header.php:19
+[10-Jan-2022 16:02:29 UTC] PHP   4. include() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-includes/template-loader.php:106
+[10-Jan-2022 16:02:29 UTC] PHP Warning:  Illegal string offset 'alt' in /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-content/themes/lieuxfauves/front-page.php on line 84
+[10-Jan-2022 16:02:29 UTC] PHP Stack trace:
+[10-Jan-2022 16:02:29 UTC] PHP   1. {main}() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/index.php:0
+[10-Jan-2022 16:02:29 UTC] PHP   2. require() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/index.php:17
+[10-Jan-2022 16:02:29 UTC] PHP   3. require_once() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-blog-header.php:19
+[10-Jan-2022 16:02:29 UTC] PHP   4. include() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-includes/template-loader.php:106
+[10-Jan-2022 16:02:46 UTC] PHP Warning:  Illegal string offset 'url' in /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-content/themes/lieuxfauves/front-page.php on line 84
+[10-Jan-2022 16:02:46 UTC] PHP Stack trace:
+[10-Jan-2022 16:02:46 UTC] PHP   1. {main}() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/index.php:0
+[10-Jan-2022 16:02:46 UTC] PHP   2. require() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/index.php:17
+[10-Jan-2022 16:02:46 UTC] PHP   3. require_once() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-blog-header.php:19
+[10-Jan-2022 16:02:46 UTC] PHP   4. include() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-includes/template-loader.php:106
+[10-Jan-2022 16:02:46 UTC] PHP Warning:  Illegal string offset 'alt' in /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-content/themes/lieuxfauves/front-page.php on line 84
+[10-Jan-2022 16:02:46 UTC] PHP Stack trace:
+[10-Jan-2022 16:02:46 UTC] PHP   1. {main}() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/index.php:0
+[10-Jan-2022 16:02:46 UTC] PHP   2. require() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/index.php:17
+[10-Jan-2022 16:02:46 UTC] PHP   3. require_once() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-blog-header.php:19
+[10-Jan-2022 16:02:46 UTC] PHP   4. include() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-includes/template-loader.php:106
+[10-Jan-2022 16:03:31 UTC] PHP Warning:  Illegal string offset 'url' in /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-content/themes/lieuxfauves/front-page.php on line 84
+[10-Jan-2022 16:03:31 UTC] PHP Stack trace:
+[10-Jan-2022 16:03:31 UTC] PHP   1. {main}() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/index.php:0
+[10-Jan-2022 16:03:31 UTC] PHP   2. require() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/index.php:17
+[10-Jan-2022 16:03:31 UTC] PHP   3. require_once() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-blog-header.php:19
+[10-Jan-2022 16:03:31 UTC] PHP   4. include() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-includes/template-loader.php:106
+[10-Jan-2022 16:03:31 UTC] PHP Warning:  Illegal string offset 'alt' in /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-content/themes/lieuxfauves/front-page.php on line 84
+[10-Jan-2022 16:03:31 UTC] PHP Stack trace:
+[10-Jan-2022 16:03:31 UTC] PHP   1. {main}() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/index.php:0
+[10-Jan-2022 16:03:31 UTC] PHP   2. require() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/index.php:17
+[10-Jan-2022 16:03:31 UTC] PHP   3. require_once() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-blog-header.php:19
+[10-Jan-2022 16:03:31 UTC] PHP   4. include() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-includes/template-loader.php:106
+[10-Jan-2022 16:03:34 UTC] PHP Warning:  Illegal string offset 'url' in /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-content/themes/lieuxfauves/front-page.php on line 84
+[10-Jan-2022 16:03:34 UTC] PHP Stack trace:
+[10-Jan-2022 16:03:34 UTC] PHP   1. {main}() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/index.php:0
+[10-Jan-2022 16:03:34 UTC] PHP   2. require() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/index.php:17
+[10-Jan-2022 16:03:34 UTC] PHP   3. require_once() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-blog-header.php:19
+[10-Jan-2022 16:03:34 UTC] PHP   4. include() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-includes/template-loader.php:106
+[10-Jan-2022 16:03:34 UTC] PHP Warning:  Illegal string offset 'alt' in /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-content/themes/lieuxfauves/front-page.php on line 84
+[10-Jan-2022 16:03:34 UTC] PHP Stack trace:
+[10-Jan-2022 16:03:34 UTC] PHP   1. {main}() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/index.php:0
+[10-Jan-2022 16:03:34 UTC] PHP   2. require() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/index.php:17
+[10-Jan-2022 16:03:34 UTC] PHP   3. require_once() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-blog-header.php:19
+[10-Jan-2022 16:03:34 UTC] PHP   4. include() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-includes/template-loader.php:106
+[10-Jan-2022 16:03:52 UTC] PHP Warning:  Illegal string offset 'url' in /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-content/themes/lieuxfauves/front-page.php on line 84
+[10-Jan-2022 16:03:52 UTC] PHP Stack trace:
+[10-Jan-2022 16:03:52 UTC] PHP   1. {main}() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/index.php:0
+[10-Jan-2022 16:03:52 UTC] PHP   2. require() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/index.php:17
+[10-Jan-2022 16:03:52 UTC] PHP   3. require_once() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-blog-header.php:19
+[10-Jan-2022 16:03:52 UTC] PHP   4. include() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-includes/template-loader.php:106
+[10-Jan-2022 16:03:52 UTC] PHP Warning:  Illegal string offset 'alt' in /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-content/themes/lieuxfauves/front-page.php on line 84
+[10-Jan-2022 16:03:52 UTC] PHP Stack trace:
+[10-Jan-2022 16:03:52 UTC] PHP   1. {main}() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/index.php:0
+[10-Jan-2022 16:03:52 UTC] PHP   2. require() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/index.php:17
+[10-Jan-2022 16:03:52 UTC] PHP   3. require_once() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-blog-header.php:19
+[10-Jan-2022 16:03:52 UTC] PHP   4. include() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-includes/template-loader.php:106
+[10-Jan-2022 16:04:00 UTC] PHP Warning:  Illegal string offset 'url' in /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-content/themes/lieuxfauves/front-page.php on line 84
+[10-Jan-2022 16:04:00 UTC] PHP Stack trace:
+[10-Jan-2022 16:04:00 UTC] PHP   1. {main}() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/index.php:0
+[10-Jan-2022 16:04:00 UTC] PHP   2. require() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/index.php:17
+[10-Jan-2022 16:04:00 UTC] PHP   3. require_once() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-blog-header.php:19
+[10-Jan-2022 16:04:00 UTC] PHP   4. include() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-includes/template-loader.php:106
+[10-Jan-2022 16:04:00 UTC] PHP Warning:  Illegal string offset 'alt' in /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-content/themes/lieuxfauves/front-page.php on line 84
+[10-Jan-2022 16:04:00 UTC] PHP Stack trace:
+[10-Jan-2022 16:04:00 UTC] PHP   1. {main}() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/index.php:0
+[10-Jan-2022 16:04:00 UTC] PHP   2. require() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/index.php:17
+[10-Jan-2022 16:04:00 UTC] PHP   3. require_once() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-blog-header.php:19
+[10-Jan-2022 16:04:00 UTC] PHP   4. include() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-includes/template-loader.php:106
+[10-Jan-2022 16:12:34 UTC] PHP Warning:  Illegal string offset 'url' in /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-content/themes/lieuxfauves/front-page.php on line 84
+[10-Jan-2022 16:12:34 UTC] PHP Stack trace:
+[10-Jan-2022 16:12:34 UTC] PHP   1. {main}() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/index.php:0
+[10-Jan-2022 16:12:34 UTC] PHP   2. require() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/index.php:17
+[10-Jan-2022 16:12:34 UTC] PHP   3. require_once() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-blog-header.php:19
+[10-Jan-2022 16:12:34 UTC] PHP   4. include() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-includes/template-loader.php:106
+[10-Jan-2022 16:12:34 UTC] PHP Warning:  Illegal string offset 'alt' in /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-content/themes/lieuxfauves/front-page.php on line 84
+[10-Jan-2022 16:12:34 UTC] PHP Stack trace:
+[10-Jan-2022 16:12:34 UTC] PHP   1. {main}() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/index.php:0
+[10-Jan-2022 16:12:34 UTC] PHP   2. require() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/index.php:17
+[10-Jan-2022 16:12:34 UTC] PHP   3. require_once() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-blog-header.php:19
+[10-Jan-2022 16:12:34 UTC] PHP   4. include() /Users/evamarechal/Local Sites/local-lieux-fauves/app/public/wp-includes/template-loader.php:106
