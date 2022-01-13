@@ -25,7 +25,7 @@ function lf_projets_rpt() {
 
     $labels = array(
         // Le nom au pluriel
-		'name'                => _x( 'Projets', 'Post Type General Name'),
+		'name'                => _x( 'Projet', 'Post Type General Name'),
 		// Le nom au singulier
 		'singular_name'       => _x( 'Projet', 'Post Type Singular Name'),
 		// Le libellé affiché dans le menu

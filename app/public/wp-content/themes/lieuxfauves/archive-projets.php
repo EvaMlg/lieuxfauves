@@ -1,16 +1,18 @@
 <?php
 
 /**
- *  The template for displaying Archive Exploration
+ *  The template for displaying Archive Projet
  * 
  * 
  */
 get_header();
 ?>
 
+
+
 <?php
 $args = array(
-    'post_type' => 'explorations', 'post_status' => 'publish', 'posts_per_page' => 9999
+    'post_type' => 'projets', 'post_status' => 'publish', 'posts_per_page' => 9999
 );
 
 $my_query = new WP_Query($args);

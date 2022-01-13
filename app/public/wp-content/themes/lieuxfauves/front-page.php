@@ -72,7 +72,33 @@ get_header();
 
         <section class="sec-faire">
 
-            <div class="actu-bloc"></div>
+            <div class="actu-bloc">
+
+                <?php
+                // 1. Arguments => FONCTION À CRÉER POUR RÉCUPÉRER LA MANIÈRE DONT ON EST ARRIVÉ SUR LA PAGE
+                $args = array(
+                    'post_type' => 'post',
+                    'orderby' => 'date',
+                    'posts_per_page' => 2,
+
+
+                );
+
+                $my_query = new WP_Query($args);
+                if ($my_query->have_posts()) : while ($my_query->have_posts()) : $my_query->the_post();
+                        the_title();
+                    endwhile;
+                endif;
+
+                // 4. On réinitialise à la requête principale (important)
+                wp_reset_postdata();
+
+                ?>
+
+
+
+
+            </div>
 
             <div class="link-bloc">
                 <div class="list-link">
@@ -95,13 +121,32 @@ get_header();
 
         <section class="sec-archiurba">
 
-            <div class="bloc-images">
+            <div class="blocLoop">
+
                 <?php
-                $section_archiurba = get_field('section_archiurba');
-                if ($section_archiurba) : ?>
-                    <?php $images = get_group_field('section_archiurba', 'images') ?>
-                    <img src="<?php echo esc_url($images['image_droite']['url']); ?>" alt="<?php echo esc_attr($images['image']['alt']); ?>" />
-                    <img src="<?php echo esc_url($images['image_gauche']['url']); ?>" alt="<?php echo esc_attr($images['image']['alt']); ?>" />
+                // 1. Arguments 
+                $args = array(
+                    'post_type' => 'projets',
+                    'category_projet' => 'architecture',
+                    'posts_per_page' => 2,
+
+
+                );
+
+                $my_query = new WP_Query($args);
+                if ($my_query->have_posts()) : while ($my_query->have_posts()) : $my_query->the_post();
+                        the_title();
+                        the_post_thumbnail();
+                    endwhile;
+                endif;
+
+                // 4. On réinitialise à la requête principale (important)
+                wp_reset_postdata();
+
+                ?>
+
+
+
             </div>
 
             <div class="link-bloc">
@@ -118,7 +163,6 @@ get_header();
                 <?php $haiku = get_group_field('section_archiurba', 'haiku') ?>
                 <img src="<?php echo esc_url($haiku['image']['url']); ?>" alt="<?php echo esc_attr($haiku['image']['alt']); ?>" />
                 <?php echo $haiku['texte']; ?>
-            <?php endif; ?>
             </div>
 
 
@@ -133,7 +177,34 @@ get_header();
                     <img src="<?php echo esc_url($section_ves['image']['url']); ?>" alt="<?php echo esc_attr($section_ves['image']['alt']); ?>" />
             </div>
 
-            <div class="bloc-exploration"></div>
+            <div class="bloc-exploration">
+                <?php
+                    // 1. Arguments => 
+                    $args = array(
+                        'post_type' => 'explorations',
+                        'category_projet' => 'architecture',
+                        'orderby'   => array(
+                            'date' => 'DESC',
+                        )
+
+
+                    );
+
+                    $my_query = new WP_Query($args);
+                    if ($my_query->have_posts()) : while ($my_query->have_posts()) : $my_query->the_post();
+                            the_title();
+                            the_post_thumbnail();
+                        endwhile;
+                    endif;
+
+
+                    wp_reset_postdata();
+
+                ?>
+
+
+
+            </div>
 
             <div class="bloc-link">
                 <div class="list-link">

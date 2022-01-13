@@ -1,0 +1,48 @@
+.imageWrapper {
+
+    
+}
+.whiteLayout {
+    
+}
+.titleWrapper  {
+    
+}
+.contentWrapper {
+    display: flex;
+    width: 100vw;
+    width: calc(100vw - 61px);
+    
+
+}
+.leftColumn {
+    width: 50%;
+
+    .cardLink {
+        background-color : $fauve-col;
+        padding-top : 15px;
+        padding-bottom : 15px;
+        padding-left: 20px ;
+        padding-right: 20px;
+        margin-left: 61px;
+        margin-right: 61px;
+        margin-bottom: 10px;
+        margin-top : 10px;
+
+    }
+
+  
+    
+}
+.rightColumn {
+    width: 60%;
+    
+}
+.loopWrapper {
+    
+}
+
+.main{
+    width: calc(100vw - 61px);
+   
+}
