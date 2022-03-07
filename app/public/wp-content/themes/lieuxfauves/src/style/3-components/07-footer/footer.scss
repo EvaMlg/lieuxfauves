@@ -1,81 +1,164 @@
-body{
-  
-    display: grid; 
-    grid-template-rows: auto 1fr auto; 
-    height: 100vh; }
+body {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    height: 100vh;
+}
 
 
 footer {
-    
-
-
-    background-color: $jungle-col;
-
-
-    .container-adresses {
-
+    @include laptopS {
         display: flex;
+    }
+
+    padding-top : $dCol;
+    padding-bottom : $dCol;
+
+    width: 100vw;
+
+    @include laptopS {
+        width: calc(100vw - 77px);
+    }
+
+}
+
+
+.devise {
+    display: none;
+    height: 110px;
+    position: relative;
+    margin-left: $m-margin-small;
+
+    @include laptopS {
+        position: fixed;
+        top: $margin;
+        left: $margin;
+    }
+
+}
+
+
+.deviseOff {
+    display: none;
+
+    @include laptopS {
+        display: none;
+    }
+
+}
+
+.deviseOn {
+    display: none;
+
+    @include laptopS {
+        display: block;
+    }
+
+}
+
+
+.left-container {
+    padding-left: $m-margin-small;
+
+    @include laptopS {
+
+        padding-left: $margin;
+        width: 43.4%;
+        display: flex;
+        flex-direction: column;
         justify-content: space-between;
-        align-items: center;
-
-
-        width: 90vw;
-        
-
-
-    .logo {
-        justify-content: start;
-        margin: 3vh;
-
-        img {
-            height: 5vh;
-
-            @include tablet {
-            height: 10vh;
-            width: auto;
-        }
-        }
-        
-    }    
-
-    .adresse {
-        justify-content: end; 
-        font-family: 'Fira Sans', sans-serif;
-        color :white;
-
-        font-size: 10px;
-
-        @include tablet {
-        font-size: 18px;
-        padding:15px;
     }
 
+    .credits {
+        display: none;
+
+        @include laptopS {
+            display: block;
+        }
+
+        @include footer-legend;
+        color : $grey-col
     }
 
+    .logoWrapper {
+        display: flex;
+        align-items: flex-end;
+
+        .logo-categorie {
+            margin-top: $dCol;
+
+            @include laptopS {
+                margin-top: 0;
+                margin-bottom: 0;
+            }
+
+            height: 100px;
+        }
+
+        .socialsButtonsWrapper {
+            padding-left: 20px;
+
+            .logo-ig {
+
+                height: 30px;
+            }
+
+            .logo-in {
+                height: 30px;
+            }
+        }
+    }
 }
 
-  
+
+
+
+.right-container {
+    @include laptopS {
+        width: 56.6%;
+    }
+
+    @include footer-p;
+    color : $jungle-col;
+
+    .contact-container {
+        @include footer-p-bold;
+        padding-left: $m-margin-small;
+        margin-top: $dCol;
+
+        @include laptopS {
+            padding-left: 0;
+            margin-top: 0;
+        }
+    }
+
+    .adress-container {
+        padding-left: $m-margin-small;
+
+        @include laptopS {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        padding-top: 15px;
+        padding-bottom: 15px;
+        padding-right: $dCol;
+        padding-left: 0;
+
+
+        .adresse-bold {
+            @include footer-p-bold
+        }
+    }
+
+    .legal {
+        padding-left: $m-margin-small;
+
+        @include laptopS {
+            padding-left: 0;
+        }
+
+        @include footer-legend;
+        color : $grey-col
+    }
 }
-
-.legal {
-    text-align: center;
-    border-top : 0.5px solid white;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    font-family: 'Fira Sans', sans-serif;
-    font-weight: 300;
-    color :white;
-
-    font-size: 8px;
-
-
-    @include tablet { font-size: 12px; }
-}
-
-
-.adress-container {
-    display: flex;
-    flex-direction: row;
-    width: 60vw;
-    justify-content: space-around;
-} 

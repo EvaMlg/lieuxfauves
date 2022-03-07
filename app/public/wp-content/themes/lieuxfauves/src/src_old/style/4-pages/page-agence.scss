@@ -1,0 +1,209 @@
+.imageWrapperAgence {
+    overflow: hidden;
+    width: 100%;
+    height: auto;
+
+    img {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        object-fit: cover;
+    }
+}
+
+.list-chapter-agence {
+ 
+
+    @include chapter;
+    color : $grey-col;
+    position: fixed;
+    bottom: 37px;
+    left: $margin;
+
+    a {
+        text-decoration: none;
+        color: $grey-col;
+    }
+
+}
+
+
+.spanAgence {
+    @include chapter-bold;
+    text-transform: uppercase;
+    color : $jungle-col;
+}
+
+
+.sec-valeurs {
+    padding: $dCol;
+    background: $black-col-5;
+}
+
+
+
+.titleAgence {
+    @include p-intro-bold-capitalize;
+    color: $jungle-col;
+    padding-bottom: 0.5rem;
+    padding-top: 1rem;
+}
+
+.contentAgence {
+    @include p-very-small;
+    color: $grey-col;
+
+
+    p {
+        @include p-very-small;
+    }
+
+    b {
+        @include p-bold;
+        color: $grey-col;
+
+    }
+
+}
+
+
+.contentAgenceBold {
+    p {
+    @include p-intro-bold;
+    color: $grey-col;
+    padding-bottom: 0.5rem;
+    }
+
+    a {
+        @include fauveUnderline;
+        color: $grey-col;
+
+    }
+    padding-bottom: $dCol;
+
+}
+
+
+    .taglinegrey {
+        @include p-intro-bold;
+        background-color: $black-col-5;
+    }
+
+
+.subtitleAgence {
+    @include p-bold;
+    text-transform: uppercase;
+    color: $grey-col;
+    padding-bottom : 0.5rem;
+    padding-top: 1rem;
+
+}
+
+.columsWrapperAgence {
+    display: block;
+
+    @include laptopS {
+        display: flex;
+
+    }
+
+    ;
+    background-color: $jungle-col-10;
+    padding: $dCol;
+
+
+    .rightColumnAgence {
+        height: 50%;
+        padding-right: $dCol;
+    }
+
+    .leftColumnAgence {
+        height: 50%;
+    }
+}
+
+.distinctionsWrapperAgence {
+    background-color: $jungle-col-10;
+    padding-left: $dCol;
+    padding-right:  $dCol;
+    padding-bottom: $dCol;
+}
+
+
+.sec-equipe {
+    background-color: $black-col-5;
+    padding-bottom: $dCol;
+
+    .imageWrapperAgence {
+        overflow: hidden;
+        width: 100%;
+        height: auto;
+
+        img {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            object-fit: cover;
+        }
+
+
+    }
+
+
+    .equipeWrapper {
+        background-color: white;
+        padding: $dCol;
+        margin-left: $dCol;
+        margin-right: $dCol;
+        margin-top: $dCol;
+
+
+    }
+}
+
+.rejoindreWrapper {
+    background-color: $jungle-col;
+    padding : $dCol;
+    padding-bottom: 2 * $dCol;
+
+    h3 {
+        @include haiku;
+        color : white;
+        padding-left: $dCol;
+    }
+
+    .annonceWrapper {
+        background-color: white;
+        margin-bottom: 0.5em;
+        padding-left: $dCol;
+        padding-right: $dCol;
+        padding-top: 1em;
+        padding-bottom: 1em;
+
+        .titleAnnonce {
+    
+                @include p-bold;
+                color: $grey-col;
+                padding-bottom: 0.5em;
+
+
+
+        }
+
+        p {
+            @include p-very-small;
+            color: $grey-col;
+            padding-bottom: 0.5em;
+        }
+
+        .logo-load {
+            height: 14px;
+        
+        }
+
+    }
+}

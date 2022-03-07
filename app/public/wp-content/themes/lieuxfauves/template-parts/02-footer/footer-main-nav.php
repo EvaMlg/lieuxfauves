@@ -3,37 +3,62 @@
 
 
 
-<div class ="container-adresses">
-<div class="logo">
-  <img src="wp-content/themes/lieuxfauves/src/assets/img/Logo_bas.png" alt="Logo Lieux Fauves">
-</div>
+
+  <img class="devise"src="/wp-content/themes/lieuxfauves/src/assets/img/LF_logo_devise.svg">
 
 
-<div class="adress-container">
-  <p class="adresse">
-    PARIS <br>
-    22 rue des Taillandiers <br>
-    75011 Paris <br>
-  </p>
-  <p class="adresse">
-    LYON <br>
-    43 rue des Hérideaux <br>
-    69008 Lyon <br>
-  </p>
-  <p class="adresse">
-    MAYOTTE <br>
-    18 Chemin de la Convalescence <br>
-    97600 Mamoudzou <br>
-  </p>
-</div>
-</div>
 
-<div class ="legal">
-  <p>© LIEUX FAUVES 2021. SAS d’architecture et d’urbanisme Lieux F.AU.VES <br>
-    Au capital de 712 450 euros. SIREN 901815845 RCS PARIS. Ordre des Architectes n°522644. Code NAF 7111Z. Numéro TVA FR80901815845</p>
-</div>
+  <div class="left-container" id="footer">
+    <div class="logoWrapper">
+      <img class="logo-categorie" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_footer_logo.svg">
+      <div class="socialsButtonsWrapper">
+        <img class="logo-ig" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_footer_rrss_ig.svg">
+        <img class="logo-in" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_footer_rrss_in.svg">
+      </div>
+    </div>
+    <div class="credits">
+      <p>© Lieux F.AU.VES 2022. Tous droits réservés. MENTIONS LÉGALES <br>
+        Design Finilasiesta — Développement Eva Maréchal</p>
+    </div>
 
-<script src="https://kit.fontawesome.com/ec2295b45c.js" crossorigin="anonymous"></script>
+  </div>
+
+  <div class="right-container">
+
+    <div class="contact-container">
+      <p class="contact">
+        04 72 74 80 80 <br>
+        CONTACT[AT]LIEUXFAUVES.COM
+      </p>
+
+    </div>
+
+
+    <div class="adress-container">
+      <p class="adresse">
+        <span class="adresse-bold">PARIS </span><br>
+        22 rue des Taillandiers <br>
+        75011 Paris <br>
+      </p>
+      <p class="adresse">
+        <span class="adresse-bold">LYON</span> <br>
+        43 rue des Hérideaux <br>
+        69008 Lyon <br>
+      </p>
+      <p class="adresse">
+        <span class="adresse-bold"> MAYOTTE </span><br>
+        18 Chemin de la Convalescence <br>
+        97600 Mamoudzou <br>
+      </p>
+    </div>
+
+
+    <div class="legal">
+      <p>SAS d’architecture et d’urbanisme Lieux F.AU.VES. Au capital de 712 450 euros. SIREN 901 815 845 RCS PARIS. <br>
+        Ordre des Architectes n°522644. Code NAF 7111Z. Numéro TVA FR80901815845</p>
+    </div>
+
+  </div>
 
 
 </footer>

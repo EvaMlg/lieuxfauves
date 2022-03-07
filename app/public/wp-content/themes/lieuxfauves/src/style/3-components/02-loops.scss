@@ -1,0 +1,82 @@
+.projetsLoopExplo {
+    background-color: $black-col-5;
+}
+
+.projetsLoop {
+
+    padding-top: $margin;
+    padding-left: $margin;
+
+
+    .titleLoop {
+        @include menu-link;
+        color: $jungle-col;
+        padding-top: $dCol;
+        padding-bottom: $dCol;
+    }
+
+    .loopWrapper {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: $dCol;
+      
+
+        .projectCard {
+            width: calc(25% - 45px);
+
+
+        a {
+            @include p-intro-bold;
+            text-decoration: none;
+            color: $grey-col
+        }
+
+    }
+    
+        .projectCard:nth-child(3n) {
+            img {
+                height: 500px;
+
+            }
+    
+      
+        }
+    
+        .projectThumbnail {
+         
+            img {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                object-fit: cover;
+                height: 360px;
+            }
+        }
+
+
+            .projectTitle {
+                padding-top: 8px;
+                width: 300px;
+                @include p-bold;
+                color: $grey-col;
+               
+                padding-right: 2 * $dCol;
+              
+
+                a {
+                    text-decoration: none;
+                    color: $grey-col;
+                }
+
+
+            }
+
+
+        } 
+    }
+
+        
+
+    
