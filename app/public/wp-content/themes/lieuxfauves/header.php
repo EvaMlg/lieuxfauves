@@ -43,7 +43,9 @@
 
 
 <div id="loader">
-    <img src="/wp-content/themes/lieuxfauves/src/assets/img/LF_INTRO_test.gif" alt="Loader Lieux Fauves" style="
+    <img src="/wp-content/themes/lieuxfauves/src/assets/img/LF_INTRO_image01.jpg" alt="Loader Lieux Fauves" style="
+
+
 
     
     width: 100%;

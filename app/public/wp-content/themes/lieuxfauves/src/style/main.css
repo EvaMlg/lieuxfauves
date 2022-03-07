@@ -5977,9 +5977,10 @@ acf-gallery {
 }
 @media (max-width: 1025px) {
   .sec-archiurba .projet-bloc .projet-popup-wrapper .projet-thumbnail {
-    position: absolute;
     overflow: hidden;
-    height: 100%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
   }
   .sec-archiurba .projet-bloc .projet-popup-wrapper .projet-thumbnail img {
     width: 100%;

@@ -1810,9 +1810,9 @@ $m-margin-big : 20px;
                 height: 100%;
 
                 .projet-thumbnail {
-                    position: absolute;
+                    //position: absolute;
                     overflow: hidden;
-                    height: 100%;
+                    height: fit-content;
 
                     img {
                         width: 100%;
