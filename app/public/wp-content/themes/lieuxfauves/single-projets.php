@@ -93,8 +93,8 @@ get_header();
 
 
     <div class="titleWrapper">
-
-        <h1 class="singleProjetTitle"><?php the_field('titre'); ?></h1>
+	
+    <?php the_title( '<h1 class="singleProjetTitle">', '</h1>' ); ?>
         <h2 class="singleProjetSubTitle"><?php the_field('lieu'); ?></h2>
 
     </div>
@@ -201,8 +201,8 @@ get_header();
 
     <div class="titleLoop">
         <img class="logo-categorie" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_logo_categories.svg">
-        <a>PROJETS</a>
-        <a>Architecture</a>
+        <span>PROJETS</span>
+        <a class="fauveUnderline">Architecture</a>
     </div>
 
     <div class="loopWrapper">

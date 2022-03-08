@@ -68,7 +68,7 @@ get_header();
 
                         <div class="list-link">
                             <img class="logo-categorie" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_logo_categories.svg">
-                            <a>AGENCE</a>
+                            <span>AGENCE</span>
                             <a href="agence/#sec-agence" class="fauveUnderline">Valeurs</a>
                             <a href="agence/#sec-expertises" class="fauveUnderline">Expertises</a>
                             <a href="agence/#sec-equipe" class="fauveUnderline">Équipe</a>
@@ -133,7 +133,7 @@ get_header();
                 <div class="link-bloc">
                     <div class="list-link">
                         <img class="logo-categorie" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_logo_categories.svg">
-                        <a>AGENCE</a>
+                        <span>AGENCE</span>
                         <a href="agence/#sec-rejoindre" class="fauveUnderline">Rejoindre Lieux F.AU.VES</a>
                     </div>
                 </div>
@@ -201,7 +201,7 @@ get_header();
                     <div class="list-link">
 
                         <img class="logo-categorie" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_logo_categories.svg">
-                        <a>PROJETS</a>
+                        <span>PROJETS</span>
                         <a href="projets?cat=architecture" class="fauveUnderline">Architecture</a>
                         <a href="projets?cat=urbanisme" class="fauveUnderline">Urbanisme</a>
                         <a href="projets?cat=paysage" class="fauveUnderline">Paysage</a>
@@ -283,7 +283,7 @@ get_header();
                 <div class="link-bloc">
                     <div class="list-link">
                         <img class="logo-categorie" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_logo_categories.svg">
-                        <a>EXPLORATIONS</a>
+                        <span>EXPLORATIONS</span>
                         <a href="explorations" class="fauveUnderline">Vivant</a>
                         <a href="explorations" class="fauveUnderline">Éthique</a>
                         <a href="explorations" class="fauveUnderline">Soutenable</a>

@@ -96,7 +96,7 @@ get_header();
 
     <div class="titleLoop">
         <img class="logo-categorie" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_logo_categories.svg">
-        <a>PROJETS</a>
+        <span>PROJETS</span>
         <a href="projets" class="fauveUnderline">Architecture</a>
     </div>
 
@@ -137,7 +137,7 @@ get_header();
 
     <div class="titleLoop">
         <img class="logo-categorie" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_logo_categories.svg">
-        <a>ACTUALITÉS</a>
+        <span>ACTUALITÉS</span>
         <a href="projets" class="fauveUnderline">Vivant</a>
     </div>
 

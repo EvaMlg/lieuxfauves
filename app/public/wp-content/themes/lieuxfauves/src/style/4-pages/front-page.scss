@@ -188,6 +188,11 @@
 
     }
 
+    span {
+        margin-right: 20px;
+        color: $jungle-col;
+    }
+
     a {
         margin-right: 20px;
         color: $jungle-col;
@@ -199,7 +204,7 @@
 .bloc-haiku {
     height: 235px;
     @include haiku;
-    color: white;
+    color: $jungle-col-10;
     background-color: $jungle-col;
 
     padding-left: $m-margin-small;

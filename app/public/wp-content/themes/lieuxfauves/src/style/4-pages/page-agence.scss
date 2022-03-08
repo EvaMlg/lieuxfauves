@@ -185,14 +185,43 @@
 }
 
 .distinctionsWrapperAgence {
+
+   
+        @include p-very-small;
+        color: $grey-col;
+    
+
+  
+         b {
+        @include p-bold;
+        color: $grey-col;
+
+    }
+
+    a {
+        @include fauveUnderline;
+        color: $grey-col;
+
+    }
+
+    a:hover {
+        @include fauveUnderlineHover;
+        color: $grey-col;
+
+    }
+
+
+
+
+
     background-color: $jungle-col-10;
 
+
+
     @include laptopS { padding-left: $dCol;
-        padding-right: $dCol;}
+    padding-right: $dCol;}
     padding-left: $m-margin-small;
     padding-right:  $m-margin-small;
-
-
     padding-bottom: $dCol;
 }
 

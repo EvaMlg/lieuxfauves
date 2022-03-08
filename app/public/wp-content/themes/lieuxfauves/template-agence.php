@@ -12,7 +12,7 @@ get_header();
 
     <div class="logoHeader">
 
-        <img class="logoFrontpage" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_logo.svg">
+        <a href="<?php echo get_option('home'); ?>/"><img class="logoFrontpage" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_logo.svg"></a>
 
     </div>
 
@@ -106,16 +106,20 @@ get_header();
                 <div class="distinctionsWrapperAgence">
 
 
-                    <?php $distinctions = get_group_field('section_expertises', 'distinctions') ?>
-                    <h3 class="titleAgence"><?php echo $distinctions['titre']; ?></h3>
+                    <h3 class="titleAgence">DISTINCTIONS</h3>
 
-                    <?php $urbanisme = get_group_field('section_expertises', 'distinctions') ?>
-                    <h4 class="subtitleAgence"><?php echo $urbanisme['titre']; ?></h4>
-                    <?php echo $urbanisme['contenu']; ?>
+                    <?php $urbanisme = get_group_field('section_expertises', 'distinctions_urbanisme') ?>
+                    <h3 class="subtitleAgence">Urbanisme</h3>
+                    <div class="distinctionsToggleWrapper">
+                        <p><?php echo $urbanisme; ?></p>
+                    </div>
 
-                    <?php $archi = get_group_field('section_expertises', 'distinctions') ?>
-                    <h4 class="subtitleAgence"><?php echo $urbanisme['titre']; ?></h4>
-                    <p><?php echo $urbanisme['contenu']; ?></p>
+                    <?php $architecture = get_group_field('section_expertises', 'distinctions_architecture') ?>
+                    <h3 class="subtitleAgence">Architecture</h3>
+                    <div class="distinctionsToggleWrapper">
+                    <p><?php echo $architecture; ?></p>
+                    </div>
+
 
                 </div>
 

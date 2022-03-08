@@ -1489,6 +1489,10 @@ footer {
   margin-right: 20px;
   height: 11px;
 }
+.list-link span {
+  margin-right: 20px;
+  color: #00534e;
+}
 .list-link a {
   margin-right: 20px;
   color: #00534e;
@@ -1497,9 +1501,10 @@ footer {
 .bloc-haiku {
   height: 235px;
   font-family: "Fira Light";
+  font-style: italic;
   font-size: 22px;
   line-height: 30px;
-  color: white;
+  color: #e5eeed;
   background-color: #00534e;
   padding-left: 18px;
   padding-right: 18px;
@@ -3505,10 +3510,56 @@ footer {
 }
 
 .distinctionsWrapperAgence {
+  font-family: "Fira Light";
+  font-size: 14px;
+  line-height: 24px;
+  color: #828787;
   background-color: #e5eeed;
   padding-left: 18px;
   padding-right: 18px;
   padding-bottom: 45px;
+}
+@media (min-width: 1025px) {
+  .distinctionsWrapperAgence {
+    font-size: 14px;
+    line-height: 24px;
+  }
+}
+.distinctionsWrapperAgence b {
+  font-family: "Fira Bold";
+  font-size: 14px;
+  line-height: 25px;
+  color: #828787;
+}
+@media (min-width: 1025px) {
+  .distinctionsWrapperAgence b {
+    font-size: 14px;
+    line-height: 25px;
+  }
+}
+.distinctionsWrapperAgence a {
+  padding-bottom: 1px;
+  padding-right: 5px;
+  padding-left: 5px;
+  -webkit-box-shadow: inset 0 -10px 0 #f1dcad;
+          box-shadow: inset 0 -10px 0 #f1dcad;
+  color: #00534e;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  color: #828787;
+}
+.distinctionsWrapperAgence a:hover {
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  padding-right: 5px;
+  padding-left: 5px;
+  -webkit-box-shadow: inset 0 -60px 0 #f1dcad;
+          box-shadow: inset 0 -60px 0 #f1dcad;
+  -webkit-transition: ease-in-out;
+  transition: ease-in-out;
+  color: #828787;
 }
 @media (min-width: 1025px) {
   .distinctionsWrapperAgence {
@@ -3574,6 +3625,7 @@ footer {
 }
 .rejoindreWrapper h3 {
   font-family: "Fira Light";
+  font-style: italic;
   font-size: 22px;
   line-height: 30px;
   color: white;
@@ -5845,6 +5897,7 @@ acf-gallery {
   .bloc-haiku {
     height: 235px;
     font-family: "Fira Light";
+    font-style: italic;
     font-size: 22px;
     line-height: 30px;
     color: white;
@@ -6588,6 +6641,7 @@ acf-gallery {
 @media (max-width: 1025px) and (max-width: 768px) {
   .rejoindreWrapper h3 {
     font-family: "Fira Light";
+    font-style: italic;
     font-size: 22px;
     line-height: 30px;
     color: white;
