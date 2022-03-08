@@ -1,3 +1,27 @@
+.distinctionsToggleWrapper {
+    display: none;
+    padding-bottom: $dCol;
+    @include laptopS {
+        padding-left: $dCol;
+        padding-right: $dCol;
+    }
+
+}
+
+
+
+.distinctionsTitleWrapper {
+    border-top : 1px solid white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include laptopS {
+        padding-left: $dCol;
+        padding-right: $dCol;
+    }
+
+}
+
 .imageWrapperAgence {
     overflow: hidden;
     width: 100%;
@@ -186,6 +210,13 @@
 
 .distinctionsWrapperAgence {
 
+    .titleAgence {
+        @include laptopS {
+        padding-left: $dCol;
+        padding-right: $dCol
+        }
+    }
+
    
         @include p-very-small;
         color: $grey-col;
@@ -218,8 +249,8 @@
 
 
 
-    @include laptopS { padding-left: $dCol;
-    padding-right: $dCol;}
+    @include laptopS { padding-left: 0;
+    padding-right:0;}
     padding-left: $m-margin-small;
     padding-right:  $m-margin-small;
     padding-bottom: $dCol;

@@ -109,13 +109,20 @@ get_header();
                     <h3 class="titleAgence">DISTINCTIONS</h3>
 
                     <?php $urbanisme = get_group_field('section_expertises', 'distinctions_urbanisme') ?>
-                    <h3 class="subtitleAgence">Urbanisme</h3>
+                    <div class="distinctionsTitleWrapper">
+                        <h3 class="subtitleAgence distinctionsTitle">Urbanisme</h3>
+                        <img class="logo-categorie logoDistinctions" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_plus_fermer.svg">
+                    </div>
                     <div class="distinctionsToggleWrapper">
                         <p><?php echo $urbanisme; ?></p>
                     </div>
 
                     <?php $architecture = get_group_field('section_expertises', 'distinctions_architecture') ?>
-                    <h3 class="subtitleAgence">Architecture</h3>
+                    <div class="distinctionsTitleWrapper">
+                        <h3 class="subtitleAgence distinctionsTitle">Architecture</h3>
+                        <img class="logo-categorie logoDistinctions" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_plus_fermer.svg">
+
+                    </div>
                     <div class="distinctionsToggleWrapper">
                     <p><?php echo $architecture; ?></p>
                     </div>
