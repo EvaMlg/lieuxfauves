@@ -896,6 +896,20 @@ html {
             transform: translate(0);
   }
 }
+.projectLoopLieu {
+  font-family: "Fira Light";
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 20px;
+  color: #828787;
+}
+@media (min-width: 1025px) {
+  .projectLoopLieu {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+
 .projetsLoopExplo {
   background-color: #f4f4f4;
 }

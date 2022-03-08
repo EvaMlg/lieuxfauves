@@ -165,6 +165,9 @@ get_header();
 				<div class="cardProjet">
 					<div class="thumbnailProjet"> <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail(); ?></div>
 					<div class="titleProjet"> <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></div>
+					<p class="projectLoopLieu"><?php the_field('lieu', $post->ID); ?></p>
+				
+
 				</div>
 
 		<?php endwhile;

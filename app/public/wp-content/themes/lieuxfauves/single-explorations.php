@@ -117,6 +117,7 @@ get_header();
                 <a href="<?php the_permalink(); ?>">
                     <div class="projectThumbnail"><?php the_post_thumbnail(); ?></div>
                     <div class="projectTitle"><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></div>
+                    <p class="projectLoopLieu"><?php the_field('lieu', $post->ID); ?></p>
                 </a>
                 </div>
 

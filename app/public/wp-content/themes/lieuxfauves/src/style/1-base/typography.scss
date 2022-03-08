@@ -292,6 +292,27 @@
 
 }
 
+ // LOOP
+
+
+ @mixin subtitleLoop {
+  font-family: "Fira Light";
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 20px;
+  color: #828787;
+
+
+  @include laptopS {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+}
+
+
+
+
 
 
 

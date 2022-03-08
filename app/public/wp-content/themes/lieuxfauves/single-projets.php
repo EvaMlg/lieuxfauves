@@ -95,7 +95,7 @@ get_header();
     <div class="titleWrapper">
 
         <h1 class="singleProjetTitle"><?php the_field('titre'); ?></h1>
-        <h2 class="singleProjetSubTitle"><?php the_field('sous-titre'); ?></h2>
+        <h2 class="singleProjetSubTitle"><?php the_field('lieu'); ?></h2>
 
     </div>
 
@@ -135,44 +135,48 @@ get_header();
             <div class="ficheTechnique">
                 <div class="FTright columnFT">
                     <div class="wrapperItems">
+
+                    <?php
+            $ficheTechnique = get_field('fiche_technique');
+            if ($ficheTechnique) : ?>
+                
                         <h3>Programme</h3>
-                        <p>Le gymnase est composé d’une salle multisports, d’une salle d’armes, de locaux annexes et d’une tribune 300 places</p>
+                        <p><?php echo $ficheTechnique['programme']; ?></p>
                     </div>
                     <div class="wrapperItems">
                         <h3>Maîtrise d’ouvrage</h3>
-                        <p>Bordeaux Métropole</p>
+                        <p><?php echo $ficheTechnique['maitrise_d’ouvrage']; ?></p>
                     </div>
                     <div class="wrapperItems">
                         <h3>Maîtrise d’oeuvre</h3>
-                        <p>TEKHNE, Architecte Mandataire - NODE, Architecte associé - AMOES, Fluides & QEB - ARBORESCENCE, Structure Bois - DENIZOU, Économie - PEUTZ, Acoustique - OVERDRIVE, VRD & OPC
+                        <p><?php echo $ficheTechnique['maitrise_d’oeuvre']; ?></p>
                     </div>
                 </div>
                 <div class="FTleft columnFT">
                     <div class="wrapperItems">
                         <h3>Surface</h3>
-                        <p>2233 m2 SU</p>
+                        <p><?php echo $ficheTechnique['surface']; ?></p>
                     </div>
                     <div class="wrapperItems">
                         <h3>Coûts</h3>
-                        <p>4800 k€ HT</p>
+                        <p><?php echo $ficheTechnique['couts']; ?></p>
                     </div>
                     <div class="wrapperItems">
                         <h3>Dates / Livraison</h3>
-                        <p>Etudes en cours</p>
+                        <p><?php echo $ficheTechnique['dates__livraison']; ?></p>
                     </div>
                     <div class="wrapperItems">
-                        <h3>perf environnementale</h3>
-                        <p>EC1</p>
+                        <h3>Performances environnementales</h3>
+                        <p><?php echo $ficheTechnique['performances_environnementales']; ?></p>
                     </div>
                 </div>
+                <?php endif; ?>
             </div>
             <div class="boutonWrapperProjet">
                 <p class="cardLink cardLinkLight shareLinks"><img class="logo-categorie" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_fleche-partager.svg"> &nbsp; Partager</p>
                 <p class="cardLink cardLinkLight shareLinks"><img class="logo-categorie" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_fleche-telecharger.svg"> &nbsp; <?php the_field('document_a_telecharger'); ?></p>
                 <p class="cardLink cardLinkLight shareLinks"><img class="logo-categorie" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_fleche-lien.svg"> &nbsp; <?php the_field('lien_externe'); ?></p>
             </div>
-
-
 
 
 
@@ -218,6 +222,7 @@ get_header();
                     <a href="<?php the_permalink(); ?>">
                         <div class="projectThumbnail"><?php the_post_thumbnail(); ?></div>
                         <div class="projectTitle"><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></div>
+                        <p class="projectLoopLieu"><?php the_field('lieu', $post->ID); ?></p>
                     </a>
                 </div>
 
