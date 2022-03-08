@@ -3880,10 +3880,6 @@ acf-gallery {
   }
 }
 @media (min-width: 1025px) {
-  .full-menu .leftColumnMenu {
-    width: 100% !important;
-  }
-
   .responsive-menu {
     display: none;
     z-index: 200;
@@ -3905,6 +3901,25 @@ acf-gallery {
 @media (max-width: 768px) {
   .barMenuFull {
     display: none;
+  }
+
+  .full-menu .leftColumnMenu {
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
+  }
+
+  .full-menu .rightColumnMenu {
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .full-menu .leftColumnMenu .menuItemFP {
+    width: 90vw;
   }
 
   .full-menu {
@@ -3930,6 +3945,7 @@ acf-gallery {
     border-top: 1px solid white;
     padding-top: 20px;
     margin-top: 20px;
+    width: 100vw;
   }
 }
 @media (max-width: 768px) and (max-width: 768px) {

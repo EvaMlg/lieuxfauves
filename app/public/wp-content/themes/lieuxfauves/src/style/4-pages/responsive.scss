@@ -62,9 +62,7 @@ $m-margin-big : 20px;
 }
 
 @include laptopS {
-    .full-menu .leftColumnMenu {
-        width: 100% !important;
-    }
+   
 
     .responsive-menu {
         display: none;
@@ -111,6 +109,25 @@ $m-margin-big : 20px;
     }
 
 
+    .full-menu .leftColumnMenu {
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+        align-items: start;
+    }
+
+    .full-menu .rightColumnMenu {
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+
+    }
+
+    .full-menu .leftColumnMenu .menuItemFP {
+        width: 90vw;
+    }
+    
+
 
 
     .full-menu {
@@ -126,7 +143,6 @@ $m-margin-big : 20px;
         padding-right: $m-margin-small;
         padding-left: $m-margin-small;
         padding-bottom: $m-margin-small;
-
         display: grid;
     }
 
@@ -137,6 +153,7 @@ $m-margin-big : 20px;
         border-top: 1px solid white;
         padding-top: 20px;
         margin-top: 20px;
+        width: 100vw;
 
 
 
@@ -215,7 +232,6 @@ $m-margin-big : 20px;
 
 
     .leftColumnMenu {
-
 
         @include mobile {
             padding-top: 20vh;

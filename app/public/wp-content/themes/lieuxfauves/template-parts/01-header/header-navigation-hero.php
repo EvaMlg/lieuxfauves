@@ -48,7 +48,7 @@
         <div class="leftColumnMenu">
             <div class="leftColumnContent">
 
-                <div class="searchForm">
+              <!--   <div class="searchForm">
 
                     <form role="search" method="get" id="searchform" class="searchform" action="<?= home_url('/') ?>">
                         <div>
@@ -60,15 +60,16 @@
                     <div id="search_result_ajax">
 
                     </div>
-                </div>
+                </div> -->
 
 
 
 
 
+                
                 <div class="menuItemFP">
                     <h1><a href="/agence">Agence</a></h1>
-                    <div class="subMenuFP"> | <a href="/agence/#sec-valeur">Valeurs</a> | <a href="/agence/#sec-expertise">Expertise</a> | <a href="/agence/#sec-equipe">Équipe</a> | </div>
+                    <div class="subMenuFP"><span class="barMenuFull">|</span><a href="/agence/#sec-valeur">Valeurs</a><span class="barMenuFull">|</span><a href="/agence/#sec-expertise">Expertise</a><span class="barMenuFull">|</span><a href="/agence/#sec-equipe">Équipe</a><span class="barMenuFull">|</span></div>
 
                 </div>
 
@@ -79,12 +80,13 @@
 
                 <div class="menuItemFP">
                     <h1> <a href="/projets">Projets</a> </h1>
-                    <div class="subMenuFP"> | <a href="/projets?lieu=lieux">Lieux</a> | <a href="/projets?cat=architecture">Architectures</a> | <a href="/projets?cat=urbanisme">Urbanisme</a> | <a href="/projets?thematique=vivant">Vivant</a> | <a href="/projets?thematique=ethique">Éthique</a> | <a href="/projets?thematique=soutenable">Soutenable</a> | </div>
+                    <div class="subMenuFP"><span class="barMenuFull"><span class="barMenuFull"><span class="barMenuFull"><span class="barMenuFull">|</span></span></span></span><a href="/projets">Lieux</a><span class="barMenuFull">|</span><a href="/projets">Architectures</a><span class="barMenuFull">|</span><a href="/projets">Urbanisme</a><span class="barMenuFull">|</span><a href="/projets">Vivant</a><span class="barMenuFull">|</span><a href="/projets">Éthique</a><span class="barMenuFull">|</span><a href="/projets">Soutenable</a><span class="barMenuFull">|</span></div>
                 </div>
 
                 <div class="menuItemFP">
                     <h1><a href="/explorations">Explorations</a> </h1>
                 </div>
+
 
 
 
@@ -96,7 +98,7 @@
     </div>
 
 
-    <div id="fullMenu" class="full-menu menu fullMenu fullMenuOff">
+   <!--  <div id="fullMenu" class="full-menu menu fullMenu fullMenuOff">
 
         <div class="rightColumnMenu">
             <div class="headerFullMenuWrapper">
@@ -173,7 +175,7 @@
             </div>
 
         </div>
-    </div>
+    </div> -->
 
     <div class="responsive-menu">
 
