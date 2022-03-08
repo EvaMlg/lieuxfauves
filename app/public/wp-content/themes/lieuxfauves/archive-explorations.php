@@ -21,7 +21,7 @@ get_header();
 
         </div>
 
-        <div class="categoryHeader">
+        <div class="categoryHeader catHeaderOff">
 			
 
 

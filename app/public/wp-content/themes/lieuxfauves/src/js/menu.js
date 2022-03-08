@@ -170,13 +170,13 @@ const catHeader = document.querySelector('.categoryHeader');
 
 
 responsiveCatLogo.addEventListener('click', function () {
-   if (catHeader.classList.contains('catHeaderOn')) {
-       catHeader.classList.remove("catHeaderOn");
-       catHeader.classList.add("catHeaderOff");
+   if (catHeader.classList.contains('catHeaderOff')) {
+       catHeader.classList.add("catHeaderOn");
+       catHeader.classList.remove("catHeaderOff");
          catHeader.style.animation = "transition 2s ease"; }
  else {
-     catHeader.classList.remove("catHeaderOff");
-     catHeader.classList.add("catHeaderOn");
+     catHeader.classList.remove("catHeaderOn");
+     catHeader.classList.add("catHeaderOff");
   
  }
  }, false); 

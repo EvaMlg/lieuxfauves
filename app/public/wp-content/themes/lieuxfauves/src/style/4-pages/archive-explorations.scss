@@ -24,7 +24,6 @@
     }
 
     .categoryHeader {
-        display: none;
         @include laptopS {
             display: flex;
         }

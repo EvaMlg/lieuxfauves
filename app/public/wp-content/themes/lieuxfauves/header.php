@@ -12,17 +12,6 @@
 <head>
 
 
-<!-- ‘charset‘ – Displays the “Encoding for pages and feeds” set in Settings -->
-
-
-<link
-  rel="stylesheet"
-  href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
-/>
-
-<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
-
-
 
     <meta charset="<?php bloginfo( "charset" ) ?>">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">

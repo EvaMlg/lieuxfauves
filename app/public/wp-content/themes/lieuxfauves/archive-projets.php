@@ -30,7 +30,7 @@ get_header();
 		
 
 
-		<div class="categoryHeader">
+		<div class="categoryHeader catHeaderOff">
 
 
 			<?php
