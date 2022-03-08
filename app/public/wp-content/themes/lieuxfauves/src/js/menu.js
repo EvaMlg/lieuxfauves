@@ -148,16 +148,24 @@ burgerButton.addEventListener('click', function () {
 
 
 const responsiveBurger =  document.querySelector('.responsiveBurger');
+const logoResponsive = document.querySelector('.logoResponsive');
+const responsiveBurgerImg =  document.querySelector('.responsiveBurgerImg');
+
+
 
 
 responsiveBurger.addEventListener('click', function () {
     if (fullMenu.classList.contains('fullMenuOff')) {
         fullMenu.classList.remove("fullMenuOff");
         fullMenu.classList.add("fullMenuOn");
+       logoResponsive.src="/wp-content/themes/lieuxfauves/src/assets/img/LF_nav_logo.svg";
+       responsiveBurgerImg.src="/wp-content/themes/lieuxfauves/src/assets/img/LF_menu_burguer-fermer.svg";
         fullMenu.style.animation = "transition 2s ease"; }
 else {
     fullMenu.classList.remove("fullMenuOn");
     fullMenu.classList.add("fullMenuOff");
+    logoResponsive.src="/wp-content/themes/lieuxfauves/src/assets/img/LF_nav_logo.svg";
+    responsiveBurgerImg.src="/wp-content/themes/lieuxfauves/src/assets/img/LF_nav_menu-burguer.svg";
   
 }
 }, false); 
