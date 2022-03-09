@@ -40,10 +40,10 @@
     width: 100%;
     position: absolute;
     height: 99.5vh;
-    z-index: 500;
+    z-index: 2000;
     object-fit: cover;">
     <img src="/wp-content/themes/lieuxfauves/src/assets/img/.jpg" alt="" class="svg" style="position: absolute;
-    z-index: 501;
+    z-index: 2000;
     width: 40%;
     top: 28%;
     left: 30%;">

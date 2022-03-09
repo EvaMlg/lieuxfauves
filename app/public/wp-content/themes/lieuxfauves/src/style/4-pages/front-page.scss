@@ -57,7 +57,9 @@
 
 
 .container-front-page {
-    position: relative;
+    display: block;
+ 
+
 
     @include laptopS {
         display: flex;
@@ -68,6 +70,9 @@
 
 
 .split-left {
+    width: 100%;
+    height: 100vh;
+    z-index: 1000;
 
     @include laptopS {
         width: 43.4%;
@@ -77,14 +82,22 @@
 
 
 .list-chapter {
-    display: none;
+    display: block;
+
+    position: fixed;
+    bottom: $m-margin-small;
+    left: $m-margin-small;
+    @include laptopS {
+        position: fixed;
+        bottom: 37px;
+        left: $margin;}
+
+
 
     .catSpan:hover {
         font-family: "Fira Bold";
  
      }
-
-   
 
     @include laptopS {
         display: block;
@@ -92,9 +105,9 @@
 
     @include chapter;
     color : $grey-col;
-    position: fixed;
-    bottom: 37px;
-    left: $margin;
+
+
+
 
     a {
         text-decoration: none;
@@ -236,8 +249,22 @@
     }
 }
 
+.sec-lieux {
+    position: relative;
+    z-index: 500;
+    @include mobile-tab {
+        margin-bottom: 500px;
+    }
+
+}
+
 
 .sec-faire {
+    position: relative;
+    z-index: 500;
+    @include mobile-tab {
+        margin-bottom: 500px;
+    }
 
     .actu-bloc {
         @include laptopS {
@@ -306,6 +333,11 @@
 }
 
 .sec-archiurba {
+    position: relative;
+    z-index: 500;
+    @include mobile-tab {
+        margin-bottom: 500px;
+    }
     .projet-bloc {
         height: 400px;
 
@@ -431,6 +463,9 @@
 
 
 .sec-ves {
+    position: relative;
+    z-index: 500;
+    
 
     .bloc-exploration {
         .thumbnailExplo {

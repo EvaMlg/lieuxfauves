@@ -1643,9 +1643,7 @@ $m-margin-big : 20px;
 
         @include chapter;
         color: $grey-col;
-        position: fixed;
-        bottom: 37px;
-        left: $margin;
+       
 
         a {
             text-decoration: none;
