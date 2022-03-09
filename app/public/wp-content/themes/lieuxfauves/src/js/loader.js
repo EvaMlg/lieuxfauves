@@ -42,13 +42,6 @@ setTimeout(function () {
 
 
 
-const thumbnailPopup = document.querySelectorAll('.thumbnailPopup');
-const contentPopup = document.querySelectorAll('.contentPopup');
-const logoClose = document.querySelectorAll('.logoClose');
-
-console.log(thumbnailPopup);
-console.log(contentPopup);
-console.log(logoClose);
 
 
 /*thumbnailPopup.forEach(item => {
@@ -87,6 +80,38 @@ contentPopup.forEach(item => {
 */
 
 
+// Pop up Thumbnail
+
+logoOpen = document.querySelector('.logo-open');
 
 
-const projetCross = document.querySelectorAll('.thumbnailPopup');
+logoOpen.addEventListener('click', function() { 
+    if ( document.querySelector('.projet-popup').style.display === "none") {
+        document.querySelector('.projet-popup').style.display = "block"; 
+        document.querySelector('.projet-popup').style.animation = "windowUp 0.2s ease"
+      
+
+
+    }
+    else {
+        document.querySelector('.projet-popup').style.display = "none";
+
+
+
+    }
+
+ }, false);
+
+
+ logoClose = document.querySelector('.logo-close');
+
+ 
+ 
+ logoClose.addEventListener('click', function() { 
+    document.querySelector('.projet-popup').style.animation = "windowDown 0.2s ease"
+    document.querySelector('.projet-popup').style.display = "none"; 
+
+ 
+  }, false);
+ 
+ 

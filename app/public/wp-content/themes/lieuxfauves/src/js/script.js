@@ -13,12 +13,12 @@
 			  });
 		})
 
-		$('.sec-archiurba .projet-bloc .projet-popup-wrapper').mouseenter(function(){
+		/* $('.sec-archiurba .projet-bloc .projet-popup-wrapper').mouseenter(function(){
 			$(this).find('#contentPopup').addClass('popup-active');
 		});
 		
 		$('.sec-archiurba .projet-bloc .projet-popup-wrapper .projet-popup .logo-wrapper button#logoClose').click(function(){
-			$(this).parent('.logo-wrapper').parent('.popup-active').removeClass('popup-active')
+			$(this).parent('.logo-wrapper').parent('.popup-active').removeClass('popup-active') */
 		});
 		
 		$('a img.loupe').click(function(){

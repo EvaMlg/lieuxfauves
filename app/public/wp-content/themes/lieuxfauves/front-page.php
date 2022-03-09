@@ -166,12 +166,17 @@ get_header();
                     if ($my_query->have_posts()) : while ($my_query->have_posts()) : $my_query->the_post(); ?>
 
                             <div class="projet-popup-wrapper">
-                                <div class="projet-thumbnail thumbnailPopup" id="thumbnailPopup"><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail(); ?> </a></div>
+
+                           <img class="logo-open" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_plus_ouvrir.svg">
+
+                         
+
+                                <div class="projet-thumbnail thumbnailPopup" id="thumbnailPopup"><?php the_post_thumbnail(); ?></div>
                                 <div class="projet-popup transition contentPopup" id="contentPopup">
                                     <a href="<?php the_permalink(); ?>">
                                         <?php the_title(); ?></a>
+                                        <p class="projectLoopLieu"><?php the_field('lieu', $post->ID); ?></p>
                                     <?php the_excerpt(); ?>
-                                    <span class="projet-date"><?php the_date() ?></span>
                                     <div class="logo-wrapper">
                                         <a href="<?php the_permalink(); ?>"><img class="logo-readmore" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_load.svg"></a>
                                         <button id="logoClose" class="logoClose"><img class="logo-close" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_plus_fermer.svg"></button>

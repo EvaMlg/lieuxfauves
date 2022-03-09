@@ -53,3 +53,14 @@
         transform: translate(0)
         }
         }
+
+
+
+        @keyframes  windowUp {from {
+            transform: translateY(10%)
+            }
+            
+            to {
+            transform: translate(0)
+            }
+            }
