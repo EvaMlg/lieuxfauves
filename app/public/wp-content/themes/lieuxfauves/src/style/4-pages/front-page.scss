@@ -79,10 +79,12 @@
 .list-chapter {
     display: none;
 
-    span:hover {
-        color : $jungle-col;
+    .catSpan:hover {
+        font-family: "Fira Bold";
+ 
+     }
 
-    }
+   
 
     @include laptopS {
         display: block;

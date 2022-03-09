@@ -21,7 +21,9 @@ get_header();
     <div class="split-left">
 
         <div class="list-chapter-agence">
+            <div class="list-chapter-agence-title">
             <a href="#sec-agence"><span class="spanAgence">Agence</span></a><br>
+            </div>
             <a href="#sec-valeurs"> <span class="spanValeurs">Valeurs</span></a><br>
             <a href="#sec-expertises"> <span class="spanExpertises">Expertises</span></a><br>
             <a href="#sec-equipe"> <span class="spanEquipe">Équipe</span></a><br>

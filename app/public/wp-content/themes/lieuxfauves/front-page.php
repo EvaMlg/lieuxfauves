@@ -35,12 +35,12 @@ get_header();
 
             <div class="list-chapter">
                 <span class="lieuxSpan">Lieux</span><br>
-                <a href="#sec-faire"><span>pour</span><span class="faireSpan"> Faire</span><br></a>
-                <a href="#sec-archiurba"><span>une</span><span class="archiSpan"> Architecture</span><br></a>
-                <a href="#sec-archiurba"><span>et un</span><span class="urbaSpan"> Urbanisme</span><br></a>
-                <a href="#sec-ves"><span class="vivantSpan">Vivant,</span><br></a>
-                <a href="#sec-ves"><span class="ethiqueSpan">Éthique</span><br></a>
-                <a href="#sec-ves"><span>et</span><span class="soutenableSpan"> Soutenable</span><br></a>
+                <a href="#sec-faire"><span>pour</span><span class="catSpan faireSpan"> Faire</span><br></a>
+                <a href="#sec-archiurba"><span>une</span><span class="catSpan archiSpan"> Architecture</span><br></a>
+                <a href="#sec-archiurba"><span>et un</span><span class="catSpan urbaSpan"> Urbanisme</span><br></a>
+                <a href="#sec-ves"><span class="catSpan vivantSpan">Vivant,</span><br></a>
+                <a href="#sec-ves"><span class="catSpan ethiqueSpan">Éthique</span><br></a>
+                <a href="#sec-ves"><span>et</span><span class="catSpan soutenableSpan"> Soutenable</span><br></a>
             </div>
 
 

@@ -1,4 +1,4 @@
-<header class="header-navigation-hero">
+<header class="header-navigation-hero" id="header">
 
     <div id="searchMenu" class="full-menu menu fullMenu fullMenuOff">
 
@@ -200,7 +200,7 @@
                     </div>
 
                     <a> <img class="pictoNav loupe" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_nav_loupe.svg"></a>
-                    <a href="#footer"> <img class="pictoNav flecheBas" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_nav_fleche-bas.svg"></a>
+                    <a href="#header"> <img class="pictoNav flecheBas" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_nav_fleche-haut.svg"></a>
                     <a class="pictoLogo" href="<?php echo home_url(); ?>" ?><img class="pictoNav" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_nav_logo.svg"></a>
 
                     <?php

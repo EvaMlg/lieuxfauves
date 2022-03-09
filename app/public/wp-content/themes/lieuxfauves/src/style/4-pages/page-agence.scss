@@ -39,6 +39,12 @@
 
 .list-chapter-agence {
 
+    .list-chapter-agence-title{
+      
+        padding-bottom: 20px;
+    }
+
+
     @include tablet {
         display: none
     }
@@ -58,6 +64,13 @@
     a {
         text-decoration: none;
         color: $grey-col;
+    
+    }
+
+    a:hover {
+        text-decoration: none;
+        font-family: "Fira Bold";
+    
     }
 
 }
@@ -66,7 +79,8 @@
 .spanAgence {
     @include chapter-bold;
     text-transform: uppercase;
-    color: $grey-col;
+    color: $jungle-col;
+    margin-bottom: $dCol;
 }
 
 
@@ -158,6 +172,11 @@
 
     }
 
+    a:hover {
+        @include fauveUnderlineHover;
+        color: $grey-col;
+
+    }
     padding-bottom: $dCol;
 
 }
@@ -166,6 +185,7 @@
 .taglinegrey {
     @include p-intro-bold;
     background-color: $black-col-5;
+    line-height: 30px !important;
 }
 
 
@@ -187,7 +207,7 @@
     }
 
     ;
-    background-color: $jungle-col-10;
+    background-color: $grey-new-col-50;
     padding-left: $m-margin-small;
     padding-right: $m-margin-small;
     padding-top: $dCol;
@@ -245,7 +265,7 @@
 
 
 
-    background-color: $jungle-col-10;
+    background-color: $grey-new-col-50;
 
 
 
@@ -322,7 +342,8 @@ padding-bottom: $dCol;
 
 
     h3 {
-        @include haiku;
+        @include p-intro-bold-capitalize;
+        text-transform: uppercase;
         color: white;
         @include laptopS {   padding-left: $dCol;}
     }
