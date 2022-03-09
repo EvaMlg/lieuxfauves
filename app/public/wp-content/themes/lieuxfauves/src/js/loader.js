@@ -1,7 +1,7 @@
 document.querySelector('#loader .progressionBarInner').style.animation = "progressionBar 4s ease";
 
 
-setTimeout(function () {
+setTimeout(function once() {
 
     var state = document.readyState;
 
@@ -43,46 +43,13 @@ setTimeout(function () {
 
 
 
-
-/*thumbnailPopup.forEach(item => {
-    item.addEventListener("mouseover", function () {
-        for (var i = 0; i < contentPopup.length; i += 1) {
-            contentPopup[i].style.display = 'block';
-        }
-    })
-});
-
-thumbnailPopup.forEach(item => {
-    item.addEventListener("mouseout", function () {
-        for (var i = 0; i < contentPopup.length; i += 1) {
-            contentPopup[i].style.display = 'none';
-        }
-    })
-});
-
-
-contentPopup.forEach(item => {
-    item.addEventListener("mouseover", function () {
-        for (var i = 0; i < contentPopup.length; i += 1) {
-            contentPopup[i].style.display = 'block';
-        }
-    })
-});
-
-contentPopup.forEach(item => {
-    item.addEventListener("mouseout", function () {
-        for (var i = 0; i < contentPopup.length; i += 1) {
-            contentPopup[i].style.display = 'none';
-        }
-
-    })
-});
-*/
-
-
-// Pop up Thumbnail
-
 logoOpen = document.querySelector('.logo-open');
+
+
+// popUps = document.getElementsByClassName('.projet-popup');
+
+
+// popUps.forEach(element => ));
 
 
 logoOpen.addEventListener('click', function() { 
@@ -103,9 +70,9 @@ logoOpen.addEventListener('click', function() {
  }, false);
 
 
+
  logoClose = document.querySelector('.logo-close');
 
- 
  
  logoClose.addEventListener('click', function() { 
     document.querySelector('.projet-popup').style.animation = "windowDown 0.2s ease"

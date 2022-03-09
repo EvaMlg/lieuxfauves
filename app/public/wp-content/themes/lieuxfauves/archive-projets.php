@@ -24,6 +24,7 @@ get_header();
 
 		<div class="reponsiveCat">
 		<a> <img class=" pictoFiltres responsiveCatLogo" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_mobile_picto-filtres.svg"></a>
+		
 			
 		</div>
 

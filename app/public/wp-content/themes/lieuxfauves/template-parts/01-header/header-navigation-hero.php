@@ -48,19 +48,19 @@
         <div class="leftColumnMenu">
             <div class="leftColumnContent">
 
-              <!--   <div class="searchForm">
+                 <div class="searchForm">
 
                     <form role="search" method="get" id="searchform" class="searchform" action="<?= home_url('/') ?>">
                         <div>
                             <input type="text" placeholder="Chercher..." value="<?= get_search_query() ?>" name="s" id="s" />
-
+ 
                             <button type="submit" id="searchsubmit" class="glyphicon glyphicon-search"></button>
                         </div>
                     </form>
                     <div id="search_result_ajax">
 
                     </div>
-                </div> -->
+                </div> 
 
 
 

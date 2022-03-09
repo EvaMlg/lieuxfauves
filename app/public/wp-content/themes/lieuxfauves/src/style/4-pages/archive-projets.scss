@@ -4,9 +4,13 @@
 
 
 .reponsiveCat {
+    display: flex;
+    flex-direction: column;
     @include laptopS {
         display: none;
     }
+
+
 
     @include mobile-tab {
 
@@ -30,6 +34,8 @@
     height: 25px;
     width: 25px;
 }
+
+
 
 
 // .reponsiveCatOn {
@@ -174,7 +180,7 @@
 
     .categoryHeader {
    
-        width: 70vw;
+        width: 100vw;
         flex-wrap : wrap;
         display: -webkit-box;
         display: -ms-flexbox;
@@ -187,7 +193,7 @@
         display: flex;
         background-color: rgba(255, 255, 255, 0.9);
         padding-bottom: 45px;
-        gap : $dCol
+        gap : 20px;
     }
 
     .projetsContainer .catWrapper {

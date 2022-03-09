@@ -1432,6 +1432,10 @@ footer {
   display: block;
 }
 
+.devise {
+  display: none;
+}
+
 .split-right {
   width: 100vw;
 }
@@ -1650,6 +1654,12 @@ footer {
     display: flex;
   }
 }
+@media (max-width: 1025px) {
+  .sec-archiurba .projet-bloc {
+    display: -ms-grid;
+    display: grid;
+  }
+}
 .sec-archiurba .projet-bloc .projet-popup-wrapper {
   position: relative;
   height: 100%;
@@ -1700,6 +1710,7 @@ footer {
   z-index: 1;
 }
 .sec-archiurba .projet-bloc .projet-popup-wrapper .projet-popup {
+  display: block;
   display: none;
   position: absolute;
   z-index: 200;
@@ -1711,6 +1722,11 @@ footer {
   width: 100%;
   padding: 45px;
   background-color: white;
+}
+@media (min-width: 1025px) {
+  .sec-archiurba .projet-bloc .projet-popup-wrapper .projet-popup {
+    display: none;
+  }
 }
 .sec-archiurba .projet-bloc .projet-popup-wrapper .projet-popup a {
   font-family: "Fira Bold";
@@ -2829,6 +2845,15 @@ footer {
   display: none;
 }
 
+.reponsiveCat {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
 @media (min-width: 1025px) {
   .reponsiveCat {
     display: none;
@@ -2996,7 +3021,7 @@ footer {
 }
 
 .categoryHeader {
-  width: 70vw;
+  width: 100vw;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   display: -webkit-box;
@@ -3010,7 +3035,7 @@ footer {
   display: flex;
   background-color: rgba(255, 255, 255, 0.9);
   padding-bottom: 45px;
-  gap: 45px;
+  gap: 20px;
 }
 
 .catWrapper {
@@ -3975,6 +4000,31 @@ acf-gallery {
   }
 }
 
+@media (max-height: 730px) {
+  .responsive-menu {
+    z-index: 200;
+    position: fixed;
+    top: 18px;
+    right: 18px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  .responsive-menu .pictoResponsive {
+    height: 25px;
+    width: 25px;
+  }
+  .responsive-menu .responsiveBurger {
+    z-index: 100;
+  }
+}
 @media (min-width: 768px) {
   .responsive-menu {
     z-index: 200;
@@ -4353,7 +4403,16 @@ acf-gallery {
 }
 @media (max-width: 1025px) {
   .projetsGrid .titleProjet {
-    padding: 18px;
+    padding-left: 18px;
+    padding-right: 18px;
+    padding-top: 18px;
+  }
+}
+@media (max-width: 1025px) {
+  .projetsGrid .projectLoopLieu {
+    padding-left: 18px;
+    padding-right: 18px;
+    padding-bottom: 18px;
   }
 }
 @media (max-width: 1025px) {
@@ -4394,7 +4453,7 @@ acf-gallery {
     height: 360px;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 1025px) {
   .mainSingleProjet {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -4462,13 +4521,13 @@ acf-gallery {
     top: 450px;
   }
 }
-@media (max-width: 768px) and (min-width: 1025px) {
+@media (max-width: 1025px) and (min-width: 1025px) {
   .headerProjetWrapper .whiteLayout .nomenclature {
     font-size: 12px;
     line-height: 12px;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 1025px) {
   .headerProjetWrapper .whiteLayout .nomenclature a {
     font-family: "Fira Bold";
     font-size: 12px;
@@ -4477,13 +4536,13 @@ acf-gallery {
     line-height: 30px;
   }
 }
-@media (max-width: 768px) and (min-width: 1025px) {
+@media (max-width: 1025px) and (min-width: 1025px) {
   .headerProjetWrapper .whiteLayout .nomenclature a {
     font-size: 12px;
     line-height: 12px;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 1025px) {
   .singleProjetTitle {
     font-family: "Fira Bold";
     font-size: 28px;
@@ -4491,7 +4550,7 @@ acf-gallery {
     color: #828787;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 1025px) {
   .singleProjetSubTitle {
     font-family: "Fira Light";
     text-transform: uppercase;
@@ -4501,7 +4560,7 @@ acf-gallery {
     padding-top: 10px;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 1025px) {
   .contentWrapperProjet {
     position: relative;
     width: 100vw;
@@ -4547,13 +4606,13 @@ acf-gallery {
     color: #828787;
   }
 }
-@media (max-width: 768px) and (min-width: 1025px) {
+@media (max-width: 1025px) and (min-width: 1025px) {
   .contentWrapperProjet .projetWrapper .rightColumn h2 {
     font-size: 17px;
     line-height: 30px;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 1025px) {
   .contentWrapperProjet .projetWrapper .rightColumn h3 {
     font-family: "Fira Bold";
     font-size: 22px;
@@ -4564,13 +4623,13 @@ acf-gallery {
     padding-bottom: 15px;
   }
 }
-@media (max-width: 768px) and (min-width: 1025px) {
+@media (max-width: 1025px) and (min-width: 1025px) {
   .contentWrapperProjet .projetWrapper .rightColumn h3 {
     font-size: 20px;
     line-height: 30px;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 1025px) {
   .contentWrapperProjet .projetWrapper .rightColumn p {
     font-family: "Fira Light";
     font-size: 14px;
@@ -4578,13 +4637,13 @@ acf-gallery {
     color: #828787;
   }
 }
-@media (max-width: 768px) and (min-width: 1025px) {
+@media (max-width: 1025px) and (min-width: 1025px) {
   .contentWrapperProjet .projetWrapper .rightColumn p {
     font-size: 14px;
     line-height: 24px;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 1025px) {
   .contentWrapperProjet .projetWrapper .rightColumn a {
     padding-bottom: 1px;
     padding-right: 5px;
@@ -4597,7 +4656,7 @@ acf-gallery {
     color: #828787;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 1025px) {
   .contentWrapperProjet .projetWrapper .rightColumn a:hover {
     -webkit-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
@@ -4612,7 +4671,7 @@ acf-gallery {
     color: #828787;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 1025px) {
   .contentWrapperProjet .projetWrapper .leftColumn {
     width: 100%;
     padding-right: 0;
@@ -4623,13 +4682,13 @@ acf-gallery {
     line-height: 24px;
   }
 }
-@media (max-width: 768px) and (min-width: 1025px) {
+@media (max-width: 1025px) and (min-width: 1025px) {
   .contentWrapperProjet .projetWrapper .leftColumn p {
     font-size: 14px;
     line-height: 24px;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 1025px) {
   .contentWrapperProjet .projetWrapper .leftColumn .boutonWrapperExploration {
     text-align: left;
     display: -webkit-box;
@@ -4649,13 +4708,13 @@ acf-gallery {
     padding-top: 45px;
   }
 }
-@media (max-width: 768px) and (min-width: 1025px) {
+@media (max-width: 1025px) and (min-width: 1025px) {
   .contentWrapperProjet .projetWrapper .leftColumn .boutonWrapperExploration {
     font-size: 12px;
     line-height: 12px;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 1025px) {
   .contentWrapperProjet .projetWrapper .leftColumn .boutonWrapperExploration button {
     text-align: left;
     font-family: "Fira Bold";
@@ -4664,13 +4723,13 @@ acf-gallery {
     color: #828787;
   }
 }
-@media (max-width: 768px) and (min-width: 1025px) {
+@media (max-width: 1025px) and (min-width: 1025px) {
   .contentWrapperProjet .projetWrapper .leftColumn .boutonWrapperExploration button {
     font-size: 12px;
     line-height: 12px;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 1025px) {
   .contentWrapperProjet .projetWrapper .leftColumn .cardLink {
     padding-right: 18px;
     padding-left: 18px;
@@ -4679,7 +4738,7 @@ acf-gallery {
     margin-top: 10px;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 1025px) {
   .contentWrapperProjet .projetWrapper .leftColumn .cardLinkJungle {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -4706,19 +4765,19 @@ acf-gallery {
     line-height: 25px;
   }
 }
-@media (max-width: 768px) and (min-width: 1025px) {
+@media (max-width: 1025px) and (min-width: 1025px) {
   .contentWrapperProjet .projetWrapper .leftColumn .cardLinkJungle p {
     font-size: 12px;
     line-height: 25px;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 1025px) {
   .contentWrapperProjet .projetWrapper .leftColumn .cardLinkLight {
     background-color: #e5eeed;
     color: #828787;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 1025px) {
   .contentWrapperProjet .projetWrapper .leftColumn .boutonWrapperProjet {
     margin-bottom: 45px;
     font-family: "Fira Bold";
@@ -4734,13 +4793,13 @@ acf-gallery {
             flex-direction: column;
   }
 }
-@media (max-width: 768px) and (min-width: 1025px) {
+@media (max-width: 1025px) and (min-width: 1025px) {
   .contentWrapperProjet .projetWrapper .leftColumn .boutonWrapperProjet {
     font-size: 11px;
     line-height: 24px;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 1025px) {
   .contentWrapperProjet .projetWrapper .leftColumn .boutonWrapperProjet .shareLinks {
     font-family: "Fira Bold";
     font-size: 11px;
@@ -4752,13 +4811,13 @@ acf-gallery {
     padding-bottom: 4%;
   }
 }
-@media (max-width: 768px) and (min-width: 1025px) {
+@media (max-width: 1025px) and (min-width: 1025px) {
   .contentWrapperProjet .projetWrapper .leftColumn .boutonWrapperProjet .shareLinks {
     font-size: 11px;
     line-height: 24px;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 1025px) {
   .logoOuvrir {
     background-color: transparent;
   }
@@ -4767,13 +4826,13 @@ acf-gallery {
     width: 20px;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 1025px) {
   .logoPrevNext {
     height: 20px;
     width: 20px;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 1025px) {
   .ficheTechnique {
     font-family: "Fira Light";
     font-size: 14px;
@@ -4795,29 +4854,29 @@ acf-gallery {
     line-height: 25px;
   }
 }
-@media (max-width: 768px) and (min-width: 1025px) {
+@media (max-width: 1025px) and (min-width: 1025px) {
   .ficheTechnique h3 {
     font-size: 12px;
     line-height: 25px;
   }
 }
-@media (max-width: 768px) and (min-width: 1025px) {
+@media (max-width: 1025px) and (min-width: 1025px) {
   .ficheTechnique {
     font-size: 14px;
     line-height: 24px;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 1025px) {
   .ficheTechnique .columnFT {
     width: 50%;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 1025px) {
   .ficheTechnique .wrapperItems {
     margin-bottom: 15px;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 1025px) {
   .navNextPrev {
     position: fixed;
     z-index: 3000;
@@ -4842,7 +4901,7 @@ acf-gallery {
     height: 154px;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 1025px) {
   .projetsLoopExplo {
     display: none;
     width: 100vw;
@@ -4864,13 +4923,13 @@ acf-gallery {
     padding-bottom: 45px;
   }
 }
-@media (max-width: 768px) and (min-width: 1025px) {
+@media (max-width: 1025px) and (min-width: 1025px) {
   .projetsLoop .titleLoop {
     font-size: 15px;
     line-height: 14px;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 1025px) {
   .projetsLoop .loopWrapper {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -4891,18 +4950,18 @@ acf-gallery {
     color: #828787;
   }
 }
-@media (max-width: 768px) and (min-width: 1025px) {
+@media (max-width: 1025px) and (min-width: 1025px) {
   .projetsLoop .loopWrapper .projectCard a {
     font-size: 17px;
     line-height: 24px;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 1025px) {
   .projetsLoop .loopWrapper .projectCard:nth-child(3n) img {
     height: 500px;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 1025px) {
   .projetsLoop .loopWrapper .projectThumbnail img {
     width: 100%;
     height: 100%;
@@ -4920,7 +4979,7 @@ acf-gallery {
     height: 360px;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 1025px) {
   .projetsLoop .loopWrapper .projectTitle {
     padding-top: 8px;
     width: 300px;
@@ -4931,13 +4990,13 @@ acf-gallery {
     padding-right: 90px;
   }
 }
-@media (max-width: 768px) and (min-width: 1025px) {
+@media (max-width: 1025px) and (min-width: 1025px) {
   .projetsLoop .loopWrapper .projectTitle {
     font-size: 14px;
     line-height: 25px;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 1025px) {
   .projetsLoop .loopWrapper .projectTitle a {
     text-decoration: none;
     color: #828787;

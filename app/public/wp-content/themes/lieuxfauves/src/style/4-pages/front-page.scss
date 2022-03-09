@@ -117,6 +117,9 @@
     display: block;
 }
 
+.devise {
+    display: none;
+}
 
 
 
@@ -303,7 +306,13 @@
         @include laptopS {
         display: flex;}
 
+        @include mobile-tab {
+            display: grid;
+        }
+
         .projet-popup-wrapper {
+
+
             @include laptopS {
                 width: 50%;}
 
@@ -350,7 +359,9 @@
             }
 
             .projet-popup {
-
+                display: block;
+                @include laptopS {
+                    display: none;}
            
 
                 display: none;

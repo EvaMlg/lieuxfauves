@@ -34,9 +34,9 @@ get_header();
 
         <div class="boutonWrapperExploration">
 
-        <span class="shareLinks"><img class="logo-categorie" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_fleche-partager.svg"> Partager Fb-Ig-Tt</span>
-            <span class="shareLinks"><img class="logo-categorie" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_fleche-telecharger.svg"> <?php the_field('document_a_telecharger'); ?></span>
-            <span class="shareLinks"><img class="logo-categorie" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_fleche-lien.svg"> <?php the_field('lien_externe'); ?></span>
+        <span class="shareLinks"><img class="logo-categorie logo-explo" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_fleche-partager.svg"> Partager Fb-Ig-Tt</span>
+            <span class="shareLinks"><img class="logo-categorie logo-explo" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_fleche-telecharger.svg"> <?php the_field('document_a_telecharger'); ?></span>
+            <span class="shareLinks"><img class="logo-categorie logo-explo" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_fleche-lien.svg"> <?php the_field('lien_externe'); ?></span>
 
         </div>
 

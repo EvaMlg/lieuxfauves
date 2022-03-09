@@ -8,8 +8,7 @@ $m-margin-big : 20px;
 
 
 
-@include tablet {
-
+@include sideBarResponsive { 
     .responsive-menu {
         z-index: 200;
         position: fixed;
@@ -29,6 +28,39 @@ $m-margin-big : 20px;
 
         }
     }
+   
+}
+
+
+
+
+@include tablet {
+
+
+        .responsive-menu {
+            z-index: 200;
+            position: fixed;
+            top: $m-margin-small;
+            right: $m-margin-small;
+            display: flex;
+            flex-direction: column;
+            width: fit-content;
+    
+            .pictoResponsive {
+                height: 25px;
+                width: 25px;
+            }
+    
+            .responsiveBurger {
+                z-index: 100;
+    
+            }
+        }
+       
+    
+    
+
+  
 
 }
 
@@ -60,7 +92,6 @@ $m-margin-big : 20px;
 }
 
 @include laptopS {
-
 
     .responsive-menu {
         display: none;
@@ -415,7 +446,16 @@ $m-margin-big : 20px;
         }
 
         .titleProjet {
-            padding: $m-margin-small;
+            padding-left: $m-margin-small;
+            padding-right: $m-margin-small;
+            padding-top: $m-margin-small;
+
+        }
+
+        .projectLoopLieu {
+            padding-left: $m-margin-small;
+            padding-right: $m-margin-small;
+            padding-bottom: $m-margin-small;
 
         }
 
@@ -458,7 +498,7 @@ $m-margin-big : 20px;
 // PROJET SINGLE => AJOUTER BLOC autour du header pour responsive
 
 
-@include mobile {
+@include mobile-tab {
 
 
     .mainSingleProjet {
@@ -817,7 +857,7 @@ $m-margin-big : 20px;
 // LOOP
 
 
-@include mobile {
+@include mobile-tab {
     .projetsLoopExplo {
         display: none;
         width: 100vw;

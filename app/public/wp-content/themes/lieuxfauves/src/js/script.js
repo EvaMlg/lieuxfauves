@@ -13,13 +13,13 @@
 			  });
 		})
 
-		/* $('.sec-archiurba .projet-bloc .projet-popup-wrapper').mouseenter(function(){
+		 $('.sec-archiurba .projet-bloc .projet-popup-wrapper').mouseenter(function(){
 			$(this).find('#contentPopup').addClass('popup-active');
 		});
 		
 		$('.sec-archiurba .projet-bloc .projet-popup-wrapper .projet-popup .logo-wrapper button#logoClose').click(function(){
-			$(this).parent('.logo-wrapper').parent('.popup-active').removeClass('popup-active') */
-		});
+			$(this).parent('.logo-wrapper').parent('.popup-active').removeClass('popup-active') 
+		}); 
 		
 		$('a img.loupe').click(function(){
 			if($('.searchForm').hasClass('active')){
@@ -112,7 +112,7 @@
         });
 
     });
-})(jQuery);
+ })(jQuery);
 
 document.addEventListener('DOMContentLoaded', function () {
 
@@ -240,7 +240,11 @@ document.addEventListener('DOMContentLoaded', function () {
 })
 
 
+
+
+
 element = document.querySelector('.logoOuvrir');
+console.log (element);
 cross = document.querySelector('.logoOuvrir img');
 element.addEventListener('click', function() { 
     if ( document.querySelector('.ficheTechnique').style.display === "none") {
@@ -255,9 +259,3 @@ element.addEventListener('click', function() {
     }
 
  }, false);
-
-
-
-
-
-
