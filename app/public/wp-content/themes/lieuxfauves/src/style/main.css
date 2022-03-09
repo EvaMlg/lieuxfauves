@@ -735,7 +735,7 @@ html {
 
 .sideNavWrapper .sideNav a {
   padding-left: 30px;
-  font-family: "Fira Black";
+  font-family: "Fira Bold";
   font-size: 15px;
   line-height: 14px;
   letter-spacing: 1px;
@@ -751,7 +751,7 @@ html {
 
 .sideNavWrapper .sideNav a:hover {
   padding-left: 30px;
-  font-family: "Fira Black";
+  font-family: "Fira Bold";
   font-size: 15px;
   line-height: 14px;
   letter-spacing: 1px;
@@ -939,7 +939,7 @@ html {
   padding-left: 77px;
 }
 .projetsLoop .titleLoop {
-  font-family: "Fira Black";
+  font-family: "Fira Bold";
   font-size: 15px;
   line-height: 14px;
   color: #00534e;
@@ -1489,7 +1489,7 @@ footer {
 
 .list-link {
   height: 100%;
-  font-family: "Fira Black";
+  font-family: "Fira Bold";
   font-size: 15px;
   line-height: 14px;
   color: #00534e;
@@ -1509,6 +1509,9 @@ footer {
     padding-left: 45px;
   }
 }
+.list-link .titleListLink {
+  letter-spacing: 1px;
+}
 .list-link img {
   margin-right: 20px;
   height: 11px;
@@ -1526,9 +1529,9 @@ footer {
   height: 235px;
   font-family: "Fira Light";
   font-style: italic;
-  font-size: 22px;
-  line-height: 30px;
-  color: #e5eeed;
+  font-size: 19px;
+  line-height: 28px;
+  color: #658d8c;
   background-color: #00534e;
   padding-left: 18px;
   padding-right: 18px;
@@ -1537,8 +1540,8 @@ footer {
 }
 @media (min-width: 1025px) {
   .bloc-haiku {
-    font-size: 22px;
-    line-height: 30px;
+    font-size: 19px;
+    line-height: 28px;
   }
 }
 @media (min-width: 1025px) {
@@ -1858,7 +1861,7 @@ footer {
   line-height: 24px;
   line-height: 24px;
   color: #828787;
-  padding-right: 135px;
+  padding-right: 90px;
 }
 @media (min-width: 1025px) {
   .sec-ves .bloc-exploration .explorationWrapper .titleExplo {
@@ -3732,14 +3735,14 @@ footer {
 .rejoindreWrapper h3 {
   font-family: "Fira Light";
   font-style: italic;
-  font-size: 22px;
-  line-height: 30px;
+  font-size: 19px;
+  line-height: 28px;
   color: white;
 }
 @media (min-width: 1025px) {
   .rejoindreWrapper h3 {
-    font-size: 22px;
-    line-height: 30px;
+    font-size: 19px;
+    line-height: 28px;
   }
 }
 @media (min-width: 1025px) {
@@ -4915,7 +4918,7 @@ acf-gallery {
     padding-left: 77px;
   }
   .projetsLoop .titleLoop {
-    font-family: "Fira Black";
+    font-family: "Fira Bold";
     font-size: 15px;
     line-height: 14px;
     color: #00534e;
@@ -6000,7 +6003,7 @@ acf-gallery {
 @media (max-width: 1025px) {
   .list-link {
     height: 100%;
-    font-family: "Fira Black";
+    font-family: "Fira Bold";
     font-size: 15px;
     line-height: 14px;
     color: #00534e;
@@ -6029,7 +6032,6 @@ acf-gallery {
 }
 @media (max-width: 1025px) {
   .list-link a {
-    margin-right: 20px;
     color: #00534e;
   }
 }
@@ -6038,8 +6040,8 @@ acf-gallery {
     height: 235px;
     font-family: "Fira Light";
     font-style: italic;
-    font-size: 22px;
-    line-height: 30px;
+    font-size: 19px;
+    line-height: 28px;
     color: white;
     background-color: #00534e;
     padding-left: 18px;
@@ -6050,8 +6052,8 @@ acf-gallery {
 }
 @media (max-width: 1025px) and (min-width: 1025px) {
   .bloc-haiku {
-    font-size: 22px;
-    line-height: 30px;
+    font-size: 19px;
+    line-height: 28px;
   }
 }
 @media (max-width: 1025px) and (min-width: 1025px) {
@@ -6782,15 +6784,15 @@ acf-gallery {
   .rejoindreWrapper h3 {
     font-family: "Fira Light";
     font-style: italic;
-    font-size: 22px;
-    line-height: 30px;
+    font-size: 19px;
+    line-height: 28px;
     color: white;
   }
 }
 @media (max-width: 1025px) and (max-width: 768px) and (min-width: 1025px) {
   .rejoindreWrapper h3 {
-    font-size: 22px;
-    line-height: 30px;
+    font-size: 19px;
+    line-height: 28px;
   }
 }
 @media (max-width: 1025px) and (max-width: 768px) and (min-width: 1025px) {

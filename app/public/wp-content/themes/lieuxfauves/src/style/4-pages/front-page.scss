@@ -185,6 +185,10 @@
     }
     padding-bottom: $dCol;
 
+    .titleListLink {
+        letter-spacing: 1px;
+    }
+
     img {
         margin-right: 20px;
         height: 11px;
@@ -207,7 +211,7 @@
 .bloc-haiku {
     height: 235px;
     @include haiku;
-    color: $jungle-col-10;
+    color: #658d8c;
     background-color: $jungle-col;
 
     padding-left: $m-margin-small;
@@ -487,7 +491,7 @@
                 @include p-intro-bold;
                 line-height: 24px;
                 color: $grey-col;
-                padding-right: 3 * $dCol;
+                padding-right: 2 * $dCol;
            
             }
 

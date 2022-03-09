@@ -84,7 +84,7 @@
 
 
 @mixin menu-link {
-  font-family: "Fira Black";
+  font-family: "Fira Bold";
   font-size: 15px;
   line-height: 14px;
 
@@ -98,12 +98,12 @@
 @mixin haiku {
   font-family: "Fira Light";
   font-style: italic;
-  font-size: 22px;
-  line-height: 30px;
+  font-size: 19px;
+  line-height: 28px;
 
   @include laptopS {
-    font-size: 22px;
-    line-height: 30px;
+    font-size: 19px;
+    line-height: 28px;
   }
 }
 
