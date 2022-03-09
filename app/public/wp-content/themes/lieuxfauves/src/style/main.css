@@ -591,7 +591,7 @@ html {
   line-height: 16px;
   color: white;
   padding-bottom: 45px;
-  padding-top: 45px;
+  padding-top: 12px;
   text-transform: uppercase;
 }
 @media (min-width: 1025px) {
@@ -663,7 +663,12 @@ html {
 }
 .full-menu .leftColumnMenu .subMenuFP a {
   padding: 4px;
+  padding-left: 10px;
+  padding-right: 10px;
   color: white;
+}
+.full-menu .leftColumnMenu .barMenuFull {
+  font-family: "Fira Light";
 }
 
 .activePage {
@@ -2955,19 +2960,25 @@ footer {
 }
 .projetsGrid .titleProjet {
   padding-right: 90px;
+  padding-top: 5px;
 }
-.projetsGrid a {
+.projetsGrid .titleProjet a {
   font-family: "Fira Bold";
   font-size: 17px;
   line-height: 24px;
+  line-height: 20px !important;
   text-decoration: none;
   color: #828787;
 }
 @media (min-width: 1025px) {
-  .projetsGrid a {
+  .projetsGrid .titleProjet a {
     font-size: 17px;
     line-height: 24px;
   }
+}
+.projetsGrid .projectLoopLieu {
+  padding-top: 5px;
+  padding-right: 90px;
 }
 .projetsGrid .cardProjet:nth-child(3n+2) img {
   height: 480px;
@@ -2999,6 +3010,14 @@ footer {
     font-size: 12px;
     line-height: 20px;
   }
+}
+
+.subCatName {
+  cursor: pointer;
+}
+
+.subCatName span:hover {
+  font-family: "Fira Bold";
 }
 
 .categoryHeader .div-to-toggle .subCatName span.active {

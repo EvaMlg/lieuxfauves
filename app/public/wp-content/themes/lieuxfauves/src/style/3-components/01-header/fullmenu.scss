@@ -107,7 +107,7 @@
             @include footer-p-bold;
             color : white;
             padding-bottom: $dCol;
-            padding-top :$dCol;
+            padding-top :12px;
             text-transform: uppercase;
     
         }
@@ -160,9 +160,15 @@
     
 
              a {
-            padding: 4px;
+             padding: 4px;
+             padding-left: 10px;
+             padding-right: 10px;
              color : white;
              }
+        }
+
+        .barMenuFull {
+           font-family: 'Fira Light';
         }
 
 

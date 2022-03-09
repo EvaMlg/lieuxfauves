@@ -117,14 +117,24 @@
 
         .titleProjet {
             padding-right: 2 * $dCol;
-        }
+            padding-top : 5px;
 
 
         a {
             @include p-intro-bold;
+            line-height: 20px !important;
             text-decoration: none;
             color: $grey-col
         }
+        }
+
+        .projectLoopLieu {
+            padding-top: 5px;
+            padding-right: 2 * $dCol;
+
+        }
+
+
 
     
         .cardProjet:nth-child(3n+2) {
@@ -161,6 +171,18 @@
 
     .catName.active {
       
+    }
+
+    .subCatName {
+        cursor: pointer;
+    }
+
+
+    .subCatName span:hover {
+        font-family : 'Fira Bold';
+      
+
+
     }
 
   
