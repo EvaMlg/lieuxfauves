@@ -583,7 +583,7 @@ html {
   padding-right: 30px;
 }
 .full-menu .rightColumnMenu .logo-socials {
-  height: 50px;
+  height: 40px;
 }
 .full-menu .rightColumnMenu .contactWrapper {
   font-family: "Fira Bold";
@@ -613,7 +613,7 @@ html {
   }
 }
 .full-menu .rightColumnMenu .adressesWrapper .adressWrapper {
-  padding-bottom: 0px;
+  padding-bottom: 10px;
 }
 .full-menu .leftColumnMenu {
   display: -webkit-box;
@@ -633,7 +633,7 @@ html {
   font-family: "Fira Black";
   font-size: 36px;
   line-height: 50px;
-  letter-spacing: 5px;
+  letter-spacing: 6px;
   color: #00534e;
   text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
   text-transform: uppercase;
@@ -642,7 +642,7 @@ html {
   .full-menu .leftColumnMenu .menuItemFP h1 {
     font-size: 36px;
     line-height: 50px;
-    letter-spacing: 5px;
+    letter-spacing: 6px;
   }
 }
 .full-menu .leftColumnMenu .menuItemFP h1 a {
@@ -4262,7 +4262,7 @@ acf-gallery {
     font-family: "Fira Black";
     font-size: 36px;
     line-height: 50px;
-    letter-spacing: 5px;
+    letter-spacing: 6px;
     color: #00534e;
     text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
     text-transform: uppercase;
@@ -4275,7 +4275,7 @@ acf-gallery {
   .leftColumnMenu .menuItemFP h1 {
     font-size: 36px;
     line-height: 50px;
-    letter-spacing: 5px;
+    letter-spacing: 6px;
   }
 }
 @media (max-width: 768px) {
