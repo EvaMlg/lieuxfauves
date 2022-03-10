@@ -1566,7 +1566,18 @@ $m-margin-big : 20px;
 
 // FRONT PAGE 
 
+
+
+
 @include mobile-tab {
+
+    .logoFrontpageCloned {
+        display: block;
+        position: absolute;
+        height: 100px;
+        top: $m-margin-small;
+        left : $m-margin-small;
+    }
 
 
     .fauveUnderline {
@@ -1597,13 +1608,13 @@ $m-margin-big : 20px;
 
     .link-bloc {
         background-color: $grey-new-col-50;
-        height: 235px - $dCol;
+        height: fit-content;
         padding-top: $dCol;
     }
 
     .link-bloc-2 {
         background-color: $jungle-col-10;
-        height: 235px - $dCol;
+        height: fit-content;
         height: 100%;
     }
 
@@ -1667,6 +1678,11 @@ $m-margin-big : 20px;
     .deviseOn {
         display: block;
     }
+
+    .devise  {
+        display: none;
+    }
+
 
 
 
@@ -1853,20 +1869,24 @@ $m-margin-big : 20px;
     }
 
     .sec-archiurba {
+
+       .logo-open {
+           display: none;
+       }
         .projet-bloc {
-            height: 400px;
+            height: fit-content;
 
             @include laptopS {
                 display: flex;
             }
 
             .projet-popup-wrapper {
+
                 @include laptopS {
                     width: 50%;
                 }
 
                 position: relative;
-
                 height: 100%;
 
                 .projet-thumbnail {
@@ -1886,15 +1906,20 @@ $m-margin-big : 20px;
                 }
 
                 .projet-popup {
-                    display: none;
-                    //position: absolute;
+                    display: block;
+                    position: relative;
                     z-index: 200;
                     background-color: $fauve-col-40;
                     top: 150px;
                     bottom: 0;
                     height: auto;
 
-                    padding: $dCol;
+                    padding : $m-margin-small;
+
+                    @include laptopS {
+
+                    padding: $dCol;}
+
                     background-color: white;
 
                     a {

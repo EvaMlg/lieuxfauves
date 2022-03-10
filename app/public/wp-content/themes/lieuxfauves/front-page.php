@@ -21,16 +21,20 @@ get_header();
 <div class="wrapper-front-page">
 
     <div class="container-front-page">
-        <div class="split-left-cloned">
-        </div>
+
 
         <div class="split-left" id="splitLeft">
 
             <div class="logoHeader">
 
-            <a href="<?php echo get_option('home'); ?>/" ><img class="logoFrontpage" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_logo.svg"></a>
+            <a class="logoFrontPageA" href="<?php echo get_option('home'); ?>/" ><img class="logoFrontpage" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_logo.svg"></a>
+
+
 
             </div>
+
+            <a href="<?php echo get_option('home'); ?>/" ><img class="logoFrontpageCloned" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_logo.svg"></a>
+
 
 
             <div class="list-chapter">

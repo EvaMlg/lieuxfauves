@@ -1285,6 +1285,7 @@ footer {
 }
 .right-container .legal {
   padding-left: 18px;
+  padding-rightg: 18px;
   font-family: "Fira Light";
   font-size: 10px;
   line-height: 12px;
@@ -1300,6 +1301,10 @@ footer {
     font-size: 10px;
     line-height: 12px;
   }
+}
+
+.logoFrontpageCloned {
+  display: none;
 }
 
 .fauveUnderline {
@@ -5906,6 +5911,14 @@ acf-gallery {
   }
 }
 @media (max-width: 1025px) {
+  .logoFrontpageCloned {
+    display: block;
+    position: absolute;
+    height: 100px;
+    top: 18px;
+    left: 18px;
+  }
+
   .fauveUnderline {
     padding-bottom: 1px;
     padding-right: 5px;
@@ -5946,13 +5959,17 @@ acf-gallery {
 
   .link-bloc {
     background-color: #ecececec;
-    height: 190px;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
     padding-top: 45px;
   }
 
   .link-bloc-2 {
     background-color: #e5eeed;
-    height: 190px;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
     height: 100%;
   }
 
@@ -6026,6 +6043,11 @@ acf-gallery {
 @media (max-width: 1025px) {
   .deviseOn {
     display: block;
+  }
+}
+@media (max-width: 1025px) {
+  .devise {
+    display: none;
   }
 }
 @media (max-width: 1025px) {
@@ -6254,8 +6276,13 @@ acf-gallery {
   }
 }
 @media (max-width: 1025px) {
+  .sec-archiurba .logo-open {
+    display: none;
+  }
   .sec-archiurba .projet-bloc {
-    height: 400px;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
   }
 }
 @media (max-width: 1025px) and (min-width: 1025px) {
@@ -6298,15 +6325,23 @@ acf-gallery {
 }
 @media (max-width: 1025px) {
   .sec-archiurba .projet-bloc .projet-popup-wrapper .projet-popup {
-    display: none;
+    display: block;
+    position: relative;
     z-index: 200;
     background-color: #f1dcad;
     top: 150px;
     bottom: 0;
     height: auto;
-    padding: 45px;
+    padding: 18px;
     background-color: white;
   }
+}
+@media (max-width: 1025px) and (min-width: 1025px) {
+  .sec-archiurba .projet-bloc .projet-popup-wrapper .projet-popup {
+    padding: 45px;
+  }
+}
+@media (max-width: 1025px) {
   .sec-archiurba .projet-bloc .projet-popup-wrapper .projet-popup a {
     font-family: "Fira Bold";
     font-size: 17px;
