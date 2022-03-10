@@ -178,19 +178,39 @@ else {
 const responsiveCatLogo =  document.querySelector('.responsiveCatLogo');
 const responsiveCat = document.querySelector('.reponsiveCat');
 const catHeader = document.querySelector('.categoryHeader');
+const titleProjResponsive = document.querySelector('.projPageNameResponsive');
+const titleProjLaptop = document.querySelector('.projPageName');
+const pictoValider = document.querySelector('.pictoValider');
+const responsiveBurgerImgCat = document.querySelector('.responsiveBurgerImg');
+
 
 
 responsiveCatLogo.addEventListener('click', function () {
    if (catHeader.classList.contains('catHeaderOff')) {
        catHeader.classList.add("catHeaderOn");
        catHeader.classList.remove("catHeaderOff");
-         catHeader.style.animation = "transition 2s ease"; }
+        catHeader.style.animation = "transition 2s ease";
+        pictoValider.style.display ="block";
+        titleProjResponsive.style.display ="block";
+        titleProjLaptop.style.display="none";
+        responsiveBurgerImgCat.src="/wp-content/themes/lieuxfauves/src/assets/img/LF_menu_burguer-fermer.svg"
+     }
  else {
      catHeader.classList.remove("catHeaderOn");
      catHeader.classList.add("catHeaderOff");
+     pictoValider.style.display ="none";
+     titleProjResponsive.style.display ="none";
+    titleProjLaptop.style.display="block";
+    responsiveBurgerImgCat.src="/wp-content/themes/lieuxfauves/src/assets/img/LF_nav_menu-burguer.svg";
   
  }
  }, false); 
+
+ pictoValider.addEventListener('click', function () {
+    catHeader.classList.remove("catHeaderOn");
+    catHeader.classList.add("catHeaderOff");
+}, false); 
+
 
 
 

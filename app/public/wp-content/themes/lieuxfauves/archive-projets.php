@@ -19,19 +19,26 @@ get_header();
 			<a href="<?php echo get_option('home'); ?>/"><img class="logoArchiveExplo" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_logo_fiches.svg"></a>
 
 			<h1 class="projPageName">PROJETS</h1>
+			<h1 class="projPageNameResponsive">PROJETS</h1>
+
 
 		</div>
 
 		<div class="reponsiveCat">
 		<a> <img class=" pictoFiltres responsiveCatLogo" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_mobile_picto-filtres.svg"></a>
-		
-			
 		</div>
 
+		<a> <img class="pictoValider responsiveCatLogo" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_mobile-picto_valider.svg"></a>
+
+		
+		
 		
 
 
 		<div class="categoryHeader catHeaderOff">
+
+
+
 
 
 			<?php

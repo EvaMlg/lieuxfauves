@@ -88,7 +88,7 @@
 
     <div id="searchMenu" class="full-menu menu fullMenu fullMenuOff">
 
-        <div class="rightColumnMenu">
+        <div class="rightColumnMenu rightColumnSearch">
             <div class="headerFullMenuWrapper">
                 <div class="logoWrapper">
                     <img class="logo-white" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_menu_logo.svg">

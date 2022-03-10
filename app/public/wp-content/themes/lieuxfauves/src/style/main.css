@@ -921,6 +921,10 @@ html {
             transform: translate(0);
   }
 }
+.rightColumnSearch {
+  background-color: #dca832;
+}
+
 .projectLoopLieu {
   font-family: "Fira Light";
   text-transform: uppercase;
@@ -2927,6 +2931,19 @@ footer {
   display: none;
 }
 
+.projPageNameResponsive {
+  display: none;
+}
+
+.pictoValider {
+  display: none;
+}
+@media (max-width: 1025px) {
+  .pictoValider {
+    display: none;
+  }
+}
+
 .reponsiveCat {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2944,7 +2961,7 @@ footer {
 @media (max-width: 1025px) {
   .reponsiveCat {
     background-color: #00534e;
-    z-index: 1;
+    z-index: 5;
     position: fixed;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
@@ -2955,16 +2972,26 @@ footer {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    top: 90px;
+    top: 100px;
     right: 0;
     width: 63px;
     height: 45px;
+    padding-top: 6px;
   }
 }
 
 .pictoFiltres {
   height: 25px;
   width: 25px;
+}
+
+.pictoValider {
+  height: 25px;
+  width: 25px;
+  position: fixed;
+  top: 155px;
+  z-index: 4;
+  right: 18px;
 }
 
 .projetsContainer {
@@ -3144,8 +3171,6 @@ footer {
 }
 
 .categoryHeader .catName {
-  font-family: "Fira Bold";
-  font-size: 14px;
   line-height: 25px;
   padding-bottom: 1px;
   padding-right: 5px;
@@ -3154,6 +3179,13 @@ footer {
   box-shadow: inset 0 -10px 0 #f1dcad;
   color: #00534e;
   cursor: pointer;
+}
+@media (max-width: 1025px) {
+  .categoryHeader .catName {
+    font-size: 18px !important;
+    padding-top: 2px;
+    padding-bottom: 2px;
+  }
 }
 
 .projetsContainer {
@@ -4728,6 +4760,25 @@ form#searchform div button {
   }
   .categoryHeader .catWrapper {
     margin: 0;
+    margin-bottom: 20px;
+  }
+  .categoryHeader .subCatName {
+    color: #00534e;
+  }
+  .categoryHeader .catName {
+    margin-bottom: 4px;
+  }
+  .categoryHeader .catName:hover {
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-right: 5px;
+    padding-left: 5px;
+    -webkit-box-shadow: inset 0 -60px 0 #f1dcad;
+            box-shadow: inset 0 -60px 0 #f1dcad;
+    -webkit-transition: ease-in-out;
+    transition: ease-in-out;
   }
   .categoryHeader .div-to-toggle {
     display: block;
@@ -4788,6 +4839,24 @@ form#searchform div button {
   }
 }
 @media (max-width: 1025px) {
+  .projetsContainer .headerProjets .logoHeader .projPageNameResponsive {
+    display: block;
+    font-family: "Fira Black";
+    font-size: 30px;
+    line-height: 50px;
+    color: #e5eeed;
+    text-shadow: -1px -1px 0 #00534e, 1px -1px 0 #00534e, -1px 1px 0 #00534e, 1px 1px 0 #00534e;
+    letter-spacing: 2px;
+    display: none;
+  }
+}
+@media (max-width: 1025px) and (min-width: 1025px) {
+  .projetsContainer .headerProjets .logoHeader .projPageNameResponsive {
+    font-size: 30px;
+    line-height: 50px;
+  }
+}
+@media (max-width: 1025px) {
   .projetsGrid .lfLogo {
     display: none;
   }
@@ -4812,15 +4881,15 @@ form#searchform div button {
 @media (max-width: 1025px) {
   .projetsGrid .titleProjet {
     padding-left: 18px;
-    padding-right: 18px;
-    padding-top: 18px;
+    padding-right: 30%;
   }
 }
 @media (max-width: 1025px) {
   .projetsGrid .projectLoopLieu {
     padding-left: 18px;
-    padding-right: 60px;
-    padding-bottom: 18px;
+    padding-right: 30%;
+    padding-bottom: 45px;
+    padding-top: 0px;
   }
 }
 @media (max-width: 1025px) {
@@ -5615,7 +5684,7 @@ form#searchform div button {
 }
 @media (max-width: 1025px) {
   .mainArticle .rightColumnArticle .imagesArticle {
-    padding-top: 77px;
+    padding-top: 20px;
     overflow: hidden;
   }
   .mainArticle .rightColumnArticle .imagesArticle img {
@@ -5660,6 +5729,8 @@ form#searchform div button {
             justify-content: space-between;
     padding-left: 18px;
     padding-right: 18px;
+    padding-top: 18px;
+    padding-bottom: 18px;
   }
   .headerExploration .logoHeader {
     display: block;
@@ -5691,13 +5762,6 @@ form#searchform div button {
     line-height: 50px;
   }
 }
-@media (max-width: 1025px) {
-  .headerExploration .categoryHeader {
-    font-family: "Fira Bold";
-    font-size: 14px;
-    line-height: 25px;
-  }
-}
 @media (max-width: 1025px) and (min-width: 1025px) {
   .headerExploration .categoryHeader {
     display: -webkit-box;
@@ -5705,17 +5769,12 @@ form#searchform div button {
     display: flex;
   }
 }
-@media (max-width: 1025px) and (min-width: 1025px) {
-  .headerExploration .categoryHeader {
-    font-size: 14px;
-    line-height: 25px;
-  }
-}
 @media (max-width: 1025px) {
   .headerExploration .categoryHeader .catName {
     font-family: "Fira Bold";
     font-size: 14px;
     line-height: 25px;
+    font-size: 18px !important;
     color: #00534e;
   }
 }
@@ -5806,6 +5865,28 @@ form#searchform div button {
     line-height: 25px;
     color: #00534e;
   }
+  .explorationsContainer .explorationWrapper .taxThumbnailWrapper .taxExplo .taxnames {
+    padding-bottom: 1px;
+    padding-right: 5px;
+    padding-left: 5px;
+    -webkit-box-shadow: inset 0 -10px 0 #f1dcad;
+            box-shadow: inset 0 -10px 0 #f1dcad;
+    color: #00534e;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+  }
+  .explorationsContainer .explorationWrapper .taxThumbnailWrapper .taxExplo .taxnames:hover {
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-right: 5px;
+    padding-left: 5px;
+    -webkit-box-shadow: inset 0 -60px 0 #f1dcad;
+            box-shadow: inset 0 -60px 0 #f1dcad;
+    -webkit-transition: ease-in-out;
+    transition: ease-in-out;
+  }
   .explorationsContainer .explorationWrapper .taxThumbnailWrapper .taxExplo .barre-nobold {
     display: inline;
     text-decoration: none;
@@ -5827,14 +5908,6 @@ form#searchform div button {
     display: inline;
     text-decoration: none;
     color: #828787;
-    padding-bottom: 1px;
-    padding-right: 5px;
-    padding-left: 5px;
-    -webkit-box-shadow: inset 0 -10px 0 #f1dcad;
-            box-shadow: inset 0 -10px 0 #f1dcad;
-    color: #00534e;
-    -webkit-transition: all 0.2s ease-in-out;
-    transition: all 0.2s ease-in-out;
   }
 }
 @media (max-width: 1025px) {
@@ -5870,6 +5943,7 @@ form#searchform div button {
 }
 @media (max-width: 1025px) {
   .explorationsContainer .excerptExplo {
+    padding-top: 15px;
     font-family: "Fira Light";
     font-size: 14px;
     line-height: 24px;
@@ -5914,7 +5988,10 @@ form#searchform div button {
 @media (max-width: 1025px) {
   .wrapperExplo {
     width: 100%;
-    padding: 18px;
+    padding-left: 18px;
+    padding-top: 18px;
+    padding-right: 18px;
+    padding-bottom: 0;
     display: block;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -5940,7 +6017,7 @@ form#searchform div button {
     font-size: 12px;
     line-height: 12px;
     border-top: 0px #f4f4f4 solid;
-    margin-top: 45px;
+    margin-top: 25px;
     padding-top: 0;
   }
 }

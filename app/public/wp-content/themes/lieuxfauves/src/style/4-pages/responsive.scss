@@ -361,6 +361,20 @@ $m-margin-big : 20px;
 
         .catWrapper {
             margin: 0;
+            margin-bottom: 20px;
+    
+        }
+
+        .subCatName {
+            color : $jungle-col;
+        }
+
+        .catName {
+            margin-bottom: 4px;
+        }
+
+        .catName:hover {
+            @include fauveUnderlineHover
         }
 
         .div-to-toggle {
@@ -415,6 +429,18 @@ $m-margin-big : 20px;
                 .projPageName {
                     @include title_h1;
                     color: $jungle-col;
+                  
+            
+                }
+
+                .projPageNameResponsive {
+                    display: block;
+                    @include title_h1;
+                    @include projetOoutline;
+                    letter-spacing: 2px;
+                    display: none;
+           
+            
                 }
             }
 
@@ -449,15 +475,17 @@ $m-margin-big : 20px;
 
         .titleProjet {
             padding-left: $m-margin-small;
-            padding-right: $m-margin-small;
-            padding-top: $m-margin-small;
+            padding-right: 30%;
+
+            //padding-top: $m-margin-small;
 
         }
 
         .projectLoopLieu {
             padding-left:  $m-margin-small;;
-            padding-right:60px;
-            padding-bottom: $m-margin-small;
+            padding-right: 30%;
+            padding-bottom: 1 * $dCol;
+            padding-top: 0px;
 
         }
 
@@ -1119,7 +1147,7 @@ $m-margin-big : 20px;
 
 
             .imagesArticle {
-                padding-top: $margin;
+                padding-top: 20px;
                 overflow: hidden;
 
 
@@ -1175,6 +1203,11 @@ $m-margin-big : 20px;
         justify-content: space-between;
         padding-left: $m-margin-small;
         padding-right: $m-margin-small;
+        padding-top: $m-margin-small;
+        padding-bottom: $m-margin-small;
+
+
+        
 
         .logoHeader {
             display: block;
@@ -1205,10 +1238,11 @@ $m-margin-big : 20px;
                 display: flex;
             }
 
-            @include p-bold;
+            //@include p-bold;
 
             .catName {
                 @include p-bold;
+                font-size: 18px !important;
                 color: $jungle-col
             }
 
@@ -1266,8 +1300,25 @@ $m-margin-big : 20px;
                 display: block;
                 width: 100%;
 
+           
+
 
                 .taxExplo {
+
+                    .taxnames {
+                        @include fauveUnderline
+                        
+                    }
+
+                    .taxnames:hover {
+                       
+                            @include fauveUnderlineHover
+                            
+                        
+            
+                        
+                    }
+    
 
                     .barre-nobold {
                         display: inline;
@@ -1281,7 +1332,6 @@ $m-margin-big : 20px;
                     }
 
                     display: block;
-
                     padding: $m-margin-small;
 
 
@@ -1291,21 +1341,20 @@ $m-margin-big : 20px;
                     color : $jungle-col;
 
 
-                    a {
+                     a {
                         display: inline;
                         text-decoration: none;
                         color: $grey-col;
-                        @include fauveUnderline;
+                       
                     }
 
                     a:hover {
                         text-decoration: none;
                         @include fauveUnderlineHover;
-                    }
-
-
+                    } 
 
                 }
+
             }
         }
 
@@ -1321,6 +1370,7 @@ $m-margin-big : 20px;
         }
 
         .excerptExplo {
+            padding-top: 15px;
             @include p-very-small;
             color: $grey-col;
         }
@@ -1354,7 +1404,10 @@ $m-margin-big : 20px;
 
     .wrapperExplo {
         width: 100%;
-        padding: $m-margin-small;
+        padding-left:  $m-margin-small;
+        padding-top:$m-margin-small;
+        padding-right: $m-margin-small;
+        padding-bottom: 0;
         display: block;
         flex-direction: column;
         justify-content: space-between;
@@ -1369,7 +1422,7 @@ $m-margin-big : 20px;
             justify-content: space-between;
             @include small-button;
             border-top: 0px $black-col-5 solid;
-            margin-top: $dCol;
+            margin-top: 25px;
             padding-top: 0;
 
             button {

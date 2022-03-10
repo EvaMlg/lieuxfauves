@@ -47,4 +47,11 @@ text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
 
 }
 
+@mixin projetOoutline {
+    color: $jungle-col-10;
+    text-shadow: -1px -1px 0 $jungle-col, 1px -1px 0 $jungle-col, -1px 1px 0 $jungle-col, 1px 1px 0 $jungle-col;
+    
+    }
+    
+
 

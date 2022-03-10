@@ -2,6 +2,21 @@
     display: none;
 }
 
+.projPageNameResponsive {
+    display: none;
+}
+
+
+.pictoValider{
+    display: none;
+
+    @include mobile-tab {
+        display: none;
+
+    }
+}
+
+
 
 .reponsiveCat {
     display: flex;
@@ -13,17 +28,17 @@
 
 
     @include mobile-tab {
-
     background-color: $jungle-col;
-    z-index: 1;
+    z-index: 5;
     position: fixed;
     justify-content: center;
     align-items: center;
     display: flex;
-    top : 2 * $dCol;
+    top :100px;
     right: 0;
     width: $dCol + 18px;
     height: $dCol;
+    padding-top: 6px;
 
     
     }
@@ -33,6 +48,17 @@
 .pictoFiltres {
     height: 25px;
     width: 25px;
+}
+
+.pictoValider {
+    height: 25px;
+    width: 25px;
+    position: fixed;
+    top : 155px;
+    z-index: 4;
+    right: $m-margin-small;
+
+
 }
 
 
@@ -201,7 +227,7 @@
     }
 
     .categoryHeader {
-   
+
         width: 100vw;
         flex-wrap : wrap;
         display: -webkit-box;
@@ -233,8 +259,14 @@
         line-height: 25px;
     }
     .categoryHeader .catName {
-        font-family: "Fira Bold";
-        font-size: 14px;
+        @include mobile-tab {
+            font-size: 18px !important;
+            padding-top: 2px;
+            padding-bottom: 2px;
+        }
+
+        
+       
         line-height: 25px;
         padding-bottom: 1px;
         padding-right: 5px;
