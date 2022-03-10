@@ -1978,6 +1978,14 @@ footer {
   display: none;
 }
 
+.titleWrapperResponsive {
+  display: none;
+}
+
+.mobileImgWhiteLayout {
+  display: none;
+}
+
 .laptopImgWhiteLayout {
   width: 100%;
   height: 100%;
@@ -4931,6 +4939,16 @@ form#searchform div button {
   }
 }
 @media (max-width: 1025px) {
+  .titleWrapperResponsive {
+    display: block;
+    padding: 18px;
+    padding-right: 72px;
+  }
+
+  .titleWrapper {
+    display: none;
+  }
+
   .mobileImgWhiteLayout {
     display: block;
     width: 100%;
@@ -4950,7 +4968,27 @@ form#searchform div button {
             flex-direction: column;
   }
 
+  .headerProjetWrapper .imageWrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 600px !important;
+  }
+  .headerProjetWrapper .imageThumbnailWrapper img {
+    height: 600px !important;
+  }
+  .headerProjetWrapper .mobileImgWhiteLayout {
+    position: absolute;
+    bottom: 0;
+  }
+  .headerProjetWrapper .imageWrapper {
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
   .headerProjetWrapper .imageWrapper img {
+    height: auto;
     width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -4963,9 +5001,11 @@ form#searchform div button {
             align-items: center;
     -o-object-fit: cover;
        object-fit: cover;
+    position: absolute;
   }
   .headerProjetWrapper .whiteLayout {
     width: 100%;
+    height: auto;
     z-index: 1;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -4989,8 +5029,7 @@ form#searchform div button {
     margin-left: 18px;
     margin-right: 18px;
     text-align: center;
-    position: absolute;
-    top: 450px;
+    position: relative;
   }
 }
 @media (max-width: 1025px) and (min-width: 1025px) {
@@ -5029,7 +5068,7 @@ form#searchform div button {
     font-size: 14px;
     line-height: 35px;
     color: #828787;
-    padding-top: 10px;
+    padding-top: 0;
   }
 }
 @media (max-width: 1025px) {
@@ -5372,7 +5411,7 @@ form#searchform div button {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    width: 77px;
+    width: 65px;
     height: 154px;
   }
 }

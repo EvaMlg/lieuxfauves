@@ -532,6 +532,16 @@ $m-margin-big : 20px;
 
 @include mobile-tab {
 
+    .titleWrapperResponsive {
+        display: block;
+        padding : $m-margin-small;
+        padding-right : 4 *  $m-margin-small;
+    }
+
+    .titleWrapper {
+        display: none;
+    }
+
     .mobileImgWhiteLayout {
         display : block;
         width: 100%;
@@ -552,21 +562,43 @@ $m-margin-big : 20px;
     .headerProjetWrapper {
 
         .imageWrapper {
+            display: flex;
+            height: 600px !important;
+           
+        }
+
+        .imageThumbnailWrapper img {
+            height: 600px !important;
+        }
+
+        .mobileImgWhiteLayout {
+            position: absolute;
+            bottom: 0;
+            
+         }
+  
+        .imageWrapper {
+            height: 100%;
+            display: flex;
             
             img {
+                height: auto;
                 width: 100%;
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 object-fit: cover;
+                position: absolute;
             }
 
         }
 
         .whiteLayout {
+
+          
  
             width: 100%;
-            //height: 600px;
+            height: auto;
             //position: absolute;
             z-index: 1;
             display: flex;
@@ -586,8 +618,8 @@ $m-margin-big : 20px;
                 margin-left: $m-margin-small;
                 margin-right: $m-margin-small;
                 text-align: center;
-                position: absolute;
-                top: 450px;
+                position: relative;
+                //top: 450px;
 
                 a {
                     @include small-button;
@@ -616,13 +648,12 @@ $m-margin-big : 20px;
     }
 
     .singleProjetSubTitle {
-
         font-family: "Fira Light";
         text-transform: uppercase;
         font-size: 14px;
         line-height: 35px;
         color: #828787;
-        padding-top: 10px;
+        padding-top: 0;
 
 
 
@@ -876,7 +907,7 @@ $m-margin-big : 20px;
         justify-content: center;
         align-items: center;
 
-        width: $margin;
+        width: 65px;
         height: 2 * $margin;
 
 

@@ -8,16 +8,32 @@
 get_header();
 ?>
 
+
+<div class="titleWrapperResponsive">
+	
+    <?php the_title( '<h1 class="singleProjetTitle">', '</h1>' ); ?>
+        <h2 class="singleProjetSubTitle"><?php the_field('lieu'); ?></h2>
+
+    </div>
+
 <div class="headerProjetWrapper">
 
 
     <div class="imageWrapper">
+
+    <div class="imageThumbnailWrapper">
+
 
         <?php
         $image = get_field('image');
         if (!empty($image)) : ?>
             <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
         <?php endif; ?>
+
+        </div>
+
+        <img class="mobileImgWhiteLayout" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_mobile_projet_logo.svg">
+
     </div>
 
     <div class="navNextPrev">
@@ -50,7 +66,6 @@ get_header();
 
 
     <div class="whiteLayout">
-        <img class="mobileImgWhiteLayout" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_mobile_projet_logo.svg">
         <img class="laptopImgWhiteLayout" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_projet_logo.svg">
 
 
