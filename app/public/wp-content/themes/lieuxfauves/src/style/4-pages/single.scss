@@ -1,3 +1,12 @@
+.mainArticle .rightColumnArticle .titleArticle {
+    padding-right: 4 * $dCol;
+}
+
+.mobileLayout {
+    display: none;
+}
+
+
 .headerArticle {
     background-color: $black-col-5;
     padding-left: $margin;
@@ -70,15 +79,21 @@
      
     }
 
+ 
+
     .rightColumnArticle {
         width: 56.6%;
         padding-left: $dCol;
         padding-right:$dCol ;
 
         .titleArticle {
+         
             padding-top: 15px;
             padding-bottom: 15px;
-            @include title_h1;
+            font-family: "Fira Bold";
+    font-size: 28px;
+    line-height: 35px;
+  
             color : $grey-col;
 
         }

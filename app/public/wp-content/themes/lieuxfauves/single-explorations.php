@@ -14,6 +14,7 @@ get_header();
 
 </div>
 
+
 <div class="mainExploration">
 
 
@@ -70,13 +71,13 @@ get_header();
 </div>
 	 <div class="galleryWrapper mainExploration">
 
-        <!-- FAIRE UN SLIDER  -->
+       
 		<?php $images = get_field('galerie_exploration');
 			if( $images ): ?>
         		<?php foreach( $images as $image ): ?>
 					<div class="single-slide-image">
                      	<img class="logo-categorie" src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
-						<span class="zoom-image"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
+                         <span class="zoom-image"><img class="logo-categorie pictoSlider" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_slide_picto-full.svg"></span>
 					</div>
         		
 				<?php endforeach; ?>
@@ -138,7 +139,7 @@ get_header();
     <div class="titleLoop">
         <img class="logo-categorie" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_logo_categories.svg">
         <span>ACTUALITÉS</span>
-        <a href="projets" class="fauveUnderline">Vivant</a>
+        <a href="actualites" class="fauveUnderline">Vivant</a>
     </div>
 
     <div class="loopWrapper">

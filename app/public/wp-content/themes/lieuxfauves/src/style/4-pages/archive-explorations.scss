@@ -34,7 +34,7 @@
         }
 
         .catName:hover {
-            @include fauveUnderlineSmallHover;
+            @include fauveUnderlineHover;
         }
 
         .catName.active {
@@ -196,7 +196,7 @@
         }
 
         .excerptExplo {
-            padding-left: $dCol;
+            //padding-left: $dCol;
         }
 
     }

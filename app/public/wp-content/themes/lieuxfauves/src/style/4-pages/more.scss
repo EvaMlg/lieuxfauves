@@ -1,0 +1,270 @@
+
+.pictoSlider {
+    height: 20px !important;
+}
+
+.flecheSlider {
+    height: 24px;
+  }
+
+.projetsLoopExplo {
+    background-color: #f4f4f4;
+  }
+  
+  .projetsLoop {
+    padding-top: 77px;
+    padding-left: 77px;
+  }
+  .projetsLoop .titleLoop {
+    font-family: "Fira Black";
+    font-size: 15px;
+    line-height: 14px;
+    color: #00534e;
+    padding-top: 45px;
+    padding-bottom: 45px;
+  }
+  @media (min-width: 1025px) {
+    .projetsLoop .titleLoop {
+      font-size: 15px;
+      line-height: 14px;
+    }
+  }
+  .projetsLoop .loopWrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding-bottom: 45px;
+  }
+  .projetsLoop .loopWrapper .projectCard {
+    width: calc(25% - 45px);
+  }
+  .projetsLoop .loopWrapper .projectCard a {
+    font-family: "Fira Bold";
+    font-size: 17px;
+    line-height: 24px;
+    text-decoration: none;
+    color: #828787;
+  }
+  
+  .slick-prev{
+      position: absolute;
+      left: 3%;
+      top: 50%;
+      z-index: 9;
+      background: none;
+      transform: translateY(-50%);
+  }
+  
+  
+  .slick-next{
+      position: absolute;
+      right: 3%;
+      top: 50%;
+      z-index: 9;
+      background: none;
+      transform: translateY(-50%);
+  }
+  
+  .slick-prev:before {
+      content: url("/wp-content/themes/lieuxfauves/src/assets/img/LF_slide_picto-prev.svg");
+      border : 10px solid transparent;
+      width: 50px;
+      height: 50px;
+      color: #fff;
+      
+     
+  }
+  
+  .slick-next:before {
+    content: url("/wp-content/themes/lieuxfauves/src/assets/img/LF_slide_picto-next.svg");
+    border : 10px solid transparent;
+    width: 30px;
+    height: 30px;
+      color: #fff;
+    
+  }
+
+.searchForm {
+  /*position: absolute;
+  top: 50px;
+  left: 650px;
+  z-index: 1;
+  width: 50vw;*/
+}
+
+form#searchform div{
+	display: flex;
+    align-items: center;
+    grid-gap: 10px;
+}
+
+form#searchform div input{
+	border-radius: 10px;
+    padding: 10px;
+    width: 290px;
+	outline-style: none;
+	box-shadow: none;
+	border-color: transparent;
+}
+
+form#searchform div button{
+	background: url(/wp-content/themes/lieuxfauves/src/assets/img/LF_menu_loupe.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 25px;
+    height: 25px;
+}
+
+.searchForm.active{
+	display:flex;
+    flex-direction: column;
+}
+
+.explorations-template-default .galleryWrapper.mainExploration .slick-list{
+	height: 600px;
+}
+
+.explorations-template-default .galleryWrapper.mainExploration .slick-prev{
+	left: calc(3% + 77px);
+}
+
+.explorations-template-default .galleryWrapper.mainExploration .slick-track{
+	height: 100%;
+}
+
+#search_result_ajax #all_results{
+	display:flex;
+	grid-gap: .5rem;
+}
+
+#search_result_ajax,
+#search_result_ajax a{
+	color: white;
+	font-family: "Fira Light"
+}
+
+#search_result_ajax #total_result{
+	font-family: "Fira Bold";
+	margin-top: 1rem;
+    font-size: 35px;
+}
+
+#search_result_ajax #total_result span{
+	font-family: "Fira Light"
+}
+
+#search_result_ajax h3{
+	font-size: 20px;
+    font-family: 'Fira Bold';
+    margin-top: 2rem;
+}
+
+#search_result_ajax ul li {
+    margin: .5rem 0;
+    border-bottom: 1px solid white;
+    padding-bottom: .5rem;
+}
+
+#search_result_ajax ul li:last{
+	border-bottom: 0;
+}
+
+.leftColumnContent,
+#search_result_ajax,
+.leftColumnContent .searchForm{
+	height: 100%;
+}
+
+#search_result_ajax{
+	overflow-y: auto;
+}
+
+
+.contentWrapperProjet {
+    padding-top: 77px;
+    padding-left: 77px;
+  }
+  .contentWrapperProjet .titleWrapper {
+    padding-bottom: 45px;
+  }
+  .contentWrapperProjet .galleryWrapper {
+    overflow: hidden;
+    width: 100%;
+    height: 800px;
+    padding-bottom: 45px;
+  }
+  
+  .contentWrapperProjet .galleryWrapper .slick-list,
+  .contentWrapperProjet .galleryWrapper .slick-list .slick-track{
+      height: 100%;
+  }
+  
+  .galleryWrapper .single-slide-image{
+      position:relative;
+  }
+  
+  .galleryWrapper .single-slide-image .zoom-image{
+      position: absolute;
+      right: 3%;
+      top: 60%;
+      cursor: pointer;
+  }
+  
+  .galleryWrapper .single-slide-image .zoom-image i{
+      color:#fff;
+  }
+  
+  .zoom-image-slider{
+      display: none;
+      position: fixed;
+       left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: #fff;
+      z-index: 9999999999;
+  }
+  
+  .zoom-image-slider img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+  }
+  
+  .zoom-image-slider .div-zoom{
+      position:relative;
+  }
+  
+  .zoom-image-slider .div-zoom span.close{
+      position: absolute;
+      right: 0;
+      top: 1%;
+      right: 1%;
+      font-size: 30px;
+      cursor: pointer;
+  }
+  
+  .galleryWrapper img {
+    width: 100%;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .contentWrapperProjet .projetWrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }

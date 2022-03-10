@@ -26,6 +26,7 @@
 
 .sidebarMenu {
     display: none;
+
     @include laptopS {
         display: block;
 

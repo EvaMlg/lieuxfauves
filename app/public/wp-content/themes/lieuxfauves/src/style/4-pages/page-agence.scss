@@ -1,5 +1,7 @@
 .distinctionsToggleWrapper {
-    display: none;
+    display: block;
+    @include laptopS {
+    display: none; }
     padding-bottom: $dCol;
     @include laptopS {
         padding-left: $dCol;
@@ -45,9 +47,7 @@
     }
 
 
-    @include tablet {
-        display: none
-    }
+display: block;
 
     @include laptopS {
         display: block

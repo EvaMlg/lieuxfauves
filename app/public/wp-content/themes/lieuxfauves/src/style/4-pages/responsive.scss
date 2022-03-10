@@ -323,6 +323,8 @@ $m-margin-big : 20px;
 
 @include mobile-tab {
 
+
+
     .categoryHeader .div-to-toggle .subCatName span.active {
         margin: 0;
     }
@@ -453,8 +455,8 @@ $m-margin-big : 20px;
         }
 
         .projectLoopLieu {
-            padding-left: $m-margin-small;
-            padding-right: $m-margin-small;
+            padding-left:  $m-margin-small;;
+            padding-right:60px;
             padding-bottom: $m-margin-small;
 
         }
@@ -495,10 +497,23 @@ $m-margin-big : 20px;
 
 
 
+
+
 // PROJET SINGLE => AJOUTER BLOC autour du header pour responsive
 
 
 @include mobile-tab {
+
+    .mobileImgWhiteLayout {
+        display : block;
+        width: 100%;
+
+    }
+
+    .laptopImgWhiteLayout {
+                display: none;
+    }
+
 
 
     .mainSingleProjet {
@@ -509,10 +524,7 @@ $m-margin-big : 20px;
     .headerProjetWrapper {
 
         .imageWrapper {
-            position: absolute;
-            overflow: hidden;
-            height: 1000px;
-
+            
             img {
                 width: 100%;
                 display: flex;
@@ -524,21 +536,14 @@ $m-margin-big : 20px;
         }
 
         .whiteLayout {
-            top: 400px;
+ 
             width: 100%;
-            height: 600px;
-            position: absolute;
+            //height: 600px;
+            //position: absolute;
             z-index: 1;
             display: flex;
             justify-content: center;
             align-items: center;
-
-
-            img {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-            }
 
             .nomenclature-wrapper {
                 display: none;
@@ -795,6 +800,7 @@ $m-margin-big : 20px;
 
 
     .ficheTechnique {
+        display: flex;
 
         h3 {
             color: white;
@@ -948,7 +954,38 @@ $m-margin-big : 20px;
 
 // SINGLE ARTILE 
 
-@include mobile {
+@include mobile-tab {
+
+    .mobileLayout {
+        display : block;
+    }
+
+    .laptopLayout {
+       display: none;
+    }
+
+    .logoArchiveExplo {
+        display: none;
+    }
+    
+
+    .titleArticle {
+         
+        padding-top: 15px;
+        padding-bottom: 15px;
+        font-family: "Fira Bold";
+        font-size: 28px;
+        line-height: 35px;
+
+        color : $grey-col;
+
+    }
+
+    .dateArticle {  
+        @include p-very-small;
+        color : $grey-col;
+
+    }
 
     .headerArticle {
         background-color: $black-col-5;
@@ -1024,6 +1061,11 @@ $m-margin-big : 20px;
 
         }
 
+        .mainArticle .rightColumnArticle .titleArticle {
+            padding-right: 2 * $dCol;
+        }
+
+
         .rightColumnArticle {
             grid-row: 2;
             width: 100%;
@@ -1031,12 +1073,20 @@ $m-margin-big : 20px;
             padding-right: $m-margin-small;
 
             .titleArticle {
-                padding-top: 15px;
-                padding-bottom: 15px;
-                @include title_h1;
-                color: $grey-col;
+               
+             
+               
+                    padding-top: 15px;
+                    padding-bottom: 15px;
+                    font-family: "Fira Bold";
+            font-size: 28px;
+            line-height: 35px;
+          
+                    color : $grey-col;
+        
+                }
 
-            }
+            
 
             .dateArticle {
                 @include p-very-small;
@@ -1339,7 +1389,7 @@ $m-margin-big : 20px;
             display: block;
 
             .titleExplo {
-                padding-right: 0;
+                padding-right: 60px;
             }
 
             .excerptExplo {
@@ -1768,12 +1818,12 @@ $m-margin-big : 20px;
     .bloc-haiku {
         height: 235px;
         @include haiku;
-        color: white;
+  
         background-color: $jungle-col;
 
         padding-left: $m-margin-small;
         padding-right: $m-margin-small;
-        padding-top: $dCol;
+        padding-top: 30px;
         padding-bottom: $dCol;
 
         @include laptopS {
@@ -1892,7 +1942,7 @@ $m-margin-big : 20px;
                 .projet-thumbnail {
                     //position: absolute;
                     overflow: hidden;
-                    height: fit-content;
+                    height: 550px;
 
                     img {
                         width: 100%;
@@ -1907,14 +1957,16 @@ $m-margin-big : 20px;
 
                 .projet-popup {
                     display: block;
-                    position: relative;
+                    position: absolute;
                     z-index: 200;
                     background-color: $fauve-col-40;
-                    top: 150px;
                     bottom: 0;
                     height: auto;
 
-                    padding : $m-margin-small;
+                    padding-left : $m-margin-small;
+                    padding-right: $m-margin-small;
+                    padding-top : 20px;
+                    padding-bottom : 20px;
 
                     @include laptopS {
 
@@ -1925,7 +1977,14 @@ $m-margin-big : 20px;
                     a {
                         @include p-intro-bold;
                         color: $grey-col;
+                       
                     }
+
+                    a #text {
+                       
+                        padding-right: 60px;
+                    }
+
 
                     .projet-date {
                         @include p-localisation;
@@ -1951,6 +2010,7 @@ $m-margin-big : 20px;
 
                         .logo-close {
                             height: 22px;
+                            
                         }
 
                     }
@@ -2041,7 +2101,7 @@ $m-margin-big : 20px;
                         @include p-intro-bold;
                         line-height: 24px;
                         color: $grey-col;
-                        padding-right: 0;
+                        padding-right: 60px;
 
                     }
 
@@ -2049,6 +2109,7 @@ $m-margin-big : 20px;
                         @include p-very-small;
                         color: $grey-col;
                         padding-bottom: 10px;
+                        padding-top: 10px;
 
                         a {
                             color: $grey-col;
@@ -2080,7 +2141,34 @@ $m-margin-big : 20px;
 
     // PAGE AGENCE
 
-    @include mobile {
+    @include mobile-tab {
+
+        .sec-agence {
+            z-index: 500;
+            position: relative;
+            margin-bottom: 420px;
+
+        }
+
+        .sec-valeurs {
+            z-index: 500;
+            position: relative;
+            margin-bottom: 420px;
+        }
+
+        .sec-expertises {
+            z-index: 500;
+            position: relative;
+            margin-bottom: 420px;
+        }
+
+        .sec-equipe {
+            z-index: 500;
+            position: relative;
+
+        }
+
+
 
         .imageWrapperAgence {
             overflow: hidden;
@@ -2098,14 +2186,17 @@ $m-margin-big : 20px;
         }
 
         .list-chapter-agence {
-            display: none;
+            position: relative;
+            z-index: 90;
+        
+         
 
 
             @include chapter;
             color: $grey-col;
             position: fixed;
-            bottom: 37px;
-            left: $margin;
+            bottom: $m-margin-small;
+            left: $m-margin-small;
 
             a {
                 text-decoration: none;
@@ -2242,8 +2333,12 @@ $m-margin-big : 20px;
             background-color: $jungle-col-10;
             padding-left: $m-margin-small;
             padding-right: $m-margin-small;
-            padding-top: $dCol;
-            padding-bottom : $dCol;
+            padding-bottom: $dCol;
+            padding-top: 25px;
+
+            @include laptopS {
+
+            padding-top : $dCol; }
 
             @include laptopS {
                 padding: $dCol;
@@ -2354,8 +2449,8 @@ $m-margin-big : 20px;
             .annonceWrapper {
                 background-color: white;
                 margin-bottom: 0.5em;
-                padding-left: $dCol;
-                padding-right: $dCol;
+                padding-left: 30px;
+                padding-right: 30px;
                 padding-top: 1em;
                 padding-bottom: 1em;
 

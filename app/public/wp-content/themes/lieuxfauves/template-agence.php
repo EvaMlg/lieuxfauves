@@ -10,11 +10,16 @@ get_header();
 
 <div class="container-front-page">
 
+
+
     <div class="logoHeader">
 
         <a href="<?php echo get_option('home'); ?>/"><img class="logoFrontpage" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_logo.svg"></a>
 
     </div>
+
+    <a href="<?php echo get_option('home'); ?>/" ><img class="logoFrontpageCloned" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_logo.svg"></a>
+
 
 
 

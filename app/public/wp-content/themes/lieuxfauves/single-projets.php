@@ -43,16 +43,15 @@ get_header();
 
         <span class="nav-next"><?php next_post_link('%link', __('<span class="meta-nav"><img STYLE="height:20px;width:20px" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_slide_picto-next.svg">')); ?>
             <h2><a href="<?php echo $permalink; ?>"></a></h2>
-
         </span>
 
     </div>
 
+
+
     <div class="whiteLayout">
-
-        <img src="/wp-content/themes/lieuxfauves/src/assets/img/LF_projet_logo.svg">
-
-
+        <img class="mobileImgWhiteLayout" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_mobile_projet_logo.svg">
+        <img class="laptopImgWhiteLayout" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_projet_logo.svg">
 
 
         <div class="nomenclature">
@@ -109,7 +108,7 @@ get_header();
             <?php foreach ($images as $image) : ?>
                 <div class="single-slide-image">
                     <img class="logo-categorie" src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
-                    <span class="zoom-image"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
+                    <span class="zoom-image"><img class="logo-categorie pictoSlider" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_slide_picto-full.svg"></span>
                 </div>
 
             <?php endforeach; ?>
@@ -119,7 +118,7 @@ get_header();
     <div class="zoom-image-slider">
         <div class="div-zoom">
             <img src="" />
-            <span class="close"><i class="fa-solid fa-xmark"></i></span>
+            <span class="close"><i><img class="logo-categorie pictoSlider" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_menu_burguer-fermer.svg"></i></span>
         </div>
 
     </div>

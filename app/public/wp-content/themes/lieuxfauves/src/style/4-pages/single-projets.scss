@@ -1,5 +1,18 @@
 
 
+.mobileImgWhiteLayout {
+    display : none;
+}
+
+
+.laptopImgWhiteLayout {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    object-fit: cover;
+}
 
 .headerProjetWrapper {
     width: 100%;
@@ -27,14 +40,7 @@
         z-index: 1;
         height: 764px;
 
-        img {
-            width: 100%;
-            height: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            object-fit: cover;
-        }
+      
 
         .nomenclature-wrapper {
             padding-top: $dCol;

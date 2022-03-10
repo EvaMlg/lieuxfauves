@@ -239,6 +239,10 @@
     padding-right: $m-margin-small;
     padding-top: $dCol;
     padding-bottom : $dCol;
+    @include mobile-tab {
+        padding-top: 30px;
+
+    }
 
     @include laptopS {
         padding: $dCol;
@@ -257,9 +261,9 @@
 
 .sec-lieux {
     position: relative;
-    z-index: 500;
+    z-index: 1;
     @include mobile-tab {
-        margin-bottom: 500px;
+        margin-bottom: 420px;
     }
 
 }
@@ -267,9 +271,9 @@
 
 .sec-faire {
     position: relative;
-    z-index: 500;
+    z-index: 1;
     @include mobile-tab {
-        margin-bottom: 500px;
+        margin-bottom: 420px;
     }
 
     .actu-bloc {
@@ -338,11 +342,14 @@
     }
 }
 
+
+
+
 .sec-archiurba {
     position: relative;
-    z-index: 500;
+    z-index: 1;
     @include mobile-tab {
-        margin-bottom: 500px;
+        margin-bottom: 420px;
     }
     .projet-bloc {
         height: 400px;
@@ -355,6 +362,8 @@
         }
 
         .projet-popup-wrapper {
+
+            .projet-popup .logo-wrapper .logo-close { display: none; }
 
 
             @include laptopS {
@@ -470,7 +479,7 @@
 
 .sec-ves {
     position: relative;
-    z-index: 500;
+    z-index: 1;
     
 
     .bloc-exploration {
@@ -535,6 +544,11 @@
                 line-height: 24px;
                 color: $grey-col;
                 padding-right: 2 * $dCol;
+                @include mobile-tab {
+                    padding-right: 60px;
+
+                }
+
            
             }
 
@@ -542,6 +556,10 @@
                 @include p-very-small;
                 color: $grey-col;
                 padding-bottom: 10px;
+                @include mobile-tab {
+                    padding-top: 10px;
+                }
+                
 
                 a {
                     color: $grey-col;

@@ -8,13 +8,16 @@ const flecheBas = document.querySelector('.flecheBas');
 const loupe = document.querySelector('.loupe');
 const picto = document.querySelector('.pictoLogo');
 
+const searchMenu = document.querySelector('#searchMenu');
+console.log(searchMenu);
+
 
 
 loupe.addEventListener('click', function () {
-    if (fullMenu.classList.contains('fullMenuOff')) {
-        fullMenu.classList.remove("fullMenuOff");
-        fullMenu.classList.add("fullMenuOn");
-        fullMenu.style.animation = "transition 2s ease";
+    if (searchMenu.classList.contains('fullMenuOff')) {
+        searchMenu.classList.remove("fullMenuOff");
+        searchMenu.classList.add("fullMenuOn");
+        searchMenu.style.animation = "transition 2s ease";
         buttonOn.style.display = "none";
         buttonOff.style.display = "flex";
         sideNavWrapper.style.backgroundColor = "rgb(0,83,78)";
@@ -24,8 +27,8 @@ loupe.addEventListener('click', function () {
         picto.style.display = "none";
 
     } else if (document.querySelector('.single-explorations')) {
-        fullMenu.classList.remove("fullMenuOn");
-        fullMenu.classList.add("fullMenuOff");
+        searchMenu.classList.remove("fullMenuOn");
+        searchMenu.classList.add("fullMenuOff");
         buttonOn.style.display = "flex";
         buttonOff.style.display = "none";
         sideNavWrapper.style.backgroundColor = "white";
@@ -42,8 +45,8 @@ loupe.addEventListener('click', function () {
     }
     
     else {
-        fullMenu.classList.remove("fullMenuOn");
-        fullMenu.classList.add("fullMenuOff");
+        searchMenu.classList.remove("fullMenuOn");
+        searchMenu.classList.add("fullMenuOff");
         buttonOn.style.display = "flex";
         buttonOff.style.display = "none";
         sideNavWrapper.style.backgroundColor = "white";
