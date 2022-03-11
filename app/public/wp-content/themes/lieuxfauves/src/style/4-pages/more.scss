@@ -98,19 +98,43 @@
   width: 50vw;*/
 }
 
+.titleSearch {
+    color: white;
+    font-family: "Fira Light";
+    font-size : 24Px;
+
+}
+
+
+
 form#searchform div{
 	display: flex;
     align-items: center;
     grid-gap: 10px;
+
+  
 }
 
 form#searchform div input{
-	border-radius: 10px;
-    padding: 10px;
-    width: 290px;
+    height: 1*$margin;
 	outline-style: none;
 	box-shadow: none;
 	border-color: transparent;
+    background-color: #00534e;
+    color : white;
+    font-family: "Fira Bold";
+  
+    font-size: 35px;
+    color : white;
+   
+}
+
+form#searchform div input #text {
+   
+    font-family: "Fira Bold";
+    margin-top: 1rem;
+    font-size: 35px;
+    color : white;
 }
 
 form#searchform div button{

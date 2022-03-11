@@ -91,41 +91,21 @@
         <div class="rightColumnMenu rightColumnSearch">
             <div class="headerFullMenuWrapper">
                 <div class="logoWrapper">
-                    <img class="logo-white" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_menu_logo.svg">
+                    <!-- <img class="logo-white" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_menu_logo.svg"> -->
+                    <div id="search_result_ajax"></div>
                 </div>
 
-                <div class="taglineWrapper">
-                    <img class="tagline-white" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_intro_devise.svg">
-
-                </div>
+                
             </div>
             <div class="contentFullMenuWrapper">
                 <div class="socialsButtonsWrapper">
                     <img class="logo-ig logo-socials" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_menu_rrss_ig.svg">
                     <img class="logo-in logo-socials" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_menu_rrss_in.svg">
+                    
+                   
 
-                </div>
-                <div class="contactWrapper">
-                    <p>04 72 74 80 80 <br>
-                        contact[AT]lieuxfauves.com</p>
-                </div>
-                <div class="adressesWrapper">
-                    <div class="parisAdressWrapper adressWrapper">
-                        <p>PARIS<br>
-                            22 rue des Taillandiers <br>
-                            75011 Paris</p>
-
-                    </div>
-                    <div class="lyonAdressWrapper adressWrapper">
-                        LYON<br>
-                        43 rue des Hérideaux<br>
-                        69008 Lyon
-                    </div>
-                    <div class="mayotteAdressWrapper adressWrapper">
-                        MAYOTTE<br>
-                        18 Chemin de la Convalescence<br>
-                        97600 Mamoudzou
-                    </div>
+         
+                
                 </div>
             </div>
 
@@ -136,9 +116,12 @@
 
                 <div class="searchForm">
 
+                <h1 class="titleSearch"> Que recherchez vous ? </h1>
+
+
                     <form role="search" method="get" id="searchform" class="searchform" action="<?= home_url('/') ?>">
                         <div>
-                            <input type="text" placeholder="Chercher..." value="<?= get_search_query() ?>" name="s" id="s" />
+                            <input type="text" placeholder="Votre recherche ici..." value="<?= get_search_query() ?>" name="s" id="s" />
 
                             <button type="submit" id="searchsubmit" class="glyphicon glyphicon-search"></button>
                         </div>

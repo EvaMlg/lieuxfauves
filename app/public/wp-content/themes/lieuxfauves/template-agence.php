@@ -118,7 +118,7 @@ get_header();
                     <?php $urbanisme = get_group_field('section_expertises', 'distinctions_urbanisme') ?>
                     <div class="distinctionsTitleWrapper">
                         <h3 class="subtitleAgence distinctionsTitle">Urbanisme</h3>
-                        <img class="logo-categorie logoDistinctions" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_plus_fermer.svg">
+                        <img class="logo-categorie logoDistinctions" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_plus_ouvrir_gris.svg">
                     </div>
                     <div class="distinctionsToggleWrapper">
                         <p><?php echo $urbanisme; ?></p>
@@ -127,7 +127,7 @@ get_header();
                     <?php $architecture = get_group_field('section_expertises', 'distinctions_architecture') ?>
                     <div class="distinctionsTitleWrapper">
                         <h3 class="subtitleAgence distinctionsTitle">Architecture</h3>
-                        <img class="logo-categorie logoDistinctions" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_plus_fermer.svg">
+                        <img class="logo-categorie logoDistinctions" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_plus_ouvrir_gris.svg">
 
                     </div>
                     <div class="distinctionsToggleWrapper">

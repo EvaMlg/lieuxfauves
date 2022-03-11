@@ -27,6 +27,8 @@ loupe.addEventListener('click', function () {
         picto.style.display = "none";
 
     } else if (document.querySelector('.single-explorations')) {
+        fullMenu.classList.remove("fullMenuOn");
+        fullMenu.classList.add("fullMenuOff");
         searchMenu.classList.remove("fullMenuOn");
         searchMenu.classList.add("fullMenuOff");
         buttonOn.style.display = "flex";
