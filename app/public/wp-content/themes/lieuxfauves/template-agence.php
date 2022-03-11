@@ -18,7 +18,7 @@ get_header();
 
     </div>
 
-    <a href="<?php echo get_option('home'); ?>/" ><img class="logoFrontpageCloned" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_logo.svg"></a>
+    <a href="<?php echo get_option('home'); ?>/"><img class="logoFrontpageCloned" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_logo.svg"></a>
 
 
 
@@ -27,7 +27,7 @@ get_header();
 
         <div class="list-chapter-agence">
             <div class="list-chapter-agence-title">
-            <a href="#sec-agence"><span class="spanAgence">Agence</span></a><br>
+                <a href="#sec-agence"><span class="spanAgence">Agence</span></a><br>
             </div>
             <a href="#sec-valeurs"> <span class="spanValeurs">Valeurs</span></a><br>
             <a href="#sec-expertises"> <span class="spanExpertises">Expertises</span></a><br>
@@ -131,7 +131,7 @@ get_header();
 
                     </div>
                     <div class="distinctionsToggleWrapper">
-                    <p><?php echo $architecture; ?></p>
+                        <p><?php echo $architecture; ?></p>
                     </div>
 
 
@@ -147,24 +147,28 @@ get_header();
         <section class="sec-equipe" id="sec-equipe">
 
 
-            <?php
-            $images = get_field('trombinoscope');
-            $size = 'full'; // (thumbnail, medium, large, full or custom size)
-            if ($images) : ?>
-                <ul>
-                    <?php foreach ($images as $image_id) : ?>
-                        <li>
-                            <?php echo wp_get_attachment_image($image_id, $size); ?>
-                        </li>
+
+            <div class="galleryWrapper">
+
+
+                <?php $images = get_field('trombinoscope');
+                if ($images) : ?>
+                    <?php foreach ($images as $image) : ?>
+                        <div class="single-slide-image">
+                            <img class="logo-categorie" src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+                            <span class="zoom-image"><img class="logo-categorie pictoSlider" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_slide_picto-full.svg"></span>
+                        </div>
+
                     <?php endforeach; ?>
-                </ul>
-            <?php endif; ?>
+                <?php endif; ?>
+
+            </div>
 
 
             <div class="contentAgenceLegende">
                 <p><?php echo $trombinoscope['legende']; ?></p>
-                <button><img class="logo-categorie flecheSlider" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_fleche-lien.svg"></button>
-            </div>
+<!--                 <button><img class="logo-categorie flecheSlider" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_fleche-lien.svg"></button>
+ -->            </div>
 
 
 

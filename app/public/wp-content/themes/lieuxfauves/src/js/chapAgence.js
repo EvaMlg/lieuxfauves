@@ -37,6 +37,7 @@ window.addEventListener('scroll', function () {
         equipeSpan.classList.remove("scroll");
         listChapterAgence.classList.remove("scroll-off");
         logoFrontpage.classList.remove("scroll-off");
+        listChapterAgence.style.display="block";
         devise.classList.remove("deviseOn");
     } else if (window.scrollY < section2) {
         valeursSpan.classList.add("scroll");
@@ -44,6 +45,7 @@ window.addEventListener('scroll', function () {
         equipeSpan.classList.remove("scroll");
         listChapterAgence.classList.remove("scroll-off");
         logoFrontpage.classList.remove("scroll-off");
+        listChapterAgence.style.display="block";
         devise.classList.remove("deviseOn");
     } else if (window.scrollY < section3) {
         valeursSpan.classList.remove("scroll");
@@ -51,6 +53,7 @@ window.addEventListener('scroll', function () {
         equipeSpan.classList.remove("scroll");
         listChapterAgence.classList.remove("scroll-off");
         logoFrontpage.classList.remove("scroll-off");
+        listChapterAgence.style.display="block";
         devise.classList.remove("deviseOn");
     } else if (window.scrollY < section4) {
         valeursSpan.classList.remove("scroll");
@@ -58,12 +61,14 @@ window.addEventListener('scroll', function () {
         equipeSpan.classList.add("scroll");
         listChapterAgence.classList.remove("scroll-off");
         logoFrontpage.classList.remove("scroll-off");
+        listChapterAgence.style.display="block";
         devise.classList.remove("deviseOn"); 
     } else if (window.scrollY < section5) {
         valeursSpan.classList.remove("scroll");
         expertisesSpan.classList.remove("scroll");
         equipeSpan.classList.add("scroll");
         listChapterAgence.classList.add("scroll-off");
+        listChapterAgence.style.display="none";
         logoFrontpage.classList.add("scroll-off");
         devise.classList.add("deviseOn");
     }

@@ -1,4 +1,6 @@
-
+.leftColumnContent, #search_result_ajax, .leftColumnContent .searchForm {
+    height: auto !important;
+}
 .pictoSlider {
     height: 20px !important;
 }
@@ -6,6 +8,7 @@
 .flecheSlider {
     height: 24px;
   }
+
 
 .projetsLoopExplo {
     background-color: #f4f4f4;

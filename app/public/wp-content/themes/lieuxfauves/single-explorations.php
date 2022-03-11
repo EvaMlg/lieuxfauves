@@ -15,7 +15,15 @@ get_header();
 </div>
 
 
+
+
 <div class="mainExploration">
+
+<div class="titleWrapperExplorationResponsive">
+
+<h1><?php the_field('titre'); ?></h1>
+
+</div>
 
 
     <div class="leftColumnExploration">
@@ -95,11 +103,13 @@ get_header();
 
 <div class="projetsLoop projetsLoopExplo">
 
-    <div class="titleLoop">
+
+<div class="list-link-loop">
         <img class="logo-categorie" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_logo_categories.svg">
-        <span>PROJETS</span>
-        <a href="projets" class="fauveUnderline">Architecture</a>
+        <span class="titleListLink">PROJETS</span>
+        <a class="fauveUnderline">Architecture</a>
     </div>
+
 
     <div class="loopWrapper">
 
@@ -131,18 +141,18 @@ get_header();
 
     </div>
 
-</div>
-
-<div class="projetsLoop projetsLoopExplo">
 
 
-    <div class="titleLoop">
+<div class="projetsLoopActu">
+
+
+    <div class="list-link-loop">
         <img class="logo-categorie" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_logo_categories.svg">
-        <span>ACTUALITÉS</span>
+        <span class="titleListLink">ACTUALITÉS</span>
         <a href="actualites" class="fauveUnderline">Vivant</a>
     </div>
 
-    <div class="loopWrapper">
+    <div class="loopWrapperActu">
 
         <?php
         $args = array(
@@ -155,9 +165,11 @@ get_header();
 
         $my_query = new WP_Query($args);
         if ($my_query->have_posts()) : while ($my_query->have_posts()) : $my_query->the_post(); ?>
-                <div class="projectCard">
+                <div class="projectCardActu">
                 <a href="<?php the_permalink(); ?>">
+                
                     <div class="projectThumbnail"><?php the_post_thumbnail(); ?></div>
+                    <span class="projectLoopLieu"><?php the_time('d—m—Y'); ?></span>
                     <div class="projectTitle"><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></div>
                 </a>
                 </div>
@@ -173,7 +185,7 @@ get_header();
 </div>
 </div>
 
-
+</div>
 
 
 </div>

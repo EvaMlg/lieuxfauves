@@ -9,7 +9,7 @@
     padding-bottom: $dCol;
     .catName {
         @include p-bold;
-        @include fauveUnderline;
+        @include fauveUnderlineSmall;
         color: $jungle-col;
         
     }
@@ -21,8 +21,13 @@
 
 }
 .catWrapper {
-    margin-right: $dCol;
+    margin-right: 0;
     text-align: center;
+    
+        width: fit-content;
+        min-width: 130px;
+    
+  
 }
 
 

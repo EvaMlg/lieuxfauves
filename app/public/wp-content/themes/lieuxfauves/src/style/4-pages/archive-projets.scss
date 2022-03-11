@@ -1,6 +1,3 @@
-.projets-template-default .menuButtonWrapper {
-    display: none;
-}
 
 .projPageNameResponsive {
     display: none;
@@ -144,6 +141,7 @@
         .titleProjet {
             padding-right: 2 * $dCol;
             padding-top : 5px;
+            line-height: 22px !important;
 
 
         a {
@@ -215,6 +213,8 @@
 
     .categoryHeader .div-to-toggle .subCatName span.active {
         @include cat-bold;
+        
+
         -webkit-box-shadow: inset 0 -8px 0 #f1dcad;
         box-shadow: inset 0 -8px 0 #f1dcad;
         width: fit-content;

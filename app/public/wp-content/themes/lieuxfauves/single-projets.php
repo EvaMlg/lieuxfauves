@@ -10,25 +10,25 @@ get_header();
 
 
 <div class="titleWrapperResponsive">
-	
-    <?php the_title( '<h1 class="singleProjetTitle">', '</h1>' ); ?>
-        <h2 class="singleProjetSubTitle"><?php the_field('lieu'); ?></h2>
 
-    </div>
+    <?php the_title('<h1 class="singleProjetTitle">', '</h1>'); ?>
+    <h2 class="singleProjetSubTitle"><?php the_field('lieu'); ?></h2>
+
+</div>
 
 <div class="headerProjetWrapper">
 
 
     <div class="imageWrapper">
 
-    <div class="imageThumbnailWrapper">
+        <div class="imageThumbnailWrapper">
 
 
-        <?php
-        $image = get_field('image');
-        if (!empty($image)) : ?>
-            <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
-        <?php endif; ?>
+            <?php
+            $image = get_field('image');
+            if (!empty($image)) : ?>
+                <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+            <?php endif; ?>
 
         </div>
 
@@ -37,8 +37,8 @@ get_header();
     </div>
 
     <div class="navNextPrev">
-       <a href="/projets"><img class="close-icon" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_projet_picto-fermer.svg"></span></a>
-    
+        <a href="/projets"><img class="close-icon" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_menu_burguer-fermer.svg"></span></a>
+
 
         <?php
         $prev_post = get_previous_post();
@@ -50,14 +50,21 @@ get_header();
         $nid = $next_post->ID;
         $permalink = get_permalink($nid);
         ?>
-   
 
-        <span class="nav-previous"><?php previous_post_link('%link', __('<img STYLE="height:20px;width:20px" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_slide_picto-prev.svg">')); ?>
+
+        <span class="nav-previous"><?php previous_post_link('%link', __('<img STYLE="height:22px;width:22px" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_slide_picto-prev.svg">')); ?>
             <h2><a href="<?php echo $permalink; ?>"></a></h2>
         </span>
 
+        <span class="nav-next"><?php next_post_link('%link', __('<span class="meta-nav"><img STYLE="height:22px;width:22px" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_slide_picto-next.svg">')); ?>
+            <h2><a href="<?php echo $permalink; ?>"></a></h2>
+        </span>
 
-        <span class="nav-next"><?php next_post_link('%link', __('<span class="meta-nav"><img STYLE="height:20px;width:20px" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_slide_picto-next.svg">')); ?>
+        <span class="nav-previousMobile"><?php previous_post_link('%link', __('<img STYLE="height:22px;width:22px" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_slide_picto-prev.svg">')); ?>
+            <h2><a href="<?php echo $permalink; ?>"></a></h2>
+        </span>
+
+        <span class="nav-nextMobile"><?php next_post_link('%link', __('<span class="meta-nav"><img STYLE="height:22px;width:22px" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_fleche-lien.svg">')); ?>
             <h2><a href="<?php echo $permalink; ?>"></a></h2>
         </span>
 
@@ -68,22 +75,19 @@ get_header();
     <div class="whiteLayout">
         <img class="laptopImgWhiteLayout" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_projet_logo.svg">
 
+        <a href="<?php echo get_option('home'); ?>/" ><div class="zone-cliquable"></div></a>
+
 
         <div class="nomenclature">
 
-            <?php
-            $args = array(
-                'post_type' => 'explorations', 'post_status' => 'publish', 'posts_per_page' => 9999
-            );
-            $my_query = new WP_Query($args);
-            if ($my_query->have_posts()) : while ($my_query->have_posts()) : $my_query->the_post();
-            ?>
-                    <?php echo wpdocs_custom_taxonomies_terms_links(); ?>
-            <?php endwhile;
-            endif;
-            wp_reset_postdata();
+        <div class="taxNamesProj">
 
-            ?>
+        <span class="fauveUnderlineSmall">insertion urbaine</span><span class="barre-nobold"> | </span><span class="fauveUnderlineSmall">gestion des flux</span><span class="barre-nobold"> | </span><span  class="fauveUnderlineSmall">confort intérieur</span><span class="barre-nobold"> | </span><span  class="fauveUnderlineSmall">traitement des eaux de pluie</span>
+
+        </div>
+
+
+           
 
             <?php
             $nomenclature = get_field('nomenclature');
@@ -107,8 +111,8 @@ get_header();
 
 
     <div class="titleWrapper">
-	
-    <?php the_title( '<h1 class="singleProjetTitle">', '</h1>' ); ?>
+
+        <?php the_title('<h1 class="singleProjetTitle">', '</h1>'); ?>
         <h2 class="singleProjetSubTitle"><?php the_field('lieu'); ?></h2>
 
     </div>
@@ -150,12 +154,12 @@ get_header();
                 <div class="FTright columnFT">
                     <div class="wrapperItems">
 
-                    <?php
-            $ficheTechnique = get_field('fiche_technique');
-            if ($ficheTechnique) : ?>
-                
-                        <h3>Programme</h3>
-                        <p><?php echo $ficheTechnique['programme']; ?></p>
+                        <?php
+                        $ficheTechnique = get_field('fiche_technique');
+                        if ($ficheTechnique) : ?>
+
+                            <h3>Programme</h3>
+                            <p><?php echo $ficheTechnique['programme']; ?></p>
                     </div>
                     <div class="wrapperItems">
                         <h3>Maîtrise d’ouvrage</h3>
@@ -184,7 +188,7 @@ get_header();
                         <p><?php echo $ficheTechnique['performances_environnementales']; ?></p>
                     </div>
                 </div>
-                <?php endif; ?>
+            <?php endif; ?>
             </div>
             <div class="boutonWrapperProjet">
                 <p class="cardLink cardLinkLight shareLinks"><img class="logo-categorie logo-explo" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_fleche-partager.svg"> &nbsp; Partager</p>
@@ -213,11 +217,12 @@ get_header();
 <div class="projetsLoop">
 
 
-    <div class="titleLoop">
+    <div class="list-link-loop">
         <img class="logo-categorie" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_logo_categories.svg">
-        <span>PROJETS</span>
+        <span class="titleListLink">PROJETS</span>
         <a class="fauveUnderline">Architecture</a>
     </div>
+
 
     <div class="loopWrapper">
 

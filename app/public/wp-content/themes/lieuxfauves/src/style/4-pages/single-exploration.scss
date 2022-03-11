@@ -1,3 +1,13 @@
+.titleWrapperExplorationResponsive {
+    display: none;
+
+    @include mobile-tab {
+        display: block
+    }
+
+
+}
+
 .headerExplo {
     background-color: $black-col-5;
     padding-left: $margin;
@@ -23,7 +33,9 @@
             //min-height: 180px;
             background-color: white;
             padding: $dCol;
-            @include p-bold;
+            font-family: "Fira Medium";
+            font-size: 12px ;
+            line-height: 12px;
             color: $grey-col;
             margin-bottom: 15px;
 
@@ -32,13 +44,14 @@
              }
 
             a {
+                
                 text-decoration: none;
                 color: $grey-col;
-                @include fauveUnderline;
+                @include fauveUnderlineSmall;
             }
             a:hover {
                 text-decoration: none;
-                @include fauveUnderlineHover;
+                @include fauveUnderlineSmallHover;
             }
 
         }
@@ -95,6 +108,7 @@
             flex-direction: column;
 
             .shareLinks {
+                color : $grey-col-50;
                 background-color: white;
                 padding-left: $dCol;
                 padding-top: 4%;

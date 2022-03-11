@@ -62,7 +62,7 @@ get_header();
 
                             <?php echo wpdocs_custom_taxonomies_terms_links_2(); ?>
 
-
+                            
                         </div>
 
 

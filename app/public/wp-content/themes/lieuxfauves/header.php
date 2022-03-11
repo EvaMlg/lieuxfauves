@@ -32,16 +32,17 @@
 
 
 <div id="loader">
-    <img src="/wp-content/themes/lieuxfauves/src/assets/img/LF_INTRO_image01.jpg" alt="Loader Lieux Fauves" style="
-
-
-
-    
-    width: 100%;
+    <img class ="introImg" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_INTRO_image01.jpg" alt="Loader Lieux Fauves" style="
+    /* width: 100%;
     position: absolute;
     height: 99.5vh;
     z-index: 2000;
-    object-fit: cover;">
+    object-fit: cover;
+    @media (max-width: 1025px) { 
+      width: 10%; */
+     
+
+     }">
     <img src="/wp-content/themes/lieuxfauves/src/assets/img/.jpg" alt="" class="svg" style="position: absolute;
     z-index: 2000;
     width: 40%;

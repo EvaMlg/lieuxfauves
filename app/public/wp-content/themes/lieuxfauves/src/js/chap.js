@@ -47,6 +47,20 @@ console.log(sectionCinq);
 console.log(sectionSplit);
 
 
+const arrow = document.querySelector('.flecheBas')
+window.addEventListener('scroll', function () {
+    if (window.scrollY > sectionTrois) {
+        arrow.style.display = "block";
+
+    }
+    else if (window.scrollY < sectionTrois) {
+        arrow.style.display = "none";
+
+    }
+}, false);
+
+
+
 window.addEventListener('scroll', function () {
     if (window.scrollY < sectionUn) {
         lieuxSpan.classList.add("scroll");

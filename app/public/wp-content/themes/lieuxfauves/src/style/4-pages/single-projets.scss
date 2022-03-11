@@ -1,3 +1,18 @@
+.projets-template-default .menuButtonWrapper {
+    display: none;
+
+    
+
+    .loupe {
+        display: none;
+    }
+
+    .flecheBas{
+        display: none;
+    }
+
+    
+}
 
 
 .mobileImgWhiteLayout {
@@ -58,13 +73,17 @@
 
         .nomenclature {
             @include small-button;
+            line-height: 20px !important;
             color: $grey-col;
             margin-left: $margin;
+            padding-right: 180px;
             position: absolute;
             top: 600px;
 
             a {
                 @include small-button;
+                line-height: 20px !important;
+
                 color: $grey-col;
                 line-height: 30px;
             }
@@ -93,19 +112,32 @@
 
     font-family: "Fira Light";
     text-transform: uppercase;
-    font-size: 14px;
+    font-size: 18px;
     line-height: 35px;
     color: #828787;
-    padding-top: 10px;
+    //padding-top: 10px;
 
 
 
 }
 
+.zone-cliquable {
+    position: absolute;
+    top : 20px;
+    left: $margin;
+    width: 250px;
+    height: 150px;
+    cursor: pointer;
+
+    @include mobile-tab {
+        display: none;
+    }
+}
+
 
 .contentWrapperProjet {
 
-    padding-top: $margin;
+    padding-top: 50px !important;
     padding-left: $margin;
 
 
@@ -357,11 +389,26 @@
     span {
         margin-bottom: 3px;
     }
+
+    .nav-previousMobile {
+        display: none;
+    }
+
+    .nav-nextMobile {
+        display: none;
+    }
+   
    
 
-    .nav-previous {}
+    .nav-previous {
+        height: 25px;
+        width: 25px;
+    }
 
-    .nav-next {}
+    .nav-next {
+        height: 25px;
+        width: 25px;
+    }
 
     .close-icon {}
 

@@ -109,6 +109,7 @@
             a {
                 @include fauveUnderline;
                 color : $grey-col;
+                font-family: "Fira Bold";
                 }
 
                 a:hover {

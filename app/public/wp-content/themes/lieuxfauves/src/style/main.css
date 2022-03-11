@@ -442,6 +442,29 @@ button {
     width: 68.75vw;
   }
 }
+.fauveUnderlineSmall {
+  cursor: pointer;
+  padding-bottom: 0px;
+  padding-right: 3px;
+  padding-left: 3px;
+  -webkit-box-shadow: inset 0 -8px 0 #f1dcad;
+          box-shadow: inset 0 -8px 0 #f1dcad;
+  color: #828787;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.fauveUnderlineSmall:hover {
+  padding-bottom: 2px;
+  padding-right: 3px;
+  padding-left: 3px;
+  -webkit-box-shadow: inset 0 -60px 0 #f1dcad;
+          box-shadow: inset 0 -60px 0 #f1dcad;
+  color: #828787;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
 @font-face {
   font-family: "Fira Light";
   src: url("/wp-content/themes/lieuxfauves/src/assets/fonts/FiraSans-ExtraLight.woff2") format("woff2");
@@ -484,6 +507,14 @@ html {
   height: 24px;
 }
 
+.introImg {
+  width: 100%;
+  position: absolute;
+  height: 99.5vh;
+  z-index: 2000;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
 .searchForm {
   position: absolute;
   top: 50px;
@@ -691,6 +722,10 @@ html {
   color: white !important;
 }
 
+.flecheBas {
+  display: none;
+}
+
 .sidebarMenu {
   display: none;
 }
@@ -772,7 +807,7 @@ html {
 
 .menuButtonWrapper {
   position: relative;
-  z-index: 1000;
+  z-index: 1100;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -921,8 +956,39 @@ html {
             transform: translate(0);
   }
 }
-.rightColumnSearch {
-  background-color: #dca832;
+.list-link-loop {
+  height: 100%;
+  font-family: "Fira Bold";
+  font-size: 15px;
+  line-height: 14px;
+  color: #00534e;
+  padding-right: 18px;
+  padding-left: 0;
+  padding-bottom: 45px;
+}
+@media (min-width: 1025px) {
+  .list-link-loop {
+    font-size: 15px;
+    line-height: 14px;
+  }
+}
+@media (min-width: 1025px) {
+  .list-link-loop {
+    padding-right: 45px;
+    padding-left: 0;
+  }
+}
+.list-link-loop img {
+  margin-right: 20px;
+  height: 11px;
+}
+.list-link-loop span {
+  margin-right: 20px;
+  color: #00534e;
+}
+.list-link-loop a {
+  margin-right: 20px;
+  color: #00534e;
 }
 
 .projectLoopLieu {
@@ -940,13 +1006,112 @@ html {
   }
 }
 
+.projetsLoop {
+  padding: 0;
+}
+
 .projetsLoopExplo {
   background-color: #f4f4f4;
 }
 
+.projetsLoopActu {
+  padding-top: 77px;
+  padding-left: 0;
+}
+.projetsLoopActu .titleLoop {
+  font-family: "Fira Bold";
+  font-size: 15px;
+  line-height: 14px;
+  color: #00534e;
+  padding-top: 45px;
+  padding-bottom: 45px;
+}
+@media (min-width: 1025px) {
+  .projetsLoopActu .titleLoop {
+    font-size: 15px;
+    line-height: 14px;
+  }
+}
+.projetsLoopActu .loopWrapperActu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-bottom: 45px;
+}
+.projetsLoopActu .loopWrapperActu .projectCardActu {
+  width: calc(25% - 45px);
+}
+.projetsLoopActu .loopWrapperActu .projectCardActu a {
+  font-family: "Fira Bold";
+  font-size: 17px;
+  line-height: 24px;
+  text-decoration: none;
+  color: #828787;
+}
+@media (min-width: 1025px) {
+  .projetsLoopActu .loopWrapperActu .projectCardActu a {
+    font-size: 17px;
+    line-height: 24px;
+  }
+}
+.projetsLoopActu .loopWrapperActu .projectCardActu img {
+  height: 500px;
+}
+.projetsLoopActu .loopWrapperActu .projectThumbnail {
+  position: relative;
+  width: 100%;
+}
+.projetsLoopActu .loopWrapperActu .projectThumbnail img {
+  position: absolute;
+  width: 100%;
+  height: 360px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+  opacity: 0.5;
+}
+.projetsLoopActu .loopWrapperActu .projectThumbnail::after {
+  content: "";
+  width: 100%;
+  height: 360px;
+  background-color: #00534e;
+  display: block;
+  padding-bottom: 100%;
+}
+.projetsLoopActu .loopWrapperActu .projectTitle {
+  padding-top: 8px;
+  width: 300px;
+  font-family: "Fira Bold";
+  font-size: 14px;
+  line-height: 25px;
+  color: #828787;
+  padding-right: 90px;
+}
+@media (min-width: 1025px) {
+  .projetsLoopActu .loopWrapperActu .projectTitle {
+    font-size: 14px;
+    line-height: 25px;
+  }
+}
+.projetsLoopActu .loopWrapperActu .projectTitle a {
+  text-decoration: none;
+  color: #828787;
+}
+
 .projetsLoop {
   padding-top: 77px;
-  padding-left: 77px;
+  padding-left: 0;
 }
 .projetsLoop .titleLoop {
   font-family: "Fira Bold";
@@ -1026,6 +1191,44 @@ html {
   color: #828787;
 }
 
+.list-link {
+  height: 100%;
+  font-family: "Fira Bold";
+  font-size: 15px;
+  line-height: 14px;
+  color: #00534e;
+  padding-right: 18px;
+  padding-left: 18px;
+  padding-bottom: 45px;
+}
+@media (min-width: 1025px) {
+  .list-link {
+    font-size: 15px;
+    line-height: 14px;
+  }
+}
+@media (min-width: 1025px) {
+  .list-link {
+    padding-right: 45px;
+    padding-left: 45px;
+  }
+}
+.list-link .titleListLink {
+  letter-spacing: 1px;
+}
+.list-link img {
+  margin-right: 20px;
+  height: 11px;
+}
+.list-link span {
+  margin-right: 20px;
+  color: #00534e;
+}
+.list-link a {
+  margin-right: 20px;
+  color: #00534e;
+}
+
 .categoryHeader {
   width: 100%;
   display: -webkit-box;
@@ -1044,12 +1247,13 @@ html {
   font-family: "Fira Bold";
   font-size: 14px;
   line-height: 25px;
-  padding-bottom: 1px;
-  padding-right: 5px;
-  padding-left: 5px;
-  -webkit-box-shadow: inset 0 -10px 0 #f1dcad;
-          box-shadow: inset 0 -10px 0 #f1dcad;
-  color: #00534e;
+  cursor: pointer;
+  padding-bottom: 0px;
+  padding-right: 3px;
+  padding-left: 3px;
+  -webkit-box-shadow: inset 0 -8px 0 #f1dcad;
+          box-shadow: inset 0 -8px 0 #f1dcad;
+  color: #828787;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
   color: #00534e;
@@ -1074,8 +1278,12 @@ html {
 }
 
 .catWrapper {
-  margin-right: 45px;
+  margin-right: 0;
   text-align: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  min-width: 130px;
 }
 
 .subCatName {
@@ -1313,6 +1521,7 @@ footer {
 }
 
 .fauveUnderline {
+  cursor: pointer;
   padding-bottom: 1px;
   padding-right: 5px;
   padding-left: 5px;
@@ -1392,6 +1601,7 @@ footer {
 }
 
 .split-left {
+  z-index: 1 !important;
   width: 100%;
   height: 100vh;
   z-index: 1000;
@@ -1898,7 +2108,7 @@ footer {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  font-family: "Fira Bold";
+  font-family: "Fira Medium";
   font-size: 12px;
   line-height: 12px;
   border-top: 1px #f4f4f4 solid;
@@ -1912,7 +2122,7 @@ footer {
   }
 }
 .sec-ves .bloc-exploration .explorationWrapper .boutonWrapperExploration button {
-  font-family: "Fira Bold";
+  font-family: "Fira Medium";
   font-size: 12px;
   line-height: 12px;
   color: #b5b8b8;
@@ -1972,6 +2182,16 @@ footer {
 
 .logo-explo {
   height: 11px;
+}
+
+.projets-template-default .menuButtonWrapper {
+  display: none;
+}
+.projets-template-default .menuButtonWrapper .loupe {
+  display: none;
+}
+.projets-template-default .menuButtonWrapper .flecheBas {
+  display: none;
 }
 
 .mobileImgWhiteLayout {
@@ -2036,11 +2256,13 @@ footer {
   padding-top: 45px;
 }
 .headerProjetWrapper .whiteLayout .nomenclature {
-  font-family: "Fira Bold";
+  font-family: "Fira Medium";
   font-size: 12px;
   line-height: 12px;
+  line-height: 20px !important;
   color: #828787;
   margin-left: 77px;
+  padding-right: 180px;
   position: absolute;
   top: 600px;
 }
@@ -2051,9 +2273,10 @@ footer {
   }
 }
 .headerProjetWrapper .whiteLayout .nomenclature a {
-  font-family: "Fira Bold";
+  font-family: "Fira Medium";
   font-size: 12px;
   line-height: 12px;
+  line-height: 20px !important;
   color: #828787;
   line-height: 30px;
 }
@@ -2074,14 +2297,27 @@ footer {
 .singleProjetSubTitle {
   font-family: "Fira Light";
   text-transform: uppercase;
-  font-size: 14px;
+  font-size: 18px;
   line-height: 35px;
   color: #828787;
-  padding-top: 10px;
+}
+
+.zone-cliquable {
+  position: absolute;
+  top: 20px;
+  left: 77px;
+  width: 250px;
+  height: 150px;
+  cursor: pointer;
+}
+@media (max-width: 1025px) {
+  .zone-cliquable {
+    display: none;
+  }
 }
 
 .contentWrapperProjet {
-  padding-top: 77px;
+  padding-top: 50px !important;
   padding-left: 77px;
 }
 .contentWrapperProjet .titleWrapper {
@@ -2158,6 +2394,7 @@ footer {
   }
 }
 .contentWrapperProjet .projetWrapper .rightColumn a {
+  cursor: pointer;
   padding-bottom: 1px;
   padding-right: 5px;
   padding-left: 5px;
@@ -2206,7 +2443,7 @@ footer {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
-  font-family: "Fira Bold";
+  font-family: "Fira Medium";
   font-size: 12px;
   line-height: 12px;
   border-top: 1px #f4f4f4 solid;
@@ -2220,7 +2457,7 @@ footer {
   }
 }
 .contentWrapperProjet .projetWrapper .leftColumn .boutonWrapperExploration button {
-  font-family: "Fira Bold";
+  font-family: "Fira Medium";
   font-size: 12px;
   line-height: 12px;
   color: #828787;
@@ -2391,6 +2628,29 @@ footer {
 .navNextPrev span {
   margin-bottom: 3px;
 }
+.navNextPrev .nav-previousMobile {
+  display: none;
+}
+.navNextPrev .nav-nextMobile {
+  display: none;
+}
+.navNextPrev .nav-previous {
+  height: 25px;
+  width: 25px;
+}
+.navNextPrev .nav-next {
+  height: 25px;
+  width: 25px;
+}
+.titleWrapperExplorationResponsive {
+  display: none;
+}
+@media (max-width: 1025px) {
+  .titleWrapperExplorationResponsive {
+    display: block;
+  }
+}
+
 .headerExplo {
   background-color: #f4f4f4;
   padding-left: 77px;
@@ -2435,17 +2695,11 @@ footer {
 .mainExploration .leftColumnExploration .tagsWrapperExploration {
   background-color: white;
   padding: 45px;
-  font-family: "Fira Bold";
-  font-size: 14px;
-  line-height: 25px;
+  font-family: "Fira Medium";
+  font-size: 12px;
+  line-height: 12px;
   color: #828787;
   margin-bottom: 15px;
-}
-@media (min-width: 1025px) {
-  .mainExploration .leftColumnExploration .tagsWrapperExploration {
-    font-size: 14px;
-    line-height: 25px;
-  }
 }
 .mainExploration .leftColumnExploration .tagsWrapperExploration .barre-nobold {
   font-family: "Fira Light";
@@ -2461,27 +2715,26 @@ footer {
 .mainExploration .leftColumnExploration .tagsWrapperExploration a {
   text-decoration: none;
   color: #828787;
-  padding-bottom: 1px;
-  padding-right: 5px;
-  padding-left: 5px;
-  -webkit-box-shadow: inset 0 -10px 0 #f1dcad;
-          box-shadow: inset 0 -10px 0 #f1dcad;
-  color: #00534e;
+  cursor: pointer;
+  padding-bottom: 0px;
+  padding-right: 3px;
+  padding-left: 3px;
+  -webkit-box-shadow: inset 0 -8px 0 #f1dcad;
+          box-shadow: inset 0 -8px 0 #f1dcad;
+  color: #828787;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
 .mainExploration .leftColumnExploration .tagsWrapperExploration a:hover {
   text-decoration: none;
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
-  padding-top: 3px;
-  padding-bottom: 3px;
-  padding-right: 5px;
-  padding-left: 5px;
+  padding-bottom: 2px;
+  padding-right: 3px;
+  padding-left: 3px;
   -webkit-box-shadow: inset 0 -60px 0 #f1dcad;
           box-shadow: inset 0 -60px 0 #f1dcad;
-  -webkit-transition: ease-in-out;
-  transition: ease-in-out;
+  color: #828787;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 .mainExploration .leftColumnExploration .article-thumbnail {
   position: relative;
@@ -2535,6 +2788,7 @@ footer {
   }
 }
 .mainExploration .leftColumnExploration .boutonWrapperExploration .shareLinks {
+  color: #b5b8b8;
   background-color: white;
   padding-left: 45px;
   padding-top: 4%;
@@ -2674,24 +2928,24 @@ footer {
   }
 }
 .headerExploration .categoryHeader .catName:hover {
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
-  padding-top: 3px;
-  padding-bottom: 3px;
-  padding-right: 5px;
-  padding-left: 5px;
+  padding-bottom: 2px;
+  padding-right: 3px;
+  padding-left: 3px;
   -webkit-box-shadow: inset 0 -60px 0 #f1dcad;
           box-shadow: inset 0 -60px 0 #f1dcad;
-  -webkit-transition: ease-in-out;
-  transition: ease-in-out;
+  color: #828787;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 .headerExploration .categoryHeader .catName.active {
-  padding-top: 3px;
-  padding-bottom: -5px;
-  padding-right: 5px;
-  padding-left: 5px;
-  -webkit-box-shadow: inset 0 -10px 0 #f1dcad;
-          box-shadow: inset 0 -10px 0 #f1dcad;
+  padding-bottom: 2px;
+  padding-right: 3px;
+  padding-left: 3px;
+  -webkit-box-shadow: inset 0 -60px 0 #f1dcad;
+          box-shadow: inset 0 -60px 0 #f1dcad;
+  color: #828787;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 .explorationsContainer {
@@ -2741,6 +2995,20 @@ footer {
   display: -ms-flexbox;
   display: flex;
   width: 50%;
+}
+.explorationsContainer .explorationWrapper .taxThumbnailWrapper .taxnames {
+  color: red !important;
+}
+.explorationsContainer .explorationWrapper .taxThumbnailWrapper .taxExplo a {
+  font-family: "Fira Medium" !important;
+  font-size: 12px !important;
+  line-height: 12px !important;
+}
+@media (min-width: 1025px) {
+  .explorationsContainer .explorationWrapper .taxThumbnailWrapper .taxExplo a {
+    font-size: 12px !important;
+    line-height: 12px !important;
+  }
 }
 .explorationsContainer .explorationWrapper .taxThumbnailWrapper .taxExplo {
   display: -webkit-box;
@@ -2857,7 +3125,7 @@ footer {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  font-family: "Fira Bold";
+  font-family: "Fira Medium";
   font-size: 12px;
   line-height: 12px;
   border-top: 1px #f4f4f4 solid;
@@ -2871,7 +3139,7 @@ footer {
   }
 }
 .wrapperExplo .boutonWrapperExploration button {
-  font-family: "Fira Bold";
+  font-family: "Fira Medium";
   font-size: 12px;
   line-height: 12px;
   color: #b5b8b8;
@@ -2933,10 +3201,6 @@ footer {
   background-color: #00534e;
   display: block;
   padding-bottom: 100%;
-}
-
-.projets-template-default .menuButtonWrapper {
-  display: none;
 }
 
 .projPageNameResponsive {
@@ -3070,6 +3334,7 @@ footer {
 .projetsGrid .titleProjet {
   padding-right: 90px;
   padding-top: 5px;
+  line-height: 22px !important;
 }
 .projetsGrid .titleProjet a {
   font-family: "Fira Bold";
@@ -3420,7 +3685,7 @@ footer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-family: "Fira Bold";
+  font-family: "Fira Medium";
   font-size: 12px;
   line-height: 12px;
   border-top: 1px #f4f4f4 solid;
@@ -3432,7 +3697,7 @@ footer {
   }
 }
 .boutonWrapperArchiveActu button {
-  font-family: "Fira Bold";
+  font-family: "Fira Medium";
   font-size: 12px;
   line-height: 12px;
   color: #b5b8b8;
@@ -3507,6 +3772,8 @@ footer {
 }
 
 .list-chapter-agence {
+  z-index: 50;
+  position: fixed;
   display: block;
   font-family: "Fira Light";
   font-size: 33px;
@@ -3686,6 +3953,7 @@ footer {
   }
 }
 .contentAgenceBold a {
+  cursor: pointer;
   padding-bottom: 1px;
   padding-right: 5px;
   padding-left: 5px;
@@ -3803,6 +4071,7 @@ footer {
   }
 }
 .distinctionsWrapperAgence a {
+  cursor: pointer;
   padding-bottom: 1px;
   padding-right: 5px;
   padding-left: 5px;
@@ -4089,6 +4358,7 @@ acf-gallery {
   }
 }
 .mainArticle .rightColumnArticle .contentArticle a {
+  cursor: pointer;
   padding-bottom: 1px;
   padding-right: 5px;
   padding-left: 5px;
@@ -4098,6 +4368,7 @@ acf-gallery {
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
   color: #828787;
+  font-family: "Fira Bold";
 }
 .mainArticle .rightColumnArticle .contentArticle a:hover {
   -webkit-transition: all 0.2s ease-in-out;
@@ -4159,6 +4430,10 @@ acf-gallery {
     font-size: 10px;
     line-height: 12px;
   }
+}
+
+.leftColumnContent, #search_result_ajax, .leftColumnContent .searchForm {
+  height: auto !important;
 }
 
 .pictoSlider {
@@ -4706,7 +4981,7 @@ form#searchform div button {
     color: #00534e;
   }
 }
-@media (max-width: 768px) and (max-width: 768px) {
+@media (max-width: 768px) and (max-width: 1025px) {
   .leftColumnMenu .subMenuFP {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -4721,9 +4996,12 @@ form#searchform div button {
     font-family: "Fira Sans Black";
     line-height: 31px;
     color: white;
+    padding: 0;
+    padding-top: 8px;
+    padding-left: 0px;
   }
 }
-@media (max-width: 768px) and (max-width: 768px) and (min-width: 1025px) {
+@media (max-width: 768px) and (max-width: 1025px) and (min-width: 1025px) {
   .leftColumnMenu .subMenuFP {
     font-size: 18px;
     line-height: 14px;
@@ -4733,6 +5011,9 @@ form#searchform div button {
   .leftColumnMenu .subMenuFP a {
     padding: 4px;
     color: white;
+    padding: 0;
+    padding-top: 8px;
+    padding-left: 0px;
   }
 }
 @media (max-width: 1025px) {
@@ -5022,7 +5303,7 @@ form#searchform div button {
     padding-top: 45px;
   }
   .headerProjetWrapper .whiteLayout .nomenclature {
-    font-family: "Fira Bold";
+    font-family: "Fira Medium";
     font-size: 12px;
     line-height: 12px;
     color: #828787;
@@ -5040,7 +5321,7 @@ form#searchform div button {
 }
 @media (max-width: 1025px) {
   .headerProjetWrapper .whiteLayout .nomenclature a {
-    font-family: "Fira Bold";
+    font-family: "Fira Medium";
     font-size: 12px;
     line-height: 12px;
     color: #828787;
@@ -5156,6 +5437,7 @@ form#searchform div button {
 }
 @media (max-width: 1025px) {
   .contentWrapperProjet .projetWrapper .rightColumn a {
+    cursor: pointer;
     padding-bottom: 1px;
     padding-right: 5px;
     padding-left: 5px;
@@ -5211,7 +5493,7 @@ form#searchform div button {
     -webkit-box-align: end;
         -ms-flex-align: end;
             align-items: flex-end;
-    font-family: "Fira Bold";
+    font-family: "Fira Medium";
     font-size: 12px;
     line-height: 12px;
     border-top: 1px #f4f4f4 solid;
@@ -5228,7 +5510,7 @@ form#searchform div button {
 @media (max-width: 1025px) {
   .contentWrapperProjet .projetWrapper .leftColumn .boutonWrapperExploration button {
     text-align: left;
-    font-family: "Fira Bold";
+    font-family: "Fira Medium";
     font-size: 12px;
     line-height: 12px;
     color: #828787;
@@ -5393,7 +5675,7 @@ form#searchform div button {
 @media (max-width: 1025px) {
   .navNextPrev {
     position: fixed;
-    z-index: 3000;
+    z-index: 50;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -5413,6 +5695,18 @@ form#searchform div button {
             align-items: center;
     width: 65px;
     height: 154px;
+  }
+  .navNextPrev .nav-previousMobile {
+    display: block;
+  }
+  .navNextPrev .nav-nextMobile {
+    display: block;
+  }
+  .navNextPrev .nav-previous {
+    display: none;
+  }
+  .navNextPrev .nav-next {
+    display: none;
   }
 }
 @media (max-width: 1025px) {
@@ -5685,6 +5979,7 @@ form#searchform div button {
 }
 @media (max-width: 1025px) {
   .mainArticle .rightColumnArticle .contentArticle a {
+    cursor: pointer;
     padding-bottom: 1px;
     padding-right: 5px;
     padding-left: 5px;
@@ -5824,26 +6119,6 @@ form#searchform div button {
   }
 }
 @media (max-width: 1025px) {
-  .headerExploration .categoryHeader .catName:hover {
-    padding-top: 3px;
-    padding-bottom: -5px;
-    padding-right: 5px;
-    padding-left: 5px;
-    -webkit-box-shadow: inset 0 -10px 0 #f1dcad;
-            box-shadow: inset 0 -10px 0 #f1dcad;
-  }
-}
-@media (max-width: 1025px) {
-  .headerExploration .categoryHeader .catName.active {
-    padding-top: 3px;
-    padding-bottom: -5px;
-    padding-right: 5px;
-    padding-left: 5px;
-    -webkit-box-shadow: inset 0 -10px 0 #f1dcad;
-            box-shadow: inset 0 -10px 0 #f1dcad;
-  }
-}
-@media (max-width: 1025px) {
   .explorationsContainer {
     width: 100vw;
     background-color: white;
@@ -5905,6 +6180,7 @@ form#searchform div button {
     color: #00534e;
   }
   .explorationsContainer .explorationWrapper .taxThumbnailWrapper .taxExplo .taxnames {
+    cursor: pointer;
     padding-bottom: 1px;
     padding-right: 5px;
     padding-left: 5px;
@@ -6052,7 +6328,7 @@ form#searchform div button {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    font-family: "Fira Bold";
+    font-family: "Fira Medium";
     font-size: 12px;
     line-height: 12px;
     border-top: 0px #f4f4f4 solid;
@@ -6069,7 +6345,7 @@ form#searchform div button {
 @media (max-width: 1025px) {
   .wrapperExplo .boutonWrapperExploration button {
     text-align: left;
-    font-family: "Fira Bold";
+    font-family: "Fira Medium";
     font-size: 12px;
     line-height: 12px;
     border-top: 1px #f4f4f4 solid;
@@ -6145,12 +6421,34 @@ form#searchform div button {
     padding-bottom: 100%;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 1025px) {
+  .mainExploration .leftColumnExploration .boutonWrapperExploration {
+    margin-bottom: 0 !important;
+  }
+
   .mainExploration {
     display: block;
     width: 100vw;
   }
 
+  .titleWrapperExplorationResponsive {
+    background-color: white;
+    padding: 18px;
+    font-family: "Fira Bold";
+    font-size: 14px;
+    line-height: 35px;
+    color: #828787;
+    margin-bottom: 18px;
+    margin-top: 18px;
+  }
+}
+@media (max-width: 1025px) and (min-width: 1025px) {
+  .titleWrapperExplorationResponsive {
+    font-size: 14px;
+    line-height: 35px;
+  }
+}
+@media (max-width: 1025px) {
   .headerExplo {
     display: none;
     background-color: #f4f4f4;
@@ -6161,7 +6459,8 @@ form#searchform div button {
   .headerExplo img {
     height: 100px;
   }
-
+}
+@media (max-width: 1025px) {
   .mainExploration {
     background-color: #f4f4f4;
     padding-left: 18px;
@@ -6184,29 +6483,30 @@ form#searchform div button {
     margin-bottom: 15px;
   }
 }
-@media (max-width: 768px) and (min-width: 1025px) {
+@media (max-width: 1025px) and (min-width: 1025px) {
   .mainExploration .leftColumnExploration .tagsWrapperExploration {
     font-size: 14px;
     line-height: 25px;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 1025px) {
   .mainExploration .leftColumnExploration .tagsWrapperExploration .barre-nobold {
     font-family: "Fira Light";
     font-size: 14px;
     line-height: 24px;
   }
 }
-@media (max-width: 768px) and (min-width: 1025px) {
+@media (max-width: 1025px) and (min-width: 1025px) {
   .mainExploration .leftColumnExploration .tagsWrapperExploration .barre-nobold {
     font-size: 14px;
     line-height: 24px;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 1025px) {
   .mainExploration .leftColumnExploration .tagsWrapperExploration a {
     text-decoration: none;
     color: #828787;
+    cursor: pointer;
     padding-bottom: 1px;
     padding-right: 5px;
     padding-left: 5px;
@@ -6217,7 +6517,7 @@ form#searchform div button {
     transition: all 0.2s ease-in-out;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 1025px) {
   .mainExploration .leftColumnExploration .tagsWrapperExploration a:hover {
     text-decoration: none;
     -webkit-transition: all 0.2s ease-in-out;
@@ -6232,7 +6532,7 @@ form#searchform div button {
     transition: ease-in-out;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 1025px) {
   .mainExploration .leftColumnExploration .article-thumbnail {
     position: relative;
     -webkit-box-pack: center;
@@ -6259,14 +6559,14 @@ form#searchform div button {
        object-fit: cover;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 1025px) {
   .mainExploration .leftColumnExploration .article-thumbnail::after {
     content: "";
     display: block;
     padding-bottom: 100%;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 1025px) {
   .mainExploration .leftColumnExploration .boutonWrapperExploration {
     margin-top: 15px;
     margin-bottom: 45px;
@@ -6283,13 +6583,13 @@ form#searchform div button {
             flex-direction: column;
   }
 }
-@media (max-width: 768px) and (min-width: 1025px) {
+@media (max-width: 1025px) and (min-width: 1025px) {
   .mainExploration .leftColumnExploration .boutonWrapperExploration {
     font-size: 11px;
     line-height: 24px;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 1025px) {
   .mainExploration .leftColumnExploration .boutonWrapperExploration .shareLinks {
     background-color: white;
     padding-left: 18px;
@@ -6298,11 +6598,12 @@ form#searchform div button {
     margin-bottom: 15px;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 1025px) {
   .mainExploration .rightColumnExploration {
     width: 100%;
   }
   .mainExploration .rightColumnExploration .titleWrapperExploration {
+    display: none;
     background-color: white;
     padding: 18px;
     font-family: "Fira Bold";
@@ -6312,20 +6613,20 @@ form#searchform div button {
     margin-bottom: 1.5%;
   }
 }
-@media (max-width: 768px) and (min-width: 1025px) {
+@media (max-width: 1025px) and (min-width: 1025px) {
   .mainExploration .rightColumnExploration .titleWrapperExploration {
     font-size: 14px;
     line-height: 35px;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 1025px) {
   .mainExploration .rightColumnExploration .contentWrapperExploration {
     background-color: white;
     padding: 18px;
     margin-bottom: 45px;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 1025px) {
   .mainExploration .rightColumnExploration .chapeauWrapperExploration {
     font-family: "Fira Bold";
     font-size: 17px;
@@ -6334,13 +6635,13 @@ form#searchform div button {
     padding-bottom: 45px;
   }
 }
-@media (max-width: 768px) and (min-width: 1025px) {
+@media (max-width: 1025px) and (min-width: 1025px) {
   .mainExploration .rightColumnExploration .chapeauWrapperExploration {
     font-size: 17px;
     line-height: 30px;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 1025px) {
   .mainExploration .rightColumnExploration .subtitleWrapperExploration {
     padding-bottom: 2%;
   }
@@ -6352,13 +6653,13 @@ form#searchform div button {
     color: #00534e;
   }
 }
-@media (max-width: 768px) and (min-width: 1025px) {
+@media (max-width: 1025px) and (min-width: 1025px) {
   .mainExploration .rightColumnExploration .subtitleWrapperExploration h3 {
     font-size: 20px;
     line-height: 30px;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 1025px) {
   .mainExploration .rightColumnExploration .texteWrapperExploration {
     font-family: "Fira Light";
     font-size: 14px;
@@ -6366,7 +6667,7 @@ form#searchform div button {
     color: #828787;
   }
 }
-@media (max-width: 768px) and (min-width: 1025px) {
+@media (max-width: 1025px) and (min-width: 1025px) {
   .mainExploration .rightColumnExploration .texteWrapperExploration {
     font-size: 14px;
     line-height: 24px;
@@ -6382,6 +6683,7 @@ form#searchform div button {
   }
 
   .fauveUnderline {
+    cursor: pointer;
     padding-bottom: 1px;
     padding-right: 5px;
     padding-left: 5px;
@@ -6461,6 +6763,7 @@ form#searchform div button {
 @media (max-width: 1025px) {
   .split-left {
     display: block;
+    z-index: 1;
   }
 }
 @media (max-width: 1025px) {
@@ -6924,7 +7227,7 @@ form#searchform div button {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    font-family: "Fira Bold";
+    font-family: "Fira Medium";
     font-size: 12px;
     line-height: 12px;
     border-top: 0px #f4f4f4 solid;
@@ -6941,7 +7244,7 @@ form#searchform div button {
 @media (max-width: 1025px) {
   .sec-ves .bloc-exploration .explorationWrapper .boutonWrapperExploration button {
     text-align: left;
-    font-family: "Fira Bold";
+    font-family: "Fira Medium";
     font-size: 12px;
     line-height: 12px;
     border-top: 1px #f4f4f4 solid;
@@ -7238,6 +7541,7 @@ form#searchform div button {
 }
 @media (max-width: 1025px) and (max-width: 1025px) {
   .contentAgenceBold a {
+    cursor: pointer;
     padding-bottom: 1px;
     padding-right: 5px;
     padding-left: 5px;

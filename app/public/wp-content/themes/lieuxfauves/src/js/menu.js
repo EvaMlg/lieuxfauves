@@ -182,6 +182,8 @@ const titleProjResponsive = document.querySelector('.projPageNameResponsive');
 const titleProjLaptop = document.querySelector('.projPageName');
 const pictoValider = document.querySelector('.pictoValider');
 const responsiveBurgerImgCat = document.querySelector('.responsiveBurgerImg');
+const pictofiltres = document.querySelector('.pictoFiltres');
+
 
 
 
@@ -193,7 +195,10 @@ responsiveCatLogo.addEventListener('click', function () {
         pictoValider.style.display ="block";
         titleProjResponsive.style.display ="block";
         titleProjLaptop.style.display="none";
-        responsiveBurgerImgCat.src="/wp-content/themes/lieuxfauves/src/assets/img/LF_menu_burguer-fermer.svg"
+        responsiveBurgerImgCat.src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_trait_fermer_gris.svg";
+        pictofiltres.src="/wp-content/themes/lieuxfauves/src/assets/img/LF_mobile_picto-filtres_gris.svg";
+        responsiveCat.style.backgroundColor="transparent";
+      
      }
  else {
      catHeader.classList.remove("catHeaderOn");
@@ -202,6 +207,7 @@ responsiveCatLogo.addEventListener('click', function () {
      titleProjResponsive.style.display ="none";
     titleProjLaptop.style.display="block";
     responsiveBurgerImgCat.src="/wp-content/themes/lieuxfauves/src/assets/img/LF_nav_menu-burguer.svg";
+    responsiveCat.style.backgroundColor="#00534e";
   
  }
  }, false); 
@@ -209,6 +215,9 @@ responsiveCatLogo.addEventListener('click', function () {
  pictoValider.addEventListener('click', function () {
     catHeader.classList.remove("catHeaderOn");
     catHeader.classList.add("catHeaderOff");
+    titleProjResponsive.style.display ="none";
+    titleProjLaptop.style.display="block";
+    pictoValider.style.display ="none";
 }, false); 
 
 

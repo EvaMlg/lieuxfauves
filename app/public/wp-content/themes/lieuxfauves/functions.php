@@ -415,7 +415,7 @@ function wpdocs_custom_taxonomies_terms_links() {
         if ( ! empty( $terms ) ) {
 
             foreach ( $terms as $term ) {
-                $out[] = sprintf( '<a href="%1$s"><span="taxNames">%2$s</span></a><span class="barre-nobold">&nbsp;|&nbsp;</span>',
+                $out[] = sprintf( '<a href="%1$s"><span="taxNames fauveUnderlineSmall">%2$s</span></a><span class="barre-nobold">&nbsp;|&nbsp;</span>',
                     esc_url( get_term_link( $term->slug, $taxonomy_slug ) ),
                     esc_html( $term->name )
                 );
@@ -514,7 +514,7 @@ function projet_ajax_projets()
     <?php endwhile; 
 			
 	if($post_update->post_count == 0){ ?>
-			<div class="no-result">Aucun résultat</div>
+			<div class="no-result"></div>
 	<?php } ?>
 
     <?php wp_reset_postdata();
@@ -604,3 +604,20 @@ wp_reset_postdata();
 
 
 
+// Limiter le titre des articles à 50 caractères
+add_action( 'admin_footer', 'wpm_limit_title_chars_post' );
+
+function wpm_limit_title_chars_post() {
+	
+	// On récupère le type de contenu sur lequel on se trouve dans l'administration
+	$post_type = get_current_screen()->post_type;
+	
+	// Si c'est un article on applique la limitation
+    if ( $post_type == 'post') { ?>
+
+	    <!-- On défini un nombre de caractère maximum pour les titres des articles: ici 50 -->
+	    <script>jQuery( 'input#title' ).attr( 'maxlength', 10 );</script>
+
+<?php }
+
+}
