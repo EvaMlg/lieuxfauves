@@ -307,12 +307,11 @@ $m-margin-big : 20px;
 
 
             a {
-                @include mobile {
-                    padding: 4px;
+                @include mobile-tab {
                     color: white;
-                    padding: 0;
                     padding-top: 8px;
                     padding-left: 0px;
+                    padding-left: 0px !important;
 
                 }
             }
@@ -810,6 +809,7 @@ $m-margin-big : 20px;
 
         .projetWrapper {
             display: block;
+            margin-top : 0;
 
 
             .rightColumn {
@@ -1019,7 +1019,7 @@ $m-margin-big : 20px;
         z-index: 50;
         display: flex;
         right: 0;
-        top: 0;
+        top: 5px;
         background-color: transparent;
         display: flex;
         flex-direction: column;

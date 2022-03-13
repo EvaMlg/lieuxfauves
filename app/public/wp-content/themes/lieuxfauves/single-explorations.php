@@ -30,9 +30,9 @@ endforeach;
 
 ?>
 
-<div class="headerExplo">
+<div class="headerExplo" >
 
-    <a href="<?php echo get_option('home'); ?>/"><img class="logoArchiveExplo" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_logo.svg"><a>
+    <a href="<?php echo get_option('home'); ?>/"><img data-aos="zoom-in" data-aos-duration="1000" class="logoArchiveExplo" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_logo.svg"><a>
 
 </div>
 
@@ -43,14 +43,14 @@ endforeach;
 
     <div class="titleWrapperExplorationResponsive">
 
-        <h1><?php the_field('titre'); ?></h1>
+        <h1 data-aos="fade-up"><?php the_field('titre'); ?></h1>
 
     </div>
 
 
     <div class="leftColumnExploration">
 
-        <div class="tagsWrapperExploration">
+        <div class="tagsWrapperExploration" data-aos="fade-up">
 
             <?php
             $displayedTerms = array();
@@ -100,13 +100,13 @@ endforeach;
 
         </div>
 
-        <div class="article-thumbnail"><?php the_post_thumbnail(); ?></div>
+        <div data-aos="fade-up" class="article-thumbnail"><?php the_post_thumbnail(); ?></div>
 
         <div class="boutonWrapperExploration">
 
-            <span class="shareLinks"><img class="logo-categorie logo-explo" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_fleche-partager.svg"> Partager Fb-Ig-Tt</span>
-            <span class="shareLinks"><img class="logo-categorie logo-explo" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_fleche-telecharger.svg"> <?php the_field('document_a_telecharger'); ?></span>
-            <span class="shareLinks"><img class="logo-categorie logo-explo" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_fleche-lien.svg"> <?php the_field('lien_externe'); ?></span>
+            <span class="shareLinks" data-aos="fade-up"><img class="logo-categorie logo-explo" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_fleche-partager.svg"> Partager Fb-Ig-Tt</span>
+            <span class="shareLinks"data-aos="fade-up"><img class="logo-categorie logo-explo" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_fleche-telecharger.svg"> <?php the_field('document_a_telecharger'); ?></span>
+            <span class="shareLinks" data-aos="fade-up"><img class="logo-categorie logo-explo" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_fleche-lien.svg"> <?php the_field('lien_externe'); ?></span>
 
         </div>
 
@@ -114,23 +114,23 @@ endforeach;
 
     <div class="rightColumnExploration">
 
-        <div class="titleWrapperExploration">
+        <div class="titleWrapperExploration" data-aos="fade-up">
 
             <h1><?php the_field('titre'); ?></h1>
 
         </div>
 
-        <div class="contentWrapperExploration">
+        <div class="contentWrapperExploration" data-aos="fade-up">
 
-            <div class="chapeauWrapperExploration">
+            <div class="chapeauWrapperExploration" data-aos="fade-up">
                 <o><?php the_field('chapeau'); ?></p>
             </div>
 
-            <div class="subtitleWrapperExploration">
+            <div class="subtitleWrapperExploration" data-aos="fade-up">
                 <h3><?php the_field('sous-titre'); ?></h3>
             </div>
 
-            <div class="texteWrapperExploration">
+            <div class="texteWrapperExploration"data-aos="fade-up">
                 <p><?php the_field('contenu'); ?></p>
             </div>
 
@@ -145,7 +145,7 @@ endforeach;
     if ($images) : ?>
         <?php foreach ($images as $image) : ?>
             <div class="single-slide-image">
-                <img class="logo-categorie" src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+                <img class="logo-categorie" data-aos="zoom-in" data-aos-duration="1000" src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
                 <span class="zoom-image"><img class="logo-categorie pictoSlider" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_slide_picto-full.svg"></span>
             </div>
 
@@ -162,7 +162,7 @@ endforeach;
 </div>
 </div>
 
-<div class="projetsLoop projetsLoopExplo">
+<div class="projetsLoop projetsLoopExplo" data-aos="fade-up">
 
 
     <div class="list-link-loop">
@@ -216,7 +216,7 @@ endforeach;
         wp_reset_query();
         wp_reset_postdata();
 
-        if (sizeof($postToDisplay)) {
+        if (sizeof($postToDisplay)<4) {
             $args = array(
                 'post_type' => 'projets',
                 'posts_per_page' => (4 - sizeof($postToDisplay)),
@@ -242,11 +242,11 @@ endforeach;
         }
 
         foreach ($postToDisplay as $post) : ?>
-            <div class="projectCard">
+            <div class="projectCard" data-aos="fade-up">
                 <a href="<?= $post['permalink']; ?>" title="<?= $post['title_attribute']; ?>">
-                    <div class="projectThumbnail"><?= $post['thumbnail']; ?></div>
-                    <div class="projectTitle"><?= $post['title']; ?></div>
-                    <p class="projectLoopLieu"><?= $post['lieu'] ?></p>
+                    <div class="projectThumbnail" data-aos="fade-up"><?= $post['thumbnail']; ?></div>
+                    <div class="projectTitle" data-aos="fade-up"><?= $post['title']; ?></div>
+                    <p class="projectLoopLieu" data-aos="fade-up"><?= $post['lieu'] ?></p>
                 </a>
             </div>
         <?php
@@ -259,7 +259,7 @@ endforeach;
 
 
 
-    <div class="projetsLoopActu">
+    <div class="projetsLoopActu" data-aos="fade-up">
 
 
         <div class="list-link-loop">
@@ -336,11 +336,11 @@ endforeach;
             }
 
             foreach ($postToDisplay as $post) : ?>
-                <div class="projectCardActu">
+                <div class="projectCardActu" data-aos="fade-up">
                     <a href="<?= $post['permalink']; ?>" title="<?= $post['title_attribute']; ?>">
-                        <div class="projectThumbnail"><?= $post['thumbnail']; ?></div>
-                        <span class="projectLoopLieu"><?= $post['date']; ?></span>
-                        <div class="projectTitle"><?= $post['title']; ?></div>
+                        <div class="projectThumbnail" data-aos="fade-up"><?= $post['thumbnail']; ?></div>
+                        <span class="projectLoopLieu" data-aos="fade-up"><?= $post['date']; ?></span>
+                        <div class="projectTitle" data-aos="fade-up"><?= $post['title']; ?></div>
                     </a>
                 </div>
             <?php endforeach; ?>

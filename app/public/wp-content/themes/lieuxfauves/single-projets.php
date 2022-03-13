@@ -58,7 +58,9 @@ endforeach;
     </div>
 
     <div class="navNextPrev">
-        <a href="/projets"><img class="close-icon" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_menu_burguer-fermer.svg"></span></a>
+        <a href="/projets"><img class="close-icon laptopPicto" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_menu_burguer-fermer.svg"></span></a>
+        <a href="/projets"><img class="close-icon mobilePicto" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_trait_fermer_gris.svg"></span></a>
+
 
 
         <?php
@@ -81,7 +83,7 @@ endforeach;
             <h2><a href="<?php echo $permalink; ?>"></a></h2>
         </span>
 
-        <span class="nav-previousMobile"><?php previous_post_link('%link', __('<img STYLE="height:22px;width:22px" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_slide_picto-prev.svg">')); ?>
+        <span class="nav-previousMobile"><?php previous_post_link('%link', __('<img STYLE="height:22px;width:22px" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_projet_picto-prev_gris.svg">')); ?>
             <h2><a href="<?php echo $permalink; ?>"></a></h2>
         </span>
 
@@ -238,7 +240,7 @@ endforeach;
         if ($images) : ?>
             <?php foreach ($images as $image) : ?>
                 <div class="single-slide-image">
-                    <img class="logo-categorie" src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+                    <img data-aos="zoom-in" data-aos-duration="1000" class="logo-categorie" src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
                     <span class="zoom-image"><img class="logo-categorie pictoSlider" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_slide_picto-full.svg"></span>
                 </div>
 
@@ -264,7 +266,7 @@ endforeach;
             </div>
             <div class="ficheTechnique mobileNone">
                 <div class="FTright columnFT">
-                    <div class="wrapperItems">
+                    <div class="wrapperItems" >
 
                         <?php
                         $ficheTechnique = get_field('fiche_technique');
@@ -315,9 +317,9 @@ endforeach;
 
         <div class="rightColumn">
 
-            <h2><?php the_field('chapeau'); ?></h2>
-            <h3> Description </h3>
-            <p><?php the_field('description_projet'); ?></p>
+            <h2 data-aos="fade-up"><?php the_field('chapeau'); ?></h2>
+            <h3 data-aos="fade-up"> Description </h3>
+            <p data-aos="fade-up"><?php the_field('description_projet'); ?></p>
 
         </div>
 
@@ -331,7 +333,7 @@ endforeach;
 
     <div class="list-link-loop">
         <img class="logo-categorie" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_logo_categories.svg">
-        <span class="titleListLink">PROJETS</span>
+        <span class="titleListLink" >PROJETS</span>
         <?php
         $displayTerms = array();
         foreach ($taxQuery as $tax) {
@@ -406,11 +408,11 @@ endforeach;
 
 
         foreach ($postToDisplay as $post) : ?>
-            <div class="projectCard">
+            <div class="projectCard" data-aos="fade-up">
                 <a href="<?= $post['permalink']; ?>">
                     <div class="projectThumbnail"><?= $post['thumbnail']; ?></div>
-                    <div class="projectTitle"><a href="<?= $post['permalink']; ?>" title="<?= $post['title_attribute']; ?>"><?= $post['title']; ?></a></div>
-                    <p class="projectLoopLieu"><?= $post['lieu']; ?></p>
+                    <div class="projectTitle" data-aos="fade-up"><a href="<?= $post['permalink']; ?>" title="<?= $post['title_attribute']; ?>"><?= $post['title']; ?></a></div>
+                    <p class="projectLoopLieu" data-aos="fade-up"><?= $post['lieu']; ?></p>
                 </a>
             </div>
 

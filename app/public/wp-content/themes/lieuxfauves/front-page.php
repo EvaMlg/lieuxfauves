@@ -66,11 +66,11 @@ get_header();
 
                     <div class="link-bloc-2">
 
-                        <div class="tagline">
+                        <div class="tagline" data-aos="fade-up" >
                             <p><?php echo $section_lieux['tagline']; ?></p>
                         </div>
 
-                        <div class="list-link">
+                        <div class="list-link" data-aos="fade-up">
                             <img class="logo-categorie" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_logo_categories.svg">
 
     
@@ -86,7 +86,9 @@ get_header();
                     <div class="bloc-haiku haiku-map">
                         <?php $haiku = get_group_field('section_lieux', 'haiku') ?>
                         <!-- <img src="<?php echo esc_url($haiku['image']['url']); ?>" alt="<?php echo esc_attr($haiku['image']['alt']); ?>" /> -->
-                        <p><?php echo $haiku['texte']; ?></p>
+                        <?php echo '<p data-aos="fade-up">' ?>
+                    <?php echo $haiku['texte']; ?>
+                    <?php echo '</p>' ?>
                     </div>
 
                 <?php endif; ?>
@@ -94,7 +96,7 @@ get_header();
             </section>
 
 
-            <section class="sec-faire" id="sec-faire">
+            <section class="sec-faire" id="sec-faire" >
 
                 <div class="actu-bloc">
 
@@ -109,7 +111,7 @@ get_header();
 
                     $my_query = new WP_Query($args);
                     if ($my_query->have_posts()) : while ($my_query->have_posts()) : $my_query->the_post(); ?>
-                            <div class="actu-wrapper">
+                            <div class="actu-wrapper" data-aos="fade-up">
 
 
                                 <a href="<?php the_permalink(); ?>">
@@ -135,7 +137,7 @@ get_header();
                 </div>
 
                 <div class="link-bloc">
-                    <div class="list-link">
+                    <div class="list-link" data-aos="fade-up">
                         <img class="logo-categorie" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_logo_categories.svg">
 
                         <span class="titleListLink">AGENCE</span>
@@ -150,7 +152,9 @@ get_header();
                     $section_faire = get_field('section_faire');
                     if ($section_faire) : ?>
                         <?php $haiku = get_group_field('section_faire', 'haiku') ?>
-                        <p><?php echo $haiku['texte']; ?></p>
+                        <?php echo '<p data-aos="fade-up">' ?>
+                    <?php echo $haiku['texte']; ?>
+                    <?php echo '</p>' ?>
                     <?php endif; ?>
                 </div>
 
@@ -210,7 +214,7 @@ get_header();
                 </div>
 
                 <div class="link-bloc">
-                    <div class="list-link">
+                    <div class="list-link" data-aos="fade-up">
 
                         <img class="logo-categorie" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_logo_categories.svg">
                         <span class="titleListLink">PROJETS</span>
@@ -224,7 +228,10 @@ get_header();
                 <div class="bloc-haiku">
                     <?php $haiku = get_group_field('section_archiurba', 'haiku') ?>
                     <img src="<?php echo esc_url($haiku['image']['url']); ?>" alt="<?php echo esc_attr($haiku['image']['alt']); ?>" />
+                    <?php echo '<p data-aos="fade-up">' ?>
                     <?php echo $haiku['texte']; ?>
+                    <?php echo '</p>' ?>
+                    
                 </div>
 
 
@@ -259,7 +266,7 @@ get_header();
                           
 
                                 <div class="preExplorationWrapper">
-                                    <div class="explorationWrapper">
+                                    <div class="explorationWrapper" data-aos="fade-up">
                                     <a href="<?php the_permalink(); ?>">
                                 <div class="thumbnailExplo"><?php the_post_thumbnail(); ?></div>
                                         <div class="exploWrapper">
@@ -292,8 +299,8 @@ get_header();
 
                 </div>
 
-                <div class="link-bloc">
-                    <div class="list-link">
+                <div class="link-bloc" >
+                    <div class="list-link" data-aos="fade-up">
                         <img class="logo-categorie" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_logo_categories.svg">
                         <span  class="titleListLink">EXPLORATIONS</span>
                         <a href="explorations" class="fauveUnderline">Vivant</a>
@@ -309,7 +316,9 @@ get_header();
 
             <div class="bloc-haiku">
                     <?php $haiku = get_group_field('section_ves', 'haiku') ?>
+                    <?php echo '<p data-aos="fade-up">' ?>
                     <?php echo $haiku['texte']; ?>
+                    <?php echo '</p>' ?>
 
                 <?php endif; ?>
                 </div>

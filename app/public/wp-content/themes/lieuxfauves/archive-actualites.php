@@ -13,7 +13,7 @@ get_header();
 
     <div class="headerProjets">
 
-        <div class="logoHeader">
+        <div class="logoHeader" data-aos="zoom-in" data-aos-duration="1000">
 
             <a href="<?php echo get_option('home'); ?>/"><img class="logoArchiveExplo" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_logo_fiches.svg"></a>
 
@@ -40,7 +40,7 @@ get_header();
 
             $my_query = new WP_Query($args);
             if ($my_query->have_posts()) : while ($my_query->have_posts()) : $my_query->the_post(); ?>
-                    <div class="archive-actu-container">
+                    <div class="archive-actu-container" data-aos="fade-up">
 
                         <div class="archive-actu-wrapper">
 

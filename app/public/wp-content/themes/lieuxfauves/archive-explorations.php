@@ -9,7 +9,7 @@ get_header();
 
 <div class="explorationsContainer">
     <div class="headerExploration">
-        <div class="logoHeader">
+        <div class="logoHeader" data-aos="zoom-in" data-aos-duration="1000">
             <a href="<?php echo get_option('home'); ?>/"><img class="logoArchiveExplo" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_logo_fiches.svg"></a>
             <h1 class="exploPageName">EXPLORATIONS</h1>
         </div>
@@ -99,7 +99,7 @@ get_header();
         <div id="explorations-list">
             <?php while ($my_query->have_posts()) : $my_query->the_post(); ?>
                 <div class="preExplorationWrapper">
-                    <div class="explorationWrapper">
+                    <div class="explorationWrapper" data-aos="fade-up">
                         <div class="taxThumbnailWrapper">
                             <div class="taxExplo">
                                 <?php

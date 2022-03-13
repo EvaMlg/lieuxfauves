@@ -15,7 +15,7 @@ get_header();
 
 <div class="headerArticle">
 
-<a href="<?php echo get_option('home'); ?>/" ><img class="logoArchiveExplo" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_logo.svg"></a>
+<a href="<?php echo get_option('home'); ?>/" ><img data-aos="zoom-in" data-aos-duration="1000" class="logoArchiveExplo" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_logo.svg"></a>
 
 </div>
 
