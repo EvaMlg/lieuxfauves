@@ -33,6 +33,27 @@
 
 }
 
+@mixin fauveUnderlineVerySmall {
+    cursor: pointer;
+    padding-bottom:0px;
+    padding-right: 1px;
+    padding-left: 1px;
+    box-shadow: inset 0 -5px 0 $fauve-col-40;
+    color : $grey-col;
+    transition: all 0.2s ease-in-out;
+
+}
+
+@mixin fauveUnderlineVerySmallHover {
+    padding-bottom: 2px;
+    padding-right: 1px;
+    padding-left: 1px;
+    box-shadow: inset 0 -20px 0 $fauve-col-40;
+    color : $grey-col;
+    transition: all 0.2s ease-in-out;
+
+}
+
 @mixin fauveUnderlineSmallHover {
     padding-bottom: 2px;
     padding-right: 3px;
