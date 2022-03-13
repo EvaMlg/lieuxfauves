@@ -216,7 +216,7 @@ endforeach;
         wp_reset_query();
         wp_reset_postdata();
 
-        if (sizeof($postToDisplay)) {
+        if (sizeof($postToDisplay)<4) {
             $args = array(
                 'post_type' => 'projets',
                 'posts_per_page' => (4 - sizeof($postToDisplay)),
