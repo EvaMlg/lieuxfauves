@@ -549,13 +549,14 @@ function archive_list()
 	);
 
 	$tax_query = array(
-		'relation' => 'OR'
+		'relation' => 'AND'
 	);
 	if (isset($_GET['taxonomy'])) {
 		foreach ($_GET['taxonomy'] as $taxonomyName => $taxonomyTerms) {
 			array_push($tax_query, array(
 				'taxonomy' => $taxonomyName,
 				'field' => "slug",
+				'operator' => "AND",
 				'terms' => $taxonomyTerms
 			));
 		}
@@ -620,7 +621,43 @@ function archive_list()
 	wp_die();
 }
 
-
+add_action('wp_ajax_ajax_term_list', 'term_list');
+add_action('wp_ajax_nopriv_ajax_term_list', 'term_list');
+function term_list(){
+	$returnedJsonObject = new StdClass();
+	$returnedJsonObject->childs_active_terms = array();
+	$post_type =  $_GET["type"] ?? 'explorations';
+	$taxonomies = get_object_taxonomies($post_type); 
+	$argsActiveTerms = array(
+		'post_type' => $post_type,
+		'posts_per_page' => -1,
+		'post_status' => "publish"
+	);
+	$tax_query = array(
+		'relation' => 'AND'
+	);
+	if (isset($_GET['taxonomy'])) {
+		foreach ($_GET['taxonomy'] as $taxonomyName => $taxonomyTerms) {
+			array_push($tax_query, array(
+				'taxonomy' => $taxonomyName,
+				'field' => "slug",
+				'terms' => $taxonomyTerms
+			));
+		}
+	}
+	$argsActiveTerms['tax_query'] = $tax_query;
+	$queryActiveTerms = new WP_Query($argsActiveTerms);
+	if($queryActiveTerms->have_posts()): while($queryActiveTerms->have_posts()): 
+		$queryActiveTerms->the_post();
+		foreach($taxonomies as $taxonomy){
+			$activeCurrentTerms = get_the_terms( get_the_ID(), $taxonomy );
+			if(is_array($activeCurrentTerms) && sizeof($activeCurrentTerms)) foreach($activeCurrentTerms as $activeTerm) if(!array_search($activeTerm, $returnedJsonObject->childs_active_terms)) array_push($returnedJsonObject->childs_active_terms, $activeTerm);
+		}
+	endwhile; endif;
+	wp_reset_query();
+	echo wp_send_json($returnedJsonObject);
+	wp_die();
+}
 
 
 function my_search_form($form)

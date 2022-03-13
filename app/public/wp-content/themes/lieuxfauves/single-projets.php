@@ -6,19 +6,19 @@
  * 
  */
 get_header();
-$current_post_type = get_post_type(); 
-$taxonomies = get_object_taxonomies($current_post_type); 
+$current_post_type = get_post_type();
+$taxonomies = get_object_taxonomies($current_post_type);
 
 $taxQuery = array(
     'relation' => 'OR',
 );
-foreach($taxonomies as $taxonomy): 
+foreach ($taxonomies as $taxonomy) :
     $terms = get_the_terms(get_the_ID(), $taxonomy);
-    if($terms && sizeof($terms)):
+    if ($terms && sizeof($terms)) :
         $taxQueryTerm = array();
-        foreach($terms as $term){
-            if(!array_search($term->term_id, $taxQueryTerm)) array_push($taxQueryTerm, $term->term_id);
-            if(!array_search($term->parent, $taxQueryTerm)) array_push($taxQueryTerm, $term->parent);
+        foreach ($terms as $term) {
+            if (!array_search($term->term_id, $taxQueryTerm)) array_push($taxQueryTerm, $term->term_id);
+            if (!array_search($term->parent, $taxQueryTerm)) array_push($taxQueryTerm, $term->parent);
         }
         array_push($taxQuery, array(
             'taxonomy' => $taxonomy,
@@ -53,12 +53,12 @@ endforeach;
 
         </div>
 
+        <img class="mobileImgWhiteLayout" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_mobile_projet_logo.svg">
+
     </div>
 
     <div class="navNextPrev">
-        <a href="/projets"><img class="close-icon laptopPicto" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_menu_burguer-fermer.svg"></span></a>
-        <a href="/projets"><img class="close-icon mobilePicto" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_trait_fermer_gris.svg"></span></a>
-
+        <a href="/projets"><img class="close-icon" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_menu_burguer-fermer.svg"></span></a>
 
 
         <?php
@@ -81,7 +81,7 @@ endforeach;
             <h2><a href="<?php echo $permalink; ?>"></a></h2>
         </span>
 
-        <span class="nav-previousMobile"><?php previous_post_link('%link', __('<img STYLE="height:22px;width:22px" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_projet_picto-prev_gris.svg">')); ?>
+        <span class="nav-previousMobile"><?php previous_post_link('%link', __('<img STYLE="height:22px;width:22px" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_slide_picto-prev.svg">')); ?>
             <h2><a href="<?php echo $permalink; ?>"></a></h2>
         </span>
 
@@ -95,8 +95,6 @@ endforeach;
 
     <div class="whiteLayout">
         <img class="laptopImgWhiteLayout" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_projet_logo.svg">
-        <img class="mobileImgWhiteLayout" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_mobile_projet_logo.svg">
-
 
         <a href="<?php echo get_option('home'); ?>/">
             <div class="zone-cliquable"></div>
@@ -107,48 +105,49 @@ endforeach;
 
             <div class="taxNamesProj">
 
-        <?php
-        $displayedTerms = array();
-        $filteredTaxonomies = array(
-            'thematique'
-        );
+                <?php
+                $displayedTerms = array();
+                $filteredTaxonomies = array(
+                    'thematique'
+                );
 
-        foreach(get_taxonomies([], 'objects') as $taxonomy){
-            if(isset($taxonomy->object_type) && $taxonomy->object_type){
-                if(array_search($taxonomy->name, $filteredTaxonomies)!==false && array_search(get_post_type(), $taxonomy->object_type)!==false){
-                    $terms = wp_get_post_terms(get_the_ID(), $taxonomy->name);
-                    foreach($terms as $key=>$term){ 
-                        if($term->parent !==0 ):
-                            if(!$displayedTerms[$term->parent]){ 
-                                $displayedTerms[$term->parent] = array(
-                                    'term' => get_term($term->parent, $taxonomy->name),
-                                    'terms' => array($term),
-                                    'taxonomy' => $taxonomy
-                                );
-                            }else{
-                                array_push($displayedTerms[$term->parent]['terms'], $term);
-                            };
-                        else:
-                            if(!$displayedTerms[$term->term_id]){
-                                $displayedTerms[$term->term_id] = array(
-                                    'term' => $term,
-                                    'terms' => array(),
-                                    'taxonomy' => $taxonomy
-                                );
+                foreach (get_taxonomies([], 'objects') as $taxonomy) {
+                    if (isset($taxonomy->object_type) && $taxonomy->object_type) {
+                        if (array_search($taxonomy->name, $filteredTaxonomies) !== false && array_search(get_post_type(), $taxonomy->object_type) !== false) {
+                            $terms = wp_get_post_terms(get_the_ID(), $taxonomy->name);
+                            foreach ($terms as $key => $term) {
+                                if ($term->parent !== 0) :
+                                    if (!$displayedTerms[$term->parent]) {
+                                        $displayedTerms[$term->parent] = array(
+                                            'term' => get_term($term->parent, $taxonomy->name),
+                                            'terms' => array($term),
+                                            'taxonomy' => $taxonomy
+                                        );
+                                    } else {
+                                        array_push($displayedTerms[$term->parent]['terms'], $term);
+                                    };
+                                else :
+                                    if (!$displayedTerms[$term->term_id]) {
+                                        $displayedTerms[$term->term_id] = array(
+                                            'term' => $term,
+                                            'terms' => array(),
+                                            'taxonomy' => $taxonomy
+                                        );
+                                    }
+                                endif;
                             }
-                        endif;
+                        }
                     }
                 }
-            }
-        }
-        foreach($displayedTerms as $term){
-            foreach($term['terms'] as $child){
-                echo '<span class="fauveUnderlineSmall"><a href="'.get_post_type_archive_link(get_post_type()).'?'.$term['taxonomy']->name.'='.$child->slug.'">';
-                echo $child->name.'</a></span><span class="barre-nobold"> | </span>';
-            }
-        }
-        ?>
-        </div>
+                foreach ($displayedTerms as $term) {
+                    foreach ($term['terms'] as $child) {
+                        echo '<span class="fauveUnderlineSmall"><a href="' . get_post_type_archive_link(get_post_type()) . '?' . $term['taxonomy']->name . '=' . $child->slug . '">';
+                        echo $child->name . '</a></span><span class="barre-nobold"> | </span>';
+                    }
+                }
+                ?>
+            </div>
+
 
 
 
@@ -167,55 +166,6 @@ endforeach;
     <?php endif; ?>
     </div>
 
-</div>
-
-<div class="ficheTechniqueMobile">
-
-    <div class="cardLinkJungle">
-        <p class="cardLink">Fiche technique</p><button class="logoOuvrir"><img class="logo-categorie" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_plus_ouvrir.svg"></button>
-    </div>
-    <div class="ficheTechnique">
-        <div class="FTright columnFT">
-            <div class="wrapperItems">
-
-                <?php
-                $ficheTechnique = get_field('fiche_technique');
-                if ($ficheTechnique) : ?>
-
-                    <h3>Programme</h3>
-                    <p><?php echo $ficheTechnique['programme']; ?></p>
-            </div>
-            <div class="wrapperItems">
-                <h3>Maîtrise d’ouvrage</h3>
-                <p><?php echo $ficheTechnique['maitrise_d’ouvrage']; ?></p>
-            </div>
-            <div class="wrapperItems">
-                <h3>Maîtrise d’oeuvre</h3>
-                <p><?php echo $ficheTechnique['maitrise_d’oeuvre']; ?></p>
-            </div>
-        </div>
-        <div class="FTleft columnFT">
-            <div class="wrapperItems">
-                <h3>Surface</h3>
-                <p><?php echo $ficheTechnique['surface']; ?></p>
-            </div>
-            <div class="wrapperItems">
-                <h3>Coûts</h3>
-                <p><?php echo $ficheTechnique['couts']; ?></p>
-            </div>
-            <div class="wrapperItems">
-                <h3>Dates / Livraison</h3>
-                <p><?php echo $ficheTechnique['dates__livraison']; ?></p>
-            </div>
-            <div class="wrapperItems">
-                <h3>Performances environnementales</h3>
-                <p><?php echo $ficheTechnique['performances_environnementales']; ?></p>
-            </div>
-        </div>
-
-
-    <?php endif; ?>
-    </div>
 </div>
 
 
@@ -249,23 +199,20 @@ endforeach;
     <div class="zoom-image-slider">
         <div class="div-zoom">
             <img src="" />
-           <span class="close"><i><img class="logo-categorie pictoSlider" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_menu_burguer-fermer.svg"></i></span>
-          <span class="close"><i><img class="logo-categorie pictoSlider" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_trait_fermer_gris.svg"></i></span>
-
+            <span class="close"><i><img class="logo-categorie pictoSlider" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_menu_burguer-fermer.svg"></i></span>
         </div>
 
     </div>
-
     <div class="projetWrapper">
 
 
         <div class="leftColumn">
 
 
-            <div class="cardLinkJungle mobileNone">
+            <div class="cardLinkJungle">
                 <p class="cardLink">Fiche technique</p><button class="logoOuvrir"><img class="logo-categorie" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_plus_ouvrir.svg"></button>
             </div>
-            <div class="ficheTechnique mobileNone">
+            <div class="ficheTechnique">
                 <div class="FTright columnFT">
                     <div class="wrapperItems">
 
@@ -303,11 +250,9 @@ endforeach;
                         <p><?php echo $ficheTechnique['performances_environnementales']; ?></p>
                     </div>
                 </div>
-
-
             <?php endif; ?>
             </div>
-            <div class="boutonWrapperProjet mobileNone">
+            <div class="boutonWrapperProjet">
                 <p class="cardLink cardLinkLight shareLinks"><img class="logo-categorie logo-explo" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_fleche-partager.svg"> &nbsp; Partager</p>
                 <p class="cardLink cardLinkLight shareLinks"><img class="logo-categorie logo-explo" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_fleche-telecharger.svg"> &nbsp; <?php the_field('document_a_telecharger'); ?></p>
                 <p class="cardLink cardLinkLight shareLinks"><img class="logo-categorie logo-explo" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_fleche-lien.svg"> &nbsp; <?php the_field('lien_externe'); ?></p>
@@ -328,12 +273,6 @@ endforeach;
 
     </div>
 
-    <div class="boutonWrapperProjetCloned">
-                <p class="cardLink cardLinkLight shareLinks"><img class="logo-categorie logo-explo" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_fleche-partager.svg"> &nbsp; Partager</p>
-                <p class="cardLink cardLinkLight shareLinks"><img class="logo-categorie logo-explo" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_fleche-telecharger.svg"> &nbsp; <?php the_field('document_a_telecharger'); ?></p>
-                <p class="cardLink cardLinkLight shareLinks"><img class="logo-categorie logo-explo" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_fleche-lien.svg"> &nbsp; <?php the_field('lien_externe'); ?></p>
-            </div>
-
 </div>
 
 
@@ -343,19 +282,19 @@ endforeach;
     <div class="list-link-loop">
         <img class="logo-categorie" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_logo_categories.svg">
         <span class="titleListLink">PROJETS</span>
-        <?php 
-            $displayTerms = array();
-            foreach($taxQuery as $tax){
-                if(isset($tax['terms']) && is_array($tax['terms']) && sizeof($tax['terms'])){
-                    foreach($tax['terms'] as $term){
-                        $currentTerm = get_term($term, $tax['taxonomy']);
-                        if($currentTerm->parent===0 && array_search($tax['taxonomy'], $filteredTaxonomies)!==false && array_search($currentTerm, $displayTerms)===false) array_push($displayTerms, $currentTerm);
-                    }
+        <?php
+        $displayTerms = array();
+        foreach ($taxQuery as $tax) {
+            if (isset($tax['terms']) && is_array($tax['terms']) && sizeof($tax['terms'])) {
+                foreach ($tax['terms'] as $term) {
+                    $currentTerm = get_term($term, $tax['taxonomy']);
+                    if ($currentTerm->parent === 0 && array_search($tax['taxonomy'], $filteredTaxonomies) !== false && array_search($currentTerm, $displayTerms) === false) array_push($displayTerms, $currentTerm);
                 }
             }
-            foreach($displayTerms as $displayTerm){
-                echo '<a href="'.get_post_type_archive_link('projets').'" class="fauveUnderline">'.$displayTerm->name.'</a>';
-            }
+        }
+        foreach ($displayTerms as $displayTerm) {
+            echo '<a href="' . get_post_type_archive_link('projets') . '" class="fauveUnderline">' . $displayTerm->name . '</a>';
+        }
         ?>
     </div>
 
@@ -365,21 +304,21 @@ endforeach;
         <?php
         $postToDisplay = array();
         $postToIgnore = array();
-        
+
         $args = array(
             'post_type' => 'projets',
             'posts_per_page' => 4,
             'tax_query' => $taxQuery
         );
         $my_query = new WP_Query($args);
-        if ($my_query->have_posts()) : 
-            while ($my_query->have_posts()) : 
+        if ($my_query->have_posts()) :
+            while ($my_query->have_posts()) :
                 $my_query->the_post();
                 array_push($postToIgnore, get_the_ID());
                 $post = array(
                     'permalink' => get_permalink(get_the_ID()),
                     'thumbnail' => get_the_post_thumbnail(get_the_ID()),
-                    'title_attribute' => the_title_attribute(array('echo'=>false,'post'=>get_the_ID())),
+                    'title_attribute' => the_title_attribute(array('echo' => false, 'post' => get_the_ID())),
                     'title' => get_the_title(get_the_ID()),
                     'lieu' => get_field('lieu', get_the_ID())
                 );
@@ -389,41 +328,43 @@ endforeach;
         wp_reset_query();
         wp_reset_postdata();
 
+        if (sizeof($postToDisplay) < 4) {
+            $args = array(
+                'post_type' => 'projets',
+                'posts_per_page' => (4 - sizeof($postToDisplay)),
+                'post__not_in' => $postToIgnore,
+                'orderby' => 'rand'
+            );
+            $my_query = new WP_Query($args);
+            if ($my_query->have_posts()) :
+                while ($my_query->have_posts()) :
+                    $my_query->the_post();
+                    $post = array(
+                        'permalink' => get_permalink(get_the_ID()),
+                        'thumbnail' => get_the_post_thumbnail(get_the_ID()),
+                        'title_attribute' => the_title_attribute(array('echo' => false, 'post' => get_the_ID())),
+                        'title' => get_the_title(get_the_ID()),
+                        'lieu' => get_field('lieu', get_the_ID())
+                    );
+                    array_push($postToDisplay, $post);
+                endwhile;
+            endif;
+            wp_reset_query();
+            wp_reset_postdata();
+        }
 
-        $args = array(
-            'post_type' => 'projets',
-            'posts_per_page' => (4-sizeof($postToDisplay)),
-            'post__not_in' => $postToIgnore,
-            'orderby' => 'rand'
-        );
-        $my_query = new WP_Query($args);
-        if ($my_query->have_posts()) : 
-            while ($my_query->have_posts()) : 
-                $my_query->the_post();
-                $post = array(
-                    'permalink' => get_permalink(get_the_ID()),
-                    'thumbnail' => get_the_post_thumbnail(get_the_ID()),
-                    'title_attribute' => the_title_attribute(array('echo'=>false,'post'=>get_the_ID())),
-                    'title' => get_the_title(get_the_ID()),
-                    'lieu' => get_field('lieu', get_the_ID())
-                );
-                array_push($postToDisplay, $post);
-            endwhile;
-        endif;
-        wp_reset_query();
-        wp_reset_postdata();
 
 
-        foreach($postToDisplay as $post): ?>
-                <div class="projectCard">
-                    <a href="<?= $post['permalink']; ?>">
-                        <div class="projectThumbnail"><?= $post['thumbnail']; ?></div>
-                        <div class="projectTitle"><a href="<?= $post['permalink']; ?>" title="<?= $post['title_attribute']; ?>"><?= $post['title']; ?></a></div>
-                        <p class="projectLoopLieu"><?= $post['lieu']; ?></p>
-                    </a>
-                </div>
+        foreach ($postToDisplay as $post) : ?>
+            <div class="projectCard">
+                <a href="<?= $post['permalink']; ?>">
+                    <div class="projectThumbnail"><?= $post['thumbnail']; ?></div>
+                    <div class="projectTitle"><a href="<?= $post['permalink']; ?>" title="<?= $post['title_attribute']; ?>"><?= $post['title']; ?></a></div>
+                    <p class="projectLoopLieu"><?= $post['lieu']; ?></p>
+                </a>
+            </div>
 
-        <? endforeach;?>
+        <? endforeach; ?>
 
 
     </div>
