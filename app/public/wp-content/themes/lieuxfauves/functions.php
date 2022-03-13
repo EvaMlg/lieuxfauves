@@ -71,6 +71,15 @@ function lct_register_assets()
 		true
 	);
 
+	wp_enqueue_script(
+		'wow',
+		get_template_directory_uri() . '/src/js/wow.js',
+		array(),
+		'1.0',
+		true
+	);
+
+
 
 
 
@@ -713,4 +722,15 @@ function wpm_limit_title_chars_post()
 		</script>
 
 <?php }
+
+
 }
+
+
+// Cacher la barre WP
+
+function wpc_show_admin_bar() {
+	return false;
+}
+add_filter('show_admin_bar' , 'wpc_show_admin_bar');
+

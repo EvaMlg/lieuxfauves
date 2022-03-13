@@ -53,12 +53,12 @@ endforeach;
 
         </div>
 
-        <img class="mobileImgWhiteLayout" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_mobile_projet_logo.svg">
-
     </div>
 
     <div class="navNextPrev">
-        <a href="/projets"><img class="close-icon" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_menu_burguer-fermer.svg"></span></a>
+        <a href="/projets"><img class="close-icon laptopPicto" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_menu_burguer-fermer.svg"></span></a>
+        <a href="/projets"><img class="close-icon mobilePicto" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_trait_fermer_gris.svg"></span></a>
+
 
 
         <?php
@@ -81,7 +81,7 @@ endforeach;
             <h2><a href="<?php echo $permalink; ?>"></a></h2>
         </span>
 
-        <span class="nav-previousMobile"><?php previous_post_link('%link', __('<img STYLE="height:22px;width:22px" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_slide_picto-prev.svg">')); ?>
+        <span class="nav-previousMobile"><?php previous_post_link('%link', __('<img STYLE="height:22px;width:22px" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_projet_picto-prev_gris.svg">')); ?>
             <h2><a href="<?php echo $permalink; ?>"></a></h2>
         </span>
 
@@ -95,13 +95,17 @@ endforeach;
 
     <div class="whiteLayout">
         <img class="laptopImgWhiteLayout" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_projet_logo.svg">
+        <img class="mobileImgWhiteLayout" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_mobile_projet_logo.svg">
 
-        <a href="<?php echo get_option('home'); ?>/" ><div class="zone-cliquable"></div></a>
+
+        <a href="<?php echo get_option('home'); ?>/">
+            <div class="zone-cliquable"></div>
+        </a>
 
 
         <div class="nomenclature">
 
-        <div class="taxNamesProj">
+            <div class="taxNamesProj">
 
         <?php
         $displayedTerms = array();
@@ -147,7 +151,6 @@ endforeach;
         </div>
 
 
-           
 
             <?php
             $nomenclature = get_field('nomenclature');
@@ -164,6 +167,55 @@ endforeach;
     <?php endif; ?>
     </div>
 
+</div>
+
+<div class="ficheTechniqueMobile">
+
+    <div class="cardLinkJungle">
+        <p class="cardLink">Fiche technique</p><button class="logoOuvrir"><img class="logo-categorie" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_plus_ouvrir.svg"></button>
+    </div>
+    <div class="ficheTechnique">
+        <div class="FTright columnFT">
+            <div class="wrapperItems">
+
+                <?php
+                $ficheTechnique = get_field('fiche_technique');
+                if ($ficheTechnique) : ?>
+
+                    <h3>Programme</h3>
+                    <p><?php echo $ficheTechnique['programme']; ?></p>
+            </div>
+            <div class="wrapperItems">
+                <h3>Maîtrise d’ouvrage</h3>
+                <p><?php echo $ficheTechnique['maitrise_d’ouvrage']; ?></p>
+            </div>
+            <div class="wrapperItems">
+                <h3>Maîtrise d’oeuvre</h3>
+                <p><?php echo $ficheTechnique['maitrise_d’oeuvre']; ?></p>
+            </div>
+        </div>
+        <div class="FTleft columnFT">
+            <div class="wrapperItems">
+                <h3>Surface</h3>
+                <p><?php echo $ficheTechnique['surface']; ?></p>
+            </div>
+            <div class="wrapperItems">
+                <h3>Coûts</h3>
+                <p><?php echo $ficheTechnique['couts']; ?></p>
+            </div>
+            <div class="wrapperItems">
+                <h3>Dates / Livraison</h3>
+                <p><?php echo $ficheTechnique['dates__livraison']; ?></p>
+            </div>
+            <div class="wrapperItems">
+                <h3>Performances environnementales</h3>
+                <p><?php echo $ficheTechnique['performances_environnementales']; ?></p>
+            </div>
+        </div>
+
+
+    <?php endif; ?>
+    </div>
 </div>
 
 
@@ -197,20 +249,23 @@ endforeach;
     <div class="zoom-image-slider">
         <div class="div-zoom">
             <img src="" />
-            <span class="close"><i><img class="logo-categorie pictoSlider" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_menu_burguer-fermer.svg"></i></span>
+           <span class="close"><i><img class="logo-categorie pictoSlider" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_menu_burguer-fermer.svg"></i></span>
+          <span class="close"><i><img class="logo-categorie pictoSlider" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_trait_fermer_gris.svg"></i></span>
+
         </div>
 
     </div>
+
     <div class="projetWrapper">
 
 
         <div class="leftColumn">
 
 
-            <div class="cardLinkJungle">
+            <div class="cardLinkJungle mobileNone">
                 <p class="cardLink">Fiche technique</p><button class="logoOuvrir"><img class="logo-categorie" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_plus_ouvrir.svg"></button>
             </div>
-            <div class="ficheTechnique">
+            <div class="ficheTechnique mobileNone">
                 <div class="FTright columnFT">
                     <div class="wrapperItems">
 
@@ -248,9 +303,11 @@ endforeach;
                         <p><?php echo $ficheTechnique['performances_environnementales']; ?></p>
                     </div>
                 </div>
+
+
             <?php endif; ?>
             </div>
-            <div class="boutonWrapperProjet">
+            <div class="boutonWrapperProjet mobileNone">
                 <p class="cardLink cardLinkLight shareLinks"><img class="logo-categorie logo-explo" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_fleche-partager.svg"> &nbsp; Partager</p>
                 <p class="cardLink cardLinkLight shareLinks"><img class="logo-categorie logo-explo" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_fleche-telecharger.svg"> &nbsp; <?php the_field('document_a_telecharger'); ?></p>
                 <p class="cardLink cardLinkLight shareLinks"><img class="logo-categorie logo-explo" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_fleche-lien.svg"> &nbsp; <?php the_field('lien_externe'); ?></p>
@@ -270,6 +327,12 @@ endforeach;
         </div>
 
     </div>
+
+    <div class="boutonWrapperProjetCloned">
+                <p class="cardLink cardLinkLight shareLinks"><img class="logo-categorie logo-explo" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_fleche-partager.svg"> &nbsp; Partager</p>
+                <p class="cardLink cardLinkLight shareLinks"><img class="logo-categorie logo-explo" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_fleche-telecharger.svg"> &nbsp; <?php the_field('document_a_telecharger'); ?></p>
+                <p class="cardLink cardLinkLight shareLinks"><img class="logo-categorie logo-explo" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_fleche-lien.svg"> &nbsp; <?php the_field('lien_externe'); ?></p>
+            </div>
 
 </div>
 

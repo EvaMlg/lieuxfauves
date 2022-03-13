@@ -11,6 +11,16 @@
 <html lang="<?php language_attributes() ?>">
 <head>
 
+<head>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+
+  <link rel="stylesheet" href="bower_components/aos/dist/aos.css" />
+
+</head>
+
 
 
     <meta charset="<?php bloginfo( "charset" ) ?>">
@@ -32,17 +42,12 @@
 
 
 <div id="loader">
-    <img class ="introImg" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_INTRO_image01.jpg" alt="Loader Lieux Fauves" style="
+    <img class ="introImg" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_INTRO_image02.jpg" alt="Loader Lieux Fauves" style="
     /* width: 100%;
     position: absolute;
     height: 99.5vh;
     z-index: 2000;
-    object-fit: cover;
-    @media (max-width: 1025px) { 
-      width: 10%; */
-     
-
-     }">
+    object-fit: cover;}">
     <img src="/wp-content/themes/lieuxfauves/src/assets/img/.jpg" alt="" class="svg" style="position: absolute;
     z-index: 2000;
     width: 40%;

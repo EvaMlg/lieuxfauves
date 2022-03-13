@@ -2184,6 +2184,37 @@ footer {
   height: 11px;
 }
 
+.ficheTechniqueMobile {
+  display: none;
+}
+
+.boutonWrapperProjetCloned {
+  display: none;
+}
+
+@media (max-width: 1025px) {
+  .projets-template-default .responsiveBurger {
+    display: none !important;
+  }
+}
+.mobilePicto {
+  display: none;
+}
+@media (max-width: 1025px) {
+  .mobilePicto {
+    display: block;
+  }
+}
+
+.laptopPicto {
+  display: block;
+}
+@media (max-width: 1025px) {
+  .laptopPicto {
+    display: none;
+  }
+}
+
 .projets-template-default .menuButtonWrapper {
   display: none;
 }
@@ -2226,6 +2257,11 @@ footer {
   width: 100%;
   height: 764px;
 }
+@media (max-width: 1025px) {
+  .headerProjetWrapper {
+    height: 600px;
+  }
+}
 .headerProjetWrapper .imageWrapper {
   position: absolute;
   overflow: hidden;
@@ -2251,6 +2287,11 @@ footer {
   position: absolute;
   z-index: 1;
   height: 764px;
+}
+@media (max-width: 1025px) {
+  .headerProjetWrapper .whiteLayout {
+    height: 600px;
+  }
 }
 .headerProjetWrapper .whiteLayout .nomenclature-wrapper {
   padding-top: 45px;
@@ -2317,7 +2358,7 @@ footer {
 }
 
 .contentWrapperProjet {
-  padding-top: 50px !important;
+  padding-top: 50px;
   padding-left: 77px;
 }
 .contentWrapperProjet .titleWrapper {
@@ -2345,6 +2386,7 @@ footer {
      object-fit: cover;
 }
 .contentWrapperProjet .projetWrapper {
+  margin-top: 45px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2642,6 +2684,7 @@ footer {
   height: 25px;
   width: 25px;
 }
+
 .titleWrapperExplorationResponsive {
   display: none;
 }
@@ -4497,7 +4540,7 @@ acf-gallery {
 
 .slick-prev {
   position: absolute;
-  left: 3%;
+  left: 5px;
   top: 50%;
   z-index: 9;
   background: none;
@@ -4507,7 +4550,7 @@ acf-gallery {
 
 .slick-next {
   position: absolute;
-  right: 3%;
+  right: 30px;
   top: 50%;
   z-index: 9;
   background: none;
@@ -4593,16 +4636,24 @@ form#searchform div button {
           flex-direction: column;
 }
 
+.projets-template-default .galleryWrapper.mainExploration .slick-list {
+  height: 756px;
+}
+
 .explorations-template-default .galleryWrapper.mainExploration .slick-list {
-  height: 600px;
+  height: 756px;
 }
 
 .explorations-template-default .galleryWrapper.mainExploration .slick-prev {
-  left: calc(3% + 77px);
+  left: calc(5px + 77px);
 }
 
 .explorations-template-default .galleryWrapper.mainExploration .slick-track {
-  height: 100%;
+  height: 756px;
+}
+
+.projets-template-default .galleryWrapper.mainExploration .slick-track {
+  height: 756px;
 }
 
 #search_result_ajax #all_results {
@@ -4655,7 +4706,7 @@ form#searchform div button {
 }
 
 .contentWrapperProjet {
-  padding-top: 77px;
+  padding-top: 50px;
   padding-left: 77px;
 }
 
@@ -4681,7 +4732,7 @@ form#searchform div button {
 
 .galleryWrapper .single-slide-image .zoom-image {
   position: absolute;
-  right: 3%;
+  right: 22px;
   top: 60%;
   cursor: pointer;
 }
@@ -4794,7 +4845,7 @@ form#searchform div button {
     z-index: 100;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 1025px) {
   .responsive-menu {
     z-index: 200;
     position: fixed;
@@ -4833,12 +4884,12 @@ form#searchform div button {
     z-index: 100;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 1025px) {
   .adress-container {
     margin-left: 18px;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 1025px) {
   .barMenuFull {
     display: none;
   }
@@ -4888,20 +4939,20 @@ form#searchform div button {
     width: 100vw;
   }
 }
-@media (max-width: 768px) and (max-width: 768px) {
+@media (max-width: 1025px) and (max-width: 768px) {
   .rightColumnMenu {
     -ms-grid-row: 2;
     grid-row: 2;
   }
 }
-@media (max-width: 768px) and (max-width: 768px) {
+@media (max-width: 1025px) and (max-width: 768px) {
   .rightColumnMenu .headerFullMenuWrapper {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
   }
 }
-@media (max-width: 768px) and (max-width: 768px) {
+@media (max-width: 1025px) and (max-width: 768px) {
   .rightColumnMenu .headerFullMenuWrapper .tagline-white {
     height: 135px;
     opacity: 0.5;
@@ -4910,18 +4961,18 @@ form#searchform div button {
     left: 18px;
   }
 }
-@media (max-width: 768px) and (max-width: 768px) {
+@media (max-width: 1025px) and (max-width: 768px) {
   .rightColumnMenu .headerFullMenuWrapper .logo-white {
     height: 90px;
     padding-right: 30px;
   }
 }
-@media (max-width: 768px) and (max-width: 768px) {
+@media (max-width: 1025px) and (max-width: 768px) {
   .rightColumnMenu .logo-socials {
     height: 50px;
   }
 }
-@media (max-width: 768px) and (max-width: 768px) {
+@media (max-width: 1025px) and (max-width: 768px) {
   .rightColumnMenu .contactWrapper {
     color: #e5eeed;
     font-family: "Fira Bold";
@@ -4932,18 +4983,18 @@ form#searchform div button {
     text-transform: uppercase;
   }
 }
-@media (max-width: 768px) and (max-width: 768px) and (min-width: 1025px) {
+@media (max-width: 1025px) and (max-width: 768px) and (min-width: 1025px) {
   .rightColumnMenu .contactWrapper {
     font-size: 13px;
     line-height: 16px;
   }
 }
-@media (max-width: 768px) and (max-width: 768px) {
+@media (max-width: 1025px) and (max-width: 768px) {
   .rightColumnMenu .contactWrapper p {
     color: #e5eeed;
   }
 }
-@media (max-width: 768px) and (max-width: 768px) {
+@media (max-width: 1025px) and (max-width: 768px) {
   .rightColumnMenu .adressesWrapper {
     font-family: "Fira Regular";
     font-size: 13px;
@@ -4951,18 +5002,18 @@ form#searchform div button {
     color: #e5eeed;
   }
 }
-@media (max-width: 768px) and (max-width: 768px) and (min-width: 1025px) {
+@media (max-width: 1025px) and (max-width: 768px) and (min-width: 1025px) {
   .rightColumnMenu .adressesWrapper {
     font-size: 13px;
     line-height: 16px;
   }
 }
-@media (max-width: 768px) and (max-width: 768px) {
+@media (max-width: 1025px) and (max-width: 768px) {
   .rightColumnMenu .adressesWrapper .adressWrapper {
     padding-bottom: 0px;
   }
 }
-@media (max-width: 768px) and (max-width: 768px) {
+@media (max-width: 1025px) and (max-width: 768px) {
   .leftColumnMenu {
     padding-top: 20vh;
     -ms-grid-row: 1;
@@ -4973,7 +5024,7 @@ form#searchform div button {
             flex-direction: column;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 1025px) {
   .leftColumnMenu .menuItemFP {
     padding-top: 25px;
   }
@@ -4990,19 +5041,19 @@ form#searchform div button {
     width: 100%;
   }
 }
-@media (max-width: 768px) and (min-width: 1025px) {
+@media (max-width: 1025px) and (min-width: 1025px) {
   .leftColumnMenu .menuItemFP h1 {
     font-size: 36px;
     line-height: 50px;
     letter-spacing: 6px;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 1025px) {
   .leftColumnMenu .menuItemFP h1 a {
     color: #00534e;
   }
 }
-@media (max-width: 768px) and (max-width: 1025px) {
+@media (max-width: 1025px) and (max-width: 1025px) {
   .leftColumnMenu .subMenuFP {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -5022,13 +5073,13 @@ form#searchform div button {
     padding-left: 0px;
   }
 }
-@media (max-width: 768px) and (max-width: 1025px) and (min-width: 1025px) {
+@media (max-width: 1025px) and (max-width: 1025px) and (min-width: 1025px) {
   .leftColumnMenu .subMenuFP {
     font-size: 18px;
     line-height: 14px;
   }
 }
-@media (max-width: 768px) and (max-width: 768px) {
+@media (max-width: 1025px) and (max-width: 768px) {
   .leftColumnMenu .subMenuFP a {
     padding: 4px;
     color: white;
@@ -5241,25 +5292,158 @@ form#searchform div button {
   }
 }
 @media (max-width: 1025px) {
+  .mobileNone {
+    display: none !important;
+  }
+
+  .boutonWrapperProjetCloned {
+    margin-bottom: 45px;
+    font-family: "Fira Bold";
+    font-size: 11px;
+    line-height: 24px;
+    color: #b5b8b8;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+@media (max-width: 1025px) and (min-width: 1025px) {
+  .boutonWrapperProjetCloned {
+    font-size: 11px;
+    line-height: 24px;
+  }
+}
+@media (max-width: 1025px) {
+  .boutonWrapperProjetCloned .shareLinks {
+    font-family: "Fira Bold";
+    font-size: 11px;
+    line-height: 24px;
+    color: #b5b8b8;
+    background-color: #f4f4f4;
+    padding-left: 18px;
+    padding-top: 4%;
+    padding-bottom: 4%;
+    margin-top: 10px;
+  }
+}
+@media (max-width: 1025px) and (min-width: 1025px) {
+  .boutonWrapperProjetCloned .shareLinks {
+    font-size: 11px;
+    line-height: 24px;
+  }
+}
+@media (max-width: 1025px) {
+  .ficheTechniqueMobile {
+    display: block;
+    font-family: "Fira Light";
+    font-size: 14px;
+    line-height: 24px;
+    color: white;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 15px;
+    padding-bottom: 10px;
+    background-color: #00534e;
+    gap: 45px;
+  }
+  .ficheTechniqueMobile .ficheTechnique {
+    padding-right: 18px;
+    padding-left: 18px;
+  }
+  .ficheTechniqueMobile .cardLinkJungle {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background-color: #00534e;
+    color: #828787;
+    padding-top: 25px;
+    padding-right: 18px;
+    padding-left: 18px;
+    padding-bottom: 25Px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .ficheTechniqueMobile .cardLinkJungle p {
+    color: white;
+    text-transform: uppercase;
+    font-family: "Fira Bold";
+    font-size: 12px;
+    line-height: 25px;
+  }
+}
+@media (max-width: 1025px) and (min-width: 1025px) {
+  .ficheTechniqueMobile .cardLinkJungle p {
+    font-size: 12px;
+    line-height: 25px;
+  }
+}
+@media (max-width: 1025px) {
+  .ficheTechniqueMobile h3 {
+    color: white;
+    text-transform: uppercase;
+    font-family: "Fira Bold";
+    font-size: 12px;
+    line-height: 25px;
+  }
+}
+@media (max-width: 1025px) and (min-width: 1025px) {
+  .ficheTechniqueMobile h3 {
+    font-size: 12px;
+    line-height: 25px;
+  }
+}
+@media (max-width: 1025px) and (min-width: 1025px) {
+  .ficheTechniqueMobile {
+    font-size: 14px;
+    line-height: 24px;
+  }
+}
+@media (max-width: 1025px) {
+  .ficheTechniqueMobile .columnFT {
+    width: 50%;
+  }
+}
+@media (max-width: 1025px) {
+  .ficheTechniqueMobile .wrapperItems {
+    margin-bottom: 15px;
+  }
+}
+@media (max-width: 1025px) {
   .titleWrapperResponsive {
     display: block;
     padding: 18px;
     padding-right: 72px;
   }
-
+}
+@media (max-width: 1025px) {
   .titleWrapper {
     display: none;
   }
-
+}
+@media (max-width: 1025px) {
   .mobileImgWhiteLayout {
+    position: absolute;
+    bottom: 0;
     display: block;
     width: 100%;
   }
-
+}
+@media (max-width: 1025px) {
   .laptopImgWhiteLayout {
     display: none;
   }
-
+}
+@media (max-width: 1025px) {
   .mainSingleProjet {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -5269,7 +5453,8 @@ form#searchform div button {
         -ms-flex-direction: column;
             flex-direction: column;
   }
-
+}
+@media (max-width: 1025px) {
   .headerProjetWrapper .imageWrapper {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -5278,10 +5463,6 @@ form#searchform div button {
   }
   .headerProjetWrapper .imageThumbnailWrapper img {
     height: 600px !important;
-  }
-  .headerProjetWrapper .mobileImgWhiteLayout {
-    position: absolute;
-    bottom: 0;
   }
   .headerProjetWrapper .imageWrapper {
     height: 100%;
@@ -5307,7 +5488,7 @@ form#searchform div button {
   }
   .headerProjetWrapper .whiteLayout {
     width: 100%;
-    height: auto;
+    height: 600px;
     z-index: 1;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -5331,7 +5512,11 @@ form#searchform div button {
     margin-left: 18px;
     margin-right: 18px;
     text-align: center;
-    position: relative;
+    position: absolute;
+    top: 530px;
+    margin-left: 0px;
+    padding-right: 0;
+    position: absolute;
   }
 }
 @media (max-width: 1025px) and (min-width: 1025px) {
@@ -5377,6 +5562,7 @@ form#searchform div button {
   .contentWrapperProjet {
     position: relative;
     width: 100vw;
+    padding-top: 0;
     padding-top: 0;
     padding-left: 0;
   }
@@ -5701,7 +5887,7 @@ form#searchform div button {
     display: -ms-flexbox;
     display: flex;
     right: 0;
-    top: 77px;
+    top: 0;
     background-color: transparent;
     display: flex;
     -webkit-box-orient: vertical;
@@ -5722,6 +5908,10 @@ form#searchform div button {
   }
   .navNextPrev .nav-nextMobile {
     display: block;
+  }
+  .navNextPrev .close-icon {
+    height: 22px;
+    width: 22px;
   }
   .navNextPrev .nav-previous {
     display: none;

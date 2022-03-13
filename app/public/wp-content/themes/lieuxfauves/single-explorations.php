@@ -155,6 +155,7 @@ endforeach;
 		<div class="div-zoom">
 			<img src=""/>
 			<span class="close"><i class="fa-solid fa-xmark"></i></span>
+
 		</div>
 		
 	</div>
