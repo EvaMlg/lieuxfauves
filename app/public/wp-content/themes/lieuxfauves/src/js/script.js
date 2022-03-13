@@ -50,67 +50,6 @@
 			$('.zoom-image-slider').css('display', 'none');
 		})
 		
-        jQuery(function ($) {
-            $('#filter').submit(function () {
-                var filter = $('#filter');
-                $.ajax({
-                    url: filter.attr('action'),
-                    data: filter.serialize(), // form data
-                    type: filter.attr('method'), // POST
-                    beforeSend: function (xhr) {
-                        filter.find('button').text('En cours...'); // changing the button label
-                    },
-                    success: function (data) {
-                        filter.find('button').text('Appliquer les filtres'); // changing the button label back
-                        $('#response').html(data); // insert data
-                    }
-                });
-                return false;
-            });
-        });
-
-
-        $('.archive .projetsContainer .headerProjets .categoryHeader .catWrapper .catName').click(function () {
-            $(this).parent(".catWrapper").find(".div-to-toggle").toggle("slow");
-        });
-
-        $('.archive .projetsContainer .headerProjets .categoryHeader .catWrapper .subCatName span').click(function () {
-            if ($(this).attr("data-id") == "tous") {
-                $.each($(this).parent('.subCatName').find('span.active'), function (i, val) {
-                    $(val).removeClass('active');
-                });
-            } else {
-                $(this).parent('.subCatName').find('span[data-id="tous"]').removeClass('active');
-            }
-            if ($(this).hasClass('active')) {
-                $(this).removeClass('active');
-            } else {
-                $(this).addClass('active');
-            }
-            let lieux = [];
-            $.each($('.archive .projetsContainer .headerProjets .categoryHeader .catLieux .subCatName span.active'), function (i, val) {
-                lieux.push($(val).attr("data-id"));
-            });
-            let categories = [];
-            $.each($('.archive .projetsContainer .headerProjets .categoryHeader .catArchi .subCatName span.active'), function (i, val) {
-                categories.push($(val).attr("data-id"));
-            });
-            $.ajax({
-                url: ajaxurl,
-                type: 'GET',
-                data: {
-                    'action': 'ajax_projets',
-                    'lieu': lieux,
-                    'categories': categories
-                },
-                success: function (data) {
-                    $(".projetsGrid").html(data);
-                },
-                error: function (data) {
-                    console.log('Erreur');
-                }
-            });
-        });
 
     });
  })(jQuery);
