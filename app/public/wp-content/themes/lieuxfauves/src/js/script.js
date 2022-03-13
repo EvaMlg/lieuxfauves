@@ -204,11 +204,8 @@ element.addEventListener('click', function() {
 
 
  // CHANGER LA COULEUR DES ICONES PAGE PROJET
-const imageWrapper = document.querySelector('.projets-template-default .imageThumbnailWrapper');
-console.log(imageWrapper);
+const imageWrapper = document.querySelector('.projets-template-default .imageThumbnailWrapper img');
 let heightImageWrapper = imageWrapper.clientHeight;
-console.log(heightImageWrapper);
-
 
 window.addEventListener('scroll', function () {
     if (window.scrollY > heightImageWrapper) {
@@ -223,9 +220,6 @@ window.addEventListener('scroll', function () {
         document.querySelector('.projets-template-default .nav-next a img').src="/wp-content/themes/lieuxfauves/src/assets/img/LF_slide_picto-next.svg";
         document.querySelector('.projets-template-default .close-icon').src="/wp-content/themes/lieuxfauves/src/assets/img/LF_menu_burguer-fermer.svg";
 
-
-
- 
        
    
     }

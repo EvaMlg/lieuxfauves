@@ -73,6 +73,7 @@ logoOpen.addEventListener('click', function() {
 
  logoClose = document.querySelector('.logo-close');
 
+ 
  logoClose.addEventListener('click', function() { 
     document.querySelector('.projet-popup').style.animation = "windowDown 0.2s ease"
     document.querySelector('.projet-popup').style.display = "none"; 

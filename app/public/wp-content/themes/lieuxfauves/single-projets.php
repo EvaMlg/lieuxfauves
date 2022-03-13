@@ -168,6 +168,56 @@ endforeach;
 
 </div>
 
+<div class="ficheTechniqueMobile">
+
+    <div class="cardLinkJungle">
+        <p class="cardLink">Fiche technique</p><button class="logoOuvrir"><img class="logo-categorie" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_plus_ouvrir.svg"></button>
+    </div>
+    <div class="ficheTechnique">
+        <div class="FTright columnFT">
+            <div class="wrapperItems">
+
+                <?php
+                $ficheTechnique = get_field('fiche_technique');
+                if ($ficheTechnique) : ?>
+
+                    <h3>Programme</h3>
+                    <p><?php echo $ficheTechnique['programme']; ?></p>
+            </div>
+            <div class="wrapperItems">
+                <h3>Maîtrise d’ouvrage</h3>
+                <p><?php echo $ficheTechnique['maitrise_d’ouvrage']; ?></p>
+            </div>
+            <div class="wrapperItems">
+                <h3>Maîtrise d’oeuvre</h3>
+                <p><?php echo $ficheTechnique['maitrise_d’oeuvre']; ?></p>
+            </div>
+        </div>
+        <div class="FTleft columnFT">
+            <div class="wrapperItems">
+                <h3>Surface</h3>
+                <p><?php echo $ficheTechnique['surface']; ?></p>
+            </div>
+            <div class="wrapperItems">
+                <h3>Coûts</h3>
+                <p><?php echo $ficheTechnique['couts']; ?></p>
+            </div>
+            <div class="wrapperItems">
+                <h3>Dates / Livraison</h3>
+                <p><?php echo $ficheTechnique['dates__livraison']; ?></p>
+            </div>
+            <div class="wrapperItems">
+                <h3>Performances environnementales</h3>
+                <p><?php echo $ficheTechnique['performances_environnementales']; ?></p>
+            </div>
+        </div>
+
+
+    <?php endif; ?>
+    </div>
+</div>
+
+
 
 <div class="contentWrapperProjet">
 
@@ -209,10 +259,10 @@ endforeach;
         <div class="leftColumn">
 
 
-            <div class="cardLinkJungle">
+            <div class="cardLinkJungle mobileNone">
                 <p class="cardLink">Fiche technique</p><button class="logoOuvrir"><img class="logo-categorie" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_plus_ouvrir.svg"></button>
             </div>
-            <div class="ficheTechnique">
+            <div class="ficheTechnique mobileNone">
                 <div class="FTright columnFT">
                     <div class="wrapperItems">
 

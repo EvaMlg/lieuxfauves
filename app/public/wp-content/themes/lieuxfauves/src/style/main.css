@@ -3380,9 +3380,6 @@ footer {
   }
 }
 
-.projetsGrid {
-  width: 100%;
-}
 .projetsGrid .lfLogo {
   display: none;
 }
@@ -4776,9 +4773,9 @@ form#searchform div button {
 }
 
 #search_result_ajax #all_results {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
   grid-gap: 0.5rem;
 }
 
@@ -4822,6 +4819,7 @@ form#searchform div button {
 
 #search_result_ajax {
   overflow-y: auto;
+  padding-top: 5px;
 }
 
 .contentWrapperProjet {
@@ -5953,9 +5951,7 @@ form#searchform div button {
 }
 @media (max-width: 1025px) {
   .ficheTechnique {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    display: none;
     font-family: "Fira Light";
     font-size: 14px;
     line-height: 24px;

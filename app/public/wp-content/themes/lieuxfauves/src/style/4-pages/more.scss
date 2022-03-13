@@ -170,15 +170,18 @@ form#searchform div button{
 	height: 756px;
 }
 
+
+
 #search_result_ajax #all_results{
-	display:flex;
+	display:flex !important;
 	grid-gap: .5rem;
 }
 
 #search_result_ajax,
 #search_result_ajax a{
 	color: white;
-	font-family: "Fira Light"
+	font-family: "Fira Light";
+   
 }
 
 #search_result_ajax #total_result{
@@ -215,6 +218,7 @@ form#searchform div button{
 
 #search_result_ajax{
 	overflow-y: auto;
+    padding-top: 5px;
 }
 
 
