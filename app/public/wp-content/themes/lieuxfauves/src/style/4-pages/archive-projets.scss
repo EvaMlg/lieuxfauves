@@ -2,6 +2,12 @@
     display: none;
 }
 
+.projetsContainer {
+    width: 100vw;
+    @include mobile-tab {
+        width: 100vw !important;
+    }
+}
 .pictoValider {
     display: none;
 

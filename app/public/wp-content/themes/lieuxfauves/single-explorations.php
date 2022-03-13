@@ -88,10 +88,12 @@ endforeach;
             }
             foreach ($displayedTerms as $term) {
                 echo '<a href="' . get_post_type_archive_link(get_post_type()) . '"';
-                echo ' class="' . (sizeof($term['terms']) ? "parentTags" : "") . '">' . $term['term']->name . '</a>';
+                echo ' class="' . (sizeof($term['terms']) ? "parentTags" : "") . '">' . $term['term']->name . ' </a>';
                 foreach ($term['terms'] as $child) {
                     echo '<a href="' . get_post_type_archive_link(get_post_type()) . '?' . $term['taxonomy']->name . '=' . $child->slug . '">';
                     echo $child->name . '</a>';
+                    echo ' <span class="barre-nobold">&nbsp;|&nbsp;</span>';
+                    
                 }
             }
             ?>

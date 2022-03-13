@@ -6,6 +6,48 @@
     display: none;
 }
 
+.boutonWrapperArchiveActu {
+    display: none;
+    @include laptopS {
+    display: flex;}
+
+}
+
+
+
+
+ .archive .wrapperLinkArticle {
+     display: flex;
+    @include laptopS {
+    display: none;}
+}
+
+
+.wrapperLinkArticle {
+    padding-top: 2%;
+    display: flex;
+    flex-direction: column;
+
+    span {
+        color: $grey-col-50;
+        border: 1px solid $grey-col;
+        padding-left: $m-margin-small;
+        padding-top: 4%;
+        padding-bottom: 4%;
+        margin-bottom: 2%;
+    }
+}
+
+.wrapperLinkArticle {
+    margin-top: 3%;
+    margin-bottom: $dCol;
+    @include p-link;
+    color: $grey-col;
+    display: flex;
+    flex-direction: column;
+
+}
+
 
 .headerArticle {
     background-color: $black-col-5;

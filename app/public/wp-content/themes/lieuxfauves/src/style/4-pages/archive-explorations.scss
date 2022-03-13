@@ -88,9 +88,7 @@
             display: flex;
             width: 50%;
 
-            .taxnames {
-                color: red !important;
-            }
+         
 
             .taxExplo a {
                 font-family: "Fira Medium" !important;
@@ -104,9 +102,32 @@
             }
 
             .taxExplo {
-                .barre-nobold {
-                    @include p-very-small;
+
+
+                .taxname {
+                    @include fauveUnderlineSmall;
+                    margin-bottom: 3px;
+                    font-family: "Fira Medium";
+                    
+    
                 }
+
+                .taxname:hover {
+                    @include fauveUnderlineSmallHover;
+
+                    
+                }
+
+                .barre-nobold {
+                    text-decoration: none;
+                    color : $grey-col;
+                    font-family: "Fira Light";
+                  
+                }
+             
+
+
+               
 
                 display: flex;
                 flex-direction: column;
@@ -118,16 +139,7 @@
 
                 color: $jungle-col;
 
-                a {
-                    text-decoration: none;
-                    color: $grey-col;
-                    //@include fauveUnderline;
-                }
-
-                a:hover {
-                    text-decoration: none;
-                    //@include fauveUnderlineHover;
-                }
+                
             }
         }
     }

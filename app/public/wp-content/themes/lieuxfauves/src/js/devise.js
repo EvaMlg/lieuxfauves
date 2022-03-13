@@ -21,5 +21,3 @@ z.addEventListener('click', function() {
 
 
 
-
-

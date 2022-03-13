@@ -55,6 +55,12 @@ get_header();
                                 <a href="<?php the_permalink(); ?>"><img class="logo-load" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_load.svg"></a>
                             </div>
 
+                            <div class="wrapperLinkArticle">
+                            <span><img class="logo-categorie shareLinks logo-explo" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_fleche-partager.svg"> Partager Fb-Ig-Tt</span>
+                            <span><img class="logo-categorie shareLinks logo-explo" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_fleche-telecharger.svg"> Télécharger document divers</span>
+                            <span><img class="logo-categorie shareLinks logo-explo" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_fleche-lien.svg"> Liens externes</span>
+                        </div>
+
                         </div>
 
                         <div class="boutonWrapperArchiveActu">
@@ -62,6 +68,8 @@ get_header();
                             <button><img class="logo-categorie logo-explo" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_fleche-telecharger.svg"> &nbsp; Lien Interne / externe / site Web<?php the_field('document_a_telecharger'); ?></button>
                             <button><img class="logo-categorie logo-explo" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_fleche-lien.svg"> &nbsp; Partager <?php the_field('lien_externe'); ?></button>
                         </div>
+
+                    
 
                     </div>
 

@@ -109,8 +109,8 @@ get_header();
                                         foreach ($terms as $term) : ?>
                                             <a href="<?= get_post_type_archive_link($current_post_type) ?>?<?= $taxonomy ?>=<?= $term->slug ?>">
                                                 <span class="taxname">
-                                                    <?= $term->name ?>
-                                                    <span class="barre-nobold"> | </span>
+                                                    <?= $term->name ?>  </span>
+                                                    <span class="barre-nobold">&nbsp;|</span>
                                                 </span>
                                             </a>
                                 <?php
@@ -130,6 +130,7 @@ get_header();
                                     <a href="<?php the_permalink(); ?>"><img class="logo-load" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_load.svg"></a>
                                 </div>
                             </div>
+                            
                             <div class="boutonWrapperExploration">
                                 <button><img class="logo-categorie logo-explo" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_fleche-partager.svg"> &nbsp; Partager</button>
                                 <button><img class="logo-categorie logo-explo" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_fleche-telecharger.svg"> &nbsp; <?php the_field('document_a_telecharger'); ?></button>

@@ -2694,6 +2694,12 @@ footer {
   }
 }
 
+.parentTags {
+  color: #00534e !important;
+  font-family: "Fira Bold" !important;
+  font-size: 15px !important;
+}
+
 .headerExplo {
   background-color: #f4f4f4;
   padding-left: 77px;
@@ -3044,9 +3050,6 @@ footer {
   display: flex;
   width: 50%;
 }
-.explorationsContainer .explorationWrapper .taxThumbnailWrapper .taxnames {
-  color: red !important;
-}
 .explorationsContainer .explorationWrapper .taxThumbnailWrapper .taxExplo a {
   font-family: "Fira Medium" !important;
   font-size: 12px !important;
@@ -3076,29 +3079,39 @@ footer {
   line-height: 25px;
   color: #00534e;
 }
-.explorationsContainer .explorationWrapper .taxThumbnailWrapper .taxExplo .barre-nobold {
-  font-family: "Fira Light";
-  font-size: 14px;
-  line-height: 24px;
+.explorationsContainer .explorationWrapper .taxThumbnailWrapper .taxExplo .taxname {
+  cursor: pointer;
+  padding-bottom: 0px;
+  padding-right: 3px;
+  padding-left: 3px;
+  -webkit-box-shadow: inset 0 -6px 0 #f1dcad;
+          box-shadow: inset 0 -6px 0 #f1dcad;
+  color: #828787;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  margin-bottom: 3px;
+  font-family: "Fira Medium";
 }
-@media (min-width: 1025px) {
-  .explorationsContainer .explorationWrapper .taxThumbnailWrapper .taxExplo .barre-nobold {
-    font-size: 14px;
-    line-height: 24px;
-  }
+.explorationsContainer .explorationWrapper .taxThumbnailWrapper .taxExplo .taxname:hover {
+  padding-bottom: 2px;
+  padding-right: 3px;
+  padding-left: 3px;
+  -webkit-box-shadow: inset 0 -30px 0 #f1dcad;
+          box-shadow: inset 0 -30px 0 #f1dcad;
+  color: #828787;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+.explorationsContainer .explorationWrapper .taxThumbnailWrapper .taxExplo .barre-nobold {
+  text-decoration: none;
+  color: #828787;
+  font-family: "Fira Light";
 }
 @media (min-width: 1025px) {
   .explorationsContainer .explorationWrapper .taxThumbnailWrapper .taxExplo {
     font-size: 14px;
     line-height: 25px;
   }
-}
-.explorationsContainer .explorationWrapper .taxThumbnailWrapper .taxExplo a {
-  text-decoration: none;
-  color: #828787;
-}
-.explorationsContainer .explorationWrapper .taxThumbnailWrapper .taxExplo a:hover {
-  text-decoration: none;
 }
 .explorationsContainer .titleExplo {
   font-family: "Fira Bold";
@@ -3253,6 +3266,15 @@ footer {
 
 .projPageNameResponsive {
   display: none;
+}
+
+.projetsContainer {
+  width: 100vw;
+}
+@media (max-width: 1025px) {
+  .projetsContainer {
+    width: 100vw !important;
+  }
 }
 
 .pictoValider {
@@ -4306,6 +4328,69 @@ acf-gallery {
 
 .mobileLayout {
   display: none;
+}
+
+.boutonWrapperArchiveActu {
+  display: none;
+}
+@media (min-width: 1025px) {
+  .boutonWrapperArchiveActu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+.archive .wrapperLinkArticle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+@media (min-width: 1025px) {
+  .archive .wrapperLinkArticle {
+    display: none;
+  }
+}
+
+.wrapperLinkArticle {
+  padding-top: 2%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.wrapperLinkArticle span {
+  color: #b5b8b8;
+  border: 1px solid #828787;
+  padding-left: 18px;
+  padding-top: 4%;
+  padding-bottom: 4%;
+  margin-bottom: 2%;
+}
+
+.wrapperLinkArticle {
+  margin-top: 3%;
+  margin-bottom: 45px;
+  font-family: "Fira Bold";
+  font-size: 11px;
+  line-height: 24px;
+  color: #828787;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+@media (min-width: 1025px) {
+  .wrapperLinkArticle {
+    font-size: 11px;
+    line-height: 24px;
+  }
 }
 
 .headerArticle {
