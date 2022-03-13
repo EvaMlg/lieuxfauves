@@ -18,7 +18,7 @@ function lct_register_assets()
 	wp_enqueue_script(
 		'menu',
 		get_template_directory_uri() . '/src/js/menu.js',
-		array('jquery' ),
+		array('jquery'),
 		'1.0',
 		true
 	);
@@ -26,7 +26,7 @@ function lct_register_assets()
 	wp_enqueue_script(
 		'popUp',
 		get_template_directory_uri() . '/src/js/loader.js',
-		array('jquery' ),
+		array('jquery'),
 		'1.0',
 		false
 	);
@@ -34,7 +34,7 @@ function lct_register_assets()
 	wp_enqueue_script(
 		'popUp',
 		get_template_directory_uri() . '/src/js/popUp.js',
-		array('jquery' ),
+		array('jquery'),
 		'1.0',
 		true
 	);
@@ -81,13 +81,15 @@ function lct_register_assets()
 
 
 
-	  
+
 
 	// Charger notre script
 	wp_enqueue_script('ajax', get_template_directory_uri() . '/src/js/script.js', array('jquery'), '1.0', true);
+	wp_enqueue_script('archive', get_template_directory_uri() . '/src/js/archiveAjax.js', array('jquery'), '1.0', true);
 
 	// Envoyer une variable de PHP à JS proprement
 	wp_localize_script('ajax', 'ajaxurl', admin_url('admin-ajax.php'));
+	wp_localize_script('archive', 'ajaxurl', admin_url('admin-ajax.php'));
 
 
 	wp_enqueue_style("main-style", get_template_directory_uri() . "/src/style/main.css");
@@ -169,7 +171,7 @@ function cpt_explorations()
 		'labels'              => $labels,
 		// On définit les options disponibles dans l'éditeur de notre custom post type ( un titre, un auteur...)
 		'supports'            => array('title', 'editor', 'excerpt', 'author', 'thumbnail', 'revisions', 'custom-fields', 'page-attributes',),
-	
+
 		'menu_position' => 5,
 		'menu_icon' => 'dashicons-location-alt',
 		'show_in_rest' => true,
@@ -189,7 +191,7 @@ add_action('init', 'cpt_explorations', 0);
 
 
 // CPT Jobs
- function cpt_jobs()
+function cpt_jobs()
 {
 
 	$labels = array(
@@ -212,7 +214,7 @@ add_action('init', 'cpt_explorations', 0);
 		'description'         => __('Annonces'),
 		'labels'              => $labels,
 		'supports'            => array('title', 'editor', 'excerpt', 'author', 'thumbnail', 'revisions', 'custom-fields', 'page-attributes',),
-	
+
 		'menu_position' => 5,
 		'show_in_rest' => true,
 		'show_in_menu' => true,
@@ -393,7 +395,7 @@ register_nav_menus(array(
 	'main-nav' => 'Menu Side Nav',
 	'full-page' => 'Menu Full Page',
 
-		
+
 ));
 
 
@@ -402,70 +404,74 @@ register_nav_menus(array(
  *
  * @see get_object_taxonomies()
  */
-function wpdocs_custom_taxonomies_terms_links() {
-    // Get post by post ID.
-    if ( ! $post = get_post() ) {
-        return '';
-    }
- 
-    // Get post type by post.
-    $post_type = $post->post_type;
- 
-    // Get post type taxonomies.
-    $taxonomies = get_object_taxonomies( $post_type, 'objects' );
- 
-    $out = array();
- 
-    foreach ( $taxonomies as $taxonomy_slug => $taxonomy ){
- 
-        // Get the terms related to post.
-        $terms = get_the_terms( $post->ID, $taxonomy_slug );
- 
-        if ( ! empty( $terms ) ) {
+function wpdocs_custom_taxonomies_terms_links()
+{
+	// Get post by post ID.
+	if (!$post = get_post()) {
+		return '';
+	}
 
-            foreach ( $terms as $term ) {
-                $out[] = sprintf( '<a href="%1$s"><span="taxNames fauveUnderlineSmall">%2$s</span></a><span class="barre-nobold">&nbsp;|&nbsp;</span>',
-                    esc_url( get_term_link( $term->slug, $taxonomy_slug ) ),
-                    esc_html( $term->name )
-                );
-            }
-            $out[] = "\n</ul>\n";
-        }
-    }
-    return implode( '', $out );
+	// Get post type by post.
+	$post_type = $post->post_type;
+
+	// Get post type taxonomies.
+	$taxonomies = get_object_taxonomies($post_type, 'objects');
+
+	$out = array();
+
+	foreach ($taxonomies as $taxonomy_slug => $taxonomy) {
+
+		// Get the terms related to post.
+		$terms = get_the_terms($post->ID, $taxonomy_slug);
+
+		if (!empty($terms)) {
+
+			foreach ($terms as $term) {
+				$out[] = sprintf(
+					'<a href="%1$s"><span="taxNames fauveUnderlineSmall">%2$s</span></a><span class="barre-nobold">&nbsp;|&nbsp;</span>',
+					esc_url(get_term_link($term->slug, $taxonomy_slug)),
+					esc_html($term->name)
+				);
+			}
+			$out[] = "\n</ul>\n";
+		}
+	}
+	return implode('', $out);
 }
 
-function wpdocs_custom_taxonomies_terms_links_2() {
-    // Get post by post ID.
-    if ( ! $post = get_post() ) {
-        return '';
-    }
- 
-    // Get post type by post.
-    $post_type = $post->post_type;
- 
-    // Get post type taxonomies.
-    $taxonomies = get_object_taxonomies( $post_type, 'objects' );
- 
-    $out = array();
- 
-    foreach ( $taxonomies as $taxonomy_slug => $taxonomy ){
- 
-        // Get the terms related to post.
-        $terms = get_the_terms( $post->ID, $taxonomy_slug );
- 
-        if ( ! empty( $terms ) ) {
+function wpdocs_custom_taxonomies_terms_links_2()
+{
+	// Get post by post ID.
+	if (!$post = get_post()) {
+		return '';
+	}
 
-            foreach ( $terms as $term ) {
-                $out[] = sprintf( '<a href="%1$s"><span="taxNames">%2$s </span><span class="barre-nobold">&nbsp;|&nbsp;</span></a>',
-                    esc_url( get_term_link( $term->slug, $taxonomy_slug ) ),
-                    esc_html( $term->name )
-                );
-            }
-            $out[] = "\n</ul>\n";
-        }
-    }
-    return implode( '', $out );
+	// Get post type by post.
+	$post_type = $post->post_type;
+
+	// Get post type taxonomies.
+	$taxonomies = get_object_taxonomies($post_type, 'objects');
+
+	$out = array();
+
+	foreach ($taxonomies as $taxonomy_slug => $taxonomy) {
+
+		// Get the terms related to post.
+		$terms = get_the_terms($post->ID, $taxonomy_slug);
+
+		if (!empty($terms)) {
+
+			foreach ($terms as $term) {
+				$out[] = sprintf(
+					'<a href="%1$s"><span="taxNames">%2$s </span><span class="barre-nobold">&nbsp;|&nbsp;</span></a>',
+					esc_url(get_term_link($term->slug, $taxonomy_slug)),
+					esc_html($term->name)
+				);
+			}
+			$out[] = "\n</ul>\n";
+		}
+	}
+	return implode('', $out);
 }
 
 
@@ -477,65 +483,149 @@ add_action('wp_ajax_nopriv_ajax_projets', 'projet_ajax_projets');
 
 function projet_ajax_projets()
 {
-    if ($_GET["lieu"] != NULL && !in_array("tous", $_GET["lieu"])) {
-        $lieu = array(
-            'taxonomy' => 'lieux',
-            'field' => 'slug',
-            'terms' => $_GET['lieu'],
+	if ($_GET["lieu"] != NULL && !in_array("tous", $_GET["lieu"])) {
+		$lieu = array(
+			'taxonomy' => 'lieux',
+			'field' => 'slug',
+			'terms' => $_GET['lieu'],
 			'operator'      => 'AND'
-        );
-    }
-	if($_GET["categories"] != NULL && !in_array("tous", $_GET["categories"])){
+		);
+	}
+	if ($_GET["categories"] != NULL && !in_array("tous", $_GET["categories"])) {
 		$categories = array(
-            'taxonomy' => 'categories-projet',
-            'field' => 'slug',
-            'terms' => $_GET['categories'],
+			'taxonomy' => 'categories-projet',
+			'field' => 'slug',
+			'terms' => $_GET['categories'],
 			'operator'      => 'AND'
-        );
+		);
 	}
-	if($_GET["thematique"] != NULL && !in_array("tous", $_GET["thematique"])){
+	if ($_GET["thematique"] != NULL && !in_array("tous", $_GET["thematique"])) {
 		$thematique = array(
-            'taxonomy' => 'thematique',
-            'field' => 'slug',
-            'terms' => $_GET['thematique'],
+			'taxonomy' => 'thematique',
+			'field' => 'slug',
+			'terms' => $_GET['thematique'],
 			'operator'      => 'AND'
-        );
+		);
 	}
-	
-    $args = array(
-          'post_type' => 'projets',
-          'tax_query' => array(
-              'relation' => 'AND',
-              $lieu,
-			  $categories,
-			  $thematique
-          ),
-          'post_status' => "publish",
-		  'posts_per_page' => -1
-     );
+
+	$args = array(
+		'post_type' => 'projets',
+		'tax_query' => array(
+			'relation' => 'AND',
+			$lieu,
+			$categories,
+			$thematique
+		),
+		'post_status' => "publish",
+		'posts_per_page' => -1
+	);
 	//echo '<pre>'; var_dump($args); echo '</pre>';
-    $post_update = new WP_Query($args); ?>
-    <?php while ($post_update->have_posts()) : $post_update->the_post(); ?>
-    	<div class="cardProjet">
-        	<div class="thumbnailProjet"> <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail(); ?></div>
-            <div class="titleProjet"> <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></div>
-        </div>
-    <?php endwhile; 
-			
-	if($post_update->post_count == 0){ ?>
-			<div class="no-result"></div>
+	$post_update = new WP_Query($args); ?>
+	<?php while ($post_update->have_posts()) : $post_update->the_post(); ?>
+		<div class="cardProjet">
+			<div class="thumbnailProjet"> <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail(); ?></div>
+			<div class="titleProjet"> <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></div>
+		</div>
+	<?php endwhile;
+
+	if ($post_update->post_count == 0) { ?>
+		<div class="no-result"></div>
 	<?php } ?>
 
-    <?php wp_reset_postdata();
-    wp_die();
+	<?php wp_reset_postdata();
+	wp_die();
+}
+
+add_action('wp_ajax_ajax_archive_list', 'archive_list');
+add_action('wp_ajax_nopriv_ajax_archive_list', 'archive_list');
+
+function archive_list()
+{
+	$post_type =  $_GET["type"] ?? 'explorations';
+	$args = array(
+		'post_type' => $post_type,
+		'post_status' => 'publish',
+		'posts_per_page' => -1
+	);
+
+	$tax_query = array(
+		'relation' => 'OR'
+	);
+	if (isset($_GET['taxonomy'])) {
+		foreach ($_GET['taxonomy'] as $taxonomyName => $taxonomyTerms) {
+			array_push($tax_query, array(
+				'taxonomy' => $taxonomyName,
+				'field' => "slug",
+				'terms' => $taxonomyTerms
+			));
+		}
+	}
+	$args['tax_query'] = $tax_query;
+
+	$my_query = new WP_Query($args);
+	if ($my_query->have_posts()) : while ($my_query->have_posts()) : $my_query->the_post();
+			if ($post_type === "explorations") : ?>
+				<div class="preExplorationWrapper">
+					<div class="explorationWrapper">
+						<div class="taxThumbnailWrapper">
+							<div class="taxExplo">
+								<?php
+								$taxonomies = get_object_taxonomies("explorations");
+								foreach ($taxonomies as $taxonomy) :
+									$terms = get_the_terms($my_query->get_the_ID(), $taxonomy);
+									if ($terms && sizeof($terms)) :
+										foreach ($terms as $term) : ?>
+											<a href="<?= get_post_type_archive_link("explorations") ?>?<?= $taxonomy ?>=<?= $term->slug ?>">
+												<span class="taxname">
+													<?= $term->name ?>
+													<span class="barre-nobold"> | </span>
+												</span>
+											</a>
+								<?php
+										endforeach;
+									endif;
+								endforeach;
+								?>
+							</div>
+							<a href="<?php the_permalink(); ?>">
+								<div class="imageExplo"><?php the_post_thumbnail(); ?></div>
+							</a>
+						</div>
+						<div class="wrapperExplo">
+							<div class="contentWrapperExploration">
+								<div class="titleExplo"> <?php the_title(); ?></div>
+								<div class="excerptExplo"><?php the_excerpt(); ?>
+									<a href="<?php the_permalink(); ?>"><img class="logo-load" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_load.svg"></a>
+								</div>
+							</div>
+							<div class="boutonWrapperExploration">
+								<button><img class="logo-categorie logo-explo" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_fleche-partager.svg"> &nbsp; Partager</button>
+								<button><img class="logo-categorie logo-explo" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_fleche-telecharger.svg"> &nbsp; <?php the_field('document_a_telecharger'); ?></button>
+								<button><img class="logo-categorie logo-explo" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_fleche-lien.svg"> &nbsp; <?php the_field('lien_externe'); ?></button>
+							</div>
+						</div>
+					</div>
+				</div>
+			<?php else : ?>
+				<div class="cardProjet">
+					<div class="thumbnailProjet"> <a href="<?= the_permalink(); ?>"><?php the_post_thumbnail(); ?></div>
+					<div class="titleProjet"> <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></div>
+					<p class="projectLoopLieu"><?php the_field('lieu', get_the_ID()); ?></p>
+				</div>
+			<?php endif; ?>
+		<?php
+		endwhile;
+	endif;
+	wp_reset_query();
+	wp_die();
 }
 
 
 
 
-
-function my_search_form( $form ) {
- $form = '<form role="search" method="get" id="searchform" class="searchform" action="' . home_url( '/' ) . '" >
+function my_search_form($form)
+{
+	$form = '<form role="search" method="get" id="searchform" class="searchform" action="' . home_url('/') . '" >
  <div>
  <input type="text" placeholder="Chercher..." value="' . get_search_query() . '" name="s" id="s" />
 
@@ -543,91 +633,96 @@ function my_search_form( $form ) {
  </div>
  </form>';
 
-return $form;
- }
- add_filter( 'get_search_form', 'my_search_form' );
+	return $form;
+}
+add_filter('get_search_form', 'my_search_form');
 
 // search filter
- function my_search_filter( $query )
- {
- if (!is_admin()){
- if ( $query->is_search){
- $query->set('post_type', 'post'); //pour exclure les pages
- $query->set( 'category__not_in',array( 37) );
- }
- return $query;
- }
- }
- add_filter('pre_get_posts','my_search_filter');
+function my_search_filter($query)
+{
+	if (!is_admin()) {
+		if ($query->is_search) {
+			$query->set('post_type', 'post'); //pour exclure les pages
+			$query->set('category__not_in', array(37));
+		}
+		return $query;
+	}
+}
+add_filter('pre_get_posts', 'my_search_filter');
 
-add_action( 'wp_ajax_get_search_ajax', 'get_search_ajax' );
-add_action( 'wp_ajax_nopriv_get_search_ajax', 'get_search_ajax' );
-function get_search_ajax(){
-	
+add_action('wp_ajax_get_search_ajax', 'get_search_ajax');
+add_action('wp_ajax_nopriv_get_search_ajax', 'get_search_ajax');
+function get_search_ajax()
+{
+
 	$data = "";
-	
-	$posts_type = ["Actualité" => "post", "Annonce" => "anonces", "Actualité" => "actualites", "Projets" =>"projets", "Explorations" => "explorations"];
+
+	$posts_type = ["Actualité" => "post", "Annonce" => "anonces", "Actualité" => "actualites", "Projets" => "projets", "Explorations" => "explorations"];
 	$post = 0;
 	$anonces = 0;
 	$actualites = 0;
 	$projets = 0;
 	$explorations = 0;
-	
-	foreach($posts_type as $k => $post){
-		$the_query = new WP_Query( array( 's' => $_GET["search"], "post_type" => $post ) );
+
+	foreach ($posts_type as $k => $post) {
+		$the_query = new WP_Query(array('s' => $_GET["search"], "post_type" => $post));
 
 		// The Loop
-		if ( $the_query->have_posts() ) {
+		if ($the_query->have_posts()) {
 			$data .= "<h3>";
 			$data .= $k;
 			$data .= "</h3>";
 			$data .= '<ul>';
-			while ( $the_query->have_posts() ) {
-				
+			while ($the_query->have_posts()) {
+
 				$$post++;
 				$the_query->the_post();
-				$data .= '<li><a href="'.get_the_permalink().'">' . get_the_title() . '</a></li>';
+				$data .= '<li><a href="' . get_the_permalink() . '">' . get_the_title() . '</a></li>';
 			}
 			$data .= '</ul>';
 		}
 	}
-	
+
 	echo "<div id='all_results'>";
 	$total = 0;
-	
-		foreach($posts_type as $k => $post){
-			echo "<div>".$post."[<span>".$$post."</span>]</div>";
-			$total += $$post;
-		}
-	
+
+	foreach ($posts_type as $k => $post) {
+		echo "<div>" . $post . "[<span>" . $$post . "</span>]</div>";
+		$total += $$post;
+	}
+
 	echo "</div>";
-	
+
 	echo "<div id=\"total_result\">Résultats <span>[$total]</span></div>";
-	
+
 	echo $data;
 
-/* Restore original Post Data */
-wp_reset_postdata();
+	/* Restore original Post Data */
+	wp_reset_postdata();
 	wp_die();
 }
 
 
 
 // Limiter le titre des articles à 50 caractères
-add_action( 'admin_footer', 'wpm_limit_title_chars_post' );
+add_action('admin_footer', 'wpm_limit_title_chars_post');
 
-function wpm_limit_title_chars_post() {
-	
+function wpm_limit_title_chars_post()
+{
+
 	// On récupère le type de contenu sur lequel on se trouve dans l'administration
 	$post_type = get_current_screen()->post_type;
-	
-	// Si c'est un article on applique la limitation
-    if ( $post_type == 'post') { ?>
 
-	    <!-- On défini un nombre de caractère maximum pour les titres des articles: ici 50 -->
-	    <script>jQuery( 'input#title' ).attr( 'maxlength', 10 );</script>
+	// Si c'est un article on applique la limitation
+	if ($post_type == 'post') { ?>
+
+		<!-- On défini un nombre de caractère maximum pour les titres des articles: ici 50 -->
+		<script>
+			jQuery('input#title').attr('maxlength', 10);
+		</script>
 
 <?php }
+
 
 }
 
@@ -638,3 +733,4 @@ function wpc_show_admin_bar() {
 	return false;
 }
 add_filter('show_admin_bar' , 'wpc_show_admin_bar');
+

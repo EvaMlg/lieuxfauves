@@ -6,6 +6,27 @@
  * 
  */
 get_header();
+$current_post_type = get_post_type(); 
+$taxonomies = get_object_taxonomies($current_post_type); 
+
+$taxQuery = array(
+    'relation' => 'OR',
+);
+foreach($taxonomies as $taxonomy): 
+    $terms = get_the_terms(get_the_ID(), $taxonomy);
+    if($terms && sizeof($terms)):
+        $taxQueryTerm = array();
+        foreach($terms as $term){
+            if(!array_search($term->term_id, $taxQueryTerm)) array_push($taxQueryTerm, $term->term_id);
+            if(!array_search($term->parent, $taxQueryTerm)) array_push($taxQueryTerm, $term->parent);
+        }
+        array_push($taxQuery, array(
+            'taxonomy' => $taxonomy,
+            'field' => 'id',
+            'terms' => $taxQueryTerm
+        ));
+    endif;
+endforeach;
 ?>
 
 
@@ -86,10 +107,48 @@ get_header();
 
             <div class="taxNamesProj">
 
-                <span class="fauveUnderlineSmall">insertion urbaine</span><span class="barre-nobold"> | </span><span class="fauveUnderlineSmall">gestion des flux</span><span class="barre-nobold"> | </span><span class="fauveUnderlineSmall">confort intérieur</span><span class="barre-nobold"> | </span><span class="fauveUnderlineSmall">traitement des eaux de pluie</span>
+        <?php
+        $displayedTerms = array();
+        $filteredTaxonomies = array(
+            'thematique'
+        );
 
-            </div>
-
+        foreach(get_taxonomies([], 'objects') as $taxonomy){
+            if(isset($taxonomy->object_type) && $taxonomy->object_type){
+                if(array_search($taxonomy->name, $filteredTaxonomies)!==false && array_search(get_post_type(), $taxonomy->object_type)!==false){
+                    $terms = wp_get_post_terms(get_the_ID(), $taxonomy->name);
+                    foreach($terms as $key=>$term){ 
+                        if($term->parent !==0 ):
+                            if(!$displayedTerms[$term->parent]){ 
+                                $displayedTerms[$term->parent] = array(
+                                    'term' => get_term($term->parent, $taxonomy->name),
+                                    'terms' => array($term),
+                                    'taxonomy' => $taxonomy
+                                );
+                            }else{
+                                array_push($displayedTerms[$term->parent]['terms'], $term);
+                            };
+                        else:
+                            if(!$displayedTerms[$term->term_id]){
+                                $displayedTerms[$term->term_id] = array(
+                                    'term' => $term,
+                                    'terms' => array(),
+                                    'taxonomy' => $taxonomy
+                                );
+                            }
+                        endif;
+                    }
+                }
+            }
+        }
+        foreach($displayedTerms as $term){
+            foreach($term['terms'] as $child){
+                echo '<span class="fauveUnderlineSmall"><a href="'.get_post_type_archive_link(get_post_type()).'?'.$term['taxonomy']->name.'='.$child->slug.'">';
+                echo $child->name.'</a></span><span class="barre-nobold"> | </span>';
+            }
+        }
+        ?>
+        </div>
 
 
 
@@ -284,36 +343,87 @@ get_header();
     <div class="list-link-loop">
         <img class="logo-categorie" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_logo_categories.svg">
         <span class="titleListLink">PROJETS</span>
-        <a class="fauveUnderline">Architecture</a>
+        <?php 
+            $displayTerms = array();
+            foreach($taxQuery as $tax){
+                if(isset($tax['terms']) && is_array($tax['terms']) && sizeof($tax['terms'])){
+                    foreach($tax['terms'] as $term){
+                        $currentTerm = get_term($term, $tax['taxonomy']);
+                        if($currentTerm->parent===0 && array_search($tax['taxonomy'], $filteredTaxonomies)!==false && array_search($currentTerm, $displayTerms)===false) array_push($displayTerms, $currentTerm);
+                    }
+                }
+            }
+            foreach($displayTerms as $displayTerm){
+                echo '<a href="'.get_post_type_archive_link('projets').'" class="fauveUnderline">'.$displayTerm->name.'</a>';
+            }
+        ?>
     </div>
 
 
     <div class="loopWrapper">
 
         <?php
+        $postToDisplay = array();
+        $postToIgnore = array();
+        
         $args = array(
             'post_type' => 'projets',
-            'category_projet' => 'architecture',
             'posts_per_page' => 4,
-
-
+            'tax_query' => $taxQuery
         );
-
         $my_query = new WP_Query($args);
-        if ($my_query->have_posts()) : while ($my_query->have_posts()) : $my_query->the_post(); ?>
+        if ($my_query->have_posts()) : 
+            while ($my_query->have_posts()) : 
+                $my_query->the_post();
+                array_push($postToIgnore, get_the_ID());
+                $post = array(
+                    'permalink' => get_permalink(get_the_ID()),
+                    'thumbnail' => get_the_post_thumbnail(get_the_ID()),
+                    'title_attribute' => the_title_attribute(array('echo'=>false,'post'=>get_the_ID())),
+                    'title' => get_the_title(get_the_ID()),
+                    'lieu' => get_field('lieu', get_the_ID())
+                );
+                array_push($postToDisplay, $post);
+            endwhile;
+        endif;
+        wp_reset_query();
+        wp_reset_postdata();
+
+
+        $args = array(
+            'post_type' => 'projets',
+            'posts_per_page' => (4-sizeof($postToDisplay)),
+            'post__not_in' => $postToIgnore,
+            'orderby' => 'rand'
+        );
+        $my_query = new WP_Query($args);
+        if ($my_query->have_posts()) : 
+            while ($my_query->have_posts()) : 
+                $my_query->the_post();
+                $post = array(
+                    'permalink' => get_permalink(get_the_ID()),
+                    'thumbnail' => get_the_post_thumbnail(get_the_ID()),
+                    'title_attribute' => the_title_attribute(array('echo'=>false,'post'=>get_the_ID())),
+                    'title' => get_the_title(get_the_ID()),
+                    'lieu' => get_field('lieu', get_the_ID())
+                );
+                array_push($postToDisplay, $post);
+            endwhile;
+        endif;
+        wp_reset_query();
+        wp_reset_postdata();
+
+
+        foreach($postToDisplay as $post): ?>
                 <div class="projectCard">
-                    <a href="<?php the_permalink(); ?>">
-                        <div class="projectThumbnail"><?php the_post_thumbnail(); ?></div>
-                        <div class="projectTitle"><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></div>
-                        <p class="projectLoopLieu"><?php the_field('lieu', $post->ID); ?></p>
+                    <a href="<?= $post['permalink']; ?>">
+                        <div class="projectThumbnail"><?= $post['thumbnail']; ?></div>
+                        <div class="projectTitle"><a href="<?= $post['permalink']; ?>" title="<?= $post['title_attribute']; ?>"><?= $post['title']; ?></a></div>
+                        <p class="projectLoopLieu"><?= $post['lieu']; ?></p>
                     </a>
                 </div>
 
-        <? endwhile;
-        endif;
-
-        wp_reset_postdata();
-        ?>
+        <? endforeach;?>
 
 
     </div>
