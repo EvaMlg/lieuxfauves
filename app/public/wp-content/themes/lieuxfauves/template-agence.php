@@ -174,7 +174,7 @@ get_header();
 
 
 
-            <div class="equipeWrapper">
+            <div class="equipeWrapper animate__animated animate__slideInDown">
 
                 <?php $associes = get_group_field('section_equipe', 'associes') ?>
                 <h3 class="titleAgence"><?php echo $associes['titre']; ?></h3>
@@ -187,7 +187,7 @@ get_header();
 
         </section>
 
-        <section class="sec-rejoindre" id="sec-rejoindre">
+        <section class="sec-rejoindre animate__animated animate__slideInDown" id="sec-rejoindre">
 
 
 
@@ -209,7 +209,7 @@ get_header();
 
                 $my_query = new WP_Query($args);
                 if ($my_query->have_posts()) : while ($my_query->have_posts()) : $my_query->the_post();
-                ?> <div class="annonceWrapper"> <?php ?>
+                ?> <div class="annonceWrapper animate__animated animate__slideInDown"> <?php ?>
 
                             <div class="titleAnnonce"><?php the_title(); ?></div>
                             <?php the_excerpt(); ?>

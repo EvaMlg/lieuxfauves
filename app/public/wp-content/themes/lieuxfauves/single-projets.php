@@ -32,8 +32,8 @@ get_header();
 
         </div>
 
-        <img class="mobileImgWhiteLayout" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_mobile_projet_logo.svg">
-
+<!--         <img class="mobileImgWhiteLayout" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_mobile_projet_logo.svg">
+ -->
     </div>
 
     <div class="navNextPrev">
@@ -74,6 +74,8 @@ get_header();
 
     <div class="whiteLayout">
         <img class="laptopImgWhiteLayout" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_projet_logo.svg">
+        <img class="mobileImgWhiteLayout" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_mobile_projet_logo.svg">
+
 
         <a href="<?php echo get_option('home'); ?>/" ><div class="zone-cliquable"></div></a>
 
@@ -141,6 +143,7 @@ get_header();
         </div>
 
     </div>
+
     <div class="projetWrapper">
 
 
@@ -188,6 +191,8 @@ get_header();
                         <p><?php echo $ficheTechnique['performances_environnementales']; ?></p>
                     </div>
                 </div>
+
+                
             <?php endif; ?>
             </div>
             <div class="boutonWrapperProjet">

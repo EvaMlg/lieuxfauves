@@ -40,7 +40,7 @@
 
 .headerProjetWrapper {
     width: 100%;
-    height: 764px;
+    height: 600px;
 
     .imageWrapper {
         position: absolute;
@@ -167,6 +167,7 @@
 
 
     .projetWrapper {
+        margin-top: $dCol;
         display: flex;
 
 
