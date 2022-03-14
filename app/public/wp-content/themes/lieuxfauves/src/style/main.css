@@ -2192,6 +2192,11 @@ footer {
   z-index: 100;
 }
 
+.docDownload {
+  color: #b5b8b8;
+  text-decoration: none;
+}
+
 .boutonWrapperProjetCloned {
   display: none;
 }

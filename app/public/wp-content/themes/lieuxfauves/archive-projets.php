@@ -125,7 +125,7 @@ get_header();
 	if ($my_query->have_posts()) : ?>
 		<div id="projets-list" class="projetsGrid">
 			<?php while ($my_query->have_posts()) : $my_query->the_post(); ?>
-				<div class="cardProjet" data-aos="fade-up">
+				<div class="cardProjet">
 					<div class="thumbnailProjet"> <a href="<?= the_permalink(); ?>"><?php the_post_thumbnail(); ?></div>
 					<div class="titleProjet"> <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></div>
 					<p class="projectLoopLieu"><?php the_field('lieu', get_the_ID()); ?></p>

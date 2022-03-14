@@ -79,6 +79,24 @@ function lct_register_assets()
 		true
 	);
 
+	wp_enqueue_script(
+		'popup',
+		get_template_directory_uri() . '/src/js/popup.js',
+		array(),
+		'1.0',
+		true
+	);
+
+	wp_enqueue_script(
+		'ficheTechnique',
+		get_template_directory_uri() . '/src/js/ficheTechnique.js',
+		array(),
+		'1.0',
+		true
+	);
+
+
+
 
 
 

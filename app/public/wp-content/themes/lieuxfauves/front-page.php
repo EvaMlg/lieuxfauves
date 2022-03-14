@@ -163,25 +163,18 @@ get_header();
             <section class="sec-archiurba" id="sec-archiurba">
 
                 <div class="projet-bloc">
-
                     <?php
                     // 1. Arguments 
                     $args = array(
                         'post_type' => 'projets',
                         'category_projet' => 'architecture',
-                        'posts_per_page' => 2,
+                        'posts_per_page' => 1,
 
                     );
-
                     $my_query = new WP_Query($args);
                     if ($my_query->have_posts()) : while ($my_query->have_posts()) : $my_query->the_post(); ?>
-
                             <div class="projet-popup-wrapper">
-
                            <img class="logo-open" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_plus_ouvrir.svg">
-
-                         
-
                                 <div class="projet-thumbnail thumbnailPopup" id="thumbnailPopup"><?php the_post_thumbnail(); ?></div>
                                 <div class="projet-popup transition contentPopup" id="contentPopup">
                                     <a href="<?php the_permalink(); ?>">
@@ -192,16 +185,41 @@ get_header();
                                         <a href="<?php the_permalink(); ?>"><img class="logo-readmore" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_load.svg"></a>
                                         <button id="logoClose" class="logoClose"><img class="logo-close" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_plus_fermer.svg"></button>
                                     </div>
-
-
                                 </div>
                             </div>
+                    <?php
+                        endwhile;
+                    endif;
 
+                    // 4. On réinitialise à la requête principale (important)
+                    wp_reset_postdata();
 
+                    ?>
+               
+                    <?php
+                    // 1. Arguments 
+                    $args = array(
+                        'post_type' => 'projets',
+                        'category_projet' => 'paysage',
+                        'posts_per_page' => 1,
 
-
-
-
+                    );
+                    $my_query = new WP_Query($args);
+                    if ($my_query->have_posts()) : while ($my_query->have_posts()) : $my_query->the_post(); ?>
+                            <div class="projet-popup-wrapper">
+                           <img class="logo-open logo-open-urba" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_plus_ouvrir.svg">
+                                <div class="projet-thumbnail thumbnailPopup" id="thumbnailPopup"><?php the_post_thumbnail(); ?></div>
+                                <div class="projet-popup projet-popup-urba transition contentPopup" id="contentPopup">
+                                    <a href="<?php the_permalink(); ?>">
+                                        <?php the_title(); ?></a>
+                                        <p class="projectLoopLieu"><?php the_field('lieu', $post->ID); ?></p>
+                                    <?php the_excerpt(); ?>
+                                    <div class="logo-wrapper">
+                                        <a href="<?php the_permalink(); ?>"><img class="logo-readmore" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_load.svg"></a>
+                                        <button id="logoClose" class="logoClose"><img class="logo-close" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_plus_fermer.svg"></button>
+                                    </div>
+                                </div>
+                            </div>
                     <?php
                         endwhile;
                     endif;

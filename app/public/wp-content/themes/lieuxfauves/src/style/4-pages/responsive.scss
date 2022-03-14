@@ -346,6 +346,8 @@ $m-margin-big : 20px;
 
 
     .categoryHeader {
+
+      
         overflow-y: scroll;
         max-height: 100%;
         height: fit-content;
@@ -446,6 +448,7 @@ $m-margin-big : 20px;
                     @include projetOoutline;
                     letter-spacing: 2px;
                     display: none;
+                
 
 
                 }
@@ -1402,6 +1405,8 @@ $m-margin-big : 20px;
         }
 
         .categoryHeader {
+
+          
 
 
             @include laptopS {

@@ -42,43 +42,4 @@ setTimeout(function once() {
 
 
 
-
-logoOpen = document.querySelector('.logo-open');
-
-
-// popUps = document.getElementsByClassName('.projet-popup');
-
-
-// popUps.forEach(element => ));
-
-
-logoOpen.addEventListener('click', function() { 
-    if ( document.querySelector('.projet-popup').style.display === "none") {
-        document.querySelector('.projet-popup').style.display = "block"; 
-        document.querySelector('.projet-popup').style.animation = "windowUp 0.2s ease"
-      
-
-
-    }
-    else {
-        document.querySelector('.projet-popup').style.display = "none";
-
-
-
-    }
-
- }, false);
-
-
-
- logoClose = document.querySelector('.logo-close');
-
- 
- logoClose.addEventListener('click', function() { 
-    document.querySelector('.projet-popup').style.animation = "windowDown 0.2s ease"
-    document.querySelector('.projet-popup').style.display = "none"; 
-
- 
-  }, false);
- 
  

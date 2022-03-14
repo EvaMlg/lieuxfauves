@@ -13,14 +13,18 @@
 			  });
 		})
 
-		 $('.sec-archiurba .projet-bloc .projet-popup-wrapper').mouseenter(function(){
+/* 		 $('.sec-archiurba .projet-bloc .projet-popup-wrapper').mouseenter(function(){
 			$(this).find('#contentPopup').addClass('popup-active');
 		});
-		
-		$('.sec-archiurba .projet-bloc .projet-popup-wrapper .projet-popup .logo-wrapper button#logoClose').click(function(){
+
+        $('.sec-archiurba .projet-bloc .projet-popup-wrapper').mouseleave(function(){
+			$(this).find('#contentPopup').removeClass('popup-active');
+		});
+		 */
+	/* 	$('.sec-archiurba .projet-bloc .projet-popup-wrapper .projet-popup .logo-wrapper button#logoClose').click(function(){
 			$(this).parent('.logo-wrapper').parent('.popup-active').removeClass('popup-active') 
 		}); 
-		
+		 */
 		$('a img.loupe').click(function(){
 			if($('.searchForm').hasClass('active')){
 				$('.full-menu .leftColumnMenu').css('align-items', 'end');
@@ -180,25 +184,6 @@ document.addEventListener('DOMContentLoaded', function () {
 })
 
 
-
-
-
-element = document.querySelector('.logoOuvrir');
-console.log (element);
-cross = document.querySelector('.logoOuvrir img');
-element.addEventListener('click', function() { 
-    if ( document.querySelector('.ficheTechnique').style.display === "none") {
-        document.querySelector('.ficheTechnique').style.display = "flex"; 
-        document.querySelector('.ficheTechnique').style.animation = "windowDown 0.2s ease"
-        cross.src="/wp-content/themes/lieuxfauves/src/assets/img/LF_menu_burguer-fermer.svg";
-    }
-    else {
-        document.querySelector('.ficheTechnique').style.display = "none";
-        cross.src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_plus_ouvrir.svg";
-
-    }
-
- }, false);
 
 
 

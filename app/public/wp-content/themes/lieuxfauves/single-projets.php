@@ -173,9 +173,9 @@ endforeach;
 <div class="ficheTechniqueMobile">
 
     <div class="cardLinkJungle">
-        <p class="cardLink">Fiche technique</p><button class="logoOuvrir"><img class="logo-categorie" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_plus_ouvrir.svg"></button>
+        <p class="cardLink">Fiche technique</p><button class="logoOuvrir logoOuvrirM"><img class="logo-categorie" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_plus_ouvrir.svg"></button>
     </div>
-    <div class="ficheTechnique">
+    <div class="ficheTechnique ficheTechniqueM">
         <div class="FTright columnFT">
             <div class="wrapperItems">
 
@@ -262,9 +262,9 @@ endforeach;
 
 
             <div class="cardLinkJungle mobileNone">
-                <p class="cardLink">Fiche technique</p><button class="logoOuvrir"><img class="logo-categorie" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_plus_ouvrir.svg"></button>
+                <p class="cardLink">Fiche technique</p><button class="logoOuvrir logoOuvrirL"><img class="logo-categorie" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_plus_ouvrir.svg"></button>
             </div>
-            <div class="ficheTechnique mobileNone">
+            <div class="ficheTechnique mobileNone ficheTechniqueL">
                 <div class="FTright columnFT">
                     <div class="wrapperItems" >
 
@@ -306,7 +306,11 @@ endforeach;
             </div>
             <div class="boutonWrapperProjet">
                 <p class="cardLink cardLinkLight shareLinks"><img class="logo-categorie logo-explo" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_fleche-partager.svg"> &nbsp; Partager</p>
-                <p class="cardLink cardLinkLight shareLinks"><img class="logo-categorie logo-explo" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_fleche-telecharger.svg"> &nbsp; <?php the_field('document_a_telecharger'); ?></p>
+                <p class="cardLink cardLinkLight shareLinks"><img class="logo-categorie logo-explo" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_fleche-telecharger.svg"> &nbsp; 
+              
+                <?php if( get_field('document_a_telecharger') ): ?>
+    <a class="docDownload" href="<?php the_field('document_a_telecharger'); ?>" >Download File</a></p>
+<?php endif; ?>
                 <p class="cardLink cardLinkLight shareLinks"><img class="logo-categorie logo-explo" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_fleche-lien.svg"> &nbsp; <?php the_field('lien_externe'); ?></p>
             </div>
 
