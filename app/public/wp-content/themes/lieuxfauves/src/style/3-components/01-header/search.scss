@@ -5,103 +5,126 @@
     padding-right: $margin;
     height: 100vh;
     width: 100vw;
-   background-color: white;
+    background-color: white;
     z-index: 100;
     position: fixed;
     display: flex;
 
-
-
     .rightColumnMenuSearch {
-    
-        width: 35%;
+       
+        width: 43.3%;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
        
+    }
 
-        .headerFullMenuWrapper {
-            display: flex;
+    .logo-whiteSearch {
+        height: 100px;
+    }
 
-            .tagline-white {
-                height: 2 * $dCol;
-            }
+    .logoDeviseSearch {
+        padding-top: $dCol;
+        height: fit-content;
+        overflow: hidden;
 
-            .logo-white {
-                height: 2 * $dCol;
-                padding-right: 30px;
-            }
-
+        .logo-whiteSearch {
+            height: 100px;
         }
 
-
-
-        .logo-socials {
-            height: 40px;
-            
+        .tagline-search {
+            height: 100px;
+            padding-left: $dCol;
         }
-
-        .contactWrapper {
-            @include footer-p-bold;
-            color : white;
-        
-            text-transform: uppercase;
-    
-        }
-
-        .adressesWrapper {
-            @include footer-p;
-            color : white;
-
-            .adressWrapper {
-                padding-bottom: 10px;
-
-            }
-
-        }
-    
-
     }
 
 
     .leftColumnMenuSearch {
         background-color: $jungle-col;
         display: flex;
-        padding-top: 4*$dCol;
-       
-        width: 65%;
+      
+        padding-top: calc(100px + 45px + 50px);
         padding-left : $dCol;
-        padding-right : $dCol;
+       
+        width: 57%;
+
 
         .leftColumnContentSearch {
             padding-bottom: 10px;
         }
     }
+}
+
+#search_result_ajax {
+    margin-top: 45px;
+}
 
 
+.titleSearch {
+    font-family: "Fira Light";
+    color : white;
+    font-size: 18px;
+    line-height: 24px;
+}
+
+#all_results {
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap : wrap;
+    font-family: "Fira Light";
+    color : $jungle-col;
+    font-size: 18px;
+    line-height: 24px;
+    justify-content: space-between;
+    text-transform: capitalize;
+
+}
+
+
+
+
+#total_result {
+    color : $grey-col;
+    font-family: 'Fira Black';
+    font-size: 38px;
+    padding-top: 20px
+    
+
+}
+
+
+#total_result span {
+    color : $grey-col;
+    font-family: 'Fira Light';
+    
+
+}
+
+.jungleNumber {
+    color : $jungle-col !important;
+}
+
+
+
+.socialsButtonsWrapperSearch {
+    .logo-socials {
+        height: 45px;
+        width: 45px;
+    }
 }
 
 .logoWrapper {
     margin-right: $dCol;
-    width: 100%;
 }
 
-.tagline-search {
-    position: absolute;
-    top : $dCol;
-    padding-left: $dCol;
-    height: 100px;
-
-}
 
 #search_result_ajax {
-    
     margin-right: $dCol;
     height: 100%;
 }
 
 
-#search_result_ajax #all_results{
+/* #search_result_ajax #all_results{
     display: flex;
     flex-wrap : wrap;
 }
@@ -109,51 +132,86 @@
 #search_result_ajax #all_results{
    @include p-very-small;
    font-size: 18px;
- }
+ } */
 
 
 #search_result_ajax,
 #search_result_ajax a{
-    color: $jungle-col;
+    color: $grey-col;
+    font-size: 16px;
     
    
 }
 
-#search_result_ajax #total_result{
-    font-family: "Fira Bold";
-   
-}
-
-#search_result_ajax #total_result span{
-    font-family: "Fira Bold"
-}
 
 #search_result_ajax h3{
-    font-size: 18px;
+    padding-top : $dCol;
+    font-size: 16px;
     font-family: 'Fira Bold';
     color : $jungle-col;
+    padding-bottom: 15px;
+    border-bottom: 0.5px solid $grey-col;
    
 }
 
 #search_result_ajax ul li {
     @include p-bold;
+    color : $grey-col;
     font-size: 12px;
-    border-bottom: 1px solid white;
+    border-bottom: 0.5px solid $grey-col;
     padding-bottom: .5rem;
+    padding-top: .5rem;
 }
 
-#search_result_ajax ul li:last{
-    border-bottom: 0;
-}
+
  
-.leftColumnContent,
-#search_result_ajax,
-.leftColumnContent .searchForm{
- 
-  
-}
 
 #search_result_ajax{
-    overflow-y: auto;
+    overflow-y: scroll;
   
+}
+
+
+
+form#searchform div{
+	display: flex;
+    align-items: center;
+    grid-gap: 10px;
+
+  
+}
+
+form#searchform div input{
+    height: 1*$margin;
+	outline-style: none;
+	box-shadow: none;
+	border-color: transparent;
+    background-color: #00534e;
+    color : white;
+    font-family: "Fira Bold";
+  
+    font-size: 38px;
+    color : white;
+   
+}
+
+form#searchform div input #text {
+   
+    font-family: "Fira Bold";
+    margin-top: 1rem;
+    font-size: 35px;
+    color : white;
+}
+
+form#searchform div button{
+	background: url(/wp-content/themes/lieuxfauves/src/assets/img/LF_menu_loupe.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 25px;
+    height: 25px;
+}
+
+.searchForm.active{
+	display:flex;
+    flex-direction: column;
 }

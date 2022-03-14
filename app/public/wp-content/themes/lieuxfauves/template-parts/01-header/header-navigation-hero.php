@@ -89,21 +89,22 @@
     <div id="searchMenu" class="search-menu fullMenuOff">
 
         <div class="rightColumnMenuSearch">
-            <div class="headerFullMenuWrapper">
-                <div class="logoWrapper">
-                    <div class="logoDevise">
-                    <img class="logo-white" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_menu_logo.svg">
-                    <img class="tagline-search" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_logo_devise.svg">
-                    </div>
+            <div class="headerFullMenuWrapperSearch">
+                <div class="logoWrapperSearch">
+                    <div class="logoDeviseSearch">
+                    <img class="logo-whiteSearch" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_footer_logo.svg">
+                   <img class="tagline-search" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_logo_devise.svg">
+                  </div>
+
+                  </div>
                     <div id="search_result_ajax"></div>
 
 
-                </div>
-
+            
                 
             </div>
-            <div class="contentFullMenuWrapper">
-                <div class="socialsButtonsWrapper">
+            <div class="contentFullMenuWrapperSearch">
+                <div class="socialsButtonsWrapperSearch">
                     <img class="logo-ig logo-socials" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_menu_rrss_ig.svg">
                     <img class="logo-in logo-socials" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_menu_rrss_in.svg">
                     
@@ -135,9 +136,6 @@
 
                     </div>
                 </div>
-
-
-
 
             </div>
 

@@ -712,9 +712,8 @@ function get_search_ajax()
 
 	$data = "";
 
-	$posts_type = ["Actualité" => "post", "Annonce" => "anonces", "Actualité" => "actualites", "Projets" => "projets", "Explorations" => "explorations"];
+	$posts_type = ["Actualité" => "post", "Actualité" => "actualites", "Explorations" => "explorations", "Projets" => "projets",];
 	$post = 0;
-	$anonces = 0;
 	$actualites = 0;
 	$projets = 0;
 	$explorations = 0;
@@ -741,16 +740,24 @@ function get_search_ajax()
 	echo "<div id='all_results'>";
 	$total = 0;
 
+	
 	foreach ($posts_type as $k => $post) {
-		echo "<div>" . $post . "[<span>" . $$post . "</span>]</div>";
+		echo "<div>" . $post . " [<span>" . $$post . "</span>] </div>";
 		$total += $$post;
 	}
 
+	echo "Tout [";
+	echo $total;
+	echo "]";
+
+
 	echo "</div>";
 
-	echo "<div id=\"total_result\">Résultats <span>[$total]</span></div>";
+
+	echo "<div id=\"total_result\">Résultats <span>[</span><span class='jungleNumber'>$total</span><span>]</span></div>";
 
 	echo $data;
+
 
 	/* Restore original Post Data */
 	wp_reset_postdata();

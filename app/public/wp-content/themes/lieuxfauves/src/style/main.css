@@ -837,6 +837,30 @@ html {
   z-index: 1000;
 }
 
+@media (min-width: 1025px) {
+  .introImgMobile {
+    display: none;
+  }
+}
+
+/* .introImg {
+    @include mobile-tab {
+        display: none;
+    }
+}
+ */
+@media (max-width: 1025px) {
+  .logoIntroLaptop {
+    display: none;
+  }
+}
+
+@media (min-width: 1025px) {
+  .logoIntroMobile {
+    display: none;
+  }
+}
+
 .progressionBar {
   background-color: white;
   height: 0.5vh;
@@ -953,7 +977,7 @@ html {
   display: flex;
 }
 .search-menu .rightColumnMenuSearch {
-  width: 35%;
+  width: 43.3%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -965,73 +989,90 @@ html {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-.search-menu .rightColumnMenuSearch .headerFullMenuWrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+.search-menu .logo-whiteSearch {
+  height: 100px;
 }
-.search-menu .rightColumnMenuSearch .headerFullMenuWrapper .tagline-white {
-  height: 90px;
+.search-menu .logoDeviseSearch {
+  padding-top: 45px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  overflow: hidden;
 }
-.search-menu .rightColumnMenuSearch .headerFullMenuWrapper .logo-white {
-  height: 90px;
-  padding-right: 30px;
+.search-menu .logoDeviseSearch .logo-whiteSearch {
+  height: 100px;
 }
-.search-menu .rightColumnMenuSearch .logo-socials {
-  height: 40px;
-}
-.search-menu .rightColumnMenuSearch .contactWrapper {
-  font-family: "Fira Bold";
-  font-size: 13px;
-  line-height: 16px;
-  color: white;
-  text-transform: uppercase;
-}
-@media (min-width: 1025px) {
-  .search-menu .rightColumnMenuSearch .contactWrapper {
-    font-size: 13px;
-    line-height: 16px;
-  }
-}
-.search-menu .rightColumnMenuSearch .adressesWrapper {
-  font-family: "Fira Regular";
-  font-size: 13px;
-  line-height: 16px;
-  color: white;
-}
-@media (min-width: 1025px) {
-  .search-menu .rightColumnMenuSearch .adressesWrapper {
-    font-size: 13px;
-    line-height: 16px;
-  }
-}
-.search-menu .rightColumnMenuSearch .adressesWrapper .adressWrapper {
-  padding-bottom: 10px;
+.search-menu .logoDeviseSearch .tagline-search {
+  height: 100px;
+  padding-left: 45px;
 }
 .search-menu .leftColumnMenuSearch {
   background-color: #00534e;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding-top: 180px;
-  width: 65%;
+  padding-top: calc(100px + 45px + 50px);
   padding-left: 45px;
-  padding-right: 45px;
+  width: 57%;
 }
 .search-menu .leftColumnMenuSearch .leftColumnContentSearch {
   padding-bottom: 10px;
 }
 
-.logoWrapper {
-  margin-right: 45px;
-  width: 100%;
+#search_result_ajax {
+  margin-top: 45px;
 }
 
-.tagline-search {
-  position: absolute;
-  top: 45px;
-  padding-left: 45px;
-  height: 100px;
+.titleSearch {
+  font-family: "Fira Light";
+  color: white;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+#all_results {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  font-family: "Fira Light";
+  color: #00534e;
+  font-size: 18px;
+  line-height: 24px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  text-transform: capitalize;
+}
+
+#total_result {
+  color: #828787;
+  font-family: "Fira Black";
+  font-size: 38px;
+  padding-top: 20px;
+}
+
+#total_result span {
+  color: #828787;
+  font-family: "Fira Light";
+}
+
+.jungleNumber {
+  color: #00534e !important;
+}
+
+.socialsButtonsWrapperSearch .logo-socials {
+  height: 45px;
+  width: 45px;
+}
+
+.logoWrapper {
+  margin-right: 45px;
 }
 
 #search_result_ajax {
@@ -1039,53 +1080,39 @@ html {
   height: 100%;
 }
 
-#search_result_ajax #all_results {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+/* #search_result_ajax #all_results{
+    display: flex;
+    flex-wrap : wrap;
 }
 
-#search_result_ajax #all_results {
-  font-family: "Fira Light";
-  font-size: 14px;
-  line-height: 24px;
-  font-size: 18px;
-}
-@media (min-width: 1025px) {
-  #search_result_ajax #all_results {
-    font-size: 14px;
-    line-height: 24px;
-  }
-}
-
+#search_result_ajax #all_results{
+   @include p-very-small;
+   font-size: 18px;
+ } */
 #search_result_ajax,
 #search_result_ajax a {
-  color: #00534e;
-}
-
-#search_result_ajax #total_result {
-  font-family: "Fira Bold";
-}
-
-#search_result_ajax #total_result span {
-  font-family: "Fira Bold";
+  color: #828787;
+  font-size: 16px;
 }
 
 #search_result_ajax h3 {
-  font-size: 18px;
+  padding-top: 45px;
+  font-size: 16px;
   font-family: "Fira Bold";
   color: #00534e;
+  padding-bottom: 15px;
+  border-bottom: 0.5px solid #828787;
 }
 
 #search_result_ajax ul li {
   font-family: "Fira Bold";
   font-size: 14px;
   line-height: 25px;
+  color: #828787;
   font-size: 12px;
-  border-bottom: 1px solid white;
+  border-bottom: 0.5px solid #828787;
   padding-bottom: 0.5rem;
+  padding-top: 0.5rem;
 }
 @media (min-width: 1025px) {
   #search_result_ajax ul li {
@@ -1094,12 +1121,56 @@ html {
   }
 }
 
-#search_result_ajax ul li:last {
-  border-bottom: 0;
+#search_result_ajax {
+  overflow-y: scroll;
 }
 
-#search_result_ajax {
-  overflow-y: auto;
+form#searchform div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  grid-gap: 10px;
+}
+
+form#searchform div input {
+  height: 77px;
+  outline-style: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border-color: transparent;
+  background-color: #00534e;
+  color: white;
+  font-family: "Fira Bold";
+  font-size: 38px;
+  color: white;
+}
+
+form#searchform div input #text {
+  font-family: "Fira Bold";
+  margin-top: 1rem;
+  font-size: 35px;
+  color: white;
+}
+
+form#searchform div button {
+  background: url(/wp-content/themes/lieuxfauves/src/assets/img/LF_menu_loupe.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 25px;
+  height: 25px;
+}
+
+.searchForm.active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .list-link-loop {
@@ -1460,6 +1531,31 @@ body {
   height: 100vh;
 }
 
+.footerArrowWrapper {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.footerArrow {
+  height: 25px;
+  width: 25px;
+  right: 18px;
+}
+
+@media (min-width: 1025px) {
+  .footerArrow {
+    display: none;
+  }
+}
+
 footer {
   padding-top: 45px;
   padding-bottom: 45px;
@@ -1623,10 +1719,15 @@ footer {
 }
 .right-container .adress-container {
   padding-left: 18px;
+  padding-right: 18px;
   padding-top: 15px;
-  padding-bottom: 15px;
-  padding-right: 45px;
+  padding-bottom: 0;
   padding-left: 0;
+}
+@media (min-width: 1025px) {
+  .right-container .adress-container .footerArrowWrapper {
+    display: none;
+  }
 }
 @media (min-width: 1025px) {
   .right-container .adress-container {
@@ -1639,6 +1740,8 @@ footer {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    padding-right: 45px;
+    padding-bottom: 15px;
   }
 }
 .right-container .adress-container .adresse-bold {
@@ -1653,6 +1756,7 @@ footer {
   }
 }
 .right-container .legal {
+  padding-top: 18px;
   padding-left: 18px;
   padding-right: 18px;
   font-family: "Fira Light";
@@ -1663,6 +1767,7 @@ footer {
 @media (min-width: 1025px) {
   .right-container .legal {
     padding-left: 0;
+    padding-top: 0;
   }
 }
 @media (min-width: 1025px) {
@@ -3101,6 +3206,9 @@ footer {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+.headerExploration .catArchi:first-child {
+  display: none;
 }
 .headerExploration .logoHeader {
   display: -webkit-box;
@@ -4875,60 +4983,58 @@ acf-gallery {
   color: #fff;
 }
 
+/* 
 .titleSearch {
-  color: white;
-  font-family: "Fira Light";
-  font-size: 24Px;
+    color: white;
+    font-family: "Fira Light";
+    font-size : 24Px;
+
 }
 
-form#searchform div {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  grid-gap: 10px;
+
+
+form#searchform div{
+	display: flex;
+    align-items: center;
+    grid-gap: 10px;
+
+
 }
 
-form#searchform div input {
-  height: 77px;
-  outline-style: none;
-  -webkit-box-shadow: none;
-          box-shadow: none;
-  border-color: transparent;
-  background-color: #00534e;
-  color: white;
-  font-family: "Fira Bold";
-  font-size: 35px;
-  color: white;
+form#searchform div input{
+    height: 1*$margin;
+	outline-style: none;
+	box-shadow: none;
+	border-color: transparent;
+    background-color: #00534e;
+    color : white;
+    font-family: "Fira Bold";
+
+    font-size: 35px;
+    color : white;
+
 }
 
 form#searchform div input #text {
-  font-family: "Fira Bold";
-  margin-top: 1rem;
-  font-size: 35px;
-  color: white;
+
+    font-family: "Fira Bold";
+    margin-top: 1rem;
+    font-size: 35px;
+    color : white;
 }
 
-form#searchform div button {
-  background: url(/wp-content/themes/lieuxfauves/src/assets/img/LF_menu_loupe.svg);
-  background-size: contain;
-  background-repeat: no-repeat;
-  width: 25px;
-  height: 25px;
+form#searchform div button{
+	background: url(/wp-content/themes/lieuxfauves/src/assets/img/LF_menu_loupe.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 25px;
+    height: 25px;
 }
 
-.searchForm.active {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
+.searchForm.active{
+	display:flex;
+    flex-direction: column;
+} */
 .projets-template-default .galleryWrapper.mainExploration .slick-list {
   height: 756px;
 }

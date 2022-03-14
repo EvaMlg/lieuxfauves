@@ -1,3 +1,34 @@
+.introImgMobile {
+    @include laptopS {
+        display: none;
+    }
+}
+
+/* .introImg {
+    @include mobile-tab {
+        display: none;
+    }
+}
+ */
+
+.logoIntroLaptop {
+    @include mobile-tab{
+        display: none;
+    }
+
+
+}
+
+.logoIntroMobile {
+    @include laptopS {
+        display: none;
+    }
+
+    
+}
+
+
+
 .progressionBar {
     background-color : white;
     height: 0.5vh;

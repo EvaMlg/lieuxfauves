@@ -85,12 +85,19 @@ footer {
     }
 
         .adress-container {
-            padding-top: 15px ;
-            padding-bottom: 15px ;
-            padding-right: $dCol;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            padding-right: $dCol;
+            padding-bottom: 15px;
+
+            padding-top: 15px ;
+            padding-bottom: 15px ;
+
+           
+
+       
+
         
             .adresse-bold {
                 @include footer-p-bold

@@ -44,14 +44,14 @@
     height: 99.5vh;
     z-index: 2000;
     object-fit: cover;}">
+
+    
     <img src="/wp-content/themes/lieuxfauves/src/assets/img/.jpg" alt="" class="svg" style="position: absolute;
     z-index: 2000;
     width: 40%;
     top: 28%;
     left: 30%;">
     <div class="progressionBar"><div class="progressionBarInner"> </div></div>
-
-
 </div>
 
 

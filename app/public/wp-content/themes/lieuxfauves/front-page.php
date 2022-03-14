@@ -71,6 +71,7 @@ get_header();
                         </div>
 
                         <div class="list-link" data-aos="fade-up">
+                        
                             <img class="logo-categorie" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_logo_categories.svg">
 
     

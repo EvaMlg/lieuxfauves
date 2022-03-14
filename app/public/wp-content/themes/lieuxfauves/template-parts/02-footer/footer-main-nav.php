@@ -50,9 +50,13 @@
         18 Chemin de la Convalescence <br>
         97600 Mamoudzou <br>
       </p>
+
+      <div class="footerArrowWrapper">
+      <a href="#header"> <img class="footerArrow" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_nav_fleche-haut.svg"></a>
+      </div>
+
     </div>
 
-    <a href="#header"> <img class="pictoNav flecheBas" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_nav_fleche-haut.svg"></a>
 
 
 
@@ -66,7 +70,10 @@
         Design <a href="http://finilasiesta.com/">Finilasiesta</a> — Développement <a href="">Eva Maréchal</a></p>
     </div>
 
+
+
   </div>
+
 
 
 </footer>

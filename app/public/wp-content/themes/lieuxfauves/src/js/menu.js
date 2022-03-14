@@ -12,17 +12,21 @@ const searchMenu = document.querySelector('#searchMenu');
 console.log(searchMenu);
 
 
+const pictoBurguer = document.querySelector('.closeIcon');
+
+
 loupe.addEventListener('click', function () {
     if (searchMenu.classList.contains('fullMenuOff')) {
         searchMenu.classList.remove("fullMenuOff");
         searchMenu.classList.add("fullMenuOn");
         searchMenu.style.animation = "transition 2s ease";
         buttonOn.style.display = "none";
-        buttonOff.style.display = "flex";
         sideNavWrapper.style.backgroundColor = "rgb(0,83,78)";
+        buttonOff.style.display = "flex";
         sideNav.style.display ="none";
         flecheBas.style.display ="none";
-        loupe.src="/wp-content/themes/lieuxfauves/src/assets/img/LF_menu_loupe.svg";
+        pictoBurguer.style.display ="none";
+        loupe.src="/wp-content/themes/lieuxfauves/src/assets/img/LF_menu_burguer-fermer.svg";
         picto.style.display = "none";
 
     } else if (document.querySelector('.single-explorations')) {
@@ -42,7 +46,6 @@ loupe.addEventListener('click', function () {
         document.querySelector('.menu-item-382 a').classList.add("activePage");
         document.querySelector('.menu-item-381 a').classList.add("inactivePage2");
         document.querySelector('.menu-item-418 a').classList.add("inactivePage2");
-
     }
     
     else {

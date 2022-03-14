@@ -1,6 +1,12 @@
+
+
 .headerExploration {
     display: flex;
     justify-content: space-between;
+
+    .catArchi:first-child {
+        display: none;
+    }
 
     .logoHeader {
         display: flex;

@@ -53,7 +53,7 @@ endforeach;
 
         </div>
 
-        <img class="mobileImgWhiteLayout" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_mobile_projet_logo.svg">
+        <img class="mobileImgWhiteLayout" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_mobile_projet_logo2.svg">
 
     </div>
 
@@ -233,14 +233,14 @@ endforeach;
 
 
 
-    <div class="galleryWrapper">
+    <div class="galleryWrapper" data-aos="zoom-in" data-aos-duration="1000" >
 
 
         <?php $images = get_field('galerie_projet');
         if ($images) : ?>
             <?php foreach ($images as $image) : ?>
                 <div class="single-slide-image">
-                    <img data-aos="zoom-in" data-aos-duration="1000" class="logo-categorie" src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+                    <img class="logo-categorie" src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
                     <span class="zoom-image"><img class="logo-categorie pictoSlider" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_slide_picto-full.svg"></span>
                 </div>
 
