@@ -1,3 +1,16 @@
+.galleryWrapperAgence {
+    overflow: hidden;
+
+    .slick-track {
+        height: 600px;
+    }
+    
+
+    .single-slide-image {
+        height: 100%;
+    }
+}
+
 .logoDistinctions {
     height: 20px;
     width: 20px;
@@ -240,20 +253,15 @@ display: block;
 }
 
 .distinctionsWrapperAgence {
-
     .titleAgence {
         @include laptopS {
         padding-left: $dCol;
         padding-right: $dCol
         }
     }
-
-   
         @include p-very-small;
         color: $grey-col;
     
-
-  
          b {
         @include p-bold;
         color: $grey-col;
@@ -272,16 +280,12 @@ display: block;
 
     }
 
-
-
-
-
     background-color: $grey-new-col-50;
 
-
-
     @include laptopS { padding-left: 0;
-    padding-right:0;}
+    padding-right:0;
+    padding-bottom: 10px;
+}
     padding-left: $m-margin-small;
     padding-right:  $m-margin-small;
     padding-bottom: $dCol;

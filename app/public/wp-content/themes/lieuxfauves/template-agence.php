@@ -12,9 +12,9 @@ get_header();
 
 
 
-    <div class="logoHeader" >
+    <div class="logoHeader">
 
-        <a href="<?php echo get_option('home'); ?>/"><img data-aos="zoom-in" data-aos-duration="1000"class="logoFrontpage" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_logo.svg"></a>
+        <a href="<?php echo get_option('home'); ?>/"><img data-aos="zoom-in" data-aos-duration="1000" class="logoFrontpage" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_logo.svg"></a>
 
     </div>
 
@@ -25,7 +25,7 @@ get_header();
 
     <div class="split-left">
 
-        <div class="list-chapter-agence" data-aos="fade-up" >
+        <div class="list-chapter-agence" data-aos="fade-up">
             <div class="list-chapter-agence-title">
                 <a href="#sec-agence"><span class="spanAgence">Agence</span></a><br>
             </div>
@@ -40,7 +40,7 @@ get_header();
 
     <div class="split-right">
 
-        <section class="sec-agence" id="sec-agence" >
+        <section class="sec-agence" id="sec-agence">
 
             <?php
             $section_agence = get_field('section_agence');
@@ -49,15 +49,15 @@ get_header();
                 <div class="imageWrapperAgence" style="background-color : rgb(0,83,78);"><img data-aos="zoom-out" data-aos-duration="3000" src="<?php echo esc_url($section_agence['image']['url']); ?>" alt="<?php echo esc_attr($hero['image']['alt']); ?>" /></div>
                 <p class="bloc-haiku">
 
-              
-               
-        
-                    
-                <?php echo $section_agence['tagline']; ?>
-               
 
 
-            <?php endif; ?>
+
+
+                    <?php echo $section_agence['tagline']; ?>
+
+
+
+                <?php endif; ?>
 
         </section>
 
@@ -88,7 +88,7 @@ get_header();
             $section_expertises = get_field('section_expertises');
             if ($section_expertises) : ?>
 
-                <div class="imageWrapperAgence"><img  data-aos="zoom-out" data-aos-duration="2000" src="<?php echo esc_url($section_expertises['image']['url']); ?>" alt="<?php echo esc_attr($hero['image']['alt']); ?>" /></div>
+                <div class="imageWrapperAgence"><img data-aos="zoom-out" data-aos-duration="2000" src="<?php echo esc_url($section_expertises['image']['url']); ?>" alt="<?php echo esc_attr($hero['image']['alt']); ?>" /></div>
                 <p class="tagline taglinegrey"><?php echo $section_expertises['chapeau']; ?></p>
                 <p class="bloc-haiku"><?php echo $section_expertises['tagline']; ?></p>
 
@@ -133,7 +133,7 @@ get_header();
 
                     <?php $architecture = get_group_field('section_expertises', 'distinctions_architecture') ?>
                     <div class="distinctionsTitleWrapper">
-                        <h3 class="subtitleAgence distinctionsTitle"data-aos="fade-up">Architecture</h3>
+                        <h3 class="subtitleAgence distinctionsTitle" data-aos="fade-up">Architecture</h3>
                         <img class="logo-categorie logoDistinctions" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_plus_ouvrir_gris.svg">
 
                     </div>
@@ -154,16 +154,15 @@ get_header();
         <section class="sec-equipe" id="sec-equipe">
 
 
+            <div class="galleryWrapper galleryWrapperAgence">
 
-            <div class="galleryWrapper">
 
-
-                <?php $images = get_field('trombinoscope');
+                <?php $images = get_field('galerie_agence');
                 if ($images) : ?>
                     <?php foreach ($images as $image) : ?>
                         <div class="single-slide-image">
                             <img class="logo-categorie" src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
-                            <span class="zoom-image"><img class="logo-categorie pictoSlider" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_slide_picto-full.svg"></span>
+                            <!-- <span class="zoom-image"><img class="logo-categorie pictoSlider" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_slide_picto-full.svg"></span> -->
                         </div>
 
                     <?php endforeach; ?>
@@ -171,11 +170,11 @@ get_header();
 
             </div>
 
-
             <div class="contentAgenceLegende">
-                <p><?php echo $trombinoscope['legende']; ?></p>
-<!--                 <button><img class="logo-categorie flecheSlider" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_fleche-lien.svg"></button>
- -->            </div>
+                <p>L’album de l’agence :
+                    Légende photo, noms, situation, histoire, anecdote....
+                    sur trois lignes.</p>
+            </div>
 
 
 
@@ -184,12 +183,12 @@ get_header();
             <div class="equipeWrapper">
 
                 <?php $associes = get_group_field('section_equipe', 'associes') ?>
-                <h3 class="titleAgence" data-aos="fade-up"><?php echo $associes['titre']; ?></h3>
-                <div class="contentAgence" data-aos="fade-up"><?php echo $associes['contenu']; ?></div>
+                <h3 class="titleAgence"><?php echo $associes['titre']; ?></h3>
+                <div class="contentAgence"><?php echo $associes['contenu']; ?></div>
 
                 <?php $collaborateurs = get_group_field('section_equipe', 'collaborateurs') ?>
-                <h3 class="titleAgence" data-aos="fade-up"><?php echo $collaborateurs['titre']; ?></h3>
-                <div class="contentAgence" data-aos="fade-up"><?php echo $collaborateurs['contenu']; ?></div>
+                <h3 class="titleAgence"><?php echo $collaborateurs['titre']; ?></h3>
+                <div class="contentAgence"><?php echo $collaborateurs['contenu']; ?></div>
             </div>
 
         </section>
@@ -216,7 +215,7 @@ get_header();
 
                 $my_query = new WP_Query($args);
                 if ($my_query->have_posts()) : while ($my_query->have_posts()) : $my_query->the_post();
-                ?> <div class="annonceWrapper" data-aos="fade-up"> <?php ?>
+                ?> <div class="annonceWrapper"> <?php ?>
 
                             <div class="titleAnnonce"><?php the_title(); ?></div>
                             <?php the_excerpt(); ?>
