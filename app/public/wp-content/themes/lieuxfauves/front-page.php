@@ -37,7 +37,7 @@ get_header();
 
 
 
-            <div class="list-chapter">
+            <div class="list-chapter" data-aos="fade-up"  data-aos-delay="3000">
                 <span class="lieuxSpan">Lieux</span><br>
                 <a href="#sec-faire"><span>pour</span><span class="catSpan faireSpan"> Faire</span><br></a>
                 <a href="#sec-archiurba"><span>une</span><span class="catSpan archiSpan"> Architecture</span><br></a>
@@ -66,7 +66,7 @@ get_header();
 
                     <div class="link-bloc-2">
 
-                        <div class="tagline" data-aos="fade-up" >
+                        <div class="tagline" data-aos="fade-up"s >
                             <p><?php echo $section_lieux['tagline']; ?></p>
                         </div>
 

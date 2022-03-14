@@ -25,7 +25,7 @@ get_header();
 
     <div class="split-left">
 
-        <div class="list-chapter-agence">
+        <div class="list-chapter-agence" data-aos="fade-up" >
             <div class="list-chapter-agence-title">
                 <a href="#sec-agence"><span class="spanAgence">Agence</span></a><br>
             </div>
@@ -67,7 +67,7 @@ get_header();
             $section_valeurs = get_field('section_valeurs');
             if ($section_valeurs) : ?>
 
-                <div class="contentAgenceBold" data-aos="fade-up"><?php echo $section_valeurs['chapeau']; ?></div>
+                <div class="contentAgenceBold"><?php echo $section_valeurs['chapeau']; ?></div>
 
                 <?php $sur_les_traces = get_group_field('section_valeurs', 'sur_les_traces') ?>
                 <h3 class="titleAgence" data-aos="fade-up"><?php echo $sur_les_traces['titre']; ?></h3>

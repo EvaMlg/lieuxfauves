@@ -266,7 +266,7 @@ endforeach;
             </div>
             <div class="ficheTechnique mobileNone ficheTechniqueL">
                 <div class="FTright columnFT">
-                    <div class="wrapperItems" >
+                    <div class="wrapperItems">
 
                         <?php
                         $ficheTechnique = get_field('fiche_technique');
@@ -306,12 +306,12 @@ endforeach;
             </div>
             <div class="boutonWrapperProjet">
                 <p class="cardLink cardLinkLight shareLinks"><img class="logo-categorie logo-explo" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_fleche-partager.svg"> &nbsp; Partager</p>
-                <p class="cardLink cardLinkLight shareLinks"><img class="logo-categorie logo-explo" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_fleche-telecharger.svg"> &nbsp; 
-              
-                <?php if( get_field('document_a_telecharger') ): ?>
-    <a class="docDownload" href="<?php the_field('document_a_telecharger'); ?>" >Download File</a></p>
-<?php endif; ?>
-                <p class="cardLink cardLinkLight shareLinks"><img class="logo-categorie logo-explo" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_fleche-lien.svg"> &nbsp; <?php the_field('lien_externe'); ?></p>
+                <p class="cardLink cardLinkLight shareLinks"><img class="logo-categorie logo-explo" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_fleche-telecharger.svg"> &nbsp;
+                    <?php if (get_field('document_a_telecharger')) : ?>
+                        <a class="docDownload" href="<?php the_field('document_a_telecharger'); ?>">Download File</a>
+                </p>
+            <?php endif; ?>
+            <p class="cardLink cardLinkLight shareLinks"><img class="logo-categorie logo-explo" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_fleche-lien.svg"> &nbsp; <?php the_field('lien_externe'); ?></p>
             </div>
 
 
@@ -325,6 +325,8 @@ endforeach;
             <h3 data-aos="fade-up"> Description </h3>
             <p data-aos="fade-up"><?php the_field('description_projet'); ?></p>
 
+            
+
         </div>
 
     </div>
@@ -337,7 +339,7 @@ endforeach;
 
     <div class="list-link-loop">
         <img class="logo-categorie" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_logo_categories.svg">
-        <span class="titleListLink" >PROJETS</span>
+        <span class="titleListLink">PROJETS</span>
         <?php
         $displayTerms = array();
         foreach ($taxQuery as $tax) {

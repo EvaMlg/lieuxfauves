@@ -1,21 +1,4 @@
 
-.searchForm {
-  position: absolute;
-  top : 50px;
-  left: 650px;
-  z-index: 1;
-  width : 50vw;
-
-}
-
-.proinput {
-    @include p-very-small;
-    
-}
-
-
-
-
 
 
 .fullMenuOn {
@@ -106,6 +89,9 @@
         .contactWrapper {
             @include footer-p-bold;
             color : white;
+          
+
+
             padding-bottom: $dCol;
             padding-top :1;
             text-transform: uppercase;

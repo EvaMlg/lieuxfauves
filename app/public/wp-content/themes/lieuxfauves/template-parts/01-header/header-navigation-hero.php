@@ -86,13 +86,18 @@
 
 <!----------   SEARCH FORM MENU ---------->
 
-    <div id="searchMenu" class="full-menu menu fullMenu fullMenuOff">
+    <div id="searchMenu" class="search-menu fullMenuOff">
 
-        <div class="rightColumnMenu rightColumnSearch">
+        <div class="rightColumnMenuSearch">
             <div class="headerFullMenuWrapper">
                 <div class="logoWrapper">
-                    <!-- <img class="logo-white" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_menu_logo.svg"> -->
+                    <div class="logoDevise">
+                    <img class="logo-white" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_menu_logo.svg">
+                    <img class="tagline-search" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_logo_devise.svg">
+                    </div>
                     <div id="search_result_ajax"></div>
+
+
                 </div>
 
                 
@@ -111,17 +116,17 @@
 
 
         </div>
-        <div class="leftColumnMenu">
-            <div class="leftColumnContent">
+        <div class="leftColumnMenuSearch">
+            <div class="leftColumnContentSearch">
 
                 <div class="searchForm">
 
-                <h1 class="titleSearch"> Que recherchez vous ? </h1>
+                <h1 class="titleSearch">Recherche</h1>
 
 
                     <form role="search" method="get" id="searchform" class="searchform" action="<?= home_url('/') ?>">
                         <div>
-                            <input type="text" placeholder="Votre recherche ici..." value="<?= get_search_query() ?>" name="s" id="s" />
+                            <input style="color= white" type="text" placeholder="Mot recherché" value="<?= get_search_query() ?>" name="s" id="s" />
 
                             <button type="submit" id="searchsubmit" class="glyphicon glyphicon-search"></button>
                         </div>

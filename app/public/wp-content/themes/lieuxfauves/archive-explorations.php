@@ -9,9 +9,15 @@ get_header();
 
 <div class="explorationsContainer">
     <div class="headerExploration">
-        <div class="logoHeader" data-aos="zoom-in" data-aos-duration="1000">
+        <div class="logoHeader">
             <a href="<?php echo get_option('home'); ?>/"><img class="logoArchiveExplo" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_logo_fiches.svg"></a>
             <h1 class="exploPageName">EXPLORATIONS</h1>
+
+            <div class="reponsiveCat">
+			<a> <img class=" pictoFiltres responsiveCatLogo" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_mobile_picto-filtres.svg" /></a>
+		</div>
+
+		<a><img class="pictoValider responsiveCatLogo" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_mobile-picto_valider.svg" /></a>
         </div>
         <div class="categoryHeader catHeaderOff">
             <?php
@@ -99,7 +105,7 @@ get_header();
         <div id="explorations-list">
             <?php while ($my_query->have_posts()) : $my_query->the_post(); ?>
                 <div class="preExplorationWrapper">
-                    <div class="explorationWrapper" data-aos="fade-up">
+                    <div class="explorationWrapper">
                         <div class="taxThumbnailWrapper">
                             <div class="taxExplo">
                                 <?php

@@ -18,7 +18,7 @@
     </div>
     <div class="credits">
       <p>© Lieux F.AU.VES 2022. Tous droits réservés. MENTIONS LÉGALES <br>
-        Design Finilasiesta — Développement Eva Maréchal</p>
+        Design <a href="http://finilasiesta.com/">Finilasiesta</a> — Développement <a href="">Eva Maréchal</a></p>
     </div>
 
   </div>
@@ -52,10 +52,18 @@
       </p>
     </div>
 
+    <a href="#header"> <img class="pictoNav flecheBas" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_nav_fleche-haut.svg"></a>
+
+
 
     <div class="legal">
       <p>SAS d’architecture et d’urbanisme Lieux F.AU.VES. Au capital de 712 450 euros. SIREN 901 815 845 RCS PARIS. <br>
         Ordre des Architectes n°522644. Code NAF 7111Z. Numéro TVA FR80901815845</p>
+    </div>
+
+    <div class="credits-mobile">
+      <p>© Lieux F.AU.VES 2022. Tous droits réservés. MENTIONS LÉGALES <br>
+        Design <a href="http://finilasiesta.com/">Finilasiesta</a> — Développement <a href="">Eva Maréchal</a></p>
     </div>
 
   </div>

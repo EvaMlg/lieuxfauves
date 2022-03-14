@@ -12,7 +12,6 @@ const searchMenu = document.querySelector('#searchMenu');
 console.log(searchMenu);
 
 
-
 loupe.addEventListener('click', function () {
     if (searchMenu.classList.contains('fullMenuOff')) {
         searchMenu.classList.remove("fullMenuOff");
@@ -58,7 +57,7 @@ loupe.addEventListener('click', function () {
         picto.style.display = "block";
 
         
-        
+
         
     }
 }, false); 

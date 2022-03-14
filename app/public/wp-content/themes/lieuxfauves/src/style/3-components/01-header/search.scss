@@ -1,8 +1,159 @@
-.rightColumnSearch {
+.search-menu {
+    transition: transform 0.2s ease-in-out;
+
+    padding-left: $margin;
+    padding-right: $margin;
+    height: 100vh;
+    width: 100vw;
+   background-color: white;
+    z-index: 100;
+    position: fixed;
+    display: flex;
+
+
+
+    .rightColumnMenuSearch {
     
+        width: 35%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+       
+
+        .headerFullMenuWrapper {
+            display: flex;
+
+            .tagline-white {
+                height: 2 * $dCol;
+            }
+
+            .logo-white {
+                height: 2 * $dCol;
+                padding-right: 30px;
+            }
+
+        }
+
+
+
+        .logo-socials {
+            height: 40px;
+            
+        }
+
+        .contactWrapper {
+            @include footer-p-bold;
+            color : white;
+        
+            text-transform: uppercase;
     
+        }
+
+        .adressesWrapper {
+            @include footer-p;
+            color : white;
+
+            .adressWrapper {
+                padding-bottom: 10px;
+
+            }
+
+        }
+    
+
+    }
+
+
+    .leftColumnMenuSearch {
+        background-color: $jungle-col;
+        display: flex;
+        padding-top: 4*$dCol;
+       
+        width: 65%;
+        padding-left : $dCol;
+        padding-right : $dCol;
+
+        .leftColumnContentSearch {
+            padding-bottom: 10px;
+        }
+    }
+
+
 }
 
-.searchMenu {
+.logoWrapper {
+    margin-right: $dCol;
+    width: 100%;
+}
 
+.tagline-search {
+    position: absolute;
+    top : $dCol;
+    padding-left: $dCol;
+    height: 100px;
+
+}
+
+#search_result_ajax {
+    
+    margin-right: $dCol;
+    height: 100%;
+}
+
+
+#search_result_ajax #all_results{
+    display: flex;
+    flex-wrap : wrap;
+}
+
+#search_result_ajax #all_results{
+   @include p-very-small;
+   font-size: 18px;
+ }
+
+
+#search_result_ajax,
+#search_result_ajax a{
+    color: $jungle-col;
+    
+   
+}
+
+#search_result_ajax #total_result{
+    font-family: "Fira Bold";
+   
+}
+
+#search_result_ajax #total_result span{
+    font-family: "Fira Bold"
+}
+
+#search_result_ajax h3{
+    font-size: 18px;
+    font-family: 'Fira Bold';
+    color : $jungle-col;
+   
+}
+
+#search_result_ajax ul li {
+    @include p-bold;
+    font-size: 12px;
+    border-bottom: 1px solid white;
+    padding-bottom: .5rem;
+}
+
+#search_result_ajax ul li:last{
+    border-bottom: 0;
+}
+ 
+.leftColumnContent,
+#search_result_ajax,
+.leftColumnContent .searchForm{
+ 
+  
+}
+
+#search_result_ajax{
+    overflow-y: auto;
+  
 }

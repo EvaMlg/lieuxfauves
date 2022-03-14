@@ -22,6 +22,12 @@ footer {
 }
 
 
+.credits-mobile {
+    @include laptopS { 
+        display: none;}
+
+}
+
 .devise {
     display: none;
     height: 110px;
@@ -71,12 +77,21 @@ footer {
     .credits {
         display: none;
 
+        a {
+            color : $grey-col;
+            font-family : "Fira Bold";
+
+            
+        }
+
         @include laptopS {
             display: block;
         }
 
         @include footer-legend;
         color : $grey-col
+
+        
     }
 
     .logoWrapper {
@@ -161,5 +176,18 @@ footer {
 
         @include footer-legend;
         color : $grey-col
+    }
+}
+
+.credits-mobile {
+    @include footer-legend;
+    color : $grey-col;
+    padding-left: $m-margin-small;
+    padding-right: $m-margin-small; 
+    padding-top: $m-margin-small; 
+
+    a {
+        font-family: 'Fira Bold';
+        color : $grey-col;
     }
 }

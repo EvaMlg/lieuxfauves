@@ -237,7 +237,8 @@ $m-margin-big : 20px;
                 text-transform: uppercase;
 
                 p {
-                    color: $jungle-col-10;
+                    color: $jungle-col-10 !important;
+
 
                 }
             }
@@ -2367,10 +2368,6 @@ $m-margin-big : 20px;
             }
         }
 
-
-        .logo-explo {
-            height: 11px;
-        }
     }
 
 

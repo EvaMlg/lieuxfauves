@@ -515,26 +515,6 @@ html {
   -o-object-fit: cover;
      object-fit: cover;
 }
-.searchForm {
-  position: absolute;
-  top: 50px;
-  left: 650px;
-  z-index: 1;
-  width: 50vw;
-}
-
-.proinput {
-  font-family: "Fira Light";
-  font-size: 14px;
-  line-height: 24px;
-}
-@media (min-width: 1025px) {
-  .proinput {
-    font-size: 14px;
-    line-height: 24px;
-  }
-}
-
 .fullMenuOn {
   -webkit-transform: translateX(0%);
           transform: translateX(0%);
@@ -956,6 +936,172 @@ html {
             transform: translate(0);
   }
 }
+.search-menu {
+  -webkit-transition: -webkit-transform 0.2s ease-in-out;
+  transition: -webkit-transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
+  padding-left: 77px;
+  padding-right: 77px;
+  height: 100vh;
+  width: 100vw;
+  background-color: white;
+  z-index: 100;
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.search-menu .rightColumnMenuSearch {
+  width: 35%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.search-menu .rightColumnMenuSearch .headerFullMenuWrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.search-menu .rightColumnMenuSearch .headerFullMenuWrapper .tagline-white {
+  height: 90px;
+}
+.search-menu .rightColumnMenuSearch .headerFullMenuWrapper .logo-white {
+  height: 90px;
+  padding-right: 30px;
+}
+.search-menu .rightColumnMenuSearch .logo-socials {
+  height: 40px;
+}
+.search-menu .rightColumnMenuSearch .contactWrapper {
+  font-family: "Fira Bold";
+  font-size: 13px;
+  line-height: 16px;
+  color: white;
+  text-transform: uppercase;
+}
+@media (min-width: 1025px) {
+  .search-menu .rightColumnMenuSearch .contactWrapper {
+    font-size: 13px;
+    line-height: 16px;
+  }
+}
+.search-menu .rightColumnMenuSearch .adressesWrapper {
+  font-family: "Fira Regular";
+  font-size: 13px;
+  line-height: 16px;
+  color: white;
+}
+@media (min-width: 1025px) {
+  .search-menu .rightColumnMenuSearch .adressesWrapper {
+    font-size: 13px;
+    line-height: 16px;
+  }
+}
+.search-menu .rightColumnMenuSearch .adressesWrapper .adressWrapper {
+  padding-bottom: 10px;
+}
+.search-menu .leftColumnMenuSearch {
+  background-color: #00534e;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 180px;
+  width: 65%;
+  padding-left: 45px;
+  padding-right: 45px;
+}
+.search-menu .leftColumnMenuSearch .leftColumnContentSearch {
+  padding-bottom: 10px;
+}
+
+.logoWrapper {
+  margin-right: 45px;
+  width: 100%;
+}
+
+.tagline-search {
+  position: absolute;
+  top: 45px;
+  padding-left: 45px;
+  height: 100px;
+}
+
+#search_result_ajax {
+  margin-right: 45px;
+  height: 100%;
+}
+
+#search_result_ajax #all_results {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+#search_result_ajax #all_results {
+  font-family: "Fira Light";
+  font-size: 14px;
+  line-height: 24px;
+  font-size: 18px;
+}
+@media (min-width: 1025px) {
+  #search_result_ajax #all_results {
+    font-size: 14px;
+    line-height: 24px;
+  }
+}
+
+#search_result_ajax,
+#search_result_ajax a {
+  color: #00534e;
+}
+
+#search_result_ajax #total_result {
+  font-family: "Fira Bold";
+}
+
+#search_result_ajax #total_result span {
+  font-family: "Fira Bold";
+}
+
+#search_result_ajax h3 {
+  font-size: 18px;
+  font-family: "Fira Bold";
+  color: #00534e;
+}
+
+#search_result_ajax ul li {
+  font-family: "Fira Bold";
+  font-size: 14px;
+  line-height: 25px;
+  font-size: 12px;
+  border-bottom: 1px solid white;
+  padding-bottom: 0.5rem;
+}
+@media (min-width: 1025px) {
+  #search_result_ajax ul li {
+    font-size: 14px;
+    line-height: 25px;
+  }
+}
+
+#search_result_ajax ul li:last {
+  border-bottom: 0;
+}
+
+#search_result_ajax {
+  overflow-y: auto;
+}
+
 .list-link-loop {
   height: 100%;
   font-family: "Fira Bold";
@@ -1332,6 +1478,12 @@ footer {
   }
 }
 
+@media (min-width: 1025px) {
+  .credits-mobile {
+    display: none;
+  }
+}
+
 .devise {
   display: none;
   height: 110px;
@@ -1389,6 +1541,10 @@ footer {
   font-size: 10px;
   line-height: 12px;
   color: #828787;
+}
+.left-container .credits a {
+  color: #828787;
+  font-family: "Fira Bold";
 }
 @media (min-width: 1025px) {
   .left-container .credits {
@@ -1514,6 +1670,26 @@ footer {
     font-size: 10px;
     line-height: 12px;
   }
+}
+
+.credits-mobile {
+  font-family: "Fira Light";
+  font-size: 10px;
+  line-height: 12px;
+  color: #828787;
+  padding-left: 18px;
+  padding-right: 18px;
+  padding-top: 18px;
+}
+@media (min-width: 1025px) {
+  .credits-mobile {
+    font-size: 10px;
+    line-height: 12px;
+  }
+}
+.credits-mobile a {
+  font-family: "Fira Bold";
+  color: #828787;
 }
 
 .logoFrontpageCloned {
@@ -4699,14 +4875,6 @@ acf-gallery {
   color: #fff;
 }
 
-.searchForm {
-  /*position: absolute;
-  top: 50px;
-  left: 650px;
-  z-index: 1;
-  width: 50vw;*/
-}
-
 .titleSearch {
   color: white;
   font-family: "Fira Light";
@@ -4781,56 +4949,57 @@ form#searchform div button {
   height: 756px;
 }
 
-#search_result_ajax #all_results {
-  display: -webkit-box !important;
-  display: -ms-flexbox !important;
-  display: flex !important;
-  grid-gap: 0.5rem;
+/* 
+#search_result_ajax #all_results{
+	display:flex !important;
+	grid-gap: .5rem;
 }
 
 #search_result_ajax,
-#search_result_ajax a {
-  color: white;
-  font-family: "Fira Light";
+#search_result_ajax a{
+	color: white;
+	font-family: "Fira Light";
+
 }
 
-#search_result_ajax #total_result {
-  font-family: "Fira Bold";
-  margin-top: 1rem;
-  font-size: 35px;
+#search_result_ajax #total_result{
+	font-family: "Fira Bold";
+	margin-top: 1rem;
+    font-size: 35px;
 }
 
-#search_result_ajax #total_result span {
-  font-family: "Fira Light";
+#search_result_ajax #total_result span{
+	font-family: "Fira Light"
 }
 
-#search_result_ajax h3 {
-  font-size: 20px;
-  font-family: "Fira Bold";
-  margin-top: 2rem;
+#search_result_ajax h3{
+	font-size: 20px;
+    font-family: 'Fira Bold';
+    margin-top: 2rem;
 }
 
 #search_result_ajax ul li {
-  margin: 0.5rem 0;
-  border-bottom: 1px solid white;
-  padding-bottom: 0.5rem;
+    margin: .5rem 0;
+    border-bottom: 1px solid white;
+    padding-bottom: .5rem;
 }
 
-#search_result_ajax ul li:last {
-  border-bottom: 0;
+#search_result_ajax ul li:last{
+	border-bottom: 0;
 }
 
 .leftColumnContent,
 #search_result_ajax,
-.leftColumnContent .searchForm {
-  height: 100%;
+.leftColumnContent .searchForm{
+	height: 100%;
 }
 
-#search_result_ajax {
-  overflow-y: auto;
-  padding-top: 5px;
+#search_result_ajax{
+	overflow-y: auto;
+    padding-top: 5px;
 }
 
+*/
 .contentWrapperProjet {
   padding-top: 50px;
   padding-left: 77px;
@@ -5117,7 +5286,7 @@ form#searchform div button {
 }
 @media (max-width: 1025px) and (max-width: 768px) {
   .rightColumnMenu .contactWrapper p {
-    color: #e5eeed;
+    color: #e5eeed !important;
   }
 }
 @media (max-width: 1025px) and (max-width: 768px) {
@@ -7637,11 +7806,6 @@ form#searchform div button {
     overflow: hidden;
     width: 100%;
     height: auto;
-  }
-}
-@media (max-width: 1025px) {
-  .sec-ves .logo-explo {
-    height: 11px;
   }
 }
 @media (max-width: 1025px) and (max-width: 1025px) {
