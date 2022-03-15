@@ -37,7 +37,7 @@ get_header();
 
 
 
-            <div class="list-chapter" data-aos="fade-up"  data-aos-delay="3000">
+            <div class="list-chapter">
                 <span class="lieuxSpan">Lieux</span><br>
                 <a href="#sec-faire"><span>pour</span><span class="catSpan faireSpan"> Faire</span><br></a>
                 <a href="#sec-archiurba"><span>une</span><span class="catSpan archiSpan"> Architecture</span><br></a>

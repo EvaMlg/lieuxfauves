@@ -45,7 +45,6 @@
     z-index: 2000;
     object-fit: cover;}">
 
-    
     <img src="/wp-content/themes/lieuxfauves/src/assets/img/.jpg" alt="" class="svg" style="position: absolute;
     z-index: 2000;
     width: 40%;
@@ -53,6 +52,27 @@
     left: 30%;">
     <div class="progressionBar"><div class="progressionBarInner"> </div></div>
 </div>
+
+
+<div id="loaderMobile">
+    <img class ="introImgMobile" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_mobile_INTRO_image03.jpg" alt="Loader Lieux Fauves" style="
+    width: auto;
+    position: fixed;
+    height: 100%;
+    z-index: 2000;
+    object-fit: cover;}">
+
+    <img src="/wp-content/themes/lieuxfauves/src/assets/img/LF_mobile_logo-intro.svg" alt="" class="svgMobile" style="position: absolute;
+    z-index: 2000;
+    width: 60%;
+    top: 45%;
+    left: 20%;">
+      <!-- <div class="progressionBarMobile"><div class="progressionBarInnerMobile"> </div></div> -->
+
+
+    
+</div>
+
 
 
 
