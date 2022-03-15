@@ -8,6 +8,10 @@
 
 }
 
+.tagsWrapperExploration a:first-child {
+    display: none;
+}
+
 .parentTags {
     color : $jungle-col !important;
     font-family: "Fira Bold"  !important;

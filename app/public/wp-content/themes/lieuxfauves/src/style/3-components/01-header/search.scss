@@ -22,6 +22,12 @@
     }
 
     .loupeFooterWrapper {
+        @include mobile-tab {
+            display: none;
+        }
+    }
+
+    .loupeFooterWrapper {
         width: 45%;
         position: absolute;
         bottom : $m-margin-small;
@@ -124,7 +130,10 @@
 }
 
 #all_results {
+    padding-right: $m-margin-small;
+    @include laptopS {
     padding-right: 3 * $dCol;
+    }
     display: flex;
     flex-direction: row-reverse;
     flex-wrap : wrap;

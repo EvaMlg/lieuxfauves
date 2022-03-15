@@ -993,6 +993,11 @@ html {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
+@media (max-width: 1025px) {
+  .search-menu .loupeFooterWrapper {
+    display: none;
+  }
+}
 .search-menu .loupeFooterWrapper {
   width: 45%;
   position: absolute;
@@ -1094,7 +1099,7 @@ html {
 }
 
 #all_results {
-  padding-right: 135px;
+  padding-right: 18px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1112,6 +1117,11 @@ html {
       -ms-flex-pack: justify;
           justify-content: space-between;
   text-transform: capitalize;
+}
+@media (min-width: 1025px) {
+  #all_results {
+    padding-right: 135px;
+  }
 }
 
 #total_result {
@@ -3317,6 +3327,10 @@ footer {
   .titleWrapperExplorationResponsive {
     display: block;
   }
+}
+
+.tagsWrapperExploration a:first-child {
+  display: none;
 }
 
 .parentTags {
