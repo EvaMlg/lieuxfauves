@@ -1,6 +1,23 @@
 document.querySelector('#loader .progressionBarInner').style.animation = "progressionBar 4s ease";
 
 
+window.onload = function () {
+    let imgs = ["/wp-content/themes/lieuxfauves/src/assets/img/LF_INTRO_image01.jpg","/wp-content/themes/lieuxfauves/src/assets/img/LF_INTRO_image03.jpg","/wp-content/themes/lieuxfauves/src/assets/img/LF_INTRO_image03.jpg","/wp-content/themes/lieuxfauves/src/assets/img/LF_INTRO_image04.jpg"],
+        image = document.querySelector('#loader img'),
+        index = 0;
+    function hop () {
+        image.src= imgs[(index++)%imgs.length];
+    };
+    cool = setInterval(hop,550);
+   
+};
+
+setTimeout(function once() {
+
+clearInterval(cool); 
+}, 2500);
+
+
 
 setTimeout(function once() {
     var state = document.readyState;

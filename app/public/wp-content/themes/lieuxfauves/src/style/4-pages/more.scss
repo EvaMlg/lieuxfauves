@@ -53,40 +53,42 @@
   }
   
   .slick-prev{
-      position: absolute;
-      left: 5px;
-      top: 50%;
+    position: absolute;
+    height: 756px;
+    width: 400px;
       z-index: 9;
       background: none;
-      transform: translateY(-50%);
   }
-  
-  
-  .slick-next{
-      position: absolute;
-      right: 30px;
-      top: 50%;
-      z-index: 9;
-      background: none;
-      transform: translateY(-50%);
-  }
-  
+
   .slick-prev:before {
-      content: url("/wp-content/themes/lieuxfauves/src/assets/img/LF_slide_picto-prev.svg");
-      border : 11.5px solid transparent;
-      width: 50px;
-      height: 50px;
-      color: #fff;
-      
-     
+    content: url("/wp-content/themes/lieuxfauves/src/assets/img/LF_slide_picto-next-02_gauche.svg");
+    position: absolute;
+    left: 18px;
+    width: 25px;
+    height: 25px;
+    color: #fff;
+    
+   
+}
+  .slick-next{
+      top: 0;
+      position: absolute;
+      height: 756px;
+      width: 400px;
+      right: 0;
+      z-index: 9;
+      background: none;
+    
   }
+  
   
   .slick-next:before {
-    content: url("/wp-content/themes/lieuxfauves/src/assets/img/LF_slide_picto-next.svg");
-    border : 11.5px solid transparent;
-    width: 30px;
-    height: 30px;
-      color: #fff;
+    content: url("/wp-content/themes/lieuxfauves/src/assets/img/LF_slide_picto-next-01_droite.svg");
+    position: absolute;
+    right: 18px;
+    width: 25px;
+    height: 25px;
+    color: #fff;
     
   }
 

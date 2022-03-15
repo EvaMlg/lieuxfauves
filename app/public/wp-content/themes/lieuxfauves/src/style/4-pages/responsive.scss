@@ -11,35 +11,9 @@ $m-margin-big : 20px;
 
 
 
-@include sideBarResponsive {
-    .responsive-menu {
-        z-index: 200;
-        position: fixed;
-        top: $m-margin-small;
-        right: $m-margin-small;
-        display: flex;
-        flex-direction: column;
-        width: fit-content;
-
-        .pictoResponsive {
-            height: 25px;
-            width: 25px;
-        }
-
-        .responsiveBurger {
-            z-index: 100;
-
-        }
-    }
-
-}
-
-
 
 
 @include tablet {
-
-
     .responsive-menu {
         z-index: 200;
         position: fixed;
@@ -240,11 +214,6 @@ $m-margin-big : 20px;
                 padding-top: $m-margin-small;
                 text-transform: uppercase;
 
-                p {
-                    color: $jungle-col-10 !important;
-
-
-                }
             }
 
         }
@@ -302,6 +271,7 @@ $m-margin-big : 20px;
                 display: flex;
                 flex-direction: column;
                 @include fullmenu-submenu;
+                font-size : 16px !important;
                 font-family: "Fira Sans Black";
                 line-height: 31px;
                 color: white;
@@ -314,7 +284,7 @@ $m-margin-big : 20px;
             a {
                 @include mobile-tab {
                     color: white;
-                    padding-top: 8px;
+                    padding-top: 11px !important;
                     padding-left: 0px;
                     padding-left: 0px !important;
 
@@ -2018,7 +1988,7 @@ $m-margin-big : 20px;
         height: 100%;
         @include menu-link;
         color: $jungle-col;
-        padding-right: $m-margin-small;
+        padding-right: 50% !important;
         padding-left: $m-margin-small;
 
         @include laptopS {

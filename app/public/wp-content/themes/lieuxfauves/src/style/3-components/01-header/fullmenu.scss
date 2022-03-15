@@ -88,6 +88,10 @@
 
         .contactWrapper {
             @include footer-p-bold;
+            @include mobile-tab {
+                color : #8aa8a6;
+            }
+
             color : white;
           
 
@@ -100,6 +104,11 @@
 
         .adressesWrapper {
             @include footer-p;
+
+            @include mobile-tab {
+                color : #8aa8a6;
+            }
+
             color : white;
 
             .adressWrapper {

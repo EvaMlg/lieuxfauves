@@ -63,7 +63,7 @@ window.addEventListener('scroll', function () {
         logoFrontpage.classList.remove("scroll-off");
         listChapterAgence.style.display="block";
         devise.classList.remove("deviseOn"); 
-    } else if (window.scrollY < section5) {
+    } else if (window.scrollY < section4) {
         valeursSpan.classList.remove("scroll");
         expertisesSpan.classList.remove("scroll");
         equipeSpan.classList.add("scroll");

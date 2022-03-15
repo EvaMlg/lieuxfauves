@@ -611,6 +611,11 @@ html {
     line-height: 16px;
   }
 }
+@media (max-width: 1025px) {
+  .full-menu .rightColumnMenu .contactWrapper {
+    color: #8aa8a6;
+  }
+}
 .full-menu .rightColumnMenu .adressesWrapper {
   font-family: "Fira Regular";
   font-size: 13px;
@@ -621,6 +626,11 @@ html {
   .full-menu .rightColumnMenu .adressesWrapper {
     font-size: 13px;
     line-height: 16px;
+  }
+}
+@media (max-width: 1025px) {
+  .full-menu .rightColumnMenu .adressesWrapper {
+    color: #8aa8a6;
   }
 }
 .full-menu .rightColumnMenu .adressesWrapper .adressWrapper {
@@ -714,8 +724,9 @@ html {
     display: block;
   }
 }
-@media (min-width: 1025px) and (max-height: 730px) {
-  .sidebarMenu {
+
+@media (max-height: 730px) {
+  .sideNav {
     display: none;
   }
 }
@@ -2305,8 +2316,8 @@ footer {
   font-size: 15px;
   line-height: 14px;
   color: #00534e;
-  padding-right: 18px;
   padding-left: 18px;
+  padding-right: 50% !important;
   padding-bottom: 45px;
 }
 @media (min-width: 1025px) {
@@ -5309,37 +5320,37 @@ acf-gallery {
 
 .slick-prev {
   position: absolute;
-  left: 5px;
-  top: 50%;
+  height: 756px;
+  width: 400px;
   z-index: 9;
   background: none;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-}
-
-.slick-next {
-  position: absolute;
-  right: 30px;
-  top: 50%;
-  z-index: 9;
-  background: none;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
 }
 
 .slick-prev:before {
-  content: url("/wp-content/themes/lieuxfauves/src/assets/img/LF_slide_picto-prev.svg");
-  border: 11.5px solid transparent;
-  width: 50px;
-  height: 50px;
+  content: url("/wp-content/themes/lieuxfauves/src/assets/img/LF_slide_picto-next-02_gauche.svg");
+  position: absolute;
+  left: 18px;
+  width: 25px;
+  height: 25px;
   color: #fff;
 }
 
+.slick-next {
+  top: 0;
+  position: absolute;
+  height: 756px;
+  width: 400px;
+  right: 0;
+  z-index: 9;
+  background: none;
+}
+
 .slick-next:before {
-  content: url("/wp-content/themes/lieuxfauves/src/assets/img/LF_slide_picto-next.svg");
-  border: 11.5px solid transparent;
-  width: 30px;
-  height: 30px;
+  content: url("/wp-content/themes/lieuxfauves/src/assets/img/LF_slide_picto-next-01_droite.svg");
+  position: absolute;
+  right: 18px;
+  width: 25px;
+  height: 25px;
   color: #fff;
 }
 
@@ -5556,31 +5567,6 @@ form#searchform div button{
   display: flex;
 }
 
-@media (max-height: 730px) {
-  .responsive-menu {
-    z-index: 200;
-    position: fixed;
-    top: 18px;
-    right: 18px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
-  }
-  .responsive-menu .pictoResponsive {
-    height: 25px;
-    width: 25px;
-  }
-  .responsive-menu .responsiveBurger {
-    z-index: 100;
-  }
-}
 @media (min-width: 768px) {
   .responsive-menu {
     z-index: 200;
@@ -5751,11 +5737,6 @@ form#searchform div button{
   }
 }
 @media (max-width: 1025px) and (max-width: 768px) {
-  .rightColumnMenu .contactWrapper p {
-    color: #e5eeed !important;
-  }
-}
-@media (max-width: 1025px) and (max-width: 768px) {
   .rightColumnMenu .adressesWrapper {
     font-family: "Fira Regular";
     font-size: 13px;
@@ -5826,6 +5807,7 @@ form#searchform div button{
     font-family: "Fira Bold";
     font-size: 18px;
     line-height: 14px;
+    font-size: 16px !important;
     font-family: "Fira Sans Black";
     line-height: 31px;
     color: white;
@@ -5843,7 +5825,7 @@ form#searchform div button{
 @media (max-width: 1025px) and (max-width: 1025px) {
   .leftColumnMenu .subMenuFP a {
     color: white;
-    padding-top: 8px;
+    padding-top: 11px !important;
     padding-left: 0px;
     padding-left: 0px !important;
   }
@@ -7792,7 +7774,7 @@ form#searchform div button{
     font-size: 15px;
     line-height: 14px;
     color: #00534e;
-    padding-right: 18px;
+    padding-right: 50% !important;
     padding-left: 18px;
     padding-bottom: 45px;
   }

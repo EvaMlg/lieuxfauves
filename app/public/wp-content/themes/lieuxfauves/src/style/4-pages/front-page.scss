@@ -199,8 +199,8 @@
     height: 100%;
     @include menu-link;
     color: $jungle-col;
-    padding-right: $m-margin-small;
     padding-left: $m-margin-small;
+    padding-right: 50% !important;
     @include laptopS {
     padding-right: $dCol;
     padding-left: $dCol;
