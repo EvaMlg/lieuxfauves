@@ -993,6 +993,65 @@ html {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
+.search-menu .loupeFooterWrapper {
+  width: 45%;
+  position: absolute;
+  bottom: 18px;
+}
+.search-menu .loupeFooterWrapper .contactWrapper {
+  font-family: "Fira Bold";
+  font-size: 13px;
+  line-height: 16px;
+  color: white;
+  padding-bottom: 15px;
+  padding-top: 15px;
+  text-transform: uppercase;
+}
+@media (min-width: 1025px) {
+  .search-menu .loupeFooterWrapper .contactWrapper {
+    font-size: 13px;
+    line-height: 16px;
+  }
+}
+.search-menu .loupeFooterWrapper .adressesWrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-family: "Fira Regular";
+  font-size: 13px;
+  line-height: 16px;
+  color: white;
+}
+@media (min-width: 1025px) {
+  .search-menu .loupeFooterWrapper .adressesWrapper {
+    font-size: 13px;
+    line-height: 16px;
+  }
+}
+.search-menu .loupeFooterWrapper .adressesWrapper .adressWrapper {
+  padding-bottom: 10px;
+}
+.search-menu .loupeFooterWrapper .adressesWrapper .loupeBold {
+  font-family: "Fira Bold";
+  font-size: 13px;
+  line-height: 16px;
+}
+@media (min-width: 1025px) {
+  .search-menu .loupeFooterWrapper .adressesWrapper .loupeBold {
+    font-size: 13px;
+    line-height: 16px;
+  }
+}
+.search-menu .socialsButtonsWrapperLoupe .logo-whiteSearch {
+  margin-right: 15px;
+}
+.search-menu .socialsButtonsWrapperLoupe .logo-socials {
+  height: 30px;
+  width: 30px;
+}
 .search-menu .logo-whiteSearch {
   height: 100px;
 }
@@ -2703,8 +2762,54 @@ footer {
   text-decoration: none;
 }
 
-.boutonWrapperProjetCloned {
-  display: none;
+@media (max-width: 1025px) {
+  .boutonWrapperProjet {
+    display: none !important;
+  }
+}
+@media (min-width: 1025px) {
+  .boutonWrapperProjetMobile {
+    display: none !important;
+  }
+}
+
+.boutonWrapperProjetMobile {
+  margin-top: 15px;
+  margin-bottom: 45px;
+  font-family: "Fira Bold";
+  font-size: 11px;
+  line-height: 24px;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+@media (min-width: 1025px) {
+  .boutonWrapperProjetMobile {
+    font-size: 11px;
+    line-height: 24px;
+  }
+}
+.boutonWrapperProjetMobile .shareLinks {
+  font-family: "Fira Bold";
+  font-size: 11px;
+  line-height: 24px;
+  color: #b5b8b8;
+  background-color: #f4f4f4;
+  padding-left: 45px;
+  padding-top: 4%;
+  padding-bottom: 4%;
+  margin-top: 8px;
+}
+@media (min-width: 1025px) {
+  .boutonWrapperProjetMobile .shareLinks {
+    font-size: 11px;
+    line-height: 24px;
+  }
 }
 
 @media (max-width: 1025px) {
@@ -2910,6 +3015,11 @@ footer {
   width: 60%;
   padding-left: 45px;
   padding-right: 45px;
+}
+@media (max-width: 1025px) {
+  .contentWrapperProjet .projetWrapper .rightColumn {
+    padding-top: 18px;
+  }
 }
 .contentWrapperProjet .projetWrapper .rightColumn h2 {
   font-family: "Fira Bold";

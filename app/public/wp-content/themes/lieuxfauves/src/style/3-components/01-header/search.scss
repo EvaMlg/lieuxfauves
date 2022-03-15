@@ -17,6 +17,61 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+
+       
+    }
+
+    .loupeFooterWrapper {
+        width: 45%;
+        position: absolute;
+        bottom : $m-margin-small;
+
+        .contactWrapper {
+            @include footer-p-bold;
+            color : white;
+          
+            
+            padding-bottom: 15px;
+            padding-top : 15px;
+            text-transform: uppercase;
+
+           
+    
+        }
+        
+
+        .adressesWrapper {
+            display: flex;
+            justify-content: space-between;
+            @include footer-p;
+            color : white;
+
+            .adressWrapper {
+                padding-bottom: 10px;
+            }
+            .loupeBold {
+                @include footer-p-bold;
+
+            }
+
+
+        }
+
+        
+    }
+
+    .socialsButtonsWrapperLoupe {
+
+        .logo-whiteSearch {
+            margin-right: 15px;
+        }
+       
+      
+        .logo-socials {
+            height: 30px;
+            width: 30px;
+        }
+
        
     }
 

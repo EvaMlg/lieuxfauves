@@ -1,6 +1,6 @@
 <header class="header-navigation-hero" id="header">
 
-<!----------   FULL BAR ---------->
+    <!----------   FULL BAR ---------->
 
 
     <div id="fullMenu" class="full-menu menu fullMenu fullMenuOff">
@@ -84,7 +84,7 @@
         </div>
     </div>
 
-<!----------   SEARCH FORM MENU ---------->
+    <!----------   SEARCH FORM MENU ---------->
 
     <div id="searchMenu" class="search-menu fullMenuOff">
 
@@ -92,28 +92,16 @@
             <div class="headerFullMenuWrapperSearch">
                 <div class="logoWrapperSearch">
                     <div class="logoDeviseSearch">
-                    <img class="logo-whiteSearch" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_footer_logo.svg">
-                   <img class="tagline-search" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_logo_devise.svg">
-                  </div>
+                        <img class="logo-whiteSearch" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_footer_logo.svg">
+                        <img class="tagline-search" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_logo_devise.svg">
+                    </div>
 
-                  </div>
-                    <div id="search_result_ajax"></div>
-
-
-            
-                
-            </div>
-            <div class="contentFullMenuWrapperSearch">
-                <div class="socialsButtonsWrapperSearch">
-                    <img class="logo-ig logo-socials" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_menu_rrss_ig.svg">
-                    <img class="logo-in logo-socials" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_menu_rrss_in.svg">
-                    
-                   
-
-         
-                
                 </div>
+                <div id="search_result_ajax"></div>
+
+
             </div>
+
 
 
         </div>
@@ -122,7 +110,7 @@
 
                 <div class="searchForm">
 
-                <h1 class="titleSearch">Recherche</h1>
+                    <h1 class="titleSearch">Recherche</h1>
 
 
                     <form role="search" method="get" id="searchform" class="searchform" action="<?= home_url('/') ?>">
@@ -132,17 +120,50 @@
                             <button type="submit" id="searchsubmit" class="glyphicon glyphicon-search"></button>
                         </div>
                     </form>
-                    <div id="search_result_ajax">
 
+
+                    <div class="loupeFooterWrapper">
+
+                        <div class="socialsButtonsWrapperLoupe">
+                            <img class="logo-whiteSearch" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_menu_logo.svg"">
+                    <img class=" logo-ig logo-socials" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_menu_rrss_ig.svg">
+                            <img class="logo-in logo-socials" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_menu_rrss_in.svg">
+
+                        </div>
+
+                        <div class="contactWrapper">
+                            <p>04 72 74 80 80 <br>
+                                contact[AT]lieuxfauves.com</p>
+                        </div>
+                        <div class="adressesWrapper">
+                            <div class="parisAdressWrapper adressWrapper">
+                                <p><span class="loupeBold"> PARIS</span><br>
+                                    22 rue des Taillandiers <br>
+                                    75011 Paris</p>
+
+                            </div>
+                            <div class="lyonAdressWrapper adressWrapper">
+                                <span class="loupeBold"> LYON</span><br>
+                                43 rue des Hérideaux<br>
+                                69008 Lyon
+                            </div>
+                            <div class="mayotteAdressWrapper adressWrapper">
+                            <span class="loupeBold"> MAYOTTE</span><br>
+                                18 Chemin de la Convalescence<br>
+                                97600 Mamoudzou
+                            </div>
+                        </div>
                     </div>
                 </div>
 
             </div>
 
         </div>
+
+    </div>
     </div>
 
-<!----------   RESPONSIVE BAR ---------->
+    <!----------   RESPONSIVE BAR ---------->
     <div class="responsive-menu">
 
         <a href="<?php echo home_url(); ?>" ?><img class="pictoResponsive logoResponsive" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_nav_logo.svg"></a>
@@ -152,7 +173,7 @@
     </div>
 
 
-<!----------   SIDE BAR ---------->
+    <!----------   SIDE BAR ---------->
     <div class="sidebar-menu">
 
         <navigation class=sidebarMenu>

@@ -12,11 +12,44 @@
     text-decoration : none;
 }
 
+@include mobile-tab {
 
-
-.boutonWrapperProjetCloned {
-    display: none;
+.boutonWrapperProjet {
+        display: none !important;
+    }
 }
+
+.boutonWrapperProjetMobile {
+    @include laptopS {
+        display: none !important;
+    }
+}
+
+
+
+
+
+.boutonWrapperProjetMobile {
+    margin-top: 15px;
+    margin-bottom: $dCol;
+    @include p-link;
+    color: white;
+    display: flex;
+    flex-direction: column;
+
+    .shareLinks {
+        @include p-link;
+        color: $grey-col-50;
+        background-color: $black-col-5;
+        padding-left: $dCol;
+        padding-top: 4%;
+        padding-bottom: 4%;
+        margin-top : 8px;
+
+    }
+}
+
+
 
 @include mobile-tab {
 
@@ -233,6 +266,12 @@
 
 
         .rightColumn {
+
+            @include mobile-tab {
+                padding-top: $m-margin-small;
+            }
+
+
             width: 60%;
             padding-left: $dCol;
             padding-right: $dCol;
