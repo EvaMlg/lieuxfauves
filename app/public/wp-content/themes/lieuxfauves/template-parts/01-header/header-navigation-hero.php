@@ -168,6 +168,8 @@
 
         <a href="<?php echo home_url(); ?>" ?><img class="pictoResponsive logoResponsive" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_nav_logo.svg"></a>
         <a class="responsiveBurger" href="#" class><img class="pictoResponsive responsiveBurgerImg" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_nav_menu-burguer.svg"></a>
+        <!-- <a> <img class="pictoNav loupe" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_nav_loupe.svg"></a> -->
+
 
 
     </div>

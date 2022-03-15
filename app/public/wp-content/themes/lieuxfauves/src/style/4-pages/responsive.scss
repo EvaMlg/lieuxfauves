@@ -1673,6 +1673,13 @@ $m-margin-big : 20px;
 
 @include mobile-tab {
 
+    .parentTags {
+        color : $jungle-col !important;
+        font-family: "Fira Bold"  !important;
+        font-size: 15px  !important;
+    }
+    
+
     .mainExploration .leftColumnExploration .boutonWrapperExploration {
         margin-bottom: 0 !important;
     }
@@ -1720,28 +1727,10 @@ $m-margin-big : 20px;
             padding-right: 0;
 
             .tagsWrapperExploration {
-                //min-height: 180px;
+              
                 background-color: white;
                 padding: $m-margin-small;
-                @include p-bold;
-                color: $grey-col;
-                margin-bottom: 15px;
-
-                .barre-nobold {
-                    @include p-very-small;
-                }
-
-                a {
-                    text-decoration: none;
-                    color: $grey-col;
-                    @include fauveUnderline;
-                }
-
-                a:hover {
-                    text-decoration: none;
-                    @include fauveUnderlineHover;
-                }
-
+            
             }
 
             .article-thumbnail {
