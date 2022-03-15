@@ -1035,6 +1035,7 @@ html {
 }
 
 #all_results {
+  padding-right: 135px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

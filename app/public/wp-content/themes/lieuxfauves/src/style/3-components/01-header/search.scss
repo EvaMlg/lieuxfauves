@@ -69,6 +69,7 @@
 }
 
 #all_results {
+    padding-right: 3 * $dCol;
     display: flex;
     flex-direction: row-reverse;
     flex-wrap : wrap;

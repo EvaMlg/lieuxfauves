@@ -131,13 +131,13 @@ get_header();
                         <p data-aos="fade-up"><?php echo $urbanisme; ?></p>
                     </div>
 
-                    <?php $architecture = get_group_field('section_expertises', 'distinctions_architecture') ?>
+                    <?php $architecture = get_group_field('section_expertises', 'distinctions_archi') ?>
                     <div class="distinctionsTitleWrapper">
                         <h3 class="subtitleAgence distinctionsTitle" data-aos="fade-up">Architecture</h3>
-                        <img class="logo-categorie logoDistinctions" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_plus_ouvrir_gris.svg">
+                        <img class="logo-categorie logoDistinctions logoDistinctionsClone" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_plus_ouvrir_gris.svg">
 
                     </div>
-                    <div class="distinctionsToggleWrapper">
+                    <div class="distinctionsToggleWrapperClone distinctionsToggleWrapper">
                         <p><?php echo $architecture; ?></p>
                     </div>
 
