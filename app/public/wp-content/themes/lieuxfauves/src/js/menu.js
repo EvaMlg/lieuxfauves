@@ -5,7 +5,6 @@ const buttonOff = document.querySelector('.closeIcon');
 const sideNavWrapper = document.querySelector('.sideNavWrapper');
 const sideNav = document.querySelector('.sideNav');
 const flecheBas = document.querySelector('.flecheBas');
-const loupe = document.querySelector('.loupe');
 const picto = document.querySelector('.pictoLogo');
 
 const searchMenu = document.querySelector('#searchMenu');
@@ -14,10 +13,15 @@ console.log(searchMenu);
 
 const pictoBurguer = document.querySelector('.closeIcon');
 
-const allResults = document.getElementById('all_results');
-console.log (allResults)
-const total_result = document.getElementById('total_result');
-console.log (total_result)
+// const allResults = document.getElementById('all_results');
+// console.log (allResults)
+// const total_result = document.getElementById('total_result');
+// console.log (total_result)
+
+
+const loupe = document.querySelector('.loupe');
+const loupeMobile = document.querySelector('.loupeMobile');
+
 
 
 
@@ -26,9 +30,8 @@ loupe.addEventListener('click', function () {
         searchMenu.classList.remove("fullMenuOff");
         searchMenu.classList.add("fullMenuOn");
         searchMenu.style.animation = "transition 2s ease";
-        
-
-
+        document.querySelector('.responsiveBurger').style.display="none";
+        document.querySelector('.logoResponsive').src="/wp-content/themes/lieuxfauves/src/assets/img/LF_nav_logo_blanc.svg";
         buttonOn.style.display = "none";
         sideNavWrapper.style.backgroundColor = "rgb(0,83,78)";
         buttonOff.style.display = "flex";
@@ -39,6 +42,7 @@ loupe.addEventListener('click', function () {
         picto.style.display = "none";
 
     } else if (document.querySelector('.single-explorations')) {
+        document.querySelector('.responsiveBurger').style.display="block";
         fullMenu.classList.remove("fullMenuOn");
         fullMenu.classList.add("fullMenuOff");
         searchMenu.classList.remove("fullMenuOn");
@@ -48,7 +52,8 @@ loupe.addEventListener('click', function () {
         sideNavWrapper.style.backgroundColor = "white";
         sideNav.style.display ="block";
         flecheBas.style.display ="block";
-        loupe.src="/wp-content/themes/lieuxfauves/src/assets/img/LF_nav_loupe.svg";
+        //loupe.src="/wp-content/themes/lieuxfauves/src/assets/img/LF_nav_loupe.svg";
+        
         picto.style.display = "block";
         document.querySelector('div#sideNavWrapper').style.backgroundColor = "rgb(229, 238, 237)";
         document.querySelector('.menu-item-383 a').classList.add("inactivePage2");
@@ -58,6 +63,8 @@ loupe.addEventListener('click', function () {
     }
     
     else {
+        document.querySelector('.responsiveBurger').style.display="block";
+        document.querySelector('.logoResponsive').src="/wp-content/themes/lieuxfauves/src/assets/img/LF_nav_logo.svg";
         searchMenu.classList.remove("fullMenuOn");
         searchMenu.classList.add("fullMenuOff");
         buttonOn.style.display = "flex";
@@ -67,12 +74,67 @@ loupe.addEventListener('click', function () {
         flecheBas.style.display ="block";
         loupe.src="/wp-content/themes/lieuxfauves/src/assets/img/LF_nav_loupe.svg";
         picto.style.display = "block";
+        
+    }
+}, false); 
+
+
+loupeMobile.addEventListener('click', function () {
+    if (searchMenu.classList.contains('fullMenuOff')) {
+        searchMenu.classList.remove("fullMenuOff");
+        searchMenu.classList.add("fullMenuOn");
+        searchMenu.style.animation = "transition 2s ease";
+        document.querySelector('.responsiveBurger').style.display="none";
+        document.querySelector('.logoResponsive').src="/wp-content/themes/lieuxfauves/src/assets/img/LF_nav_logo_blanc.svg";
+        buttonOn.style.display = "none";
+        sideNavWrapper.style.backgroundColor = "rgb(0,83,78)";
+        buttonOff.style.display = "flex";
+        sideNav.style.display ="none";
+        flecheBas.style.display ="none";
+        pictoBurguer.style.display ="none";
+        loupeMobile.src="/wp-content/themes/lieuxfauves/src/assets/img/LF_menu_burguer-fermer.svg";
+        picto.style.display = "none";
+
+    } else if (document.querySelector('.single-explorations')) {
+        document.querySelector('.responsiveBurger').style.display="block";
+        fullMenu.classList.remove("fullMenuOn");
+        fullMenu.classList.add("fullMenuOff");
+        searchMenu.classList.remove("fullMenuOn");
+        searchMenu.classList.add("fullMenuOff");
+        buttonOn.style.display = "flex";
+        buttonOff.style.display = "none";
+        sideNavWrapper.style.backgroundColor = "white";
+        sideNav.style.display ="block";
+        flecheBas.style.display ="block";
+        //loupe.src="/wp-content/themes/lieuxfauves/src/assets/img/LF_nav_loupe.svg";
+        
+        picto.style.display = "block";
+        document.querySelector('div#sideNavWrapper').style.backgroundColor = "rgb(229, 238, 237)";
+        document.querySelector('.menu-item-383 a').classList.add("inactivePage2");
+        document.querySelector('.menu-item-382 a').classList.add("activePage");
+        document.querySelector('.menu-item-381 a').classList.add("inactivePage2");
+        document.querySelector('.menu-item-418 a').classList.add("inactivePage2");
+    }
+    
+    else {
+        document.querySelector('.responsiveBurger').style.display="block";
+        document.querySelector('.logoResponsive').src="/wp-content/themes/lieuxfauves/src/assets/img/LF_nav_logo.svg";
+        searchMenu.classList.remove("fullMenuOn");
+        searchMenu.classList.add("fullMenuOff");
+        buttonOn.style.display = "flex";
+        buttonOff.style.display = "none";
+        sideNavWrapper.style.backgroundColor = "white";
+        sideNav.style.display ="block";
+        flecheBas.style.display ="block";
+        loupeMobile.src="/wp-content/themes/lieuxfauves/src/assets/img/LF_nav_loupe.svg";
+        picto.style.display = "block";
 
         
 
         
     }
 }, false); 
+
 
 
 
@@ -88,6 +150,7 @@ burgerButton.addEventListener('click', function () {
         sideNav.style.display ="none";
         flecheBas.style.display ="none";
         loupe.src="/wp-content/themes/lieuxfauves/src/assets/img/LF_menu_loupe.svg";
+        
         picto.style.display = "none";
 
     } else if (document.querySelector('.single-explorations')) {
@@ -174,7 +237,8 @@ responsiveBurger.addEventListener('click', function () {
     if (fullMenu.classList.contains('fullMenuOff')) {
         fullMenu.classList.remove("fullMenuOff");
         fullMenu.classList.add("fullMenuOn");
-       logoResponsive.src="/wp-content/themes/lieuxfauves/src/assets/img/LF_nav_logo.svg";
+       logoResponsive.src="/wp-content/themes/lieuxfauves/src/assets/img/LF_nav_logo_blanc.svg";
+       loupeMobile.src="/wp-content/themes/lieuxfauves/src/assets/img/LF_menu_loupe.svg";
        responsiveBurgerImg.src="/wp-content/themes/lieuxfauves/src/assets/img/LF_menu_burguer-fermer.svg";
         fullMenu.style.animation = "transition 2s ease"; }
 else {
@@ -182,10 +246,11 @@ else {
     fullMenu.classList.add("fullMenuOff");
     logoResponsive.src="/wp-content/themes/lieuxfauves/src/assets/img/LF_nav_logo.svg";
     responsiveBurgerImg.src="/wp-content/themes/lieuxfauves/src/assets/img/LF_nav_menu-burguer.svg";
+    loupeMobile.src="/wp-content/themes/lieuxfauves/src/assets/img/LF_nav_loupe.svg";
+
   
 }
 }, false); 
-
 
 
 const responsiveCatLogo =  document.querySelector('.responsiveCatLogo');

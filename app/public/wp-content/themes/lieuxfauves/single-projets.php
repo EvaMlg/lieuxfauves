@@ -306,12 +306,15 @@ endforeach;
             </div>
             <div class="boutonWrapperProjet">
                 <p class="cardLink cardLinkLight shareLinks"><img class="logo-categorie logo-explo" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_fleche-partager.svg"> &nbsp; Partager</p>
+                 <?php if (get_field('document_a_telecharger')) : ?>
                 <p class="cardLink cardLinkLight shareLinks"><img class="logo-categorie logo-explo" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_fleche-telecharger.svg"> &nbsp;
-                    <?php if (get_field('document_a_telecharger')) : ?>
+                    
                         <a class="docDownload" href="<?php the_field('document_a_telecharger'); ?>">Download File</a>
                 </p>
             <?php endif; ?>
+            <?php if (get_field('lien_externe')) : ?>
             <p class="cardLink cardLinkLight shareLinks"><img class="logo-categorie logo-explo" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_picto_fleche-lien.svg"> &nbsp; <?php the_field('lien_externe'); ?></p>
+            <?php endif; ?>
             </div>
 
 

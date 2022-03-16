@@ -1259,6 +1259,16 @@ form#searchform div button {
 }
 
 @media (max-width: 1025px) {
+  .headerSearchGreen {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+  }
+
   .search-menu {
     padding-left: 0;
     padding-right: 0;
@@ -1276,6 +1286,7 @@ form#searchform div button {
             flex-direction: column-reverse;
   }
   .search-menu .rightColumnMenuSearch {
+    height: 80%;
     width: 100vw;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1289,6 +1300,8 @@ form#searchform div button {
             justify-content: space-between;
     margin: 0;
     margin-right: 0;
+    padding-left: 18px;
+    padding-right: 18px;
   }
   .search-menu .logo-whiteSearch {
     height: 100px;
@@ -1312,12 +1325,14 @@ form#searchform div button {
     padding-left: 45px;
   }
   .search-menu .leftColumnMenuSearch {
+    height: 20%;
     background-color: #00534e;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    padding-top: 0;
-    padding-left: 0;
+    padding-top: 18px;
+    padding-left: 18px;
+    padding-right: 18px;
     width: 100vw;
   }
   .search-menu .leftColumnMenuSearch .leftColumnContentSearch {
@@ -1333,6 +1348,7 @@ form#searchform div button {
   }
 
   .titleSearch {
+    display: none;
     font-family: "Fira Light";
     color: white;
     font-size: 18px;
@@ -1351,8 +1367,8 @@ form#searchform div button {
         flex-wrap: wrap;
     font-family: "Fira Light";
     color: #00534e;
-    font-size: 18px;
-    line-height: 24px;
+    font-size: 14px;
+    line-height: 18px;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
@@ -1438,6 +1454,7 @@ form#searchform div button {
 }
 @media (max-width: 1025px) {
   form#searchform div input {
+    width: 70vw;
     height: 77px;
     outline-style: none;
     -webkit-box-shadow: none;
@@ -3966,7 +3983,7 @@ footer {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    top: 100px;
+    top: 110px;
     right: 0;
     width: 63px;
     height: 45px;
@@ -7649,8 +7666,8 @@ form#searchform div button{
 }
 @media (max-width: 1025px) {
   .pictoNav {
-    height: 20px;
-    width: 20px;
+    height: 25px;
+    width: 25px;
   }
 }
 @media (max-width: 1025px) {

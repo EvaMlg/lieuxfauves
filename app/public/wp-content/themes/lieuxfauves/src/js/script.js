@@ -10,6 +10,7 @@
 			})
 			  .done(function( data ) {
 				$("#search_result_ajax").empty().append(data);
+                $('.all_resultsCloned').css('display', 'none');
 			  });
 		})
 
@@ -96,12 +97,20 @@ document.addEventListener('DOMContentLoaded', function () {
         document.querySelector('.menu-item-382 a').classList.add("inactivePage");
         document.querySelector('.menu-item-381 a').classList.add("inactivePage");
         document.querySelector('.menu-item-418 a').classList.add("activePage");
+    } else if (document.querySelector('.single-annonces div#sideNavWrapper')) {
+        //document.querySelector('div#sideNavWrapper').style.backgroundColor = "rgb(244,244,244)";
+        document.querySelector('footer').style.display = "none";
+        // document.querySelector('.menu-item-383 a').classList.add("inactivePage");
+        // document.querySelector('.menu-item-382 a').classList.add("inactivePage");
+        // document.querySelector('.menu-item-381 a').classList.add("inactivePage");
+        // document.querySelector('.menu-item-418 a').classList.add("activePage");
     } else if (document.querySelector('.archives-projets div#sideNavWrapper')) {
         document.querySelector('div#sideNavWrapper').style.backgroundColor = "rgb(244,244,244)";
         document.querySelector('.menu-item-383 a').classList.add("inactivePage");
         document.querySelector('.menu-item-382 a').classList.add("inactivePage");
         document.querySelector('.menu-item-381 a').classList.add("inactivePage");
         document.querySelector('.menu-item-418 a').classList.add("activePage");
+
     } else if (document.querySelector('.page-template-template-agence div#sideNavWrapper')) {
         document.querySelector('.menu-item-383 a').classList.add("activePage");
 

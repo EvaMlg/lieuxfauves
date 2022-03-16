@@ -290,7 +290,15 @@ form#searchform div button{
     // #all_results div:first-child {
     //     display: none;
     // }
+
+
+    .headerSearchGreen {
+        display: flex;
+        flex-direction: row-reverse;
+    }
     
+
+
 
     .search-menu {
         padding-left: 0;
@@ -304,12 +312,15 @@ form#searchform div button{
         flex-direction: column-reverse;
     
         .rightColumnMenuSearch {
+            height: 80%;
             width: 100vw;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
             margin : 0;
             margin-right: 0;
+            padding-left: $m-margin-small;
+            padding-right: $m-margin-small;
            
         }
     
@@ -338,11 +349,14 @@ form#searchform div button{
     
     
         .leftColumnMenuSearch {
+    
+            height: 20%;
             background-color: $jungle-col;
             display: flex;
           
-            padding-top: 0;
-            padding-left : 0;
+            padding-top: $m-margin-small;
+            padding-left: $m-margin-small;
+            padding-right: $m-margin-small;
            
             width: 100vw;
     
@@ -363,6 +377,7 @@ form#searchform div button{
     
     
     .titleSearch {
+        display: none;
         font-family: "Fira Light";
         color : white;
         font-size: 18px;
@@ -375,8 +390,8 @@ form#searchform div button{
         flex-wrap : wrap;
         font-family: "Fira Light";
         color : $jungle-col;
-        font-size: 18px;
-        line-height: 24px;
+        font-size: 14px;
+        line-height: 18px;
         justify-content: space-between;
         text-transform: capitalize;
     
@@ -474,6 +489,7 @@ form#searchform div button{
     }
     
     form#searchform div input{
+        width: 70vw;
         height: 1*$margin;
         outline-style: none;
         box-shadow: none;

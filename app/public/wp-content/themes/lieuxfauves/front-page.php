@@ -141,7 +141,7 @@ get_header();
                     <div class="list-link" data-aos="fade-up">
                         <img class="logo-categorie" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_logo_categories.svg">
 
-                        <span class="titleListLink">AGENCE</span>
+                        <span class="titleListLink">ACTUALITÉS</span>
 
 
                         <a href="agence/#sec-rejoindre" class="fauveUnderline">Rejoindre Lieux F.AU.VES</a>

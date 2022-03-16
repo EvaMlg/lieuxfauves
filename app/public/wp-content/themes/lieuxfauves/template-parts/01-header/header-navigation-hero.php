@@ -100,6 +100,17 @@
                 </div>
                 <div id="search_result_ajax"></div>
 
+                <div class="all_resultsCloned">
+                <div id="all_results">
+                    <div>actualites [<span>0</span>] </div>
+                    <div>explorations [<span>0</span>] </div>
+                    <div>projets [<span>0</span>] </div>
+                    Tout [0]</div>
+
+                    <div id="total_result">Résultats <span>[</span><span class="jungleNumber">0</span><span>]</span></div>
+
+                </div>
+
 
             </div>
 
@@ -115,7 +126,7 @@
 
 
                     <form role="search" method="get" id="searchform" class="searchform" action="<?= home_url('/') ?>">
-                        <div>
+                        <div class="headerSearchGreen">
                             <input style="color= white" type="text" placeholder="Mot recherché" value="<?= get_search_query() ?>" name="s" id="s" />
 
                             <button type="submit" id="searchsubmit" class="glyphicon glyphicon-search"></button>
@@ -169,7 +180,7 @@
 
         <a href="<?php echo home_url(); ?>" ?><img class="pictoResponsive logoResponsive" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_nav_logo.svg"></a>
         <a class="responsiveBurger" href="#" class><img class="pictoResponsive responsiveBurgerImg" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_nav_menu-burguer.svg"></a>
-        <!-- <a> <img class="pictoNav loupe" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_nav_loupe.svg"></a> -->
+        <a> <img class="pictoNav loupeMobile" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_nav_loupe.svg"></a>
 
 
 

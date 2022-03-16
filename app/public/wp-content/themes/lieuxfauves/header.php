@@ -50,10 +50,13 @@
     object-fit: cover;}"> -->
 
 
-    <div class="loader" id="video" style="z-index:2000; position: absolute; height: 99.5vh; object-fit: cover;">
-    <video src="wp-content/themes/lieuxfauves/src/assets/img/16-9fondblanc.mp4" width="100%" height="auto" autoplay="true" muted="" style="padding-bottom: 13px; background-color : white" /*;>
+    <div class="loader" id="video" style="z-index:2000; position: absolute; object-fit: cover;">
+    <video src="wp-content/themes/lieuxfauves/src/assets/img/16-9fondblanc.mp4" width="100%" height="auto" autoplay="true" muted="" style="height: 100vh; background-color : white;";>
       Cette vidéo ne peut être affichée sur votre navigateur Internet.<br>
     </video>
+    <div class="progressionBar" style="margin-top: 13px"><div class="progressionBarInner"></div></div>
+
+
   </div>
 
 
@@ -63,7 +66,7 @@
     width: 40%;
     top: 28%;
     left: 30%;"> -->
-    <div class="progressionBar"><div class="progressionBarInner"> </div></div>
+    <!--<div class="progressionBar"><div class="progressionBarInner"> </div></div> -->
 </div>
 
 
