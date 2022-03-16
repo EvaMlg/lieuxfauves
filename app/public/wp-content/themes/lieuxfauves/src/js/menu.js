@@ -14,12 +14,21 @@ console.log(searchMenu);
 
 const pictoBurguer = document.querySelector('.closeIcon');
 
+const allResults = document.getElementById('all_results');
+console.log (allResults)
+const total_result = document.getElementById('total_result');
+console.log (total_result)
+
+
 
 loupe.addEventListener('click', function () {
     if (searchMenu.classList.contains('fullMenuOff')) {
         searchMenu.classList.remove("fullMenuOff");
         searchMenu.classList.add("fullMenuOn");
         searchMenu.style.animation = "transition 2s ease";
+        
+
+
         buttonOn.style.display = "none";
         sideNavWrapper.style.backgroundColor = "rgb(0,83,78)";
         buttonOff.style.display = "flex";

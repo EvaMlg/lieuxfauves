@@ -94,7 +94,7 @@
                 <div class="logoWrapperSearch">
                     <div class="logoDeviseSearch">
                         <img class="logo-whiteSearch" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_footer_logo.svg">
-                        <img class="tagline-search" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_logo_devise.svg">
+                        <img class="tagline-search" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_mobile_menu_devise-vert.svg">
                     </div>
 
                 </div>
@@ -126,7 +126,7 @@
                     <div class="loupeFooterWrapper">
 
                         <div class="socialsButtonsWrapperLoupe">
-                            <img class="logo-whiteSearch" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_menu_logo.svg"">
+                            <img class="logo-whiteSearch" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_mobile_logo-blanc.svg">
                     <img class=" logo-ig logo-socials" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_menu_rrss_ig.svg">
                             <img class="logo-in logo-socials" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_menu_rrss_in.svg">
 

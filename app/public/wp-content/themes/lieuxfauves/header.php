@@ -26,6 +26,8 @@
 	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+
+
 </head>
 <body <?php body_class(''); if ( is_page(89) ) { ?> style="overflow:hidden;" <?php } ?> >
 
@@ -37,19 +39,30 @@
 
 
 
+
+
 <div id="loader">
-    <img class ="introImg" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_INTRO_image02.jpg" alt="Loader Lieux Fauves" style="
+    <!-- <img class ="introImg" src="/wp-content/themes/lieuxfauves/src/assets/img/LF_INTRO_image02.jpg" alt="Loader Lieux Fauves" style="
     /* width: 100%;
     position: absolute;
     height: 99.5vh;
     z-index: 2000;
-    object-fit: cover;}">
+    object-fit: cover;}"> -->
 
-    <img src="/wp-content/themes/lieuxfauves/src/assets/img/.jpg" alt="" class="svg" style="position: absolute;
+
+    <div class="loader" id="video" style="z-index:2000; position: absolute; height: 99.5vh; object-fit: cover;">
+    <video src="wp-content/themes/lieuxfauves/src/assets/img/16-9fondblanc.mp4" width="100%" height="auto" autoplay="true" muted="" style="padding-bottom: 13px; background-color : white" /*;>
+      Cette vidéo ne peut être affichée sur votre navigateur Internet.<br>
+    </video>
+  </div>
+
+
+
+    <!-- <img src="/wp-content/themes/lieuxfauves/src/assets/img/.jpg" alt="" class="svg" style="position: absolute;
     z-index: 2000;
     width: 40%;
     top: 28%;
-    left: 30%;">
+    left: 30%;"> -->
     <div class="progressionBar"><div class="progressionBarInner"> </div></div>
 </div>
 
@@ -67,7 +80,7 @@
     width: 60%;
     top: 45%;
     left: 20%;">
-      <!-- <div class="progressionBarMobile"><div class="progressionBarInnerMobile"> </div></div> -->
+    <div class="progressionBarMobile"><div class="progressionBarInnerMobile"> </div></div> 
 
 
     
