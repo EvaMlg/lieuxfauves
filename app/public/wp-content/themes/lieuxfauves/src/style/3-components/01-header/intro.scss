@@ -1,4 +1,5 @@
 #loaderMobile {
+    &:not(.see){display: none !important;}
     display: block;
     @include laptopS {
         display: none;
@@ -7,6 +8,8 @@
 }
 
 #loader {
+    &:not(.see){display: none !important;}
+    display: none !important;
     @include mobile-tab {
         display: none;
     }
