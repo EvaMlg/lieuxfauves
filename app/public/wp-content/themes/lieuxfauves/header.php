@@ -29,13 +29,13 @@
 
 
 </head>
-<body <?php body_class(''); if ( is_page(89) ) { ?> style="overflow:hidden;" <?php } ?> >
+<body <?php body_class('');?> >
 
 
 
 <?php wp_body_open(); ?>   
 
-<?php if ( is_page(89) ) { ?>
+<?php if ( is_front_page() ) { ?>
 
 
 
